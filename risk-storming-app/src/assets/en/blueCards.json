@@ -1,0 +1,59 @@
+  [
+  {
+    "title": "Structure",
+    "subTitle": "Quality Aspects",
+    
+    "description": "Reliability Aspect: The architecture, technologies used, different programming languages and duplicated code.",
+    "exampleOne": "Software usually has different layers. Which layer are you testing?",
+    "exampleTwo": "Is the code modular or does it resemble one big monolith?",
+    "exampleThree": "Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?"
+  },
+  {
+    "title": "Functionality",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  },
+  {
+    "title": "Changeability",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  },
+  {
+    "title": "Installability",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  },
+  {
+    "title": "Complexity",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  },
+  {
+    "title": "Performance",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  },
+  {
+    "title": "Operations",
+    "subTitle": "Quality Aspects",
+    "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
+    "exampleOne": "Business scenarios are typical ways your app will get used. Identifying those can cover a lot of high profile functionality.",
+    "exampleTwo": "Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?",
+    "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
+  }
+]
