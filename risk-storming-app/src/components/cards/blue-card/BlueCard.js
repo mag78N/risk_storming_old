@@ -2,6 +2,7 @@ import blueCards from '../../../assets/en/blueCards.json';
 import React from 'react';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
 const blueCardList = blueCards;
 const blueCardStyles = makeStyles({
@@ -50,33 +51,35 @@ const blueCardStyles = makeStyles({
 function BlueCard() {
   const classes = blueCardStyles();
   return (
-    <React.Fragment>
+    <Grid container direction='row' justify='center' alignItems='center'>
       {blueCardList.map((card, i) => (
-        <Card className={classes.root}>
-          <CardContent>
-            <Typography className={classes.title}>{card.title}</Typography>
-            <Typography className={classes.subtitle}>
-              {card.subTitle}
-            </Typography>
+        <Grid item key={i}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography className={classes.title}>{card.title}</Typography>
+              <Typography className={classes.subtitle}>
+                {card.subTitle}
+              </Typography>
 
-            <Typography className={classes.description}>
-              {card.description}
-            </Typography>
-            <Typography className={classes.example}>
-              1 {card.exampleOne}
-            </Typography>
-            <hr className={classes.hr}></hr>
-            <Typography className={classes.example}>
-              2 {card.exampleTwo}
-            </Typography>
-            <hr className={classes.hr}></hr>
-            <Typography className={classes.example}>
-              3 {card.exampleThree}
-            </Typography>
-          </CardContent>
-        </Card>
+              <Typography className={classes.description}>
+                {card.description}
+              </Typography>
+              <Typography className={classes.example}>
+                1 {card.exampleOne}
+              </Typography>
+              <hr className={classes.hr}></hr>
+              <Typography className={classes.example}>
+                2 {card.exampleTwo}
+              </Typography>
+              <hr className={classes.hr}></hr>
+              <Typography className={classes.example}>
+                3 {card.exampleThree}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       ))}
-    </React.Fragment>
+    </Grid>
   );
 }
 

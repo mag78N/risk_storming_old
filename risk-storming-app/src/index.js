@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../src/components/app/App';
-import BlueCard from '../src/components/cards/blue-card/BlueCard';
+import LeftPane from '../src/components/pages/LeftPane';
+//import App from '../src/components/app/App';
+//import BlueCard from '../src/components/cards/blue-card/BlueCard';
+
 import * as serviceWorker from './serviceWorker';
+import RightPane from './components/pages/RightPane';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <BlueCard></BlueCard>
-  </React.StrictMode>,
+  <div style={{display: 'flex'}}>
+    <LeftPane/>
+    <RightPane/> 
+  </div>,
+
   document.getElementById('root')
 );
 
