@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import LeftPane from '../src/components/pages/LeftPane';
-//import App from '../src/components/app/App';
-//import BlueCard from '../src/components/cards/blue-card/BlueCard';
+import './components/pages/LeftPane.css';
+import LeftPane from './components/pages/LeftPane';
 
 import * as serviceWorker from './serviceWorker';
-import RightPane from './components/pages/RightPane';
 
 ReactDOM.render(
-  <div style={{display: 'flex'}}>
-    <LeftPane/>
-    <RightPane/> 
-  </div>,
+  
+    <LeftPane className='leftPane' />
+    
+  ,
 
   document.getElementById('root')
 );
