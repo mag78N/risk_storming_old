@@ -9,9 +9,9 @@ import {
 //Pages
 import MainPage from '../pages';
 import NotFoundPage from '../pages/404';
-import FaseOnePage from '../pages/fase1';
-import FaseTwoPage from '../pages/fase2';
-import FaseThreePage from '../pages/fase3';
+import FaseOnePage from '../pages/fase-1/fase1';
+import FaseTwoPage from '../pages/fase-2/fase2';
+import FaseThreePage from '../pages/fase-3/fase3';
 
 function App() {
   return (
