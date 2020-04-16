@@ -24,7 +24,7 @@
     "exampleThree": "Input of data is usually incredibly important and often equally fragile. There's tons of rubbish we can try to input into our systems, but how does it handle it?"
   },
   {
-    "title": "Testability:",
+    "title": "Testability",
     "subTitle": "Quality Aspects",
     "description": "Maintainability Aspect: Everything and anything that impacts how easy or hard your testing efforts are.",
     "exampleOne": "Cheat codes are often ways to test a game more easily. If you want to test being all powerful, just enter '↑, ↑, ↓, ↓, ←, →, ←, →, B, A, start, select'. Don’t forget it’s a shortcut!",

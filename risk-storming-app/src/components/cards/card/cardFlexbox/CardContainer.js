@@ -1,11 +1,11 @@
 import blueCards from '../../../../assets/en/blueCards.json';
 import '../cardFlexbox/Card.css';
 import React from 'react';
-const blueCardList = blueCards;
+const BLUECARDLIST = blueCards;
 
 
 function CardContainer() {
-    return blueCardList.map((bluecard, i) => (
+    return BLUECARDLIST.map((bluecard, i) => (
       <div key={i} className='cardContainer'>
         <div className='cardTitle'>{bluecard.title}</div>
         <div className='cardSubtitle'>{bluecard.subTitle}</div>
