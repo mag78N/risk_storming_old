@@ -1,12 +1,32 @@
 import React from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+} from 'react-router-dom';
+
+//Pages
+import MainPage from '../pages';
+import NotFoundPage from '../pages/404';
+import FaseOnePage from '../pages/fase1';
+import FaseTwoPage from '../pages/fase2';
+import FaseThreePage from '../pages/fase3';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'></header>
-      <h1>TestSphere</h1>
-    </div>
+    <React.Fragment>
+      <Switch>
+        <Route exact path='/' component={MainPage} />
+        <Route exact path='/404' component={NotFoundPage} />
+        <Route exact path='/fase1' component={FaseOnePage} />
+        <Route exact path='/fase2' component={FaseTwoPage} />
+        <Route exact path='/fase3' component={FaseThreePage} />
+        <Redirect to='/404' />
+      </Switch>
+    </React.Fragment>
   );
 }
 
