@@ -2,3 +2,6 @@
   background-color: rgb(240, 38, 156);
   
 }
+.cardTitle,.cardSubtitle {
+  border-color: rgb(240, 38, 156);
+}

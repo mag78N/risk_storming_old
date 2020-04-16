@@ -1,3 +1,6 @@
 .cardContainer {
   background-color: rgb(103, 8, 122);
 }
+.cardTitle,.cardSubtitle {
+  border-color: rgb(103, 8, 122);
+}
