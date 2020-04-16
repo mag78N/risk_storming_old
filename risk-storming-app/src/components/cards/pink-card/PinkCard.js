@@ -1,12 +1,12 @@
 import pinkCards from '../../../assets/en/pinkCards.json';
-import '../card/cardFlexbox/Card.css';
+import '../../cards/Card.css';
 import '../pink-card/PinkCard.css';
 import React from 'react';
 const PINKCARDLIST = pinkCards;
 
 function PinkCard() {
-  return PINKCARDLIST.map((pinkcard, i) => (
-    <div key={i} className='cardContainer'>
+  return PINKCARDLIST.map(pinkcard => (
+    <div key={pinkcard.id} className='cardContainer'>
       <div className='cardTitle'>{pinkcard.title}</div>
       <div className='cardSubtitle'>{pinkcard.subTitle}</div>
       <div className='cardDescription'>{pinkcard.description}</div>

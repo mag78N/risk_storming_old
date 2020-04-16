@@ -1,12 +1,12 @@
 import greenCards from '../../../assets/en/greenCards.json';
-import '../card/cardFlexbox/Card.css';
+import '../../cards/Card.css';
 import '../green-card/greenCard.css';
 import React from 'react';
 const GREENCARDLIST = greenCards;
 
 function GreenCard() {
-  return GREENCARDLIST.map((greencard, i) => (
-    <div key={i} className='cardContainer'>
+  return GREENCARDLIST.map(greencard => (
+    <div key={greencard.id} className='cardContainer'>
       <div className='cardTitle'>{greencard.title}</div>
       <div className='cardSubtitle'>{greencard.subTitle}</div>
       <div className='cardDescription'>{greencard.description}</div>

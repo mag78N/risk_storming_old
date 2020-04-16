@@ -1,12 +1,12 @@
 import orangeCards from '../../../assets/en/orangeCards.json';
-import '../card/cardFlexbox/Card.css';
+import '../../cards/Card.css';
 import '../orange-card/OrangeCard.css';
 import React from 'react';
 const ORANGECARDLIST = orangeCards;
 
 function OrangeCard() {
-  return ORANGECARDLIST.map((orangecard, i) => (
-    <div key={i} className='cardContainer'>
+  return ORANGECARDLIST.map((orangecard) => (
+    <div key={orangecard.id} className='cardContainer'>
       <div className='cardTitle'>{orangecard.title}</div>
       <div className='cardSubtitle'>{orangecard.subTitle}</div>
       <div className='cardDescription'>{orangecard.description}</div>
