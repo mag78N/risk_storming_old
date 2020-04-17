@@ -1,17 +1,20 @@
 import React from 'react';
-import RiskPostIt from './RiskPostIt';
+//import RiskPostIt from './RiskPostIt';
 import Split from 'react-split';
 import './fase2.css';
 import { Link } from 'react-router-dom';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import BlueCardCarousel from './BlueCardCarousel';
 const FaseTwoPage = () => {
   return (
     <React.Fragment>
+      <TopNavbar />
       <Split
         className='splitContainerFase2'
-        sizes={[50, 50]}
+        sizes={[60, 40]}
         minSize={[250]}
         expandToMin={false}
-        gutterSize={10}
+        gutterSize={5}
         gutterAlign='center'
         snapOffset={30}
         dragInterval={1}
@@ -20,12 +23,7 @@ const FaseTwoPage = () => {
       >
         <div id='fase2LeftPane'>Fase 2</div>
         <div id='fase2RightPane'>
-          <h1>Bluecard carousel</h1>
-          <RiskPostIt />
-          <RiskPostIt />
-          <RiskPostIt />
-          <RiskPostIt />
-          <RiskPostIt />
+          <BlueCardCarousel />
         </div>
       </Split>
 

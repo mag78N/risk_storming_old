@@ -5,23 +5,52 @@
 
 #fase2LeftPane {
   background-color: rgb(228, 222, 222);
+  border-right: 1px solid black;
 }
 #fase2RightPane {
+  background-color: rgb(207, 200, 200);
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   overflow: auto;
+  border-left: 1px solid black;
 }
-div#riskPostItForm {
+div #riskPostItForm {
   display: flex;
+  flex-direction: column;
 }
 #riskPostItForm textarea {
-  height: 100px;
-  width: 350px;
+  width: 30vw;
   background-color: rgb(228, 225, 225);
+  border: 1px solid black;
+  border-radius: 2px;
+  resize: none;
+  margin-top: 1rem;
+}
+ol.carousel-indicators{
+  display: none;
+}
+.carousel-caption {
+  position: static;
+}
+div.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
 }
 
+#fase2RightPane div.active.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  height: 7rem;
+}
 #goToFase3btnContainer {
   text-align: center;
   width: 100%;
