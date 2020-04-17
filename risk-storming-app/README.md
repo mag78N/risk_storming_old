@@ -24,6 +24,7 @@ page components ~ src/components/pages
 src/app/App.jsx ~ React Router and Routes
         App.css
         App.test.js
+        
 src/index.js ~ <Router><App /></Router>        
 <br />
 
