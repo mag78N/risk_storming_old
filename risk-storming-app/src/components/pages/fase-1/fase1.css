@@ -18,6 +18,7 @@
   flex-direction: column;
   overflow: auto;
   height: 100vh;
+  border-right: 1px dashed black;
 }
 .split1Hr {
   margin-right: 1rem;
@@ -37,6 +38,7 @@
   flex-wrap: wrap;
   height: 100vh;
   overflow: auto;
+  border-left: 1px dashed black;
 }
 .splitContainerFase1 {
   display: flex;

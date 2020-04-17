@@ -5,7 +5,7 @@
 
 #fase2LeftPane {
   background-color: rgb(228, 222, 222);
-  border-right: 1px solid black;
+  border-right: 1px dashed black;
 }
 #fase2RightPane {
   background-color: rgb(207, 200, 200);
@@ -14,7 +14,7 @@
   align-items: center;
   height: 100vh;
   overflow: auto;
-  border-left: 1px solid black;
+  border-left: 1px dashed black;
 }
 div #riskPostItForm {
   display: flex;
@@ -28,7 +28,7 @@ div #riskPostItForm {
   resize: none;
   margin-top: 1rem;
 }
-ol.carousel-indicators{
+ol.carousel-indicators {
   display: none;
 }
 .carousel-caption {

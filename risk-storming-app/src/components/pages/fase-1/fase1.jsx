@@ -1,13 +1,15 @@
 import React from 'react';
 import BlueCard from '../../cards/blue-card/BlueCard';
-//import SplitPane from 'react-split-pane';
+
 import Split from 'react-split';
 import '../../pages/fase-1/fase1.css';
 import SelectedBlueCard from './SelectedBlueCard';
 import { Link } from 'react-router-dom';
+import TopNavbar from '../../TopNavbar/TopNavbar';
 const FaseOnePage = () => {
   return (
     <React.Fragment>
+      <TopNavbar />
       <Split
         className='splitContainerFase1'
         sizes={[50, 50]}
