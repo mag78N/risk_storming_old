@@ -1,12 +1,13 @@
 Card data ~ src/assets/en
                     blueCards.json, greenCards.json, orangeCards.json, pinkCards.json, purpleCards.json
-
+<br />
 Card components ~ src/components/cards
                                       Card.css ~ general layout and styles for card component
                       individual cards: 
                                       blue-card/BlueCard.jsx
                                       blue-card/BlueCard.css
                                       ...
+<br />                                      
 page components ~ src/components/pages
                                       MainPage: index.jsx
                                       NotfoundPage: 404.jsx
@@ -19,12 +20,12 @@ page components ~ src/components/pages
                                       /fase-3
                                       /TopNavbar/TopNavbar.jsx
                                                  topNavbar.css
-
+<br />
 src/app/App.jsx ~ React Router and Routes
         App.css
         App.test.js
 src/index.js ~ <Router><App /></Router>        
-
+<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
