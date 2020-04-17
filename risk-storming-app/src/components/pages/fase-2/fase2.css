@@ -17,7 +17,7 @@
   border-left: 1px dashed black;
 }
 
-div .form-group{
+div .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,6 @@ div .form-group{
   resize: none;
   margin-top: 1rem;
 }
-
 
 ol.carousel-indicators {
   display: none;
@@ -55,14 +54,17 @@ div.carousel {
 .carousel-control-next {
   height: 7rem;
 }
-#goToFase3btnContainer {
-  text-align: center;
+.btnContainer {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-#goToFase3btn {
+.goToNextFaseBtn,
+.goToPrevFaseBtn {
   background-color: rgb(40, 182, 218);
-  font-size: 1.8rem;
-  padding: 0.4rem;
-  margin: 0.5rem auto;
+  font-size: 1.2rem;
+  width: 8rem;
+  padding: 0.2rem;
+  margin: 0.5rem 1rem;
   border-radius: 10px;
 }

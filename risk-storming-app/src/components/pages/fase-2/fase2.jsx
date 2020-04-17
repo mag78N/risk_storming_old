@@ -27,9 +27,12 @@ const FaseTwoPage = () => {
         </div>
       </Split>
 
-      <div id='goToFase3btnContainer'>
+      <div class='btnContainer'>
+        <Link to='/fase1'>
+          <button class='goToPrevFaseBtn'>Previous</button>
+        </Link>
         <Link to='/fase3'>
-          <button id='goToFase3btn'>Proceed to third fase</button>
+          <button class='goToNextFaseBtn'>Next</button>
         </Link>
       </div>
     </React.Fragment>

@@ -377,6 +377,14 @@ class FaseOnePage extends Component {
             Proceed to second fase
           </Link>
         </div>
+        <div class='btnContainer'>
+          <Link to='/fase1'>
+            <button class='goToPrevFaseBtn'>Previous</button>
+          </Link>
+          <Link to='/fase3'>
+            <button class='goToNextFaseBtn'>Next</button>
+          </Link>
+        </div>
       </React.Fragment>
     );
   }
