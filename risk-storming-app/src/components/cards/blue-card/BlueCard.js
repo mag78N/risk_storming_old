@@ -4,6 +4,19 @@ import '../blue-card/BlueCard.css';
 import React from 'react';
 const BLUECARDLIST = blueCards;
 
+/* function createCard(bluecard) {
+  return <BlueCard
+    key={bluecard.id}
+    title={bluecard.title}
+    subtitle={bluecard.subtitle}
+    description={bluecard.description}
+    exampleOne={bluecard.exampleOne}
+    exampleTwo={bluecard.exampleTwo}
+    exampleThree={bluecard.exampleThree}
+  />
+} */
+
+
 function BlueCard() {
   return BLUECARDLIST.map(bluecard => (
     <div key={bluecard.id} className='cardContainer'>

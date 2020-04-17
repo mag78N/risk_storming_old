@@ -20,8 +20,7 @@ general css for card template
 }
 .cardTitle {
   max-width: inherit;
-  font-size: 3.1vmin;
-  font-weight: 800 !important;
+  font-size: 2.5vmin;
   border-bottom-style: none;
 }
 

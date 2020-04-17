@@ -9,7 +9,7 @@ const FaseOnePage = () => {
   return (
     <React.Fragment>
       <Split
-        className='splitContainer1'
+        className='splitContainerFase1'
         sizes={[50, 50]}
         minSize={[250]}
         expandToMin={false}
@@ -20,7 +20,7 @@ const FaseOnePage = () => {
         direction='horizontal'
         cursor='col-resize'
       >
-        <div id='split1'>
+        <div id='fase1LeftPane'>
           <SelectedBlueCard />
           <SelectedBlueCard />
           <SelectedBlueCard />
@@ -28,7 +28,7 @@ const FaseOnePage = () => {
           <SelectedBlueCard />
           <SelectedBlueCard />
         </div>
-        <div id='split2'>
+        <div id='fase1RightPane'>
           <BlueCard />
         </div>
       </Split>
