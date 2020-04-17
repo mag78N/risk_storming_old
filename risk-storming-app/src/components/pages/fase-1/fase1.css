@@ -20,11 +20,11 @@
   height: 100vh;
   border-right: 1px dashed black;
 }
-.split1Hr {
+.blackLine {
   margin-right: 1rem;
   width: 85%;
   border: none;
-  border-top: 0.1rem solid black;
+  border-top: 0.05rem solid black;
 }
 .selectedBlueCard {
   background-color: inherit;

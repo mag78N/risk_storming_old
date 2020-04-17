@@ -277,7 +277,12 @@ class FaseOnePage extends Component {
       draggedCard: {},
     });
   };
-
+  handleLimitToSixCards = () => {
+    let amountOfSelectedCards = this.state.selectedBlueCards.length();
+    if (amountOfSelectedCards < 6 || amountOfSelectedCards > 6) {
+      console.log('6 cards picked!');
+    }
+  };
   render() {
     const { blueCardList, selectedBlueCards } = this.state;
 
@@ -302,25 +307,38 @@ class FaseOnePage extends Component {
             onDragOver={(event) => this.onDragOver(event)}
           >
             {selectedBlueCards.map((selectedBlueCard) => (
-              <div key={selectedBlueCard.id} className='cardContainer'>
-                <div className='cardTitle'>{selectedBlueCard.title}</div>
-                <div className='cardSubtitle'>{selectedBlueCard.subTitle}</div>
-                <div className='cardDescription'>{selectedBlueCard.description}</div>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>1</div>
-                  <p className='cardExample1'>{selectedBlueCard.exampleOne}</p>
+              <React.Fragment>
+                <div key={selectedBlueCard.id} className='cardContainer'>
+                  <div className='cardTitle'>{selectedBlueCard.title}</div>
+                  <div className='cardSubtitle'>
+                    {selectedBlueCard.subTitle}
+                  </div>
+                  <div className='cardDescription'>
+                    {selectedBlueCard.description}
+                  </div>
+                  <div className='exampleContainer'>
+                    <div className='exampleNumber'>1</div>
+                    <p className='cardExample1'>
+                      {selectedBlueCard.exampleOne}
+                    </p>
+                  </div>
+                  <hr className='dottedHr'></hr>
+                  <div className='exampleContainer'>
+                    <div className='exampleNumber'>2</div>
+                    <p className='cardExample2'>
+                      {selectedBlueCard.exampleTwo}
+                    </p>
+                  </div>
+                  <hr className='dottedHr'></hr>
+                  <div className='exampleContainer'>
+                    <div className='exampleNumber'>3</div>
+                    <p className='cardExample3'>
+                      {selectedBlueCard.exampleThree}
+                    </p>
+                  </div>
                 </div>
-                <hr className='dottedHr'></hr>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>2</div>
-                  <p className='cardExample2'>{selectedBlueCard.exampleTwo}</p>
-                </div>
-                <hr className='dottedHr'></hr>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>3</div>
-                  <p className='cardExample3'>{selectedBlueCard.exampleThree}</p>
-                </div>
-              </div>
+                <hr className='blackLine'></hr>
+              </React.Fragment>
             ))}
           </div>
           <div id='fase1RightPane'>
