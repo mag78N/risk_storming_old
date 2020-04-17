@@ -16,9 +16,11 @@
   overflow: auto;
   border-left: 1px dashed black;
 }
-div #riskPostItForm {
+
+div .form-group{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 #riskPostItForm textarea {
   width: 30vw;
@@ -28,6 +30,8 @@ div #riskPostItForm {
   resize: none;
   margin-top: 1rem;
 }
+
+
 ol.carousel-indicators {
   display: none;
 }
