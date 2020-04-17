@@ -64,14 +64,6 @@
     "exampleThree": "Is the performance of your hardware stable? The Iphone 6’s antenna dropped signal when you held your phone a certain way."
   },
   {
-    "title": "Adaptability",
-    "subTitle": "Quality Aspects",
-    "description": "Portability Aspect: Does your product support multiple browsers, operating systems, mobile phones and tablets?",
-    "exampleOne": "There’s a billion different windows machines. They all have a different hardware setup. It’s remarkable old and new programs can work on them.",
-    "exampleTwo": "When building web apps programmers typically dislike testing with Internet Explorer. Which is why you should. Oh, the surprises you get. ",
-    "exampleThree": "Smartphone configurations are always in constant flux. OS versions, screen sizes, shapes, resolutions... Can your app  adapt?"
-  },
-  {
     "title": "Internationalization",
     "subTitle": "Quality Aspects",
     "description": "Usability Aspect: Currency, time zone, language, right-to-left...  Can you use your application anywhere in the world? ",
