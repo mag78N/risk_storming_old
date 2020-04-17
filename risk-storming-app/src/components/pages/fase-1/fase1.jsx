@@ -278,10 +278,11 @@ class FaseOnePage extends Component {
     });
   };
   handleLimitToSixCards = () => {
-    let amountOfSelectedCards = this.state.selectedBlueCards.length();
-    if (amountOfSelectedCards < 6 || amountOfSelectedCards > 6) {
-      console.log('6 cards picked!');
-    }
+    let amountOfSelectedCards = this.state.selectedBlueCards.length;
+    if (amountOfSelectedCards === 6) {
+      return '/fase2';
+    } 
+    
   };
   render() {
     const { blueCardList, selectedBlueCards } = this.state;
@@ -372,8 +373,8 @@ class FaseOnePage extends Component {
         </Split>
 
         <div id='goToFase2btnContainer'>
-          <Link to='/fase2'>
-            <button id='goToFase2btn'>Proceed to second fase</button>
+          <Link to={this.handleLimitToSixCards} id='goToFase2btn'>
+            Proceed to second fase
           </Link>
         </div>
       </React.Fragment>

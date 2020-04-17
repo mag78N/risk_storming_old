@@ -12,5 +12,10 @@ body {
 }
 
 .startSessionButton {
-  background-color: rgb(255, 123, 0);
+  color: black;
+  font-size: 2rem;
+  border: 2px white solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgb(196, 109, 109);
 }
