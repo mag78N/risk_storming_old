@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
-//import RiskPostIt from './RiskPostIt';
+import '../../cards/blue-card/BlueCard.css';
+import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './fase2.css';
 import { Link } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import BlueCardCarousel from './BlueCardCarousel';
-
+import createMiniCards from '../../cards/Card/createMiniCards';
 class FaseTwoPage extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
-      cards : []
-    }
-    
-    }
-    
-  
+      blueCards: [],
+    };
+  }
   componentDidMount = () => {
     this.setState({
-      cards: JSON.parse(localStorage.getItem('cards'))
+      blueCards: JSON.parse(localStorage.getItem('cards')),
     });
-    console.log(this.state.cards);
-  }
-  
-  render(){
     
+  };
+
+  render() {
+    console.log(this.state);
+    const { blueCards } = this.state;
     return (
-      <React.Fragment>
+      <>
         <TopNavbar />
-        <h1>{this.props.loc}</h1>
+
         <Split
           className='splitContainerFase2'
           sizes={[60, 40]}
@@ -42,7 +40,11 @@ class FaseTwoPage extends Component {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div id='fase2LeftPane'>Fase 2</div>
+          <div id='fase2LeftPane'>
+            {blueCards.map((card) => (
+              <div className='miniCardContainer'>{createMiniCards(card)}</div>
+            ))}
+          </div>
           <div id='fase2RightPane'>
             <BlueCardCarousel />
           </div>
@@ -56,8 +58,8 @@ class FaseTwoPage extends Component {
             <button className='goToNextFaseBtn'>Next</button>
           </Link>
         </div>
-      </React.Fragment>
+      </>
     );
-  };
+  }
 }
 export default FaseTwoPage;

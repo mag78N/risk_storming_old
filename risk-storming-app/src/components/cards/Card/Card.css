@@ -11,6 +11,15 @@ general css for card template
   padding: 0.5rem;
   margin: 0.5rem;
 }
+.miniCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 15vw;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
 .cardTitle,
 .cardSubtitle {
   text-transform: uppercase;

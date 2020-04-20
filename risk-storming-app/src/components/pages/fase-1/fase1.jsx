@@ -278,8 +278,8 @@ class FaseOnePage extends Component {
       draggedCard: {},
     };
   }
-  componentDidMount() {
-    const { selectedBlueCards, draggedCard, blueCardList } = this.state;
+  functionf() {
+    const { blueCardList } = this.state;
     this.newMethod();
     if (localStorage.getItem('cards')) {
       this.setState({
@@ -291,12 +291,14 @@ class FaseOnePage extends Component {
     } else {
       return null;
     }
+    
   }
+  
   newMethod() {
     this.cards = JSON.parse(localStorage.getItem('cards'));
   }
 
-  componentDidUpdate() {
+  componentWillUnmount() {
     localStorage.setItem('cards', JSON.stringify(this.state.selectedBlueCards));
   };
 
@@ -315,7 +317,7 @@ class FaseOnePage extends Component {
     this.setState({
       selectedBlueCards: [...selectedBlueCards, draggedCard],
       blueCardList: blueCardList.filter(
-        (card) => card.title !== draggedCard.title
+        (card) => card.id !== draggedCard.id
       ),
       draggedCard: {},
     });
@@ -345,6 +347,7 @@ class FaseOnePage extends Component {
   };
   
   render() {
+    
     const { blueCardList, selectedBlueCards } = this.state;
     return (
       <>

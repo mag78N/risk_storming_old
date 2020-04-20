@@ -1,6 +1,7 @@
-.cardContainer {
+.miniCardContainer, .cardContainer {
   background-color: rgb(65, 161, 206);
 }
+
 .cardTitle,
 .cardSubtitle {
   border-color: rgb(65, 161, 206);
