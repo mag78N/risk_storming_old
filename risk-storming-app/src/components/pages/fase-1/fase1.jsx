@@ -4,16 +4,19 @@ import '../../cards/Card/Card.css';
 import createCards from '../../cards/Card/createCards';
 import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
+import FaseTwoPage from '../../pages/fase-2/fase2';
 import '../../pages/fase-1/fase1.css';
 import { Link } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-
+import { uuid } from 'uuidv4';
 class FaseOnePage extends Component {
+  cards;
   constructor(props) {
     super(props);
     this.state = {
       blueCardList: [
         {
+          id: uuid(),
           title: 'Structure',
           subTitle: 'Quality Aspects',
           description:
@@ -26,6 +29,7 @@ class FaseOnePage extends Component {
             'Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?',
         },
         {
+          id: uuid(),
           title: 'Functionality',
           subTitle: 'Quality Aspects',
           description:
@@ -38,6 +42,7 @@ class FaseOnePage extends Component {
             'Most of our testing centres around "can we do this?" or "can\'t we do that?". How far should we go in automating these things?',
         },
         {
+          id: uuid(),
           title: 'Data',
           subTitle: 'Quality Aspects',
           description:
@@ -50,6 +55,7 @@ class FaseOnePage extends Component {
             "Input of data is usually incredibly important and often equally fragile. There's tons of rubbish we can try to input into our systems, but how does it handle it?",
         },
         {
+          id: uuid(),
           title: 'Testability',
           subTitle: 'Quality Aspects',
           description:
@@ -62,6 +68,7 @@ class FaseOnePage extends Component {
             'Can you manipulate system time to test functionality that only comes into play at certain dates?',
         },
         {
+          id: uuid(),
           title: 'Operations',
           subTitle: 'Quality Aspects',
           description:
@@ -74,6 +81,7 @@ class FaseOnePage extends Component {
             'Is the code easy to read and easy to find your way through? You might test this by asking for a change in old code by a new team member.',
         },
         {
+          id: uuid(),
           title: 'Security and Permission',
           subTitle: 'Quality Aspects',
           description:
@@ -86,6 +94,7 @@ class FaseOnePage extends Component {
             'Hacking is hard to guard your product from. Keep that virus scan, third party and open source code up-to-date!',
         },
         {
+          id: uuid(),
           title: 'Adaptability',
           subTitle: 'Quality Aspects',
           description:
@@ -98,6 +107,7 @@ class FaseOnePage extends Component {
             'Smartphone configurations are always in constant flux. OS versions, screen sizes, shapes, resolutions... Can your app  adapt?',
         },
         {
+          id: uuid(),
           title: 'Stability',
           subTitle: 'Quality Aspects',
           description:
@@ -110,6 +120,7 @@ class FaseOnePage extends Component {
             'Is the performance of your hardware stable? The Iphone 6’s antenna dropped signal when you held your phone a certain way.',
         },
         {
+          id: uuid(),
           title: 'Internationalization',
           subTitle: 'Quality Aspects',
           description:
@@ -122,6 +133,7 @@ class FaseOnePage extends Component {
             "Laws, permissions, network security differ from country to country. If you want your product to be used in China, you'll most likely need to adjust a few things...",
         },
         {
+          id: uuid(),
           title: 'Accessibility',
           subTitle: 'Quality Aspects',
           description:
@@ -134,6 +146,7 @@ class FaseOnePage extends Component {
             ' Humans are diverse. The blind person. The arthritic. The novice. How do you know your software is accessible to them?',
         },
         {
+          id: uuid(),
           title: 'Clarity',
           subTitle: 'Quality Aspects',
           description:
@@ -146,6 +159,7 @@ class FaseOnePage extends Component {
             'Naming things is often really hard. Are all the buttons named consistently? Are the icons clear and unambiguous?',
         },
         {
+          id: uuid(),
           title: 'Complexity',
           subTitle: 'Quality Aspects',
           description:
@@ -158,6 +172,7 @@ class FaseOnePage extends Component {
             'The software that beats even the most battle-hardened chess masters uses a basic kind of artificial intelligence to predict human chess behaviour. How would you test this?',
         },
         {
+          id: uuid(),
           title: 'Confidentiality',
           subTitle: 'Quality Aspects',
           description:
@@ -170,6 +185,7 @@ class FaseOnePage extends Component {
             'When working in banking or medicine you cannot just copy production data for testing purposes. US regulations, for instance, uses HIPAA or FERPA.',
         },
         {
+          id: uuid(),
           title: 'Resource Management',
           subTitle: 'Quality Aspects',
           description:
@@ -181,6 +197,7 @@ class FaseOnePage extends Component {
           exampleThree: 'Can you eliminate unnecessary features?',
         },
         {
+          id: uuid(),
           title: 'Installability',
           subTitle: 'Quality Aspects',
           description:
@@ -193,6 +210,7 @@ class FaseOnePage extends Component {
             'Does the app have custom installation options which are easy to understand? What consequences do they have?',
         },
         {
+          id: uuid(),
           title: 'Changeability',
           subTitle: 'Quality Aspects',
           description:
@@ -205,6 +223,7 @@ class FaseOnePage extends Component {
             "Is there an option to trigger updates manually by the user? How do you handle users who don’t want to or won't update? What if others want to roll back?",
         },
         {
+          id: uuid(),
           title: 'Performance',
           subTitle: 'Quality Aspects',
           description:
@@ -217,6 +236,7 @@ class FaseOnePage extends Component {
             'Databases can become performance bottlenecks, especially when multiple threads and systems use the same database.',
         },
         {
+          id: uuid(),
           title: 'User Friendliness',
           subTitle: 'Quality Aspects',
           description:
@@ -229,6 +249,7 @@ class FaseOnePage extends Component {
             'Some things are intrusive, yet people love them. For example the-groupon-space-cat-logo. This makes your app unique, identifiable and memorable.',
         },
         {
+          id: uuid(),
           title: 'Concurrency',
           subTitle: 'Quality Aspects',
           description:
@@ -241,6 +262,7 @@ class FaseOnePage extends Component {
             'Two libraries in your program try to use the same data at the same time. One gets access, one does not. This may lead to trouble.',
         },
         {
+          id: uuid(),
           title: 'Safe-guard',
           subTitle: 'Quality Aspects',
           description: 'Security Aspect: What’s keeping the bad guys out?',
@@ -256,7 +278,29 @@ class FaseOnePage extends Component {
       draggedCard: {},
     };
   }
+  componentDidMount() {
+    const { selectedBlueCards, draggedCard, blueCardList } = this.state;
+    this.newMethod();
+    if (localStorage.getItem('cards')) {
+      this.setState({
+        selectedBlueCards: this.cards,
+        blueCardList: blueCardList.filter(
+          (card) => card.id !== this.cards.id
+        ),
+      });
+    } else {
+      return null;
+    }
+  }
+  newMethod() {
+    this.cards = JSON.parse(localStorage.getItem('cards'));
+  }
 
+  componentDidUpdate() {
+    localStorage.setItem('cards', JSON.stringify(this.state.selectedBlueCards));
+  };
+
+  // Drag and drop
   onDrag = (event, card) => {
     event.preventDefault();
     this.setState({
@@ -275,6 +319,10 @@ class FaseOnePage extends Component {
       ),
       draggedCard: {},
     });
+    if (selectedBlueCards.length > 6) {
+      alert('You can select up to 6 blue cards');
+    }
+    
   };
   onDropRightPane = () => {
     const { selectedBlueCards, draggedCard, blueCardList } = this.state;
@@ -286,12 +334,16 @@ class FaseOnePage extends Component {
       draggedCard: {},
     });
   };
+
   handleLimitToSixCards = () => {
     let amountOfSelectedCards = this.state.selectedBlueCards.length;
     if (amountOfSelectedCards === 6) {
       return '/fase2';
+    } else {
+      return '';
     }
   };
+  
   render() {
     const { blueCardList, selectedBlueCards } = this.state;
     return (
@@ -345,13 +397,23 @@ class FaseOnePage extends Component {
             ))}
           </div>
         </Split>
-
-        <div class='btnContainer'>
+        <button onClick={this.logSelectedCards}>
+          log selected cards to console
+        </button>
+        <div className='btnContainer'>
           <Link to='/'>
-            <button class='goToPrevFaseBtn'>Previous</button>
+            <button className='goToPrevFaseBtn'>Previous</button>
           </Link>
-          <Link to={this.handleLimitToSixCards}>
-            <button class='goToNextFaseBtn'>Next</button>
+          <Link
+            to={{
+              pathname: '/fase2',
+              component: { FaseTwoPage },
+              state: {
+                array: 'hello i am a passed message',
+              },
+            }}
+          >
+            click
           </Link>
         </div>
       </>
