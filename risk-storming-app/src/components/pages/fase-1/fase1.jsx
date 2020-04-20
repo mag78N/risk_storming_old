@@ -258,21 +258,31 @@ class FaseOnePage extends Component {
     };
   }
 
-  onDrag = (event, blueCard) => {
+  onDrag = (event, card) => {
     event.preventDefault();
     this.setState({
-      draggedCard: blueCard,
+      draggedCard: card,
     });
   };
   onDragOver = (event) => {
     event.preventDefault();
   };
-  onDrop = () => {
+  onDropLeftPane = () => {
     const { selectedBlueCards, draggedCard, blueCardList } = this.state;
     this.setState({
       selectedBlueCards: [...selectedBlueCards, draggedCard],
       blueCardList: blueCardList.filter(
-        (blueCard) => blueCard.title !== draggedCard.title
+        (card) => card.title !== draggedCard.title
+      ),
+      draggedCard: {},
+    });
+  };
+  onDropRightPane = () => {
+    const { selectedBlueCards, draggedCard, blueCardList } = this.state;
+    this.setState({
+      blueCardList: [draggedCard, ...blueCardList],
+      selectedBlueCards: selectedBlueCards.filter(
+        (card) => card.title !== draggedCard.title
       ),
       draggedCard: {},
     });
@@ -281,8 +291,7 @@ class FaseOnePage extends Component {
     let amountOfSelectedCards = this.state.selectedBlueCards.length;
     if (amountOfSelectedCards === 6) {
       return '/fase2';
-    } 
-    
+    }
   };
   render() {
     const { blueCardList, selectedBlueCards } = this.state;
@@ -304,37 +313,42 @@ class FaseOnePage extends Component {
         >
           <div
             id='fase1LeftPane'
-            onDrop={(event) => this.onDrop(event)}
+            onDrop={(event) => this.onDropLeftPane(event)}
             onDragOver={(event) => this.onDragOver(event)}
           >
-            {selectedBlueCards.map((selectedBlueCard) => (
+            {selectedBlueCards.map((card) => (
               <React.Fragment>
-                <div key={selectedBlueCard.id} className='cardContainer'>
-                  <div className='cardTitle'>{selectedBlueCard.title}</div>
+                <div
+                  draggable
+                  key={card.id}
+                  className='cardContainer'
+                  onDrag={(event) => this.onDrag(event, card)}
+                >
+                  <div className='cardTitle'>{card.title}</div>
                   <div className='cardSubtitle'>
-                    {selectedBlueCard.subTitle}
+                    {card.subTitle}
                   </div>
                   <div className='cardDescription'>
-                    {selectedBlueCard.description}
+                    {card.description}
                   </div>
                   <div className='exampleContainer'>
                     <div className='exampleNumber'>1</div>
                     <p className='cardExample1'>
-                      {selectedBlueCard.exampleOne}
+                      {card.exampleOne}
                     </p>
                   </div>
                   <hr className='dottedHr'></hr>
                   <div className='exampleContainer'>
                     <div className='exampleNumber'>2</div>
                     <p className='cardExample2'>
-                      {selectedBlueCard.exampleTwo}
+                      {card.exampleTwo}
                     </p>
                   </div>
                   <hr className='dottedHr'></hr>
                   <div className='exampleContainer'>
                     <div className='exampleNumber'>3</div>
                     <p className='cardExample3'>
-                      {selectedBlueCard.exampleThree}
+                      {card.exampleThree}
                     </p>
                   </div>
                 </div>
@@ -342,30 +356,34 @@ class FaseOnePage extends Component {
               </React.Fragment>
             ))}
           </div>
-          <div id='fase1RightPane'>
-            {blueCardList.map((bluecard) => (
+          <div
+            id='fase1RightPane'
+            onDrop={(event) => this.onDropRightPane(event)}
+            onDragOver={(event) => this.onDragOver(event)}
+          >
+            {blueCardList.map((card) => (
               <div
                 className='cardContainer'
-                key={bluecard.id}
+                key={card.id}
                 draggable
-                onDrag={(event) => this.onDrag(event, bluecard)}
+                onDrag={(event) => this.onDrag(event, card)}
               >
-                <div className='cardTitle'>{bluecard.title}</div>
-                <div className='cardSubtitle'>{bluecard.subTitle}</div>
-                <div className='cardDescription'>{bluecard.description}</div>
+                <div className='cardTitle'>{card.title}</div>
+                <div className='cardSubtitle'>{card.subTitle}</div>
+                <div className='cardDescription'>{card.description}</div>
                 <div className='exampleContainer'>
                   <div className='exampleNumber'>1</div>
-                  <p className='cardExample1'>{bluecard.exampleOne}</p>
+                  <p className='cardExample1'>{card.exampleOne}</p>
                 </div>
                 <hr className='dottedHr'></hr>
                 <div className='exampleContainer'>
                   <div className='exampleNumber'>2</div>
-                  <p className='cardExample2'>{bluecard.exampleTwo}</p>
+                  <p className='cardExample2'>{card.exampleTwo}</p>
                 </div>
                 <hr className='dottedHr'></hr>
                 <div className='exampleContainer'>
                   <div className='exampleNumber'>3</div>
-                  <p className='cardExample3'>{bluecard.exampleThree}</p>
+                  <p className='cardExample3'>{card.exampleThree}</p>
                 </div>
               </div>
             ))}
