@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { uuid } from 'uuidv4';
 const FaseOnePage = (props) => {
-  const localDataCards = localStorage.getItem('cards');
+  //const localDataCards = localStorage.getItem('cards');
   const [blueCardList, setBlueCardList] = useState([
     {
       id: uuid(),
@@ -276,16 +276,24 @@ const FaseOnePage = (props) => {
   // Drag and drop
   const onDrag = (e, card) => {
     e.preventDefault();
+    e.stopPropagation();
+    
     setDraggedCard(card);
   };
 
-  const onDragOver = (e) => e.preventDefault();
+  const onDragOver = (e) => {
+    e.preventDefault();
+   
+    
+  };
 
   const onDropLeftPane = () => {
+   
     setSelectedBlueCards([...selectedBlueCards, draggedCard]);
     setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
   };
   const onDropRightPane = () => {
+    
     setBlueCardList([draggedCard, ...blueCardList]);
     setSelectedBlueCards(
       selectedBlueCards.filter((card) => card.title !== draggedCard.title)
@@ -294,10 +302,7 @@ const FaseOnePage = (props) => {
   useEffect(() => {
     localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
   }, [selectedBlueCards]);
-  
-  const onSaveToLocalStorage = () =>
-    !localDataCards ? localStorage.setItem('cards', JSON.stringify(selectedBlueCards)) : null;
-  
+
   return (
     <>
       <TopNavbar />
@@ -349,7 +354,7 @@ const FaseOnePage = (props) => {
           ))}
         </div>
       </Split>
-      <button onClick={onSaveToLocalStorage()} >save to local storage</button>
+
       <div className='btnContainer'>
         <Link to='/'>
           <button className='goToPrevFaseBtn'>Previous</button>
