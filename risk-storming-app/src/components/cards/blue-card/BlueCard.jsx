@@ -1,5 +1,5 @@
 import blueCards from '../../../assets/en/blueCards.json';
-import '../../cards/Card.css';
+import '../../cards/Card/Card.css';
 import '../blue-card/BlueCard.css';
 import React from 'react';
 const BLUECARDLIST = blueCards;

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import '../../cards/blue-card/BlueCard.css';
-import '../../cards/Card.css';
-
-//import BlueCard from '../../cards/blue-card/BlueCard';
-//import blueCardList from '../../../assets/en/blueCards.json';
+import '../../cards/Card/Card.css';
+import createCards from '../../cards/Card/createCards';
+//import Card from '../../cards/Card/Card';
 import Split from 'react-split';
 import '../../pages/fase-1/fase1.css';
-//import SelectedBlueCard from './SelectedBlueCard';
 import { Link } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
+import createMiniCards from '../../cards/Card/createMiniCards';
 class FaseOnePage extends Component {
   constructor(props) {
     super(props);
@@ -295,9 +294,8 @@ class FaseOnePage extends Component {
   };
   render() {
     const { blueCardList, selectedBlueCards } = this.state;
-
     return (
-      <React.Fragment>
+      <>
         <TopNavbar />
         <Split
           className='splitContainerFase1'
@@ -324,33 +322,7 @@ class FaseOnePage extends Component {
                   className='cardContainer'
                   onDrag={(event) => this.onDrag(event, card)}
                 >
-                  <div className='cardTitle'>{card.title}</div>
-                  <div className='cardSubtitle'>
-                    {card.subTitle}
-                  </div>
-                  <div className='cardDescription'>
-                    {card.description}
-                  </div>
-                  <div className='exampleContainer'>
-                    <div className='exampleNumber'>1</div>
-                    <p className='cardExample1'>
-                      {card.exampleOne}
-                    </p>
-                  </div>
-                  <hr className='dottedHr'></hr>
-                  <div className='exampleContainer'>
-                    <div className='exampleNumber'>2</div>
-                    <p className='cardExample2'>
-                      {card.exampleTwo}
-                    </p>
-                  </div>
-                  <hr className='dottedHr'></hr>
-                  <div className='exampleContainer'>
-                    <div className='exampleNumber'>3</div>
-                    <p className='cardExample3'>
-                      {card.exampleThree}
-                    </p>
-                  </div>
+                  {createMiniCards(card)}
                 </div>
                 <hr className='blackLine'></hr>
               </React.Fragment>
@@ -368,49 +340,22 @@ class FaseOnePage extends Component {
                 draggable
                 onDrag={(event) => this.onDrag(event, card)}
               >
-                <div className='cardTitle'>{card.title}</div>
-                <div className='cardSubtitle'>{card.subTitle}</div>
-                <div className='cardDescription'>{card.description}</div>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>1</div>
-                  <p className='cardExample1'>{card.exampleOne}</p>
-                </div>
-                <hr className='dottedHr'></hr>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>2</div>
-                  <p className='cardExample2'>{card.exampleTwo}</p>
-                </div>
-                <hr className='dottedHr'></hr>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>3</div>
-                  <p className='cardExample3'>{card.exampleThree}</p>
-                </div>
+                {createCards(card)}
               </div>
             ))}
           </div>
         </Split>
 
-        <div id='goToFase2btnContainer'>
-          <Link to={this.handleLimitToSixCards} id='goToFase2btn'>
-            Proceed to second fase
-          </Link>
-        </div>
         <div class='btnContainer'>
-          <Link to='/fase1'>
+          <Link to='/'>
             <button class='goToPrevFaseBtn'>Previous</button>
           </Link>
-          <Link to='/fase3'>
+          <Link to={this.handleLimitToSixCards}>
             <button class='goToNextFaseBtn'>Next</button>
           </Link>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
 export default FaseOnePage;
-/* 
-<BlueCard
-  key={blueCard.id}
-  draggable
-  onDrag={(event) => this.onDrag(event, blueCard)}
-/>; */
