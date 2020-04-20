@@ -284,23 +284,20 @@ class FaseOnePage extends Component {
     if (localStorage.getItem('cards')) {
       this.setState({
         selectedBlueCards: this.cards,
-        blueCardList: blueCardList.filter(
-          (card) => card.id !== this.cards.id
-        ),
+        blueCardList: blueCardList.filter((card) => card.id !== this.cards.id),
       });
     } else {
       return null;
     }
-    
   }
-  
+
   newMethod() {
     this.cards = JSON.parse(localStorage.getItem('cards'));
   }
 
   componentWillUnmount() {
     localStorage.setItem('cards', JSON.stringify(this.state.selectedBlueCards));
-  };
+  }
 
   // Drag and drop
   onDrag = (event, card) => {
@@ -316,15 +313,12 @@ class FaseOnePage extends Component {
     const { selectedBlueCards, draggedCard, blueCardList } = this.state;
     this.setState({
       selectedBlueCards: [...selectedBlueCards, draggedCard],
-      blueCardList: blueCardList.filter(
-        (card) => card.id !== draggedCard.id
-      ),
+      blueCardList: blueCardList.filter((card) => card.id !== draggedCard.id),
       draggedCard: {},
     });
     if (selectedBlueCards.length > 6) {
       alert('You can select up to 6 blue cards');
     }
-    
   };
   onDropRightPane = () => {
     const { selectedBlueCards, draggedCard, blueCardList } = this.state;
@@ -337,18 +331,10 @@ class FaseOnePage extends Component {
     });
   };
 
-  handleLimitToSixCards = () => {
-    let amountOfSelectedCards = this.state.selectedBlueCards.length;
-    if (amountOfSelectedCards === 6) {
-      return '/fase2';
-    } else {
-      return '';
-    }
-  };
-  
+
   render() {
-    
     const { blueCardList, selectedBlueCards } = this.state;
+   
     return (
       <>
         <TopNavbar />
@@ -409,11 +395,9 @@ class FaseOnePage extends Component {
           </Link>
           <Link
             to={{
-              pathname: '/fase2',
+              pathname: '/fase2'
+            ,
               component: { FaseTwoPage },
-              state: {
-                array: 'hello i am a passed message',
-              },
             }}
           >
             click

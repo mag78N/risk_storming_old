@@ -23,7 +23,7 @@ div .form-group {
   align-items: center;
 }
 #riskPostItForm textarea {
-  width: 30vw;
+  width: 25vw;
   background-color: rgb(228, 225, 225);
   border: 1px solid black;
   border-radius: 2px;
@@ -44,7 +44,12 @@ div.carousel {
   align-content: center;
   justify-items: center;
 }
-
+.blackLine {
+  margin-right: 1rem;
+  width: 85%;
+  border: none;
+  border-top: 0.05rem dashed black;
+}
 #fase2RightPane div.active.carousel-item {
   display: flex;
   flex-direction: column;

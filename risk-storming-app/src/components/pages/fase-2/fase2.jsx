@@ -18,7 +18,6 @@ class FaseTwoPage extends Component {
     this.setState({
       blueCards: JSON.parse(localStorage.getItem('cards')),
     });
-    
   };
 
   render() {
@@ -42,7 +41,10 @@ class FaseTwoPage extends Component {
         >
           <div id='fase2LeftPane'>
             {blueCards.map((card) => (
-              <div className='miniCardContainer'>{createMiniCards(card)}</div>
+              <>
+                <div className='miniCardContainer'>{createMiniCards(card)}</div>
+                <hr className='blackLine'></hr>
+              </>
             ))}
           </div>
           <div id='fase2RightPane'>
