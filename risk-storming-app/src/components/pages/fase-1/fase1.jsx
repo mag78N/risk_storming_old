@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import createCards from '../../cards/Card/createCards';
-//import Card from '../../cards/Card/Card';
+import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
 import '../../pages/fase-1/fase1.css';
 import { Link } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-import createMiniCards from '../../cards/Card/createMiniCards';
+
 class FaseOnePage extends Component {
   constructor(props) {
     super(props);

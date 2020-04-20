@@ -6,7 +6,7 @@ function createCards(card) {
     <Card
       key={card.id}
       title={card.title}
-      subtitle={card.subtitle}
+      subTitle={card.subTitle}
       description={card.description}
       exampleOne={card.exampleOne}
       exampleTwo={card.exampleTwo}

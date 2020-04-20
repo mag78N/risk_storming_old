@@ -6,7 +6,7 @@ function createMiniCards(card) {
     <MiniCard
       key={card.id}
       title={card.title}
-      subtitle={card.subtitle}
+      subTitle={card.subTitle}
       description={card.description}
     />
   );
