@@ -10,6 +10,10 @@ general css for card template
   border-radius: 5px;
   padding: 0.5rem;
   margin: 0.5rem;
+
+}
+.cardContainer:hover{
+  cursor: pointer;
 }
 .miniCardContainer {
   display: flex;
