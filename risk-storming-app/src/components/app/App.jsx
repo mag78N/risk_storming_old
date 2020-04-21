@@ -8,7 +8,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Pages
-import MainPage from '../pages';
+import MainPage from '../pages/main-page/index';
 import NotFoundPage from '../pages/404';
 import FaseOnePage from '../pages/fase-1/fase1';
 import FaseTwoPage from '../pages/fase-2/fase2';

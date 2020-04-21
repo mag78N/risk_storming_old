@@ -1,6 +1,8 @@
 import React from 'react';
+import './index.css';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import TopNavbar from '../TopNavbar/TopNavbar';
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const MainPage = () => {
   return (
@@ -8,7 +10,7 @@ const MainPage = () => {
       <TopNavbar />
       <div>
         <Link to='/fase1'>
-          <button className='startSessionButton'>Start Session!</button>
+          <Button variant='outline-dark' className='startSessionButton'>Start Session!</Button>
         </Link>
       </div>
     </div>
