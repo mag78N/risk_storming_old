@@ -48,7 +48,7 @@ class FaseTwoPage extends Component {
             ))}
           </div>
           <div id='fase2RightPane'>
-            <BlueCardCarousel />
+          {/*   <BlueCardCarousel /> */}
           </div>
         </Split>
 

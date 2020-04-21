@@ -20,11 +20,6 @@
   border: none;
   border-top: 0.05rem solid black;
 }
-.selectedBlueCard {
-  background-color: inherit;
-  width: 100%;
-  height: 50%;
-}
 
 #fase1RightPane {
   background-color: rgb(223, 230, 214);

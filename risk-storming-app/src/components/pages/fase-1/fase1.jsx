@@ -277,27 +277,30 @@ const FaseOnePage = (props) => {
   const onDrag = (e, card) => {
     e.preventDefault();
     e.stopPropagation();
-    
     setDraggedCard(card);
   };
-
   const onDragOver = (e) => {
     e.preventDefault();
-   
-    
+    e.stopPropagation();
   };
 
-  const onDropLeftPane = () => {
-   
-    setSelectedBlueCards([...selectedBlueCards, draggedCard]);
+  const onDropLeftPane = (e) => {
+    if (!selectedBlueCards.includes(draggedCard)) {
+      setSelectedBlueCards([...selectedBlueCards, draggedCard]);
+    }
     setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
+
+    setDraggedCard({});
   };
   const onDropRightPane = () => {
-    
-    setBlueCardList([draggedCard, ...blueCardList]);
+    if (!blueCardList.includes(draggedCard)) {
+      setBlueCardList([draggedCard, ...blueCardList]);
+    }
     setSelectedBlueCards(
-      selectedBlueCards.filter((card) => card.title !== draggedCard.title)
+      selectedBlueCards.filter((card) => card.id !== draggedCard.id)
     );
+
+    setDraggedCard({});
   };
   useEffect(() => {
     localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
