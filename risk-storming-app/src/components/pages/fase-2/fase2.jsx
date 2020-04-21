@@ -3,8 +3,9 @@ import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './fase2.css';
-import { Link } from 'react-router-dom';
+
 import TopNavbar from '../../TopNavbar/TopNavbar';
+import Footer from '../../Footer/Footer';
 import BlueCardCarousel from './BlueCardCarousel';
 import createMiniCards from '../../cards/Card/createMiniCards';
 class FaseTwoPage extends Component {
@@ -48,18 +49,10 @@ class FaseTwoPage extends Component {
             ))}
           </div>
           <div id='fase2RightPane'>
-          {/*   <BlueCardCarousel /> */}
+            <BlueCardCarousel />
           </div>
         </Split>
-
-        <div className='btnContainer'>
-          <Link to='/fase1'>
-            <button className='goToPrevFaseBtn'>Previous</button>
-          </Link>
-          <Link to='/fase3'>
-            <button className='goToNextFaseBtn'>Next</button>
-          </Link>
-        </div>
+        <Footer prev='/fase1' next='/fase3' />
       </>
     );
   }

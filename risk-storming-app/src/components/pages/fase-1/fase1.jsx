@@ -6,11 +6,10 @@ import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
 import FaseTwoPage from '../../pages/fase-2/fase2';
 import '../../pages/fase-1/fase1.css';
-import { Link } from 'react-router-dom';
+import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { uuid } from 'uuidv4';
 const FaseOnePage = (props) => {
-  //const localDataCards = localStorage.getItem('cards');
   const [blueCardList, setBlueCardList] = useState([
     {
       id: uuid(),
@@ -302,6 +301,7 @@ const FaseOnePage = (props) => {
 
     setDraggedCard({});
   };
+  //storing the selected blue cards in localstorage
   useEffect(() => {
     localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
   }, [selectedBlueCards]);
@@ -358,19 +358,7 @@ const FaseOnePage = (props) => {
         </div>
       </Split>
 
-      <div className='btnContainer'>
-        <Link to='/'>
-          <button className='goToPrevFaseBtn'>Previous</button>
-        </Link>
-        <Link
-          to={{
-            pathname: '/fase2',
-            component: { FaseTwoPage },
-          }}
-        >
-          click
-        </Link>
-      </div>
+      <Footer prev='/' next='/fase2' />
     </>
   );
 };

@@ -1,10 +1,10 @@
-/* import React, {useState} from 'react';
+import React, {useState} from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Carousel from 'react-bootstrap/Carousel';
 import RiskPostIt from './RiskPostIt';
 import createMiniCards from '../../cards/Card/createMiniCards';
-//const BLUECARDLIST = JSON.parse(localStorage.getItem('cards'));
+const BLUECARDLIST = JSON.parse(localStorage.getItem('cards'));
 function BlueCardCarousel() {
   const [cards, setCards] = useState(BLUECARDLIST);
   
@@ -21,4 +21,4 @@ function BlueCardCarousel() {
 };
 
 export default BlueCardCarousel;
- */
+ 
