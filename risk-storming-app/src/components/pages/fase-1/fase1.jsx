@@ -303,7 +303,7 @@ const FaseOnePage = () => {
       setSelectedBlueCards(JSON.parse(data));
     }
   }, []);
-  //saving which 6 cards are selected to local storage
+  //saving  selected 6 cards to local storage
   useEffect(() => {
     localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
   });
@@ -324,7 +324,7 @@ const FaseOnePage = () => {
         cursor='col-resize'
       >
         <div
-          id='fase1LeftPane'
+          className='fase1LeftPane'
           onDrop={(e) => onDropLeftPane(e)}
           onDragOver={(e) => onDragOver(e)}
         >
@@ -343,7 +343,7 @@ const FaseOnePage = () => {
           ))}
         </div>
         <div
-          id='fase1RightPane'
+          className='fase1RightPane'
           onDrop={(e) => onDropRightPane(e)}
           onDragOver={(e) => onDragOver(e)}
         >

@@ -25,7 +25,7 @@ function FaseTwoPage() {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div id='fase2LeftPane'>
+          <div className='fase2LeftPane'>
             {BLUECARDLIST.map((card) => (
               < React.Fragment key={card.id}>
                 <div className='miniCardContainer' >{createMiniCards(card)}</div>
@@ -33,7 +33,7 @@ function FaseTwoPage() {
               </ React.Fragment>
             ))}
           </div>
-          <div id='fase2RightPane'>
+          <div className='fase2RightPane'>
             <BlueCardCarousel />
           </div>
         </Split>
