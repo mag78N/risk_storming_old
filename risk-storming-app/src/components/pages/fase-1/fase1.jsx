@@ -4,12 +4,11 @@ import '../../cards/Card/Card.css';
 import createCards from '../../cards/Card/createCards';
 import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
-import FaseTwoPage from '../../pages/fase-2/fase2';
 import '../../pages/fase-1/fase1.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { uuid } from 'uuidv4';
-const FaseOnePage = (props) => {
+const FaseOnePage = () => {
   const [blueCardList, setBlueCardList] = useState([
     {
       id: uuid(),
@@ -288,8 +287,6 @@ const FaseOnePage = (props) => {
       setSelectedBlueCards([...selectedBlueCards, draggedCard]);
     }
     setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
-
-    setDraggedCard({});
   };
   const onDropRightPane = () => {
     if (!blueCardList.includes(draggedCard)) {
@@ -298,13 +295,18 @@ const FaseOnePage = (props) => {
     setSelectedBlueCards(
       selectedBlueCards.filter((card) => card.id !== draggedCard.id)
     );
-
-    setDraggedCard({});
   };
-  //storing the selected blue cards in localstorage
+  //checking if there is data saved to localstorage
+  useEffect(() => {
+    const data = localStorage.getItem('cards');
+    if (data) {
+      setSelectedBlueCards(JSON.parse(data));
+    }
+  }, []);
+  //saving which 6 cards are selected to local storage
   useEffect(() => {
     localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
-  }, [selectedBlueCards]);
+  });
 
   return (
     <>
