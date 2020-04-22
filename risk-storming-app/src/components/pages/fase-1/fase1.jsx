@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import blueCardsJSON from '../../../assets/en/blueCards.json';
@@ -9,17 +9,30 @@ import '../../pages/fase-1/fase1.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 //import { uuid } from 'uuidv4';
-
+// Hook
+/* function usePrevious(value) {
+  // The ref object is a generic container whose current property is mutable ...
+  // ... and can hold any value, similar to an instance property on a class
+  const ref = useRef();
+  
+  // Store current value in ref
+  useEffect(() => {
+    ref.current = value;
+  }, [value]); // Only re-run if value changes
+  
+  // Return previous value (happens before update in useEffect above)
+  return ref.current;
+} */
 const FaseOnePage = () => {
   const [blueCardList, setBlueCardList] = useState( [] );
   const [selectedBlueCards, setSelectedBlueCards] = useState([]);
   const [draggedCard, setDraggedCard] = useState({});
-
+  //const prevBlueCardList = usePrevious(blueCardList);
   useEffect(() => {
     console.log('use effect 1');
     const result = blueCardsJSON;
     setBlueCardList(result);
-  }, []);
+  }, [blueCardsJSON]);
 
   //checking if there is data saved to localstorage
   useEffect(() => {
