@@ -8,45 +8,32 @@ import Split from 'react-split';
 import '../../pages/fase-1/fase1.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-//import { uuid } from 'uuidv4';
-// Hook
-/* function usePrevious(value) {
-  // The ref object is a generic container whose current property is mutable ...
-  // ... and can hold any value, similar to an instance property on a class
-  const ref = useRef();
-  
-  // Store current value in ref
-  useEffect(() => {
-    ref.current = value;
-  }, [value]); // Only re-run if value changes
-  
-  // Return previous value (happens before update in useEffect above)
-  return ref.current;
-} */
+
 const FaseOnePage = () => {
-  const [blueCardList, setBlueCardList] = useState( [] );
+  const [blueCardList, setBlueCardList] = useState([]);
   const [selectedBlueCards, setSelectedBlueCards] = useState([]);
   const [draggedCard, setDraggedCard] = useState({});
-  //const prevBlueCardList = usePrevious(blueCardList);
+  //runs only once
   useEffect(() => {
     console.log('use effect 1');
     const result = blueCardsJSON;
     setBlueCardList(result);
-  }, [blueCardsJSON]);
+  }, []);
+  //stores selectedBlueCards to local storage only if value of selectedBlueCards changes
+  useEffect(() => {
+    console.log('use effect 2');
+    localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
+  }, [selectedBlueCards]);
 
   //checking if there is data saved to localstorage
   useEffect(() => {
-     console.log('use effect 2');
+    console.log('use effect 3');
     const data = localStorage.getItem('cards');
     if (data) {
       setSelectedBlueCards(JSON.parse(data));
     }
-  }, []);
+  }, [localStorage.getItem('cards')]);
   //saving  selected 6 cards to local storage
-  useEffect(() => {
-     console.log('use effect 3');
-    localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
-  }, []);
 
   // Drag and drop
   const onDrag = (e, card) => {
@@ -59,7 +46,7 @@ const FaseOnePage = () => {
 
   const onDropLeftPane = (e) => {
     if (!selectedBlueCards.includes(draggedCard)) {
-      setSelectedBlueCards([draggedCard,...selectedBlueCards]);
+      setSelectedBlueCards([draggedCard, ...selectedBlueCards]);
     }
     setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
   };
@@ -77,8 +64,8 @@ const FaseOnePage = () => {
       <TopNavbar />
       <Split
         className='splitContainerFase1'
-        sizes={[50, 50]}
-        minSize={[250]}
+        sizes={[75, 25]}
+        minSize={[300, 150]}
         expandToMin={false}
         gutterSize={10}
         gutterAlign='center'
