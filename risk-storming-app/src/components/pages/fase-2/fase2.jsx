@@ -20,7 +20,7 @@ function FaseTwoPage() {
   }, []); */
   return (
     <>
-      <TopNavbar />
+      <TopNavbar faseNum="Fase 2"/>
       <Split
         className='splitContainerFase2'
         sizes={[60, 40]}
