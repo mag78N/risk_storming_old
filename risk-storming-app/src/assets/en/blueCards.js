@@ -1,4 +1,4 @@
-[
+export default [
   {
     "id": "2c33cac2-0e20-40da-a7ea-b0d8869efbc3",
     "title": "Structure",
