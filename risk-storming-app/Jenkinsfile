@@ -1,0 +1,18 @@
+node {
+  stage('build') {
+    checkout scm
+
+    def version = "jenkins-${env.BRANCH_NAME}-${env.BUILD_ID}"
+    docker.build("riskstorming/risk-storming-app:${version}", "./risk-storming-app")
+  }
+  stage('deploy') {
+    def version = "jenkins-${env.BRANCH_NAME}-${env.BUILD_ID}"
+    echo "Publishing version ${version}"
+
+    docker.withRegistry('https://registry.praxio.be', 'registry.praxio.be') {
+      def image = docker.image("riskstorming/risk-storming-app:${version}")
+      image.push()
+      image.push("latest")
+    }
+  }
+}

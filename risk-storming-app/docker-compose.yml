@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  app:
+    image: registry.praxio.be/riskstorming/risk-storming-app:latest
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 45001:80
