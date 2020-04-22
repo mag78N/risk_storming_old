@@ -1,6 +1,6 @@
 [
   {
-    
+    "id": "2c33cac2-0e20-40da-a7ea-b0d8869efbc3",
     "title": "Structure",
     "subTitle": "Quality Aspects",
     "description": "Reliability Aspect: The architecture, technologies used, different programming languages and duplicated code.",
@@ -9,6 +9,7 @@
     "exampleThree": "Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?"
   },
   {
+    "id": "04531e35-9b9a-4baf-a8fb-d9f4180ab08a",
     "title": "Functionality",
     "subTitle": "Quality Aspects",
     "description": "Functionality Aspect: The user needs to be able to do X, so we test it. What could go wrong?",
@@ -17,6 +18,7 @@
     "exampleThree": "Most of our testing centres around \"can we do this?\" or \"can't we do that?\". How far should we go in automating these things?"
   },
   {
+    "id": "59a436e1-ce6e-4c7b-af8c-4f479009c1a4",
     "title": "Data",
     "subTitle": "Quality Aspects",
     "description": "Functionality Aspect: Data moves in, through and from your app. It can get stuck, lost, scrambled and duplicated.",
@@ -25,6 +27,7 @@
     "exampleThree": "Input of data is usually incredibly important and often equally fragile. There's tons of rubbish we can try to input into our systems, but how does it handle it?"
   },
   {
+    "id": "a83d019a-2c8c-4b0f-9f41-efc89fb2d892",
     "title": "Testability",
     "subTitle": "Quality Aspects",
     "description": "Maintainability Aspect: Everything and anything that impacts how easy or hard your testing efforts are.",
@@ -33,6 +36,7 @@
     "exampleThree": "Can you manipulate system time to test functionality that only comes into play at certain dates?"
   },
   {
+    "id": "1e1c0a9b-5bd9-4cb9-bb26-ea8b8a02c5df",
     "title": "Operations",
     "subTitle": "Quality Aspects",
     "description": "Maintainability Aspect: How easy or hard is it to rectify a problem in production after the product is released?",
@@ -41,6 +45,7 @@
     "exampleThree": "Is the code easy to read and easy to find your way through? You might test this by asking for a change in old code by a new team member."
   },
   {
+    "id": "168bf814-0442-4b62-b74b-2b070ff63ef1",
     "title": "Security and Permission",
     "subTitle": "Quality Aspects",
     "description": "Reliability Aspect: Watch Dogs, cameras, user credentials, firearms or alarm systems. What’s keeping the bad guys out of, and away from your app?",
@@ -49,6 +54,7 @@
     "exampleThree": "Hacking is hard to guard your product from. Keep that virus scan, third party and open source code up-to-date!"
   },
   {
+    "id": "4fe00c09-e160-4612-91e9-f8519d3067ac",
     "title": "Adaptability",
     "subTitle": "Quality Aspects",
     "description": "Portability Aspect: Does your product support multiple browsers, operating systems, mobile phones and tablets?",
@@ -57,6 +63,7 @@
     "exampleThree": "Smartphone configurations are always in constant flux. OS versions, screen sizes, shapes, resolutions... Can your app  adapt?"
   },
   {
+    "id": "61a371c3-71b6-4386-8364-bcbb51ca3e37",
     "title": "Stability",
     "subTitle": "Quality Aspects",
     "description": "Reliability Aspect: Is your product going down every 15 minutes? What could be the root cause?",
@@ -65,6 +72,7 @@
     "exampleThree": "Is the performance of your hardware stable? The Iphone 6’s antenna dropped signal when you held your phone a certain way."
   },
   {
+    "id": "43eedfb0-dcd9-4030-b1fd-694f5298b41e",
     "title": "Internationalization",
     "subTitle": "Quality Aspects",
     "description": "Usability Aspect: Currency, time zone, language, right-to-left...  Can you use your application anywhere in the world? ",
@@ -73,6 +81,7 @@
     "exampleThree": "Laws, permissions, network security differ from country to country. If you want your product to be used in China, you'll most likely need to adjust a few things..."
   },
   {
+    "id": "18b63f94-2e19-48de-a642-6077c9f0f4ce",
     "title": "Accessibility",
     "subTitle": "Quality Aspects",
     "description": "Usability Aspect: Testing for the elderly, the impaired, the drunk and the very young.",
@@ -81,6 +90,7 @@
     "exampleThree": " Humans are diverse. The blind person. The arthritic. The novice. How do you know your software is accessible to them?"
   },
   {
+    "id": "66ac3cf4-a9a8-4150-892a-ece4883772bd",
     "title": "Clarity",
     "subTitle": "Quality Aspects",
     "description": "Usability Aspect: Every function, icon,  name or term is ideally immediately clear to the user.",
@@ -89,6 +99,7 @@
     "exampleThree": "Naming things is often really hard. Are all the buttons named consistently? Are the icons clear and unambiguous?"
   },
   {
+    "id": "be1282c7-62ec-4853-8086-f3641b92eae0",
     "title": "Complexity",
     "subTitle": "Quality Aspects",
     "description": "Efficiency Aspect: Complexity is  dependent on the context of the project. What's making your app difficult to build?",
@@ -97,6 +108,7 @@
     "exampleThree": "The software that beats even the most battle-hardened chess masters uses a basic kind of artificial intelligence to predict human chess behaviour. How would you test this?"
   },
   {
+    "id": "e5b926bf-c2ba-4986-ba67-d0a39703b58b",
     "title": "Confidentiality",
     "subTitle": "Quality Aspects",
     "description": "Functionality Aspect: Whether the right users get access to the right things and nothing more. ",
@@ -105,6 +117,7 @@
     "exampleThree": "When working in banking or medicine you cannot just copy production data for testing purposes. US regulations, for instance, uses HIPAA or FERPA."
   },
   {
+    "id": "81ab6387-2a4a-415f-8950-522174acbdd0",
     "title": "Resource Management",
     "subTitle": "Quality Aspects",
     "description": "Efficiency Aspect: How does your app handle resources? ? Can they  be reduced?",
@@ -113,6 +126,7 @@
     "exampleThree": "Can you eliminate unnecessary features?"
   },
   {
+    "id": "437b30a5-fa59-484e-bb02-7585da564876",
     "title": "Installability",
     "subTitle": "Quality Aspects",
     "description": "Portability Aspect: All the factors that matter during the installation process of your app.",
@@ -121,6 +135,7 @@
     "exampleThree": "Does the app have custom installation options which are easy to understand? What consequences do they have?"
   },
   {
+    "id": "9b2bc803-bc4c-45ca-92e6-58e92189d36f",
     "title": "Changeability",
     "subTitle": "Quality Aspects",
     "description": "Maintainability Aspect: Updates, patches, data update, fault finding,... all these and more when your app is in production.",
@@ -129,6 +144,7 @@
     "exampleThree": "Is there an option to trigger updates manually by the user? How do you handle users who don’t want to or won't update? What if others want to roll back?"
   },
   {
+    "id": "b7f4ef51-4ba0-462f-bdc3-04be679407ea",
     "title": "Performance",
     "subTitle": "Quality Aspects",
     "description": "Efficiency Aspect: How well can your app execute the commands it's been given? How about many commands all at once?",
@@ -137,6 +153,7 @@
     "exampleThree": "Databases can become performance bottlenecks, especially when multiple threads and systems use the same database."
   },
   {
+    "id": "370c8400-532c-42cb-93c2-969357a089b8",
     "title": "User Friendliness",
     "subTitle": "Quality Aspects",
     "description": "Usability Aspect: Will users find the product convenient and easy to work with? But more important: will they enjoy it? ",
@@ -145,6 +162,7 @@
     "exampleThree": "Some things are intrusive, yet people love them. For example the-groupon-space-cat-logo. This makes your app unique, identifiable and memorable."
   },
   {
+    "id": "637411e3-e6bf-4792-bed6-2bcc5eab2057",
     "title": "Concurrency",
     "subTitle": "Quality Aspects",
     "description": "Reliability Aspect: Two users request to do the exact same thing at exactly the same time. ",
@@ -153,6 +171,7 @@
     "exampleThree": "Two libraries in your program try to use the same data at the same time. One gets access, one does not. This may lead to trouble."
   },
   {
+    "id": "308658a1-0749-47b8-a884-ad35e1e90204",
     "title": "Safe-guard",
     "subTitle": "Quality Aspects",
     "description": "Security Aspect: What’s keeping the bad guys out?",
