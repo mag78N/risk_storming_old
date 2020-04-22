@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
-import blueCards from '../../../assets/en/blueCards.json';
+import blueCardsJSON from '../../../assets/en/blueCards.json';
 import createCards from '../../cards/Card/createCards';
 import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
@@ -11,13 +11,30 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 //import { uuid } from 'uuidv4';
 
 const FaseOnePage = () => {
-  const BLUECARDLIST = blueCards;
-  const [blueCardList, setBlueCardList] = useState(BLUECARDLIST);
-    
+  const [blueCardList, setBlueCardList] = useState( [] );
   const [selectedBlueCards, setSelectedBlueCards] = useState([]);
   const [draggedCard, setDraggedCard] = useState({});
 
-  const bc = () => setBlueCardList(BLUECARDLIST, blueCardList);
+  useEffect(() => {
+    console.log('use effect 1');
+    const result = blueCardsJSON;
+    setBlueCardList(result);
+  }, []);
+
+  //checking if there is data saved to localstorage
+  useEffect(() => {
+     console.log('use effect 2');
+    const data = localStorage.getItem('cards');
+    if (data) {
+      setSelectedBlueCards(JSON.parse(data));
+    }
+  }, []);
+  //saving  selected 6 cards to local storage
+  useEffect(() => {
+     console.log('use effect 3');
+    localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
+  }, []);
+
   // Drag and drop
   const onDrag = (e, card) => {
     e.preventDefault();
@@ -29,7 +46,7 @@ const FaseOnePage = () => {
 
   const onDropLeftPane = (e) => {
     if (!selectedBlueCards.includes(draggedCard)) {
-      setSelectedBlueCards([...selectedBlueCards, draggedCard]);
+      setSelectedBlueCards([draggedCard,...selectedBlueCards]);
     }
     setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
   };
@@ -41,17 +58,6 @@ const FaseOnePage = () => {
       selectedBlueCards.filter((card) => card.id !== draggedCard.id)
     );
   };
-  //checking if there is data saved to localstorage
-  useEffect(() => {
-    const data = localStorage.getItem('cards');
-    if (data) {
-      setSelectedBlueCards(JSON.parse(data));
-    }
-  }, []);
-  //saving  selected 6 cards to local storage
-  useEffect(() => {
-    localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
-  });
 
   return (
     <>
@@ -74,16 +80,14 @@ const FaseOnePage = () => {
           onDragOver={(e) => onDragOver(e)}
         >
           {selectedBlueCards.map((card) => (
-            
-              <div
-                draggable
-                key={card.id}
-                className='cardContainer'
-                onDrag={(e) => onDrag(e, card)}
-              >
-                {createMiniCards(card)}
-              </div>
-             
+            <div
+              draggable
+              key={card.id}
+              className='cardContainer'
+              onDrag={(e) => onDrag(e, card)}
+            >
+              {createMiniCards(card)}
+            </div>
           ))}
         </div>
         <div

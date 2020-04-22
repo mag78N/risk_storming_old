@@ -10,14 +10,14 @@ import createMiniCards from '../../cards/Card/createMiniCards';
 
 function FaseTwoPage() {
   const BLUECARDLIST = JSON.parse(localStorage.getItem('cards'));
-  const { blueCards, setBlueCards } = useState([]);
+ /*  const { blueCards, setBlueCards } = useState([]);
   //checking if there is data saved to localstorage
   useEffect(() => {
     const data = localStorage.getItem('cards');
     if (data) {
       setBlueCards(JSON.parse(data));
     }
-  }, []);
+  }, []); */
   return (
     <>
       <TopNavbar />
