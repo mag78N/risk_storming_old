@@ -7,10 +7,14 @@ import initialBlueCardData from '../fase-1/initial-data';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import BlueCardCarousel from './BlueCardCarousel';
-//import { observer } from 'mobx-react';
+import { ThemeContext } from '../../../context';
 
 class FaseTwoPage extends React.Component {
-  //state = data;
+  static contextType = ThemeContext;
+  state = this.context;
+  componentDidMount() {
+    console.log(this.state);
+  }
 
   //const BLUECARDLIST = JSON.parse(localStorage.getItem('cards'));
   /*  const { blueCards, setBlueCards } = useState([]);
@@ -39,7 +43,7 @@ class FaseTwoPage extends React.Component {
         >
           <div className='fase2LeftPane'></div>
           <div className='fase2RightPane'>
-            <BlueCardCarousel />
+           {/*  <BlueCardCarousel /> */}
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />

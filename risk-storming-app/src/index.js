@@ -7,7 +7,7 @@ import CardData from '../src/components/pages/fase-1/initial-data';
 import { ThemeContext } from './context';
 
 ReactDOM.render(
-  <ThemeContext.Provider value={{ CardData }}>
+  <ThemeContext.Provider value={{ ...CardData }}>
     <App />
   </ThemeContext.Provider>,
 

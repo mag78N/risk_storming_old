@@ -12,9 +12,9 @@ import {ThemeContext} from '../../../context';
 
 class FaseOnePagednd extends React.Component {
   static contextType = ThemeContext;
-  
+  state = this.context;
   componentDidMount() {
-    console.log(this.context);
+    console.log(this.state);
   }
   onDragEnd = (result) => {
     //todo: reorder our column
@@ -30,8 +30,8 @@ class FaseOnePagednd extends React.Component {
     ) {
       return;
     }
-    const start = this.contextType.cardData.columns[source.droppableId];
-    const finish = this.context.cardData.columns[destination.droppableId];
+    const start = this.state.columns[source.droppableId];
+    const finish = this.state.columns[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -42,9 +42,9 @@ class FaseOnePagednd extends React.Component {
         cardIds: newCardIds,
       };
       const newState = {
-        ...this.context,
+        ...this.state,
         columns: {
-          ...this.context.columns,
+          ...this.state.columns,
           [newColumn.id]: newColumn,
         },
       };
@@ -65,9 +65,9 @@ class FaseOnePagednd extends React.Component {
       cardIds: finishCardIds,
     };
     const newState = {
-      ...this.context,
+      ...this.state,
       columns: {
-        ...this.context.columns,
+        ...this.state.columns,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
@@ -76,7 +76,7 @@ class FaseOnePagednd extends React.Component {
   };
 
   render() {
-    console.log(this.context);
+     console.log(this.state);
     return (
       <>
         <TopNavbar faseNum='Fase 1' />
@@ -97,10 +97,10 @@ class FaseOnePagednd extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {this.context.cardData.columnOrder.map((columnId) => {
-              const column = this.context.columns[columnId];
+            {this.state.columnOrder.map((columnId) => {
+              const column = this.state.columns[columnId];
               const cards = column.cardIds.map(
-                (cardId) => this.context.cards[cardId]
+                (cardId) => this.state.cards[cardId]
               );
 
               return (
