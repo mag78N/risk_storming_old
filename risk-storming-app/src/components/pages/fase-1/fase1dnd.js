@@ -8,12 +8,14 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import initialBlueCardData from './initial-data';
 import Column from './Column';
 import React from 'react';
-
+import {ThemeContext} from '../../../context';
 
 class FaseOnePagednd extends React.Component {
-  state = initialBlueCardData;
-  //in tutorial no style changes in callbacks but solely relying on snapshots
-
+  static contextType = ThemeContext;
+  
+  componentDidMount() {
+    console.log(this.context);
+  }
   onDragEnd = (result) => {
     //todo: reorder our column
 
@@ -22,15 +24,14 @@ class FaseOnePagednd extends React.Component {
     if (!destination) {
       return;
     }
-
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
     ) {
       return;
     }
-    const start = this.state.columns[source.droppableId];
-    const finish = this.state.columns[destination.droppableId];
+    const start = this.contextType.cardData.columns[source.droppableId];
+    const finish = this.context.cardData.columns[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -41,9 +42,9 @@ class FaseOnePagednd extends React.Component {
         cardIds: newCardIds,
       };
       const newState = {
-        ...this.state,
+        ...this.context,
         columns: {
-          ...this.state.columns,
+          ...this.context.columns,
           [newColumn.id]: newColumn,
         },
       };
@@ -64,9 +65,9 @@ class FaseOnePagednd extends React.Component {
       cardIds: finishCardIds,
     };
     const newState = {
-      ...this.state,
+      ...this.context,
       columns: {
-        ...this.state.columns,
+        ...this.context.columns,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
@@ -75,6 +76,7 @@ class FaseOnePagednd extends React.Component {
   };
 
   render() {
+    console.log(this.context);
     return (
       <>
         <TopNavbar faseNum='Fase 1' />
@@ -83,38 +85,34 @@ class FaseOnePagednd extends React.Component {
           onDragUpdate={this.onDragUpdate}
           onDragEnd={this.onDragEnd}
         >
-         
-            <Split
-              className='splitContainerFase1'
-              sizes={[75, 25]}
-              minSize={[300,150]}
-              expandToMin={false}
-              gutterSize={10}
-              gutterAlign='center'
-              snapOffset={30}
-              dragInterval={1}
-              direction='horizontal'
-              cursor='col-resize'
-            >
-              {this.state.columnOrder.map((columnId) => {
-                const column = this.state.columns[columnId];
-                const cards = column.cardIds.map(
-                  (cardId) => this.state.cards[cardId]
-                );
+          <Split
+            className='splitContainerFase1'
+            sizes={[75, 25]}
+            minSize={[300, 150]}
+            expandToMin={false}
+            gutterSize={10}
+            gutterAlign='center'
+            snapOffset={30}
+            dragInterval={1}
+            direction='horizontal'
+            cursor='col-resize'
+          >
+            {this.context.cardData.columnOrder.map((columnId) => {
+              const column = this.context.columns[columnId];
+              const cards = column.cardIds.map(
+                (cardId) => this.context.cards[cardId]
+              );
 
-                return (
-                  
-                    <Column
-                      key={column.id}
-                      column={column}
-                      cards={cards}
-                      class={column.class}
-                    />
-                  
-                );
-              })}
-            </Split>
-         
+              return (
+                <Column
+                  key={column.id}
+                  column={column}
+                  cards={cards}
+                  class={column.class}
+                />
+              );
+            })}
+          </Split>
         </DragDropContext>
         <Footer prev='/' next='/fase2' />
       </>
