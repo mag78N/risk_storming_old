@@ -16,15 +16,6 @@ class FaseTwoPage extends React.Component {
     console.log(this.state);
   }
 
-  //const BLUECARDLIST = JSON.parse(localStorage.getItem('cards'));
-  /*  const { blueCards, setBlueCards } = useState([]);
-  //checking if there is data saved to localstorage
-  useEffect(() => {
-    const data = localStorage.getItem('cards');
-    if (data) {
-      setBlueCards(JSON.parse(data));
-    }
-  }, []); */
   render() {
     return (
       <>

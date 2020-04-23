@@ -5,7 +5,6 @@ import Split from 'react-split';
 import '../../pages/fase-1/fase1.css';
 import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
-import initialBlueCardData from './initial-data';
 import Column from './Column';
 import React from 'react';
 import {ThemeContext} from '../../../context';
@@ -30,8 +29,8 @@ class FaseOnePagednd extends React.Component {
     ) {
       return;
     }
-    const start = this.state.columns[source.droppableId];
-    const finish = this.state.columns[destination.droppableId];
+    const start = this.state.columnsFase1[source.droppableId];
+    const finish = this.state.columnsFase1[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -43,8 +42,8 @@ class FaseOnePagednd extends React.Component {
       };
       const newState = {
         ...this.state,
-        columns: {
-          ...this.state.columns,
+        columnsFase1: {
+          ...this.state.columnsFase1,
           [newColumn.id]: newColumn,
         },
       };
@@ -66,8 +65,8 @@ class FaseOnePagednd extends React.Component {
     };
     const newState = {
       ...this.state,
-      columns: {
-        ...this.state.columns,
+      columnsFase1: {
+        ...this.state.columnsFase1,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
@@ -98,7 +97,7 @@ class FaseOnePagednd extends React.Component {
             cursor='col-resize'
           >
             {this.state.columnOrder.map((columnId) => {
-              const column = this.state.columns[columnId];
+              const column = this.state.columnsFase1[columnId];
               const cards = column.cardIds.map(
                 (cardId) => this.state.cards[cardId]
               );
