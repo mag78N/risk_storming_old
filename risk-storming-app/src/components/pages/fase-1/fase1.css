@@ -1,26 +1,30 @@
 
 .fase1LeftPane {
-  background-color: rgb(201, 206, 211);
   display: flex;
   flex-direction: column;
   overflow: auto;
   height: 100vh;
-  border-right: 1px dashed black;
+  border-right: 1px solid #e5e5e5;
 }
+
 .blackLine {
   margin-right: 1rem;
   width: 85%;
   border: none;
   border-top: 0.05rem solid black;
 }
+.gutter-horizontal {
+  cursor: grab;
+  background-color: #e5e5e5;
+}
 
 .fase1RightPane {
-  background-color: rgb(201, 206, 211);
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
   overflow: auto;
-  border-left: 1px dashed black;
+  border-left: 1px solid #e5e5e5;
+  padding: 0.5rem 1rem;
 }
 .splitContainerFase1 {
   display: flex;

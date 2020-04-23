@@ -1,7 +1,7 @@
 .cardContainer {
   background-color: rgb(103, 8, 122);
+  border: 2px solid rgb(103, 8, 122);
 }
-.cardTitle,.cardSubtitle {
+.cardHeader {
   border-color: rgb(103, 8, 122);
-  color: rgb(103, 8, 122);
 }
