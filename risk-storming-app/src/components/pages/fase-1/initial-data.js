@@ -262,7 +262,12 @@ const initialBlueCardData = {
   columns: {
     'column-1': {
       id: 'column-1',
-      title: 'Selected',
+      title: 'selected blue cards',
+      cardIds: [],
+    },
+    'column-2': {
+      id: 'column-2',
+      title: 'blue cards',
       cardIds: [
         'blue-1',
         'blue-2',
@@ -287,6 +292,6 @@ const initialBlueCardData = {
       ],
     },
   },
-  columnOrder: ['column-1'],
+  columnOrder: ['column-1', 'column-2'],
 };
 export default initialBlueCardData;
