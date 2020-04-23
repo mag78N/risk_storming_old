@@ -264,6 +264,7 @@ const initialBlueCardData = {
       id: 'column-1',
       title: 'selected blue cards',
       cardIds: [],
+      class: 'fase1LeftPane',
     },
     'column-2': {
       id: 'column-2',
@@ -290,6 +291,7 @@ const initialBlueCardData = {
         'blue-19',
         'blue-20',
       ],
+      class: 'fase1RightPane',
     },
   },
   columnOrder: ['column-1', 'column-2'],

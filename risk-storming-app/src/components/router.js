@@ -2,7 +2,6 @@ import React from 'react';
 
 //Pages
 import MainPage from './pages/main-page/index';
-import NotFoundPage from './pages/404';
 //import FaseOnePage from '../pages/fase-1/fase1';
 import FaseOnePagednd from './pages/fase-1/fase1dnd';
 import FaseTwoPage from './pages/fase-2/fase2';
