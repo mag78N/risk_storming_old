@@ -1,8 +1,8 @@
 import React from 'react';
 import '../TopNavbar/topNavbar.css';
 
-const TopNavbar = () => {
-  return <div className='topNavbar'>RiskStorming Online</div>;
+const TopNavbar = (props) => {
+  return <div className='topNavbar'>{props.faseNum}</div>;
 };
 
 export default TopNavbar;
