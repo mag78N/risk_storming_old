@@ -5,12 +5,9 @@ general css for card template
   display: flex;
   flex-direction: column;
   align-content: center;
-  border: 1px solid black;
-  max-width: 10rem;
-  border-radius: 5px;
-  padding: 0.5rem;
+  max-width: 12rem;
+  border-radius: 10px;
   margin: 0.5rem;
-
 }
 .cardContainer:hover{
   cursor: pointer;
@@ -19,37 +16,42 @@ general css for card template
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 15vw;
-  border-radius: 5px;
-  padding: 0.3rem;
+  width: 12rem;
+  border-radius: 10px;
   margin: 0.5rem;
 }
-.cardTitle,
-.cardSubtitle {
+.cardHeader {
   text-transform: uppercase;
-  border: dashed;
   background-color: #fff;
-  padding: 0.1rem;
+  padding: 0.5rem;
+  border-radius: 9px 9px 0 0;
 }
 .cardTitle {
   max-width: inherit;
   font-size: 2.5vmin;
-  border-bottom-style: none;
 }
-
 .cardSubtitle {
   font-size: 2vmin;
-  border-top-style: none;
+}
+.cardBody {
+  padding: 0 0.5rem 0.5rem;
+  border-radius: 0 0 9px 9px;
 }
 .cardDescription {
-  font-size: 1.5vmin;
+  font-size: 1.75vmin;
   color: #fff;
-  border: 2px dotted white;
-  border-top-style: none;
-  padding: 0.4vw;
+  border-bottom: 2px solid white;
+  padding: 0 0.5rem 0.5rem;
+  margin: 0.5rem -0.5rem;
   word-spacing: 0.05rem;
   line-height: 0.85rem;
 }
+.fase1LeftPane .cardDescription,
+.miniCardContainer .cardDescription {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+
 .exampleContainer {
   display: flex;
   font-size: 1.5vmin;
@@ -61,7 +63,7 @@ general css for card template
   align-self: center;
 }
 .cardExample1 {
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
 }
 .cardExample1,
 .cardExample2,
@@ -75,5 +77,5 @@ general css for card template
   width: 95%;
   border: none;
   border-top: 2px dotted white;
-  margin: 0.08rem;
+  margin: 0.5rem 0.08rem;
 }

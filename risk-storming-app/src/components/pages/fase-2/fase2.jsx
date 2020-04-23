@@ -26,7 +26,7 @@ function FaseTwoPage() {
         sizes={[60, 40]}
         minSize={[250]}
         expandToMin={false}
-        gutterSize={5}
+        gutterSize={10}
         gutterAlign='center'
         snapOffset={30}
         dragInterval={1}
