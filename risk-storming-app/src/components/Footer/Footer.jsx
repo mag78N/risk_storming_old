@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { A } from 'hookrouter';
 import './Footer.css';
 const Footer = (props) => {
   return (
     <div className='btnContainer'>
-      <Link to={props.prev}>
+      <A href={props.prev}>
         <button className='goToPrevFaseBtn'>Previous</button>
-      </Link>
-      <Link to={props.next}>
+      </A>
+      <A href={props.next}>
         <button className='goToNextFaseBtn'>Next</button>
-      </Link>
+      </A>
     </div>
   );
-}
+};
 
 export default Footer;

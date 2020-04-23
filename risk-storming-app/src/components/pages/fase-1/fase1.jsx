@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
-import blueCardsJSON from '../../../assets/en/blueCards.json';
+import blueCardsJSON from '../../../assets/en/blueCards';
 import createCards from '../../cards/Card/createCards';
 import createMiniCards from '../../cards/Card/createMiniCards';
 import Split from 'react-split';
@@ -28,11 +28,11 @@ const FaseOnePage = () => {
   //checking if there is data saved to localstorage
   useEffect(() => {
     console.log('use effect 3');
-    const data = localStorage.getItem('cards');
-    if (data) {
+    let data = localStorage.getItem('cards');
+    if (data !== '') {
       setSelectedBlueCards(JSON.parse(data));
     }
-  }, [localStorage.getItem('cards')]);
+  }, []);
   //saving  selected 6 cards to local storage
 
   // Drag and drop
