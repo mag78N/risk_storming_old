@@ -29,12 +29,10 @@ class Card extends React.Component {
                 <div className='exampleNumber'>1</div>
                 <div className='cardExample1'>{this.props.exampleOne}</div>
               </div>
-              <hr className='dottedHr'></hr>
               <div className='exampleContainer'>
                 <div className='exampleNumber'>2</div>
                 <div className='cardExample2'>{this.props.exampleTwo}</div>
               </div>
-              <hr className='dottedHr'></hr>
               <div className='exampleContainer'>
                 <div className='exampleNumber'>3</div>
                 <div className='cardExample3'>{this.props.exampleThree}</div>
