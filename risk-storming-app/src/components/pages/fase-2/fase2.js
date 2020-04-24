@@ -16,6 +16,7 @@ class FaseTwoPage extends React.Component {
   }
 
   render() {
+    const { data } = this.context;
     return (
       <>
         <TopNavbar faseNum='Fase 2' />

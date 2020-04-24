@@ -7,21 +7,25 @@ import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import React from 'react';
-import  CardsContext  from '../../../context';
-import CardData from '../../cards/card-data';
+import CardsContext from '../../../context';
 
 class FaseOnePagednd extends React.Component {
   static contextType = CardsContext;
   //state = {
-    //data: CardData,
-    /* setData: this.setData, */
-    /* this.context.data; */
+  //data: CardData,
+  /* setData: this.setData, */
+  /* this.context.data; */
   //};
-  
+
   componentDidMount() {
-    const { data} = this.context;
+    const { data } = this.context;
     //const data = this.context;
     console.log(data);
+  }
+  componentDidUpdate() {
+    const { data } = this.context;
+    let cards = JSON.stringify(data.columnsFase1['column-1'].cardIds);
+    localStorage.setItem('selectedBlueCards', cards);
   }
   onDragEnd = (result) => {
     const { data, setData } = this.context;
@@ -55,9 +59,7 @@ class FaseOnePagednd extends React.Component {
         },
       };
       setData(newState);
-      //context.setData(newState);
-      //this.state.setData(newState);
-      //this.context.setData(newState);
+
       return;
     }
     //moving from one list to another
@@ -82,10 +84,9 @@ class FaseOnePagednd extends React.Component {
       },
     };
     setData(newState);
-    //context.setData(newState);
-    //this.state.setData(newState);
-    //this.context.setData(newState);
     console.log(newState);
+    /* let cards = data.columnsFase1['columnId'].cardIds;
+    localStorage.setItem('cards', cards); */
   };
 
   render() {

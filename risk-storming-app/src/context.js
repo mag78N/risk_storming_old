@@ -5,21 +5,12 @@ export class CardsContextProvider extends React.Component {
   state = {
     data: CardData,
   };
-
+//this function updates the state in indirect way, this precise syntax with prevstate and data in curly braces
   setData = (data) => {
     this.setState(prevState => ({ data }));
   };
-
-  /* state = {
-    data: CardData,
-    update: this.update,
-  };
-  update = (value) => {
-    this.setState({
-      state: value,
-    });
-  }; */
   render() {
+    //binding everything 
     const { data } = this.state;
     const { children } = this.props;
     const { setData } = this;
