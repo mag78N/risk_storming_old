@@ -1,15 +1,16 @@
-import '../../cards/blue-card/BlueCard.css';
-import '../../cards/Card/Card.css';
-import TopNavbar from '../../TopNavbar/TopNavbar';
-import Split from 'react-split';
-import '../../pages/fase-1/fase1.css';
-import Footer from '../../Footer/Footer';
-import { DragDropContext } from 'react-beautiful-dnd';
-import Column from './Column';
 import React from 'react';
-import {ThemeContext} from '../../../context';
-
-class FaseOnePagednd extends React.Component {
+import Split from 'react-split';
+import '../../cards/Card/Card.css';
+import '../../cards/green-card/GreenCard.css';
+import '../../cards/orange-card/OrangeCard.css';
+import '../../cards/pink-card/PinkCard.css';
+import '../../cards/purple-card/PurpleCard.css';
+import Footer from '../../Footer/Footer';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { DragDropContext } from 'react-beautiful-dnd';
+import { ThemeContext } from '../../../context';
+import Column from './../fase-1/Column';
+class FaseThreePage extends React.Component {
   static contextType = ThemeContext;
   state = this.context;
   componentDidMount() {
@@ -29,8 +30,8 @@ class FaseOnePagednd extends React.Component {
     ) {
       return;
     }
-    const start = this.state.columnsFase1[source.droppableId];
-    const finish = this.state.columnsFase1[destination.droppableId];
+    const start = this.state.columnsFase3[source.droppableId];
+    const finish = this.state.columnsFase3[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -42,8 +43,8 @@ class FaseOnePagednd extends React.Component {
       };
       const newState = {
         ...this.state,
-        columnsFase1: {
-          ...this.state.columnsFase1,
+        columnsFase3: {
+          ...this.state.columnsFase3,
           [newColumn.id]: newColumn,
         },
       };
@@ -65,8 +66,8 @@ class FaseOnePagednd extends React.Component {
     };
     const newState = {
       ...this.state,
-      columnsFase1: {
-        ...this.state.columnsFase1,
+      columnsFase3: {
+        ...this.state.columnsFase3,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
@@ -75,10 +76,9 @@ class FaseOnePagednd extends React.Component {
   };
 
   render() {
-     console.log(this.state);
     return (
       <>
-        <TopNavbar faseNum='Fase 1' />
+        <TopNavbar faseNum='Fase 3' />
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
@@ -96,10 +96,10 @@ class FaseOnePagednd extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {this.state.columnOrderFase1.map((columnId) => {
-              const column = this.state.columnsFase1[columnId];
+            {this.state.columnOrderFase3.map((columnId) => {
+              const column = this.state.columnsFase3[columnId];
               const cards = column.cardIds.map(
-                (cardId) => this.state.bluecards[cardId]
+                (cardId) => this.state.cards[cardId]
               );
 
               return (
@@ -119,4 +119,4 @@ class FaseOnePagednd extends React.Component {
   }
 }
 
-export default FaseOnePagednd;
+export default FaseThreePage;
