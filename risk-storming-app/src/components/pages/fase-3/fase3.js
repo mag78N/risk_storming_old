@@ -113,7 +113,7 @@ class FaseThreePage extends React.Component {
             })}
           </Split>
         </DragDropContext>
-        <Footer prev='/' next='/fase2' />
+        <Footer prev='/fase2' next='/' />
       </>
     );
   }
