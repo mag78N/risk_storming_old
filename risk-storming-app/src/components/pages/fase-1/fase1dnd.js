@@ -17,6 +17,7 @@ class FaseOnePagednd extends React.Component {
     const { data } = this.context;
     //const data = this.context;
     console.log(data);
+    console.log(typeof data['bluecards'])
   }
   componentDidUpdate() {
     const { data } = this.context;
