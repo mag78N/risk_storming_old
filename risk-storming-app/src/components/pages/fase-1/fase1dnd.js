@@ -11,11 +11,7 @@ import CardsContext from '../../../context';
 
 class FaseOnePagednd extends React.Component {
   static contextType = CardsContext;
-  //state = {
-  //data: CardData,
-  /* setData: this.setData, */
-  /* this.context.data; */
-  //};
+ 
 
   componentDidMount() {
     const { data } = this.context;

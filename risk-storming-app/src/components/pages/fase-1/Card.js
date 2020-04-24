@@ -27,7 +27,7 @@ class Card extends React.Component {
               <div className='cardDescription'>{this.props.description}</div>
               <div
                 className={`exampleContainer ${
-                  this.props.column === 'column-1' ? 'displayNone' : null
+                  this.props.column === 'column-1' ? 'displayNone' : ''
                 }`}
               >
                 <div className='exampleNumber'>1</div>
@@ -35,12 +35,12 @@ class Card extends React.Component {
               </div>
               <hr
                 className={`dottedHr ${
-                  this.props.column === 'column-1' ? 'displayNone' : null
+                  this.props.column === 'column-1' ? 'displayNone' : ''
                 }`}
               ></hr>
               <div
                 className={`exampleContainer ${
-                  this.props.column === 'column-1' ? 'displayNone' : null
+                  this.props.column === 'column-1' ? 'displayNone' : ''
                 }`}
               >
                 <div className='exampleNumber'>2</div>
@@ -48,12 +48,12 @@ class Card extends React.Component {
               </div>
               <hr
                 className={`dottedHr  ${
-                  this.props.column === 'column-1' ? 'displayNone' : null
+                  this.props.column === 'column-1' ? 'displayNone' : ''
                 }`}
               ></hr>
               <div
                 className={`exampleContainer ${
-                  this.props.column === 'column-1' ? 'displayNone' : null
+                  this.props.column === 'column-1' ? 'displayNone' : ''
                 }`}
               >
                 <div className='exampleNumber'>3</div>

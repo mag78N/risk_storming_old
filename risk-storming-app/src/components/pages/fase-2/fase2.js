@@ -6,13 +6,16 @@ import './fase2.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import BlueCardCarousel from './BlueCardCarousel';
-import  CardsContext  from '../../../context';
-
+import CardsContext from '../../../context';
+const blueCards = JSON.parse(localStorage.getItem('selectedBlueCards'));
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
   state = this.context.data;
+
   componentDidMount() {
-    console.log(this.state);
+    const { data } = this.context;
+    console.log(data);
+    console.log(blueCards);
   }
 
   render() {
@@ -32,10 +35,8 @@ class FaseTwoPage extends React.Component {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div className='fase2LeftPane'></div>
-          <div className='fase2RightPane'>
-           {/*  <BlueCardCarousel /> */}
-          </div>
+          <div className='fase2LeftPane'>{blueCards}</div>
+          <div className='fase2RightPane'>{/*  <BlueCardCarousel /> */}</div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
       </>
