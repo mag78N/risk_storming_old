@@ -6,13 +6,13 @@ import { A } from 'hookrouter';
 import bg from '../../../assets/images/bg.jpg';
 
 const MainPage = () => {
-  var mainPageStyle = {
+  var bgImgStyle = {
     backgroundImage: `url(${bg})`
   };
   return (
     <div className='mainPageContainer'>
-      <TopNavbar faseNum='Risk Storming Online' />
-      <div className='mainPageJumbotron' style={ mainPageStyle }>
+      <TopNavbar faseNum='' />
+      <div className='mainPageJumbotron' style={ bgImgStyle }>
         <A href='/fase1'>
           <Button variant='outline-dark' className='startSessionButton'>Start Session!</Button>
        </A>

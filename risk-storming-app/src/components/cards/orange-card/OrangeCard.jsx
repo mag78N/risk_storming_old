@@ -14,12 +14,10 @@ function OrangeCard() {
         <div className='exampleNumber'>1</div>
         <div className='cardExample1'>{orangecard.exampleOne}</div>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>2</div>
         <div className='cardExample2'>{orangecard.exampleTwo}</div>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>3</div>
         <div className='cardExample3'>{orangecard.exampleThree}</div>

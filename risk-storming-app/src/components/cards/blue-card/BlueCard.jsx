@@ -14,12 +14,10 @@ function BlueCard() {
         <div className='exampleNumber'>1</div>
         <p className='cardExample1'>{bluecard.exampleOne}</p>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>2</div>
         <p className='cardExample2'>{bluecard.exampleTwo}</p>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>3</div>
         <p className='cardExample3'>{bluecard.exampleThree}</p>

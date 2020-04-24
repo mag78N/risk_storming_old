@@ -15,5 +15,16 @@
   font-size: 1rem;
   text-transform: uppercase;
   padding: 0.25rem 1.5rem;
-  width: 8rem;
+}
+.goToPrevFaseBtn img,
+.goToNextFaseBtn img {
+  height: 25px;
+  width: 30px;
+  display: inline-block;
+}
+.goToPrevFaseBtn img {
+  padding-right: 0.5rem;
+}
+.goToNextFaseBtn img {
+  padding-left: 0.5rem;
 }

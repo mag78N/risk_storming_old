@@ -14,12 +14,10 @@ function PinkCard() {
         <div className='exampleNumber'>1</div>
         <div className='cardExample1'>{pinkcard.exampleOne}</div>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>2</div>
         <div className='cardExample2'>{pinkcard.exampleTwo}</div>
       </div>
-      <hr className='dottedHr'></hr>
       <div className='exampleContainer'>
         <div className='exampleNumber'>3</div>
         <div className='cardExample3'>{pinkcard.exampleThree}</div>
