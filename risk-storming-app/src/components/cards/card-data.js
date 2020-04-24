@@ -2,6 +2,9 @@
 import { bluecards } from '../../assets/en/blueCards';
 import { colorcards } from '../../assets/en/colorcards';
 const CardData = {
+  /* setValue: (newValue) => {
+        this.setState({state : newValue})
+      }, */
   bluecards: bluecards,
   cards: colorcards, /* pinkcards, orangecards, purplecards, */
   /* orangecards: orangecards,
