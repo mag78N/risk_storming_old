@@ -64,7 +64,7 @@ const FaseOnePage = () => {
       <TopNavbar />
       <Split
         className='splitContainerFase1'
-        sizes={[75, 25]}
+        sizes={[50, 50]}
         minSize={[300, 150]}
         expandToMin={false}
         gutterSize={10}
