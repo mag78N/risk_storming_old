@@ -1,8 +1,17 @@
-.cardContainer {
+/* .cardContainer {
   background-color: rgb(243, 115, 11);
   border: 2px solid rgb(243, 115, 11);
 }
 
 .cardHeader {
   border-color: rgb(243, 115, 11);
+}
+ */
+
+.orange {
+  background-color: rgb(243, 115, 11);
+  border: 2px solid rgb(243, 115, 11);
+}
+.orangeHeader {
+  color: rgb(243, 115, 11);
 }

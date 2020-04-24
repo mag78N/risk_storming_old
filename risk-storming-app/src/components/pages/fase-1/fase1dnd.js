@@ -96,10 +96,10 @@ class FaseOnePagednd extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {this.state.columnOrder.map((columnId) => {
+            {this.state.columnOrderFase1.map((columnId) => {
               const column = this.state.columnsFase1[columnId];
               const cards = column.cardIds.map(
-                (cardId) => this.state.cards[cardId]
+                (cardId) => this.state.bluecards[cardId]
               );
 
               return (

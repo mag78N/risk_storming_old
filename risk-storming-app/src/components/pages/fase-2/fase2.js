@@ -3,7 +3,7 @@ import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './fase2.css';
-import initialBlueCardData from '../fase-1/initial-data';
+import initialBlueCardData from '../../cards/card-data';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import BlueCardCarousel from './BlueCardCarousel';

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from '../src/components/app/App';
 import * as serviceWorker from './serviceWorker';
-import CardData from '../src/components/pages/fase-1/initial-data';
+import CardData from './components/cards/card-data';
 import { ThemeContext } from './context';
 
 ReactDOM.render(

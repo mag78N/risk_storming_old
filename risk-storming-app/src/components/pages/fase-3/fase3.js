@@ -1,6 +1,10 @@
 import React from 'react';
 import Split from 'react-split';
 import '../../cards/Card/Card.css';
+import '../../cards/green-card/GreenCard.css';
+import '../../cards/orange-card/OrangeCard.css';
+import '../../cards/pink-card/PinkCard.css';
+import '../../cards/purple-card/PurpleCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -92,7 +96,7 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {this.state.columnOrder.map((columnId) => {
+            {this.state.columnOrderFase3.map((columnId) => {
               const column = this.state.columnsFase3[columnId];
               const cards = column.cardIds.map(
                 (cardId) => this.state.cards[cardId]
