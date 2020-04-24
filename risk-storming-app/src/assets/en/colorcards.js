@@ -565,7 +565,7 @@ export const colorcards = {
   'pink-1': {
     id: 'pink-1',
     color: 'pink',
-    title: 'Familiarity:',
+    title: 'Familiarity',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Given your experience, which problems, that you are familiar with,  would you expect in the current product? ',
@@ -579,7 +579,7 @@ export const colorcards = {
   'pink-2': {
     id: 'pink-2',
     color: 'pink',
-    title: 'Explainability:',
+    title: 'Explainability',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: A product that is hard to explain might be too hard for a user to understand.',
@@ -593,7 +593,7 @@ export const colorcards = {
   'pink-3': {
     id: 'pink-3',
     color: 'pink',
-    title: 'World:',
+    title: 'World',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: We all have expectations of the world around us. Our app should be no exception.',
@@ -607,7 +607,7 @@ export const colorcards = {
   'pink-4': {
     id: 'pink-4',
     color: 'pink',
-    title: 'History:',
+    title: 'History',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: There is much to learn from earlier versions. What do they tell you about risk and failure?',
@@ -621,7 +621,7 @@ export const colorcards = {
   'pink-5': {
     id: 'pink-5',
     color: 'pink',
-    title: 'Image:',
+    title: 'Image',
     subTitle: 'Heuristics',
     description:
       "Consistency Heuristic: Is your product true to the image and reputation you or the app's company wishes to project? ",
@@ -635,7 +635,7 @@ export const colorcards = {
   'pink-6': {
     id: 'pink-6',
     color: 'pink',
-    title: 'Comparable Products:',
+    title: 'Comparable Products',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Are your competitors doing things different, maybe even in a better way?',
@@ -649,7 +649,7 @@ export const colorcards = {
   'pink-7': {
     id: 'pink-7',
     color: 'pink',
-    title: 'Claims:',
+    title: 'Claims',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Can your product live up to the hype? ',
@@ -663,7 +663,7 @@ export const colorcards = {
   'pink-8': {
     id: 'pink-8',
     color: 'pink',
-    title: 'User Desires:',
+    title: 'User Desires',
     subTitle: 'Heuristics',
     description:
       "Consistency Heuristic: What are the user's desires and does the product live up to them?",
@@ -677,7 +677,7 @@ export const colorcards = {
   'pink-9': {
     id: 'pink-9',
     color: 'pink',
-    title: 'Product:',
+    title: 'Product',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Is the product consistent with itself, or can we even spot differences within?',
@@ -691,7 +691,7 @@ export const colorcards = {
   'pink-10': {
     id: 'pink-10',
     color: 'pink',
-    title: 'Purpose:',
+    title: 'Purpose',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Does the product solve a problem? Will it fulfil its ultimate mission? ',
@@ -705,7 +705,7 @@ export const colorcards = {
   'pink-11': {
     id: 'pink-11',
     color: 'pink',
-    title: 'Standards and Regulations:',
+    title: 'Standards and Regulations',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Your app will have to adhere to standards, norms, regulations or the law.',
@@ -719,7 +719,7 @@ export const colorcards = {
   'pink-12': {
     id: 'pink-12',
     color: 'pink',
-    title: 'Always and Never:',
+    title: 'Always and Never',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Look for the keywords "always" and "never" in your specifications. Try to break those rules.',
@@ -731,7 +731,7 @@ export const colorcards = {
   'pink-13': {
     id: 'pink-13',
     color: 'pink',
-    title: 'Change the Model:',
+    title: 'Change the Model',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Create a model of your app, pair with others to gain creative input. . ',
@@ -744,7 +744,7 @@ export const colorcards = {
   'pink-14': {
     id: 'pink-14',
     color: 'pink',
-    title: 'Reverse:',
+    title: 'Reverse',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: What can you learn from a workflow by executing it in opposite order or a different order? ',
@@ -758,7 +758,7 @@ export const colorcards = {
   'pink-15': {
     id: 'pink-15',
     color: 'pink',
-    title: 'Starve:',
+    title: 'Starve',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: How does your app handle zeros and negatives?',
@@ -772,7 +772,7 @@ export const colorcards = {
   'pink-16': {
     id: 'pink-16',
     color: 'pink',
-    title: 'Zero, One, Many:',
+    title: 'Zero, One, Many',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Blank fields, too many records or exactly one input can lead to horrible errors.',
@@ -786,7 +786,7 @@ export const colorcards = {
   'pink-17': {
     id: 'pink-17',
     color: 'pink',
-    title: 'Violate Data Format Rules:',
+    title: 'Violate Data Format Rules',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Strings for integers, weird characters where a date is expected, SQL injections,... ',
@@ -800,7 +800,7 @@ export const colorcards = {
   'pink-18': {
     id: 'pink-18',
     color: 'pink',
-    title: 'Too Many:',
+    title: 'Too Many',
     subTitle: 'Heuristics',
     description:
       "Exploratory Heuristic: Everything has a theoretical breaking point, so let's find out where exactly that happens. ",
@@ -827,7 +827,7 @@ export const colorcards = {
   'pink-20': {
     id: 'pink-20',
     color: 'pink',
-    title: 'Some, None, All:',
+    title: 'Some, None, All',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: What happens when you order some products? And more? And even more? Or all the products? ',

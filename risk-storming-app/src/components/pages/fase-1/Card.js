@@ -19,7 +19,7 @@ class Card extends React.Component {
             isDragging={snapshot.isDragging}
             className={`cardContainer ${this.props.color}`}
           >
-            <div className='cardHeader'>
+            <div className={`cardHeader ${this.props.color}Header`}>
               <div className='cardTitle'>{this.props.title}</div>
               <div className='cardSubtitle'>{this.props.subTitle}</div>
             </div>

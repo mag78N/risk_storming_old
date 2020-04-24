@@ -1,8 +1,5 @@
-import { orangecards } from '../../assets/en/orangeCards';
+
 import { bluecards } from '../../assets/en/blueCards';
-import { greencards } from '../../assets/en/greenCards';
-import { pinkcards } from '../../assets/en/pinkCards';
-import { purplecards } from '../../assets/en/purpleCards';
 import { colorcards } from '../../assets/en/colorcards';
 const CardData = {
   bluecards: bluecards,
