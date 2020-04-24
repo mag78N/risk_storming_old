@@ -7,17 +7,16 @@ import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import React from 'react';
-import {ThemeContext} from '../../../context';
+import  CardsContext  from '../../../context';
 
 class FaseOnePagednd extends React.Component {
-  static contextType = ThemeContext;
-  state = this.context;
+  static contextType = CardsContext;
+  state = this.context.data;
   componentDidMount() {
     console.log(this.state);
   }
   onDragEnd = (result) => {
-    //todo: reorder our column
-
+  
     const { destination, source, draggableId } = result;
 
     if (!destination) {
@@ -72,10 +71,11 @@ class FaseOnePagednd extends React.Component {
       },
     };
     this.setState(newState);
+    console.log(newState);
   };
 
   render() {
-     console.log(this.state);
+     
     return (
       <>
         <TopNavbar faseNum='Fase 1' />

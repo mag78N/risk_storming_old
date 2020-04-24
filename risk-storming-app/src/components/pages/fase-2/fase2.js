@@ -3,15 +3,14 @@ import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './fase2.css';
-import initialBlueCardData from '../../cards/card-data';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import BlueCardCarousel from './BlueCardCarousel';
-import { ThemeContext } from '../../../context';
+import  CardsContext  from '../../../context';
 
 class FaseTwoPage extends React.Component {
-  static contextType = ThemeContext;
-  state = this.context;
+  static contextType = CardsContext;
+  state = this.context.data;
   componentDidMount() {
     console.log(this.state);
   }

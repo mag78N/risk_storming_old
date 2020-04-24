@@ -8,11 +8,11 @@ import '../../cards/purple-card/PurpleCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { ThemeContext } from '../../../context';
+import  CardsContext  from '../../../context';
 import Column from './../fase-1/Column';
 class FaseThreePage extends React.Component {
-  static contextType = ThemeContext;
-  state = this.context;
+  static contextType = CardsContext;
+  state = this.context.data;
   componentDidMount() {
     console.log(this.state);
   }

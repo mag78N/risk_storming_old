@@ -4,12 +4,12 @@ import './index.css';
 import App from '../src/components/app/App';
 import * as serviceWorker from './serviceWorker';
 import CardData from './components/cards/card-data';
-import { ThemeContext } from './context';
+import  {CardsContextProvider}  from './context';
 
 ReactDOM.render(
-  <ThemeContext.Provider value={{ ...CardData }}>
+  <CardsContextProvider>
     <App />
-  </ThemeContext.Provider>,
+  </CardsContextProvider>,
 
   document.getElementById('root')
 );

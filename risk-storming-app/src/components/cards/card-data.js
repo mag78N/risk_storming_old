@@ -14,6 +14,7 @@ const CardData = {
       title: 'selected blue cards',
       cardIds: [],
       class: 'fase1LeftPane',
+      
     },
     'column-2': {
       id: 'column-2',
