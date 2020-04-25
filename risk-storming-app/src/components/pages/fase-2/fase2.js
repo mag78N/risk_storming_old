@@ -15,7 +15,6 @@ const blueCards = [
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
   /* state = this.context.data; */
-
   componentDidMount() {
     const { data } = this.context;
     const bluecards = [data['bluecards']];
@@ -23,42 +22,50 @@ class FaseTwoPage extends React.Component {
     console.log(blueCards);
     console.log(typeof bluecards);
     console.log(typeof blueCards);
-    console.log(Object.entries(bluecards));
-    console.log(Object.values(blueCards));
+    //console.log(Object.entries(bluecards));
+    //console.log(Object.values(blueCards));
+
   }
   compare = () => {
-    var keysOfbluecards = Object.entries(bluecards);
-    var keysOfblueCards = Object.values(blueCards);
-    console.log(keysOfblueCards);
-    console.log(keysOfbluecards);
-    var newArray = [];
-    for (const value1 of keysOfblueCards) {
-      for (const value2 of keysOfbluecards) {
-        if (keysOfblueCards === value2[1]['id']) {
-          newArray.push(...value2[1]);
-        }
+    var keysOfbluecards = Object.keys(bluecards);
+    //var valuesOfblueCards = Object.keys(blueCards);
+   
+    console.log("keys of bluecards: " + keysOfbluecards);
 
-        console.log(value2[1]);
-        console.log(keysOfblueCards[0]);
-      }
-      console.log(newArray);
-    }
-    for (const value of keysOfblueCards) {
-      if (keysOfbluecards.includes(keysOfblueCards[value])) {
-        newArray.push(value);
-      }
-      console.log(newArray);
-      console.log(value);
-    }
-    var results = [];
-    for (let i = 0; i < keysOfblueCards.length; i++) {
-      for (let j = 0; j < keysOfbluecards.length; j++) {
-        if (keysOfblueCards[i] === keysOfbluecards[j]) {
-          results.push(keysOfbluecards[i]);
+    //console.log("keys of blueCards: " + valuesOfblueCards);
+      console.log(blueCards);
+    //keysOfbluecards.map(key => console.log(key));
+
+    //blueCards.map((value,index) => console.log(value, index));
+
+   /*  for (let i = 0; i < 6; i++) {
+      const element = blueCards[0][i];
+      //console.log(element);
+      keysOfbluecards.map(key => {
+        if (key === element) {
+          console.log(key);
         }
-        //console.log(results);
+      })
+    }
+    for (let j = 0; j < 20; j++){
+      const el = Object.keys(bluecards)[j];
+      const entry = Object.values(bluecards)[j];
+      console.log(el);
+      console.log(entry);
+    } */
+    
+    for (let i = 0; i < 6; i++){
+      const chosenBlueCard = blueCards[0][i];
+      for (let j = 0; j < 20; j++){
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          console.log(entireObject);
+        }
       }
     }
+
+
   };
 
   render() {
