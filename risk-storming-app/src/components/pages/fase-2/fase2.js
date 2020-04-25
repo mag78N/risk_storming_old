@@ -9,17 +9,18 @@ import Card from './Card';
 import BlueCardCarousel from './BlueCardCarousel';
 import CardsContext from '../../../context';
 import { bluecards } from '../../../assets/en/blueCards';
-const blueCards = [
-  JSON.parse(localStorage.getItem('selectedBlueCards')),
-].sort();
+
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
-  /* state = this.context.data; */
+   blueCards = [
+      JSON.parse(localStorage.getItem('selectedBlueCards')),
+    ].sort();
   componentDidMount() {
+    
     const { data } = this.context;
     const bluecards = [data['bluecards']];
     console.log(bluecards);
-    console.log(blueCards);
+    console.log(this.blueCards);
     console.log(typeof bluecards);
     console.log(typeof blueCards);
     //console.log(Object.entries(bluecards));
@@ -42,13 +43,6 @@ class FaseTwoPage extends React.Component {
         const entireObject = Object.values(bluecards)[j]; */
         //const key = entireObject['id'];
         //const index = index;
-        /* const color = entireObject['color'];
-        const title = entireObject['title'];
-        const subTitle = entireObject['subTitle'];
-        const description = entireObject['description'];
-        const exampleOne = entireObject['exampleOne'];
-        const exampleTwo = entireObject['exampleTwo'];
-        const exampleThree = entireObject['exampleThree']; */
        /*  if (chosenBlueCard === bluecardKey) {
           //console.log(entireObject);
           newArray.push(entireObject);
@@ -56,14 +50,11 @@ class FaseTwoPage extends React.Component {
       }
     }
     return newArray;
-    
-    
   }; */
-
   render() {
      const newArray = [];
      for (let i = 0; i < 6; i++) {
-       const chosenBlueCard = blueCards[0][i];
+       const chosenBlueCard = this.blueCards[0][i];
        for (let j = 0; j < 20; j++) {
          const bluecardKey = Object.keys(bluecards)[j];
          const entireObject = Object.values(bluecards)[j];
