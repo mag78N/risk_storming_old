@@ -1,10 +1,11 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 const RiskPostIt = (props) => {
   return (
     <div id='riskPostItForm'>
       <Form>
+       
         <label htmlFor={props.riskId}>{`Risk #${props.index + 1} `}</label>
         <Form.Control
           as='textarea'

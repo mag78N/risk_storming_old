@@ -11,8 +11,6 @@ import CardsContext from '../../../context';
 
 class FaseOnePagednd extends React.Component {
   static contextType = CardsContext;
- 
-
   componentDidMount() {
     const { data } = this.context;
     //const data = this.context;
@@ -56,7 +54,6 @@ class FaseOnePagednd extends React.Component {
         },
       };
       setData(newState);
-
       return;
     }
     //moving from one list to another
@@ -87,7 +84,7 @@ class FaseOnePagednd extends React.Component {
   };
 
   render() {
-    const { data, setData } = this.context;
+    const { data } = this.context;
     return (
       <>
         <TopNavbar faseNum='Fase 1' />

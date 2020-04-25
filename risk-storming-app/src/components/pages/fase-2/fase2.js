@@ -7,26 +7,30 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
 import BlueCardCarousel from './BlueCardCarousel';
+import RiskPostIt from './RiskPostIt';
 import CardsContext from '../../../context';
-import { bluecards } from '../../../assets/en/blueCards';
+import RightPane from './RightPane';
 
 class FaseTwoPage extends React.Component {
   state = {
-    risks: [{ id: '', content: '' }],
+    risks: [{ cardId: '', riskId: '', content: '' }],
   };
   static contextType = CardsContext;
   blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
   componentDidMount() {
     const { data } = this.context;
-    //const bluecards = [data['bluecards']];
+    console.log(data);
+    /* const bluecards = data['bluecards']; */
   }
   handleAddRisk = (e) => {
     console.log('risk added!');
     this.setState((prevState) => ({
-      risks: [...prevState.risks, { id: '', content: '' }],
+      risks: [...prevState.risks, { cardId:'',id: '', content: '' }],
     }));
   };
   render() {
+    const { data } = this.context;
+    const bluecards = data['bluecards'];
     const newArray = [];
     for (let i = 0; i < 6; i++) {
       const chosenBlueCard = this.blueCards[0][i];
@@ -39,6 +43,8 @@ class FaseTwoPage extends React.Component {
       }
     }
     console.log(newArray);
+    localStorage.setItem('newChosenCards', JSON.stringify(newArray));
+    const { risks } = this.state;
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -68,9 +74,23 @@ class FaseTwoPage extends React.Component {
                 exampleThree={card.exampleThree}
               />
             ))}
+            {risks.map((value, index) => {
+              let riskId = `risk-${index}`;
+              return (
+                <RiskPostIt
+                  /*  addRisk={props.addRisk} */
+                  index={index}
+                  key={index}
+                  htmlFor={riskId}
+                  name={riskId}
+                  data-id={index}
+                  id={riskId}
+                />
+              );
+            })}
           </div>
           <div className='fase2RightPane'>
-            <BlueCardCarousel
+            <RightPane
               newArray={newArray}
               addRisk={this.handleAddRisk}
               risks={this.state.risks}

@@ -1,19 +1,16 @@
-import React from 'react';
-import '../../cards/blue-card/BlueCard.css';
-import '../../cards/Card/Card.css';
-import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
-
 import Card from './Card';
+import React from 'react';
 import RiskPostIt from './RiskPostIt';
-function BlueCardCarousel(props) {
+import Carousel from 'react-bootstrap/Carousel';
+import AddRiskButton from './AddRiskButton';
+const RightPane = (props) => {
   return (
     <Carousel slide={false} wrap={false} interval={null}>
       {props.newArray.map((card, index) => (
-        <Carousel.Item key={index}>
+        <Carousel.Item id={card.id} key={index}>
           <Card
             key={card.key}
-            card={card.card}
+            id={card.id}
             color={card.color}
             title={card.title}
             subTitle={card.subTitle}
@@ -21,15 +18,17 @@ function BlueCardCarousel(props) {
             exampleOne={card.exampleOne}
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
-          />
-          <Button onClick={props.addRisk}>Add New Risk</Button>
+            /> 
+            <AddRiskButton addRisk={props.addRisk} />
+            
+          
           {props.risks.map((value, index) => {
+            let cardId = value.cardId;
             let riskId = `risk-${index}`;
             return (
               <RiskPostIt
-                /*  addRisk={props.addRisk} */
                 index={index}
-                key={index}
+                key={cardId}
                 htmlFor={riskId}
                 name={riskId}
                 data-id={index}
@@ -41,6 +40,5 @@ function BlueCardCarousel(props) {
       ))}
     </Carousel>
   );
-}
-
-export default BlueCardCarousel;
+};
+export default RightPane;
