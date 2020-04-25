@@ -10,6 +10,7 @@ import BlueCardCarousel from './BlueCardCarousel';
 import RiskPostIt from './RiskPostIt';
 import CardsContext from '../../../context';
 import RightPane from './RightPane';
+import CardContextProvider from '../../../context';
 
 class FaseTwoPage extends React.Component {
   state = {
