@@ -11,72 +11,34 @@ import CardsContext from '../../../context';
 import { bluecards } from '../../../assets/en/blueCards';
 
 class FaseTwoPage extends React.Component {
+  state = {
+    risks: [{ id: '', content: '' }],
+  };
   static contextType = CardsContext;
-   blueCards = [
-      JSON.parse(localStorage.getItem('selectedBlueCards')),
-    ].sort();
+  blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
   componentDidMount() {
-    
     const { data } = this.context;
-    const bluecards = [data['bluecards']];
-    console.log(bluecards);
-    console.log(this.blueCards);
-    console.log(typeof bluecards);
-    console.log(typeof blueCards);
-    //console.log(Object.entries(bluecards));
-    //console.log(Object.values(blueCards));
-   
+    //const bluecards = [data['bluecards']];
   }
-  //displayChosenBlueCards = () => {
-    //var keysOfbluecards = Object.keys(bluecards);
-    //var valuesOfblueCards = Object.keys(blueCards);
-    //console.log('keys of bluecards: ' + keysOfbluecards);
-    //console.log("keys of blueCards: " + valuesOfblueCards);
-    //console.log(blueCards);
-    //keysOfbluecards.map(key => console.log(key));
-    //blueCards.map((value,index) => console.log(value, index));
-    /* const newArray = [];
+  handleAddRisk = (e) => {
+    console.log('risk added!');
+    this.setState((prevState) => ({
+      risks: [...prevState.risks, { id: '', content: '' }],
+    }));
+  };
+  render() {
+    const newArray = [];
     for (let i = 0; i < 6; i++) {
-      const chosenBlueCard = blueCards[0][i];
+      const chosenBlueCard = this.blueCards[0][i];
       for (let j = 0; j < 20; j++) {
         const bluecardKey = Object.keys(bluecards)[j];
-        const entireObject = Object.values(bluecards)[j]; */
-        //const key = entireObject['id'];
-        //const index = index;
-       /*  if (chosenBlueCard === bluecardKey) {
-          //console.log(entireObject);
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
           newArray.push(entireObject);
         }
       }
     }
-    return newArray;
-  }; */
-  render() {
-     const newArray = [];
-     for (let i = 0; i < 6; i++) {
-       const chosenBlueCard = this.blueCards[0][i];
-       for (let j = 0; j < 20; j++) {
-         const bluecardKey = Object.keys(bluecards)[j];
-         const entireObject = Object.values(bluecards)[j];
-         //const key = entireObject['id'];
-         //const index = index;
-         /* const color = entireObject['color'];
-        const title = entireObject['title'];
-        const subTitle = entireObject['subTitle'];
-        const description = entireObject['description'];
-        const exampleOne = entireObject['exampleOne'];
-        const exampleTwo = entireObject['exampleTwo'];
-        const exampleThree = entireObject['exampleThree']; */
-         if (chosenBlueCard === bluecardKey) {
-           //console.log(entireObject);
-           newArray.push(entireObject);
-         }
-       }
-       
-     }
-     console.log(newArray);
-    //const { data } = this.context;
-    
+    console.log(newArray);
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -108,12 +70,11 @@ class FaseTwoPage extends React.Component {
             ))}
           </div>
           <div className='fase2RightPane'>
-            
-              <BlueCardCarousel
-                newArray={newArray}
-                
-              />
-           
+            <BlueCardCarousel
+              newArray={newArray}
+              addRisk={this.handleAddRisk}
+              risks={this.state.risks}
+            />
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />

@@ -1,66 +1,27 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-const RiskPostIt = () => {
+const RiskPostIt = (props) => {
   return (
-    <React.Fragment>
-      <div id='riskPostItForm'>
-        <Form>
-          <Form.Group>
-            <Button variant='outline-dark'>add risk</Button>
-            <Form.Control as='textarea' rows='5' />
-
-            <Form.Control className='textBox' as='textarea' rows='5' />
-
-            <Form.Control className='textBox' as='textarea' rows='5' />
-
-            <Form.Control className='textBox' as='textarea' rows='5' />
-
-            <Form.Control className='textBox' as='textarea' rows='5' />
-          </Form.Group>
-        </Form>
-      </div>
-    </React.Fragment>
+    <div id='riskPostItForm'>
+      <Form>
+        <label htmlFor={props.riskId}>{`Risk #${props.index + 1} `}</label>
+        <Form.Control
+          as='textarea'
+          rows='3'
+          key={props.index}
+          name={props.riskId}
+          data-id={props.index}
+          id={props.riskId}
+        />
+      </Form>
+    </div>
   );
 };
 
 export default RiskPostIt;
-
 /* 
-import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import TextBox from './TextBox';
-class RiskPostIt extends Component {
-  constructor(props) {
-    super(props);
-    this.handleAddTextbox = this.handleAddTextbox.bind(this);
-    this.state = { visible: false };
-  }
-  handleAddTextbox() {
-    this.setState({ visible: true });
-    console.log('added textbox');
-  }
-  
-  render() {
-    const visible = this.state.visible;
-    return (
-      <React.Fragment>
-        <div id='riskPostItForm'>
-          <Form>
-            <Form.Group>
-              <Button variant='outline-dark'>add risk</Button>
-
-              <TextBox visible={visible} onClick={this.handleAddTextbox} />
-              <TextBox visible={visible} onClick={this.handleAddTextbox} />
-              <TextBox visible={visible} onClick={this.handleAddTextbox} />
-              <TextBox visible={visible} onClick={this.handleAddTextbox} />
-            </Form.Group>
-          </Form>
-        </div>
-      </React.Fragment>
-    );
-  };
-}
-export default RiskPostIt;
-  */
+<div key={index}>
+  <label htmlFor={riskId}>{`Risk #${index + 1} `}</label>
+  <input type='text' name={riskId} data-id={index} id={riskId} />
+</div>; */

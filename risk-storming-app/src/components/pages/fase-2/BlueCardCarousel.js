@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import Card from './Card';
 import RiskPostIt from './RiskPostIt';
@@ -9,7 +10,7 @@ function BlueCardCarousel(props) {
  
   return (
     <Carousel slide={false} wrap={false} interval={null}>
-      {props.newArray.map((card,index) => (
+      {props.newArray.map((card, index) => (
         <Carousel.Item key={index}>
           <Card
             key={card.key}
@@ -22,6 +23,21 @@ function BlueCardCarousel(props) {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
+          <Button onClick={props.addRisk}>Add New Risk</Button>
+          {props.risks.map((value, index) => {
+            let riskId = `risk-${index}`;
+            return (
+              <RiskPostIt
+                index={index}
+                key={index}
+                htmlFor={riskId}
+                name={riskId}
+                data-id={index}
+                id={riskId}
+              />
+            );
+          })}
+          
         </Carousel.Item>
       ))}
     </Carousel>
