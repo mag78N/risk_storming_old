@@ -15,6 +15,7 @@ general css for card template
 .cardContainer:hover {
   cursor: pointer;
 }
+
 .miniCardContainer {
   display: flex;
   flex-direction: column;

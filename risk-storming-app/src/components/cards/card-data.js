@@ -2,18 +2,16 @@
 import { bluecards } from '../../assets/en/blueCards';
 import { colorcards } from '../../assets/en/colorcards';
 const CardData = {
+  
   bluecards: bluecards,
-  cards: colorcards, /* pinkcards, orangecards, purplecards, */
-  /* orangecards: orangecards,
-  pinkcards: pinkcards,
-  purplecards: purplecards,
-  greencards: greencards, */
+  cards: colorcards, 
   columnsFase1: {
     'column-1': {
       id: 'column-1',
       title: 'selected blue cards',
       cardIds: [],
       class: 'fase1LeftPane',
+      
     },
     'column-2': {
       id: 'column-2',
