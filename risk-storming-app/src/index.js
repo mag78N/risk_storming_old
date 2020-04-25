@@ -5,10 +5,13 @@ import App from '../src/components/app/App';
 import * as serviceWorker from './serviceWorker';
 import CardData from './components/cards/card-data';
 import  {CardsContextProvider}  from './context';
+//import  CardsContext  from './context';
 
 ReactDOM.render(
   <CardsContextProvider>
-    <App />
+   
+      <App />
+   
   </CardsContextProvider>,
 
   document.getElementById('root')

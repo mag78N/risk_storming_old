@@ -24,48 +24,41 @@ class FaseTwoPage extends React.Component {
     console.log(typeof blueCards);
     //console.log(Object.entries(bluecards));
     //console.log(Object.values(blueCards));
-
   }
-  compare = () => {
+  displayChosenBlueCards = () => {
     var keysOfbluecards = Object.keys(bluecards);
     //var valuesOfblueCards = Object.keys(blueCards);
-   
-    console.log("keys of bluecards: " + keysOfbluecards);
+
+    console.log('keys of bluecards: ' + keysOfbluecards);
 
     //console.log("keys of blueCards: " + valuesOfblueCards);
-      console.log(blueCards);
+    console.log(blueCards);
     //keysOfbluecards.map(key => console.log(key));
 
     //blueCards.map((value,index) => console.log(value, index));
-
-   /*  for (let i = 0; i < 6; i++) {
-      const element = blueCards[0][i];
-      //console.log(element);
-      keysOfbluecards.map(key => {
-        if (key === element) {
-          console.log(key);
-        }
-      })
-    }
-    for (let j = 0; j < 20; j++){
-      const el = Object.keys(bluecards)[j];
-      const entry = Object.values(bluecards)[j];
-      console.log(el);
-      console.log(entry);
-    } */
-    
-    for (let i = 0; i < 6; i++){
+    const newArray = [];
+    for (let i = 0; i < 6; i++) {
       const chosenBlueCard = blueCards[0][i];
-      for (let j = 0; j < 20; j++){
+      for (let j = 0; j < 20; j++) {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
+        //const key = entireObject['id'];
+        //const index = index;
+        /* const color = entireObject['color'];
+        const title = entireObject['title'];
+        const subTitle = entireObject['subTitle'];
+        const description = entireObject['description'];
+        const exampleOne = entireObject['exampleOne'];
+        const exampleTwo = entireObject['exampleTwo'];
+        const exampleThree = entireObject['exampleThree']; */
         if (chosenBlueCard === bluecardKey) {
-          console.log(entireObject);
+          //console.log(entireObject);
+          newArray.push(entireObject);
         }
       }
+      
     }
-
-
+    console.log(newArray);
   };
 
   render() {
@@ -85,7 +78,10 @@ class FaseTwoPage extends React.Component {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div className='fase2LeftPane'>{this.compare()}</div>
+          <div className='fase2LeftPane'>
+            {this.displayChosenBlueCards()}
+            
+          </div>
           <div className='fase2RightPane'>{/*  <BlueCardCarousel /> */}</div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
