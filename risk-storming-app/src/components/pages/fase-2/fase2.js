@@ -105,9 +105,16 @@ class FaseTwoPage extends React.Component {
                 exampleTwo={card.exampleTwo}
                 exampleThree={card.exampleThree}
               />
-            ))} 
+            ))}
           </div>
-          <div className='fase2RightPane'>{/*  <BlueCardCarousel /> */}</div>
+          <div className='fase2RightPane'>
+            
+              <BlueCardCarousel
+                newArray={newArray}
+                
+              />
+           
+          </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
       </>

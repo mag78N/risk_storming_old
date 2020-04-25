@@ -8,9 +8,9 @@ general css for card template
   width: 230px;
   border-radius: 5px;
   margin: 0.75rem;
-  -webkit-box-shadow: 3px 5px 5px 0px rgba(158,158,158,0.75);
-  -moz-box-shadow: 3px 5px 5px 0px rgba(158,158,158,0.75);
-  box-shadow: 3px 5px 5px 0px rgba(158,158,158,0.75);
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
+  box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
 }
 .cardContainer:hover {
   cursor: pointer;
@@ -59,7 +59,7 @@ general css for card template
   /* padding-bottom: 0; */
 }
 .fase1LeftPane .cardDescription::after {
-  content: ">";
+  content: '>';
   display: block;
   text-align: center;
 }
@@ -74,11 +74,25 @@ general css for card template
   /* padding-bottom: 0; */
 }
 .fase2LeftPane .cardDescription::after {
-  content: ">";
+  content: '>';
   display: block;
   text-align: center;
 }
 .fase2LeftPane .exampleContainer {
+  display: none;
+}
+.fase2RightPane .cardDescription,
+.miniCardContainer .cardDescription {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+  /* padding-bottom: 0; */
+}
+.fase2RightPane .cardDescription::after {
+  /* content: '>'; */
+  display: block;
+  text-align: center;
+}
+.fase2RightPane .exampleContainer {
   display: none;
 }
 /**/

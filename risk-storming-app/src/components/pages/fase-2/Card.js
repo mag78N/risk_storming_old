@@ -3,8 +3,6 @@ import '../../cards/green-card/GreenCard.css';
 import '../../cards/orange-card/OrangeCard.css';
 import '../../cards/pink-card/PinkCard.css';
 import '../../cards/purple-card/PurpleCard.css';
-import styled from 'styled-components';
-import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';
 
 class Card extends React.Component {
