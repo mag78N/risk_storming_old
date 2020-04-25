@@ -8,11 +8,9 @@ import  {CardsContextProvider}  from './context';
 //import  CardsContext  from './context';
 
 ReactDOM.render(
-  <CardsContextProvider>
+  
    
-      <App />
-   
-  </CardsContextProvider>,
+      <App />,
 
   document.getElementById('root')
 );
