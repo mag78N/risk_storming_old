@@ -19,18 +19,17 @@ import FaseThreePage from '../pages/fase-3/fase3';
 
 const App = () => (
   <Router>
-    <CardsContextProvider>
-      <>
-        <Switch>
+    <>
+      <Switch>
+        <CardsContextProvider>
           <Route exact path='/' component={MainPage} />
           <Route exact path='/fase1' component={FaseOnePagednd} />
           <Route exact path='/fase2' component={FaseTwoPage} />
           <Route exact path='/fase3' component={FaseThreePage} />
           <Route path='' component={NotFoundPage} />
-        </Switch>
-      </>
-      </CardsContextProvider>
-    </Router>
-  
+        </CardsContextProvider>
+      </Switch>
+    </>
+  </Router>
 );
 export default App;

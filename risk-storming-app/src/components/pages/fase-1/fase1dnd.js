@@ -25,16 +25,18 @@ class FaseOnePagednd extends React.Component {
   onDragEnd = (result) => {
     const { data, setData } = this.context;
     const { destination, source, draggableId } = result;
-
+    //if item is dropped in non-droppable destination; do nothing
     if (!destination) {
       return;
     }
+    //if item is dropped in same spot; do nothing
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
     ) {
       return;
     }
+    //moving items in the same list; rearrange items
     const start = data.columnsFase1[source.droppableId];
     const finish = data.columnsFase1[destination.droppableId];
     if (start === finish) {
@@ -79,8 +81,7 @@ class FaseOnePagednd extends React.Component {
     };
     setData(newState);
     console.log(newState);
-    /* let cards = data.columnsFase1['columnId'].cardIds;
-    localStorage.setItem('cards', cards); */
+    
   };
 
   render() {
