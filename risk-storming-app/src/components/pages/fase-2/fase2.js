@@ -7,38 +7,69 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
 import BlueCardCarousel from './BlueCardCarousel';
-import RiskPostIt from './RiskPostIt';
+import RiskPostIt from './RiskView';
 import CardsContext from '../../../context';
 import RightPane from './RightPane';
+import RiskView from './RiskView';
 //import CardsContextProvider from '../../../context';
 
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
   state = {
     chosenCards: this.blueCards,
-    risks: [{ cardId: '', riskId: '', content: '' }],
-  }; 
-  
+    /* values: [], */
+  };
+
   blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
   componentDidMount() {
     const { data } = this.context;
     console.log(data);
-    
+
     /* const risks = [];
     data.bluecards.map((risk) =>{ risks.push(risk)}); */
   }
-  
-  handleAddRisk = (e) => {
+ /*  createPostIt = () => {
+    return this.state.values.map((el, index) => (
+      <div key={i}>
+        <input
+          type='text'
+          value={el || ''}
+          onChange={this.handleChange.bind(this, i)}
+        />
+        <input
+          type='button'
+          value='remove'
+          onClick={this.removeClick.bind(this, i)}
+        />
+      </div>
+    ));
+  };
+  handleChange(i, event) {
+    let values = [...this.state.values];
+    values[i] = event.target.value;
+    this.setState({ values });
+  }
+  addClick() {
+    this.setState((prevState) => ({ values: [...prevState.values, ''] }));
+  }
+  removeClick(i) {
+    let values = [...this.state.values];
+    values.splice(i, 1);
+    this.setState({ values });
+  } */
+  /* handleAddRisk = (e) => {
     console.log('risk added!');
+    const input = document.getElementById('input');
+    localStorage.setItem('risks', input.value); */
     //setData();
+    /*  document.querySelector('.riskForm').appendChild
     this.setState((prevState) => ({
       risks: [...prevState.risks, { cardId: '', id: '', content: '' }],
-    }));
-  };
+    })); */
+  //;
   render() {
     const { data } = this.context;
     const bluecards = data['bluecards'];
-    
     const newArray = [];
     for (let i = 0; i < 6; i++) {
       const chosenBlueCard = this.blueCards[0][i];
@@ -52,13 +83,13 @@ class FaseTwoPage extends React.Component {
     }
     console.log(newArray);
     localStorage.setItem('newChosenCards', JSON.stringify(newArray));
-    
-    const { risks } = this.state;
-    for (let i = 0; i < bluecards.length; i++){
+
+    /* const { risks } = this.state;
+    for (let i = 0; i < bluecards.length; i++) {
       const bluecard = bluecards[i];
       const riskprop = bluecard['risks'];
       console.log(riskprop);
-    }
+    } */
     const { chosencards } = this.state;
     console.log(chosencards);
     return (
@@ -90,11 +121,11 @@ class FaseTwoPage extends React.Component {
                 exampleThree={card.exampleThree}
               />
             ))}
-            {risks.map((value, index) => {
+           {/*  {risks.map((value, index) => {
               let riskId = `risk-${index}`;
               return (
-                <RiskPostIt
-                  /*  addRisk={props.addRisk} */
+                <RiskPostIt */}
+                  {/*  addRisk={props.addRisk} 
                   index={index}
                   key={index}
                   htmlFor={riskId}
@@ -103,14 +134,13 @@ class FaseTwoPage extends React.Component {
                   id={riskId}
                 />
               );
-            })}
+            })} */}
           </div>
           <div className='fase2RightPane'>
             <RightPane
-              newArray={newArray}
-              addRisk={this.handleAddRisk}
-              risks={this.state.risks}
-            />
+              newArray={newArray} risks={this.state.risks}
+
+            />  
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />

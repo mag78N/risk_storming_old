@@ -49,10 +49,28 @@ const CardData = {
     'column-2': {
       id: 'column-2',
       title: 'blue cards',
-      cardIds: [
-        
-      ],
+      cardIds: [],
       class: 'fase2RightPane',
+    },
+  },
+  risks: {
+    'bluecard-1': {
+      risks: [],
+    },
+    'bluecard-2': {
+      risks: [],
+    },
+    'bluecard-3': {
+      risks: [],
+    },
+    'bluecard-4': {
+      risks: [],
+    },
+    'bluecard-5': {
+      risks: [],
+    },
+    'bluecard-6': {
+      risks: [],
     },
   },
   columnsFase3: {

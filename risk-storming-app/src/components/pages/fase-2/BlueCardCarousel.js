@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 
 import Card from './Card';
-import RiskPostIt from './RiskPostIt';
+import RiskPostIt from './RiskView';
 function BlueCardCarousel(props) {
   return (
     <Carousel slide={false} wrap={false} interval={null}>
