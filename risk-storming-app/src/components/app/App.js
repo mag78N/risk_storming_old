@@ -10,12 +10,6 @@ import MainPage from '../pages/main-page';
 import FaseOnePagednd from '../pages/fase-1/fase1dnd';
 import FaseTwoPage from '../pages/fase-2/fase2';
 import FaseThreePage from '../pages/fase-3/fase3';
-/* function App(props) {
-  const routeResult = useRoutes(Routes);
-  return routeResult || <NotFoundPage />;
-}
- */
-/* export default App; */
 
 const App = () => (
   <Router>

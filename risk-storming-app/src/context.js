@@ -9,11 +9,13 @@ const CardsContext = React.createContext({});
 export class CardsContextProvider extends React.Component {
   state = {
     data: CardData,
+    /* localStorageData: localStorage.getItem('contextData'), */
   };
-  //this function updates the state in indirect way, this precise syntax with prevstate and data in curly braces
+  
   setData = (data) => {
     this.setState((prevState) => ({ data }));
   };
+  
   render() {
     //binding everything
     const { data } = this.state;

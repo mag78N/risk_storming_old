@@ -16,12 +16,14 @@ class FaseOnePagednd extends React.Component {
     //const data = this.context;
     console.log(data);
     console.log(data.bluecards)
+    
   }
   componentDidUpdate() {
     const { data } = this.context;
     let cards = JSON.stringify(data.columnsFase1['column-1'].cardIds);
     localStorage.setItem('selectedBlueCards', cards);
   }
+  
   onDragEnd = (result) => {
     const { data, setData } = this.context;
     const { destination, source, draggableId } = result;
