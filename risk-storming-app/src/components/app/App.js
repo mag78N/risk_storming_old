@@ -26,7 +26,7 @@ const App = () => (
           <Route exact path='/fase1' component={FaseOnePagednd} />
           <Route exact path='/fase2' component={FaseTwoPage} />
           <Route exact path='/fase3' component={FaseThreePage} />
-          <Route path='' component={NotFoundPage} />
+          <Route exact path='/404' component={NotFoundPage} />
         </CardsContextProvider>
       </Switch>
     </>

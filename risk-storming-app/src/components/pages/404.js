@@ -1,6 +1,6 @@
 import React from 'react';
 import './404.css';
-import { A } from 'hookrouter';
+import { Link } from 'react-router-dom';
 import bg from '../../assets/images/bg.jpg';
 
 const NotFoundPage = () => {
@@ -11,7 +11,7 @@ const NotFoundPage = () => {
     <div className='page404' style={ bgImgStyle }>
       <h1>404 Not Found!</h1>
       <p>This page doesn't exist,<br/>
-      go back to <A href="/">the main page</A>.
+      go back to <Link to="/">the main page</Link>.
       </p>
     </div>
   );
