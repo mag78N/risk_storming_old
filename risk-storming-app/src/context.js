@@ -7,25 +7,30 @@ const CardsContext = React.createContext({});
 
 //Create provider using traditional React.Component class
 export class CardsContextProvider extends React.Component {
-  state = {
-    data: CardData,
-    /* localStorageData: localStorage.getItem('contextData'), */
-  };
-  
-  setData = (data) => {
-    this.setState((prevState) => ({ data }));
-  };
-  
-  render() {
-    //binding everything
-    const { data } = this.state;
-    const { children } = this.props;
-    const { setData } = this;
-    return (
-      <CardsContext.Provider value={{ data, setData }}>
-        {children}
-      </CardsContext.Provider>
-    );
-  }
-}
+         state = {
+           data: CardData,
+           
+         };
+
+         setData = (data) => {
+           this.setState((prevState) => ({ data }));
+         };
+         setAddRisk = (e) => {
+           console.log('risk added!');
+           this.setState((prevState) => ({
+             risks: [...prevState.risks, { cardId: '', id: '', content: '' }],
+           }));
+         };
+         render() {
+           //binding everything
+           const { data } = this.state;
+           const { children } = this.props;
+           const { setData } = this;
+           return (
+             <CardsContext.Provider value={{ data, setData }}>
+               {children}
+             </CardsContext.Provider>
+           );
+         }
+       }
 export default CardsContext;

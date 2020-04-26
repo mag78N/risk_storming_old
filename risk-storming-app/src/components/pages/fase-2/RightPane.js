@@ -36,6 +36,9 @@ const RightPane = (props) => {
               />
             );
           })}
+          <form action="">
+            <textarea placeholder='Enter risk here' rows='3' name='risk'></textarea>
+          </form>
         </Carousel.Item>
       ))}
     </Carousel>

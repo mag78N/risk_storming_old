@@ -10,28 +10,35 @@ import BlueCardCarousel from './BlueCardCarousel';
 import RiskPostIt from './RiskPostIt';
 import CardsContext from '../../../context';
 import RightPane from './RightPane';
-import CardContextProvider from '../../../context';
+//import CardsContextProvider from '../../../context';
 
 class FaseTwoPage extends React.Component {
-  state = {
-    risks: [{ cardId: '', riskId: '', content: '' }],
-  };
   static contextType = CardsContext;
+  state = {
+    chosenCards: this.blueCards,
+    risks: [{ cardId: '', riskId: '', content: '' }],
+  }; 
+  
   blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
   componentDidMount() {
     const { data } = this.context;
     console.log(data);
-    /* const bluecards = data['bluecards']; */
+    
+    /* const risks = [];
+    data.bluecards.map((risk) =>{ risks.push(risk)}); */
   }
+  
   handleAddRisk = (e) => {
     console.log('risk added!');
+    //setData();
     this.setState((prevState) => ({
-      risks: [...prevState.risks, { cardId:'',id: '', content: '' }],
+      risks: [...prevState.risks, { cardId: '', id: '', content: '' }],
     }));
   };
   render() {
     const { data } = this.context;
     const bluecards = data['bluecards'];
+    
     const newArray = [];
     for (let i = 0; i < 6; i++) {
       const chosenBlueCard = this.blueCards[0][i];
@@ -45,7 +52,15 @@ class FaseTwoPage extends React.Component {
     }
     console.log(newArray);
     localStorage.setItem('newChosenCards', JSON.stringify(newArray));
+    
     const { risks } = this.state;
+    for (let i = 0; i < bluecards.length; i++){
+      const bluecard = bluecards[i];
+      const riskprop = bluecard['risks'];
+      console.log(riskprop);
+    }
+    const { chosencards } = this.state;
+    console.log(chosencards);
     return (
       <>
         <TopNavbar faseNum='Fase 2' />

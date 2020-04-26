@@ -11,7 +11,7 @@ export const bluecards = {
     exampleTwo: 'Is the code modular or does it resemble one big monolith?',
     exampleThree:
       'Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?',
-    risks: [],
+    risks: ['risk 1'],
   },
   'blue-2': {
     id: 'blue-2',

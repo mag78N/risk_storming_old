@@ -2,16 +2,14 @@
 import { bluecards } from '../../assets/en/blueCards';
 import { colorcards } from '../../assets/en/colorcards';
 const CardData = {
-  
   bluecards: bluecards,
-  cards: colorcards, 
+  cards: colorcards,
   columnsFase1: {
     'column-1': {
       id: 'column-1',
       title: 'selected blue cards',
       cardIds: [],
       class: 'fase1LeftPane',
-      
     },
     'column-2': {
       id: 'column-2',
@@ -39,6 +37,22 @@ const CardData = {
         'blue-20',
       ],
       class: 'fase1RightPane',
+    },
+  },
+  columnsFase2: {
+    'column-1': {
+      id: 'column-1',
+      title: 'selected blue cards and risks',
+      cardIds: [],
+      class: 'fase2LeftPane',
+    },
+    'column-2': {
+      id: 'column-2',
+      title: 'blue cards',
+      cardIds: [
+        
+      ],
+      class: 'fase2RightPane',
     },
   },
   columnsFase3: {
@@ -131,7 +145,7 @@ const CardData = {
         'purple-17',
         'purple-18',
         'purple-19',
-        'purple-20', 
+        'purple-20',
       ],
       class: 'fase1RightPane',
     },
