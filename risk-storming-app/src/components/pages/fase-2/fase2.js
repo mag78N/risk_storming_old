@@ -84,12 +84,6 @@ class FaseTwoPage extends React.Component {
     console.log(newArray);
     localStorage.setItem('newChosenCards', JSON.stringify(newArray));
 
-    /* const { risks } = this.state;
-    for (let i = 0; i < bluecards.length; i++) {
-      const bluecard = bluecards[i];
-      const riskprop = bluecard['risks'];
-      console.log(riskprop);
-    } */
     const { chosencards } = this.state;
     console.log(chosencards);
     return (
@@ -121,20 +115,7 @@ class FaseTwoPage extends React.Component {
                 exampleThree={card.exampleThree}
               />
             ))}
-           {/*  {risks.map((value, index) => {
-              let riskId = `risk-${index}`;
-              return (
-                <RiskPostIt */}
-                  {/*  addRisk={props.addRisk} 
-                  index={index}
-                  key={index}
-                  htmlFor={riskId}
-                  name={riskId}
-                  data-id={index}
-                  id={riskId}
-                />
-              );
-            })} */}
+          
           </div>
           <div className='fase2RightPane'>
             <RightPane

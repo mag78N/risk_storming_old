@@ -22,7 +22,7 @@ const RightPane = (props) => {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
-          <RiskView />
+          <RiskView  />
         </Carousel.Item>
       ))}
     </Carousel>
