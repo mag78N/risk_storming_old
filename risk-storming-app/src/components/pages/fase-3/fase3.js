@@ -8,7 +8,8 @@ import '../../cards/purple-card/PurpleCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-import  CardsContext  from '../../../context';
+import CardsContext from '../../../context';
+import Card from '../fase-2/Card';
 import Column from './../fase-1/Column';
 class FaseThreePage extends React.Component {
   static contextType = CardsContext;
@@ -76,17 +77,34 @@ class FaseThreePage extends React.Component {
   };
 
   render() {
+    const chosenbluecards = JSON.parse(localStorage.getItem('newChosenCards'));
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
+
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
           onDragEnd={this.onDragEnd}
         >
+          <div className='fase3LeftPane'> 
+            {chosenbluecards.map((card) => (
+              <Card
+                key={card.id}
+                card={card}
+                color={card.color}
+                title={card.title}
+                subTitle={card.subTitle}
+                description={card.description}
+                exampleOne={card.exampleOne}
+                exampleTwo={card.exampleTwo}
+                exampleThree={card.exampleThree}
+              />
+            ))}
+          </div>
           <Split
-            className='splitContainerFase1'
-            sizes={[75, 25]}
+            className='splitContainerFase3'
+            sizes={[70,30]}
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}

@@ -78,7 +78,7 @@ const CardData = {
       id: 'column-1',
       title: 'selected blue cards and risks',
       cardIds: [],
-      class: 'fase1LeftPane',
+      class: 'fase3LeftPane',
     },
     'column-2': {
       id: 'column-2',
@@ -165,7 +165,7 @@ const CardData = {
         'purple-19',
         'purple-20',
       ],
-      class: 'fase1RightPane',
+      class: 'fase3RightPane',
     },
   },
   columnOrderFase1: ['column-1', 'column-2'],
