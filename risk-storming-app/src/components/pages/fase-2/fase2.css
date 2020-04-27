@@ -27,7 +27,7 @@ div .form-group {
   flex-direction: column;
   align-items: center;
 }
-#riskPostItForm textarea {
+textarea {
   width: 25vw;
   background-color: #e5e5e5;
   border: 1px solid rgb(228, 225, 225);
@@ -38,6 +38,7 @@ div .form-group {
 
 ol.carousel-indicators {
   display: none;
+  
 }
 .carousel-caption {
   position: static;
@@ -63,6 +64,8 @@ div.carousel {
 .carousel-control-prev,
 .carousel-control-next {
   height: 7rem;
+  filter: invert(1);
+  
 }
 .carousel .cardDescription {
   border-bottom-width: 0;

@@ -21,6 +21,7 @@ class FaseTwoPage extends React.Component {
   };
 
   blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
+  
   componentDidMount() {
     const { data } = this.context;
     console.log(data);

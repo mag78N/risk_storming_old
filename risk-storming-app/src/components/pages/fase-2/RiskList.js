@@ -6,35 +6,43 @@ const RiskList = props => {
     return (
       <div className='form-row' key={val.idx}>
         <div className='col'>
-          <label>Risk</label>
-          <input
-            type='text'
-            placeholder='risk'
-            ris='risk'
+         {/*  <label>Risk</label> */}
+          <textarea
+            rows='3'
+            placeholder='enter risk here'
+            risk='risk'
             data-id={idx}
             id={risk}
-            />
+            resize='none'
+          ></textarea>
+          {/* <input
+            type='text'
+            placeholder='enter risk here'
+            risk='risk'
+            data-id={idx}
+            id={risk}
+          /> */}
         </div>
-        <div className='col p-4'>
+        <div className='col p-3'>
           {idx === 0 ? (
-            <button 
+            <button
               onClick={() => props.add()}
               type='button'
               className='btn btn-primary text-center'
             >
               <i className='fa fa-plus-circle' aria-hidden='true' />
-
             </button>
           ) : (
-              <button className='btn btn-danger'
-                onClick={() => props.delete(val)}>
-                
-                <i className="fa fa-minus" aria-hidden='true' />
-              </button>
+            <button
+              className='btn btn-danger'
+              onClick={() => props.delete(val)}
+            >
+              <i className='fa fa-minus' aria-hidden='true' />
+            </button>
           )}
         </div>
-    </div>
-  )
+      </div>
+    );
   
   
   })

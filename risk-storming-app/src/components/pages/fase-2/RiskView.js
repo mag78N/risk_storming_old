@@ -59,6 +59,7 @@ class RiskView extends Component {
     e.preventDefault();
   };
   render() {
+    console.log(this.state);
     let { riskDetails } = this.state;
     return (
       <div className='content'>
