@@ -1,9 +1,8 @@
 import Card from './Card';
 import React from 'react';
-import { useState } from 'react';
-import RiskPostIt from './RiskView';
+
 import Carousel from 'react-bootstrap/Carousel';
-import AddRiskButton from './AddRiskButton';
+
 import RiskView from './RiskView';
 const RightPane = (props) => {
   
@@ -22,7 +21,7 @@ const RightPane = (props) => {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
-          <RiskView  />
+          <RiskView riskDetails={props.risks} />
         </Carousel.Item>
       ))}
     </Carousel>

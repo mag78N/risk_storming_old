@@ -1,33 +1,25 @@
 import RiskList from './RiskList';
-
+import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 
 class RiskView extends Component {
-  count = 0;
-  state = {
-    riskDetails: [{ index: Math.random(), risk: '' }],
-  };
-  /*  componentDidMount() {
-    this.riskdetails = JSON.parse(localStorage.getItem('risks'));
-
-    if (localStorage.getItem('risks')) {
-      this.setState({
-        riskDetails: this.riskdetails.risk,
-      })
-    } else {
-      this.setState({ riskDetails: ['']})
-    }
-  }  */
+  constructor(props) {
+    super(props);
+    this.state = {
+      riskDetails: this.props.riskDetails,
+    }; 
+  }
+  
   componentWillUpdate(nextProps, nextState) {
     
     localStorage.setItem('risks', JSON.stringify(nextState));
   }
   handleChange = (e) => {
-    if (['risk'].includes(e.target.risk)) {
+    if (['risk'].includes(e.target.name)) {
       let riskDetails = [...this.state.riskDetails];
-      riskDetails[e.target.dataset.id][e.target.risk] = e.target.value;
+      riskDetails[e.target.dataset.id][e.target.name] = e.target.value;
     } else {
-      this.setState({ [e.target.risk]: e.target.value });
+      this.setState({ [e.target.name]: e.target.value });
     }
   };
   addNewRow = (e) => {
@@ -60,13 +52,15 @@ class RiskView extends Component {
   };
   render() {
     console.log(this.state);
+    //let { riskDetails } = props.riskDetails;
     let { riskDetails } = this.state;
     return (
       <div className='content'>
         <form onChange={this.handleChange} onSubmit={this.onsubmit}>
           <div className='row'>
+            <div className='col-sm-1' />
             <div className='col-sm-10'>
-              <h2 className='text-center'> Enter Risk </h2>
+              <h2 className='text-center'> Add Risks </h2>
               <div className='container'>
                 <div className='row'>
                   <RiskList
@@ -74,9 +68,11 @@ class RiskView extends Component {
                     delete={this.clickOnDelete.bind(this)}
                     riskDetails={riskDetails}
                   />
+                  <Button>Confirm</Button>
                 </div>
               </div>
             </div>
+            <div className='col-sm-1' />
           </div>
         </form>
       </div>

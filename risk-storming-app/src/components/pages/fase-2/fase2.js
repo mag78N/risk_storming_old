@@ -6,8 +6,6 @@ import './fase2.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
-import BlueCardCarousel from './BlueCardCarousel';
-import RiskPostIt from './RiskView';
 import CardsContext from '../../../context';
 import RightPane from './RightPane';
 import RiskView from './RiskView';
@@ -15,59 +13,26 @@ import RiskView from './RiskView';
 
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
-  state = {
-    chosenCards: this.blueCards,
-    /* values: [], */
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      chosenCards: this.blueCards,
+      riskDetails: [
+        {
+          index: Math.random(),
+          risk: '',
+        },
+      ],
+    };
+  }
 
   blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
-  
+
   componentDidMount() {
     const { data } = this.context;
     console.log(data);
+  }
 
-    /* const risks = [];
-    data.bluecards.map((risk) =>{ risks.push(risk)}); */
-  }
- /*  createPostIt = () => {
-    return this.state.values.map((el, index) => (
-      <div key={i}>
-        <input
-          type='text'
-          value={el || ''}
-          onChange={this.handleChange.bind(this, i)}
-        />
-        <input
-          type='button'
-          value='remove'
-          onClick={this.removeClick.bind(this, i)}
-        />
-      </div>
-    ));
-  };
-  handleChange(i, event) {
-    let values = [...this.state.values];
-    values[i] = event.target.value;
-    this.setState({ values });
-  }
-  addClick() {
-    this.setState((prevState) => ({ values: [...prevState.values, ''] }));
-  }
-  removeClick(i) {
-    let values = [...this.state.values];
-    values.splice(i, 1);
-    this.setState({ values });
-  } */
-  /* handleAddRisk = (e) => {
-    console.log('risk added!');
-    const input = document.getElementById('input');
-    localStorage.setItem('risks', input.value); */
-    //setData();
-    /*  document.querySelector('.riskForm').appendChild
-    this.setState((prevState) => ({
-      risks: [...prevState.risks, { cardId: '', id: '', content: '' }],
-    })); */
-  //;
   render() {
     const { data } = this.context;
     const bluecards = data['bluecards'];
@@ -116,13 +81,9 @@ class FaseTwoPage extends React.Component {
                 exampleThree={card.exampleThree}
               />
             ))}
-          
           </div>
           <div className='fase2RightPane'>
-            <RightPane
-              newArray={newArray} risks={this.state.risks}
-
-            />  
+            <RightPane newArray={newArray} risks={this.state.riskDetails} />
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
