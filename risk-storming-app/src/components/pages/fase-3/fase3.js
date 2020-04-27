@@ -9,8 +9,10 @@ import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
 import CardsContext from '../../../context';
-import Card from '../fase-2/Card';
+import Card from './../fase-2/Card';
 import Column from './Column';
+import DummyRisk from './DummyRisk';
+import './fase3.css';
 class FaseThreePage extends React.Component {
   static contextType = CardsContext;
   state = this.context.data;
@@ -89,7 +91,7 @@ class FaseThreePage extends React.Component {
         >
           <Split
             className='splitContainerFase3'
-            sizes={[60,40]}
+            sizes={[60, 40]}
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}
@@ -101,19 +103,33 @@ class FaseThreePage extends React.Component {
           >
             <div className='fase3LeftPane'>
               {chosenbluecards.map((card) => (
-                <Card
-                  key={card.id}
-                  card={card}
-                  color={card.color}
-                  title={card.title}
-                  subTitle={card.subTitle}
-                  description={card.description}
-                  exampleOne={card.exampleOne}
-                  exampleTwo={card.exampleTwo}
-                  exampleThree={card.exampleThree}
-                />
+                <div className='row cardLane'>
+                  <div className='col'>
+                    <div className='row'>
+                      <div className='col-4'>
+                        <Card
+                          key={card.id}
+                          card={card}
+                          color={card.color}
+                          title={card.title}
+                          subTitle={card.subTitle}
+                          description={card.description}
+                          exampleOne={card.exampleOne}
+                          exampleTwo={card.exampleTwo}
+                          exampleThree={card.exampleThree}
+                        />
+                      </div>
+                      <div className='col-8'>
+                        <DummyRisk />
+                        <DummyRisk />
+                        <DummyRisk />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
+
             <div className='fase3RightPane'>
               {this.state.columnOrderFase3.map((columnId) => {
                 const column = this.state.columnsFase3[columnId];
