@@ -1,7 +1,17 @@
-.cardContainer {
+/* .miniCardContainer, .cardContainer {
   background-color: rgb(8, 122, 8);
+}
+.miniCardContainer, .cardContainer {
   border: 2px solid rgb(8, 122, 8);
 }
 .cardHeader {
-  border-color: rgb(8, 122, 8);
+  color: rgb(8, 122, 8);
+} */
+
+.green {
+  background-color: rgb(8, 122, 8);
+  border: 2px solid rgb(8, 122, 8);
+}
+.greenHeader {
+  color: rgb(8, 122, 8);
 }

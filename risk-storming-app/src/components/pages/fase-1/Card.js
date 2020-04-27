@@ -1,4 +1,8 @@
 import React from 'react';
+import '../../cards/green-card/GreenCard.css';
+import '../../cards/orange-card/OrangeCard.css';
+import '../../cards/pink-card/PinkCard.css';
+import '../../cards/purple-card/PurpleCard.css';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';
@@ -13,9 +17,9 @@ class Card extends React.Component {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             isDragging={snapshot.isDragging}
-            className='cardContainer'
+            className={`cardContainer ${this.props.color}`}
           >
-            <div className='cardHeader'>
+            <div className={`cardHeader ${this.props.color}Header`}>
               <div className='cardTitle'>{this.props.title}</div>
               <div className='cardSubtitle'>{this.props.subTitle}</div>
             </div>

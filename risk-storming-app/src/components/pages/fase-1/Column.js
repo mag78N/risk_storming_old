@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../../cards/green-card/GreenCard.css';
+import '../../cards/orange-card/OrangeCard.css';
+import '../../cards/pink-card/PinkCard.css';
+import '../../cards/purple-card/PurpleCard.css';
 import Card from './Card';
 import { Droppable } from 'react-beautiful-dnd';
 import './fase1.css';
 const CardList = styled.div`
- 
-  
 `;
 
 class Column extends React.Component {
@@ -25,6 +27,7 @@ class Column extends React.Component {
                   key={card.id}
                   card={card}
                   index={index}
+                  color={card.color}
                   title={card.title}
                   subTitle={card.subTitle}
                   description={card.description}
