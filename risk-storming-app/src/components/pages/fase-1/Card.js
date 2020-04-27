@@ -10,7 +10,7 @@ import '../../cards/Card/Card.css';
 class Card extends React.Component {
   render() {
     return (
-      <Draggable draggableId={this.props.card.id} index={this.props.index}>
+      <Draggable draggable='true' draggableId={this.props.card.id} index={this.props.index}>
         {(provided, snapshot) => (
           <div
             ref={provided.innerRef}

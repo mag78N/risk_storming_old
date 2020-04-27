@@ -1,0 +1,31 @@
+
+.fase3LeftPane {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+  border-right: 1px solid #e5e5e5;
+}
+
+.blackLine {
+  margin-right: 1rem;
+  width: 85%;
+  border: none;
+  border-top: 0.05rem solid black;
+}
+.gutter-horizontal {
+  cursor: grab;
+  background-color: #e5e5e5;
+}
+
+.fase3RightPane {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: auto;
+  border-left: 1px solid #e5e5e5;
+}
+.splitContainerFase3 {
+  display: flex;
+  width: 81%;
+}

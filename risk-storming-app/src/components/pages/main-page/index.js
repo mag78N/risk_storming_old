@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import Button from 'react-bootstrap/Button';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-import { A } from 'hookrouter';
+import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/bg.jpg';
 
 const MainPage = () => {
@@ -13,9 +13,9 @@ const MainPage = () => {
     <div className='mainPageContainer'>
       <TopNavbar faseNum='' />
       <div className='mainPageJumbotron' style={ bgImgStyle }>
-        <A href='/fase1'>
+        <Link to='/fase1'>
           <Button variant='outline-dark' className='startSessionButton'>Start Session!</Button>
-       </A>
+       </Link>
       </div>
     </div>
   );

@@ -3,11 +3,7 @@ import { bluecards } from '../../assets/en/blueCards';
 import { colorcards } from '../../assets/en/colorcards';
 const CardData = {
   bluecards: bluecards,
-  cards: colorcards, /* pinkcards, orangecards, purplecards, */
-  /* orangecards: orangecards,
-  pinkcards: pinkcards,
-  purplecards: purplecards,
-  greencards: greencards, */
+  cards: colorcards,
   columnsFase1: {
     'column-1': {
       id: 'column-1',
@@ -43,12 +39,46 @@ const CardData = {
       class: 'fase1RightPane',
     },
   },
+  columnsFase2: {
+    'column-1': {
+      id: 'column-1',
+      title: 'selected blue cards and risks',
+      cardIds: [],
+      class: 'fase2LeftPane',
+    },
+    'column-2': {
+      id: 'column-2',
+      title: 'blue cards',
+      cardIds: [],
+      class: 'fase2RightPane',
+    },
+  },
+  risks: {
+    'bluecard-1': {
+      risks: [],
+    },
+    'bluecard-2': {
+      risks: [],
+    },
+    'bluecard-3': {
+      risks: [],
+    },
+    'bluecard-4': {
+      risks: [],
+    },
+    'bluecard-5': {
+      risks: [],
+    },
+    'bluecard-6': {
+      risks: [],
+    },
+  },
   columnsFase3: {
     'column-1': {
       id: 'column-1',
       title: 'selected blue cards and risks',
       cardIds: [],
-      class: 'fase1LeftPane',
+      class: 'fase3LeftPane',
     },
     'column-2': {
       id: 'column-2',
@@ -133,9 +163,9 @@ const CardData = {
         'purple-17',
         'purple-18',
         'purple-19',
-        'purple-20', 
+        'purple-20',
       ],
-      class: 'fase1RightPane',
+      class: 'fase3RightPane',
     },
   },
   columnOrderFase1: ['column-1', 'column-2'],
