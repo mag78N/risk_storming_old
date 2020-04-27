@@ -67,6 +67,7 @@ class RiskView extends Component {
                     add={this.addNewRow}
                     delete={this.clickOnDelete.bind(this)}
                     riskDetails={riskDetails}
+                    id={this.props.id}
                   />
                   <Button>Confirm</Button>
                 </div>
