@@ -40,7 +40,7 @@ class DummyRisk extends React.Component {
                     key={card.id}
                     card={card}
                     index={index}
-                    //column={this.props.column.id}
+                    column={this.props.column.id}
                     color={card.color}
                     title={card.title}
                     subTitle={card.subTitle}

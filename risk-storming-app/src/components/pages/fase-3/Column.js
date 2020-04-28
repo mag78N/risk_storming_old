@@ -15,7 +15,11 @@ class Column extends React.Component {
       console.log(this.props.columnid['id']);
       
     return (
-      <Droppable droppableId={this.props.columnid['id']} direction='vertical'>
+      <Droppable
+        droppableId={this.props.columnid['id']}
+        direction='vertical'
+        type='CARD'
+      >
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
@@ -29,7 +33,7 @@ class Column extends React.Component {
                 key={card.id}
                 card={card}
                 index={index}
-                //column={this.props.column.id}
+                column={this.props.column.id}
                 color={card.color}
                 title={card.title}
                 subTitle={card.subTitle}
