@@ -9,8 +9,10 @@ import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
 import CardsContext from '../../../context';
-import Card from '../fase-2/Card';
-import Column from './../fase-1/Column';
+import Card from './../fase-2/Card';
+import Column from './Column';
+import DummyRisk from './DummyRisk';
+import './fase3.css';
 class FaseThreePage extends React.Component {
   static contextType = CardsContext;
   state = this.context.data;
@@ -87,24 +89,9 @@ class FaseThreePage extends React.Component {
           onDragUpdate={this.onDragUpdate}
           onDragEnd={this.onDragEnd}
         >
-          <div className='fase3LeftPane'> 
-            {chosenbluecards.map((card) => (
-              <Card
-                key={card.id}
-                card={card}
-                color={card.color}
-                title={card.title}
-                subTitle={card.subTitle}
-                description={card.description}
-                exampleOne={card.exampleOne}
-                exampleTwo={card.exampleTwo}
-                exampleThree={card.exampleThree}
-              />
-            ))}
-          </div>
           <Split
             className='splitContainerFase3'
-            sizes={[70,30]}
+            sizes={[60, 40]}
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}
@@ -114,21 +101,52 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {this.state.columnOrderFase3.map((columnId) => {
-              const column = this.state.columnsFase3[columnId];
-              const cards = column.cardIds.map(
-                (cardId) => this.state.cards[cardId]
-              );
+            <div className='fase3LeftPane'>
+              {chosenbluecards.map((card) => (
+                <div className='row cardLane'>
+                  <div className='col'>
+                    <div className='row'>
+                      <div className='col-4'>
+                        <Card
+                          key={card.id}
+                          card={card}
+                          color={card.color}
+                          title={card.title}
+                          subTitle={card.subTitle}
+                          description={card.description}
+                          exampleOne={card.exampleOne}
+                          exampleTwo={card.exampleTwo}
+                          exampleThree={card.exampleThree}
+                        />
+                      </div>
+                      <div className='col-8'>
+                        <DummyRisk />
+                        <DummyRisk />
+                        <DummyRisk />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-              return (
-                <Column
-                  key={column.id}
-                  column={column}
-                  cards={cards}
-                  class={column.class}
-                />
-              );
-            })}
+            <div className='fase3RightPane'>
+              {this.state.columnOrderFase3.map((columnId) => {
+                const column = this.state.columnsFase3[columnId];
+                const cards = column.cardIds.map(
+                  (cardId) => this.state.cards[cardId]
+                );
+
+                return (
+                  <Column
+                    key={column.id}
+                    column={column}
+                    cards={cards}
+                    class={column.class}
+                  />
+                );
+              })}
+            </div>
           </Split>
         </DragDropContext>
         <Footer prev='/fase2' next='/' />

@@ -78,7 +78,7 @@ const CardData = {
       id: 'column-1',
       title: 'selected blue cards and risks',
       cardIds: [],
-      class: 'fase3LeftPane',
+      class: '',
     },
     'column-2': {
       id: 'column-2',
