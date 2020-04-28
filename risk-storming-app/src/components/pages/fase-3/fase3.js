@@ -134,7 +134,7 @@ class FaseThreePage extends React.Component {
                           column={column1}
                           cards={cardsColumn1}
                         />
-                       {/*  <DummyRisk
+                        <DummyRisk
                           columnid={column1}
                           key={column1.id}
                           column={column1}
@@ -145,7 +145,7 @@ class FaseThreePage extends React.Component {
                           key={column1.id}
                           column={column1}
                           cards={cardsColumn1}
-                        /> */}
+                        /> 
                       </div>
                     </div>
                   </div>
