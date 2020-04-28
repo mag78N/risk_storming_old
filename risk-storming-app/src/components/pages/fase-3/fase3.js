@@ -111,10 +111,10 @@ class FaseThreePage extends React.Component {
           >
             <div className='fase3LeftPane'>
               {chosenbluecards.map((card, index) => (
-                <div className='row cardLane' key={index}>
+                <div className='row cardRow' key={index}>
                   <div className='col'>
-                    <div className='row'>
-                      <div className='col-4'>
+                    <div className='row innerCardRow'>
+                      <div className='col-3'>
                         <Card
                           key={card.id}
                           card={card}
@@ -127,7 +127,7 @@ class FaseThreePage extends React.Component {
                           exampleThree={card.exampleThree}
                         />
                       </div>
-                      <div className='col-8'>
+                      <div className='col-9'>
                         <DummyRisk
                           columnid={column1}
                           key={column1.id}
