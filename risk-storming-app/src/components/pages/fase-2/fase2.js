@@ -3,22 +3,6 @@ import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './fase2.css';
-<<<<<<< HEAD
-import initialBlueCardData from '../../cards/card-data';
-import TopNavbar from '../../TopNavbar/TopNavbar';
-import Footer from '../../Footer/Footer';
-import BlueCardCarousel from './BlueCardCarousel';
-import { ThemeContext } from '../../../context';
-
-class FaseTwoPage extends React.Component {
-  static contextType = ThemeContext;
-  state = this.context;
-  componentDidMount() {
-    console.log(this.state);
-  }
-
-  render() {
-=======
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
@@ -68,7 +52,6 @@ class FaseTwoPage extends React.Component {
 
     const { chosencards } = this.state;
     console.log(chosencards);
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -84,11 +67,6 @@ class FaseTwoPage extends React.Component {
           direction='horizontal'
           cursor='col-resize'
         >
-<<<<<<< HEAD
-          <div className='fase2LeftPane'></div>
-          <div className='fase2RightPane'>
-           {/*  <BlueCardCarousel /> */}
-=======
           <div className='fase2LeftPane'>
             {newArray.map((card) => (
               <Card
@@ -106,7 +84,6 @@ class FaseTwoPage extends React.Component {
           </div>
           <div className='fase2RightPane'>
             <RightPane newArray={newArray} risks={this.state.riskDetails} />
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />

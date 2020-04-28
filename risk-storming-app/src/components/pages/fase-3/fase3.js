@@ -8,20 +8,12 @@ import '../../cards/purple-card/PurpleCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-<<<<<<< HEAD
-import { ThemeContext } from '../../../context';
-import Column from './../fase-1/Column';
-class FaseThreePage extends React.Component {
-  static contextType = ThemeContext;
-  state = this.context;
-=======
 import CardsContext from '../../../context';
 import Card from '../fase-2/Card';
 import Column from './../fase-1/Column';
 class FaseThreePage extends React.Component {
   static contextType = CardsContext;
   state = this.context.data;
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
   componentDidMount() {
     console.log(this.state);
   }
@@ -85,27 +77,16 @@ class FaseThreePage extends React.Component {
   };
 
   render() {
-<<<<<<< HEAD
-    return (
-      <>
-        <TopNavbar faseNum='Fase 3' />
-=======
     const chosenbluecards = JSON.parse(localStorage.getItem('newChosenCards'));
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
 
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
           onDragEnd={this.onDragEnd}
         >
-<<<<<<< HEAD
-          <Split
-            className='splitContainerFase1'
-            sizes={[75, 25]}
-=======
           <div className='fase3LeftPane'> 
             {chosenbluecards.map((card) => (
               <Card
@@ -124,7 +105,6 @@ class FaseThreePage extends React.Component {
           <Split
             className='splitContainerFase3'
             sizes={[70,30]}
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}

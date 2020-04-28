@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import '../../cards/blue-card/BlueCard.css';
-import '../../cards/Card/Card.css';
-import Carousel from 'react-bootstrap/Carousel';
-import RiskPostIt from './RiskPostIt';
-
-function BlueCardCarousel() {
- 
-
-  return (
-    <Carousel slide={false} wrap={false} interval={null}>
-     
-        
-=======
 import React from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
@@ -53,7 +38,6 @@ function BlueCardCarousel(props) {
             );
           })}
         </Carousel.Item>
->>>>>>> d4ada8207d4ad028bd36eb6aeaf4d90305ae7666
       ))}
     </Carousel>
   );
