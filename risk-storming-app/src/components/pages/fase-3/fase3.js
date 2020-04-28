@@ -80,6 +80,14 @@ class FaseThreePage extends React.Component {
 
   render() {
     const chosenbluecards = JSON.parse(localStorage.getItem('newChosenCards'));
+    const column1 = this.state.columnsFase3['column-1'];
+    const cardsColumn1 = column1.cardIds.map(
+      (cardId) => this.state.cards[cardId]
+    );
+    const column2 = this.state.columnsFase3['column-2'];
+    const cardsColumn2 = column2.cardIds.map(
+      (cardId) => this.state.cards[cardId]
+    );
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
@@ -102,11 +110,11 @@ class FaseThreePage extends React.Component {
             cursor='col-resize'
           >
             <div className='fase3LeftPane'>
-              {chosenbluecards.map((card) => (
-                <div className='row cardLane'>
+              {chosenbluecards.map((card, index) => (
+                <div className='row cardRow' key={index}>
                   <div className='col'>
-                    <div className='row'>
-                      <div className='col-4'>
+                    <div className='row innerCardRow'>
+                      <div className='col-3'>
                         <Card
                           key={card.id}
                           card={card}
@@ -119,10 +127,25 @@ class FaseThreePage extends React.Component {
                           exampleThree={card.exampleThree}
                         />
                       </div>
-                      <div className='col-8'>
-                        <DummyRisk />
-                        <DummyRisk />
-                        <DummyRisk />
+                      <div className='col-9'>
+                        <DummyRisk
+                          columnid={column1}
+                          key={column1.id}
+                          column={column1}
+                          cards={cardsColumn1}
+                        />
+                       {/*  <DummyRisk
+                          columnid={column1}
+                          key={column1.id}
+                          column={column1}
+                          cards={cardsColumn1}
+                        />
+                        <DummyRisk
+                          columnid={column1}
+                          key={column1.id}
+                          column={column1}
+                          cards={cardsColumn1}
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -130,22 +153,14 @@ class FaseThreePage extends React.Component {
               ))}
             </div>
 
-            <div className='fase3RightPane'>
-              {this.state.columnOrderFase3.map((columnId) => {
-                const column = this.state.columnsFase3[columnId];
-                const cards = column.cardIds.map(
-                  (cardId) => this.state.cards[cardId]
-                );
-
-                return (
-                  <Column
-                    key={column.id}
-                    column={column}
-                    cards={cards}
-                    class={column.class}
-                  />
-                );
-              })}
+            <div>
+              <Column
+                columnid={column2}
+                key={column2.id}
+                column={column2}
+                cards={cardsColumn2}
+                class={column2.class}
+              />
             </div>
           </Split>
         </DragDropContext>

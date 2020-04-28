@@ -6,23 +6,27 @@
   border-right: 1px solid #e5e5e5;
   
 }
-.blueCardDeck {
-  background-color: lightblue;
-}
 
-.riskList {
-  background-color: lightcoral;
-}
 .riskLane{
-  border: 1px solid black;
-  border-left-style: none;
+ 
   padding: 0.2rem 0.5rem;
-  border-top-style: none;
+  
 }
-.cardLane{
+.cardRow{
   border: 1px dashed black;
-  border-top-style: none;
+  border-top: none;
+  border-right: none;
   padding: 2rem 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.innerCardRow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropzone{
+  display: flex;
 }
 .blackLine {
   margin-right: 1rem;

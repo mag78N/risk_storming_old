@@ -112,6 +112,20 @@ general css for card template
 .fase3LeftPane .exampleContainer {
   display: none;
 }
+.riskLane .cardDescription,
+.miniCardContainer .cardDescription {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+  /* padding-bottom: 0; */
+}
+.riskLane .cardDescription::after {
+  content: '>';
+  display: block;
+  text-align: center;
+}
+.riskLane .exampleContainer {
+  display: none;
+}
 /**/
 .exampleContainer {
   display: flex;

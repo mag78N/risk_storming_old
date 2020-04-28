@@ -6,7 +6,7 @@ import '../../cards/purple-card/PurpleCard.css';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';
-
+const CardList = styled.div``;
 class Card extends React.Component {
   render() {
     return (
@@ -14,9 +14,10 @@ class Card extends React.Component {
         draggable='true'
         draggableId={this.props.card.id}
         index={this.props.index}
+        type='CARD'
       >
         {(provided, snapshot) => (
-          <div
+          <CardList
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -42,7 +43,7 @@ class Card extends React.Component {
                 <div className='cardExample3'>{this.props.exampleThree}</div>
               </div>
             </div>
-          </div>
+          </CardList>
         )}
       </Draggable>
     );

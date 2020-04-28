@@ -10,9 +10,16 @@ import './fase3.css';
 const CardList = styled.div``;
 
 class Column extends React.Component {
+
   render() {
+      console.log(this.props.columnid['id']);
+      
     return (
-      <Droppable droppableId={this.props.column.id} direction='vertical'>
+      <Droppable
+        droppableId={this.props.columnid['id']}
+        direction='vertical'
+        type='CARD'
+      >
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
@@ -22,6 +29,7 @@ class Column extends React.Component {
           >
             {this.props.cards.map((card, index) => (
               <Card
+                type='CARD'
                 key={card.id}
                 card={card}
                 index={index}
