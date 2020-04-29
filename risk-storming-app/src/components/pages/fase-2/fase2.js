@@ -9,32 +9,40 @@ import Card from './Card';
 import CardsContext from '../../../context';
 import RightPane from './RightPane';
 import RiskView from './RiskView';
-//import CardsContextProvider from '../../../context';
+import { bluecards } from '../../../assets/en/blueCards';
 
 class FaseTwoPage extends React.Component {
   static contextType = CardsContext;
   constructor(props) {
     super(props);
     this.state = {
-      chosenCards: this.blueCards,
-      riskDetails: [
-        {
-          index: Math.random(),
-          risk: '',
-        },
-      ],
+      chosenCardIds: this.chosenCardIds,
+      chosenCards: this.returnBlueCardObjects(),
+      
     };
   }
-
-  blueCards = [JSON.parse(localStorage.getItem('selectedBlueCards'))].sort();
-
-  componentDidMount() {
-    const { data } = this.context;
-    console.log(data);
+  returnBlueCardObjects = () => {
+    const chosenCardObjects = [];
+    for (let i = 0; i < 6; i++) {
+      const chosenBlueCard = this.state.chosenCardIds[i];
+      for (let j = 0; j < 20; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          chosenCardObjects.push(entireObject);
+        }
+      }
+    }
+    return chosenCardObjects;
   }
+  /* componentDidMount() {
+    const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
+    return chosenCardIds;
+  } */
 
   render() {
-    const { data } = this.context;
+    const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
+    /* const { data } = this.context;
     const bluecards = data['bluecards'];
     const newArray = [];
     for (let i = 0; i < 6; i++) {
@@ -46,12 +54,12 @@ class FaseTwoPage extends React.Component {
           newArray.push(entireObject);
         }
       }
-    }
-    console.log(newArray);
-    localStorage.setItem('newChosenCards', JSON.stringify(newArray));
+    } */
+    //console.log(newArray);
+    //localStorage.setItem('newChosenCards', JSON.stringify(newArray));
 
-    const { chosencards } = this.state;
-    console.log(chosencards);
+    const { chosenCards } = this.state;
+    console.log(chosenCards);
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -68,7 +76,7 @@ class FaseTwoPage extends React.Component {
           cursor='col-resize'
         >
           <div className='leftPane fase2LeftPane'>
-            {newArray.map((card) => (
+            {chosenCards.map((card) => (
               <Card
                 key={card.id}
                 card={card}
@@ -83,7 +91,7 @@ class FaseTwoPage extends React.Component {
             ))}
           </div>
           <div className='rightPane fase2RightPane'>
-            <RightPane newArray={newArray} risks={this.state.riskDetails} />
+            <RightPane newArray={chosenCards}  />
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
