@@ -6,7 +6,6 @@ import './fase2.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
-
 import RightPane from './RightPane';
 import RiskView from './RiskView';
 import { bluecards } from '../../../assets/en/blueCards';
