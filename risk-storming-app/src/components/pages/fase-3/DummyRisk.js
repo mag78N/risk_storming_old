@@ -17,8 +17,8 @@ class DummyRisk extends React.Component {
     console.log(this.props.columnid['id']);
     return (
       <>
-        <div className='row riskLane'>
-          <div className='col-sm-3'>
+        <div className='riskLane'>
+          <div className='riskPostit'>
             <textarea rows='4' disabled placeholder='risk'></textarea>
           </div>
           <Droppable
@@ -31,7 +31,7 @@ class DummyRisk extends React.Component {
                 ref={provided.innerRef}
                 {...provided.droppableProps}
                 isDraggingOver={snapshot.isDraggingOver}
-                className='col-sm-9 dropzone'
+                className='dropzone'
                 //className={props.column.class}
               >
                 {this.props.cards.map((card, index) => (

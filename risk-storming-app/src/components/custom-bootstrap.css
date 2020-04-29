@@ -1,0 +1,23 @@
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  min-width: 40px;
+  border: 2px solid rgb(46, 45, 45);
+}
+.btn-outline-dark {
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:focus {
+  background: rgb(46, 45, 45);
+  border: 2px solid rgb(46, 45, 45);
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: rgb(46, 45, 45);
+  border: 2px solid rgb(46, 45, 45);
+}

@@ -9,16 +9,19 @@
 
 .riskLane{
   min-height: 280px;
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   display: flex;
   align-items: center;
-  
+  margin-left: 1rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+.riskLane:last-child {
+  border-bottom-width: 0;
 }
 .cardRow{
-  border: 1px dashed black;
-  border-top: none;
-  border-right: none;
-  padding: 2rem 0.5rem;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 1rem 0;
+  margin: 0 1rem;
   display: flex;
   align-items: center;
 }
@@ -26,9 +29,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 255px;
+}
+.innerRiskRow {
+  width: calc(100% - 255px);
 }
 .dropzone{
   display: flex;
+  width: calc(100% - 10vw);
+  margin-left: 1rem;
+  border: 1px dashed #e5e5e5;
+  min-height: 270px;
 }
 .blackLine {
   margin-right: 1rem;
