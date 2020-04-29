@@ -3,16 +3,17 @@ import React from 'react';
 const RiskList = props => {
   return props.riskDetails.map((val, idx) => {
     let risk = `risk-${idx}`;
+    console.log(val.risk);
     return (
       <div className='form-row' key={val.index}>
-        <div className='postitContainer' id={props.id}>
-          {/*  <label>Risk</label> */}
+        <div className='postitContainer' id={`${props.card.id}|risk-${idx}`}>
           <textarea
+            onChange={props.onchange}
             rows='3'
             placeholder='enter risk here'
             name='risk'
             data-id={idx}
-            id={risk}
+            id={`${props.card.id}|risk-${idx}`}
             resize='none'
           ></textarea>
         </div>
@@ -36,8 +37,6 @@ const RiskList = props => {
         </div>
       </div>
     );
-  
-  
-  })
+  });
 }
 export default RiskList;

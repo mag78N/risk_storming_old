@@ -6,7 +6,6 @@ import './fase2.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
-
 import RightPane from './RightPane';
 import RiskView from './RiskView';
 import { bluecards } from '../../../assets/en/blueCards';
@@ -17,36 +16,36 @@ class FaseTwoPage extends React.Component {
     this.state = {
       bluecards: bluecards,
       chosenCards: this.getCardObjectsFromLocalStorage(),
-      riskDetails: [
-        {riskId: '1'},
-        {content: 'test'},
-      ]
-      
+      /* riskDetails: [
+        {
+          id: '',
+          risk: '',
+        }
+      ] , */
     };
   }
   getCardObjectsFromLocalStorage() {
     const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
-    const newArray = [];
-    for (let i = 0; i < 6; i++) {
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
-      for (let j = 0; j < 20; j++) {
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
         if (chosenBlueCard === bluecardKey) {
-          newArray.push(entireObject);
+          chosenBlueCardsArray.push(entireObject);
         }
       }
     }
-    return newArray;
+    return chosenBlueCardsArray;
   }
-  
 
   render() {
-   const { chosenCards } = this.state;
-   localStorage.setItem('chosenBlueCards', JSON.stringify(chosenCards));
-   console.log(chosenCards);
-   console.log(this.state);
-   
+    const { chosenCards } = this.state;
+    localStorage.setItem('chosenBlueCards', JSON.stringify(chosenCards));
+    console.log(chosenCards);
+    console.log(this.state);
+
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -78,7 +77,10 @@ class FaseTwoPage extends React.Component {
             ))}
           </div>
           <div className='rightPane fase2RightPane'>
-            <RightPane chosenCards={chosenCards} riskDetails={this.state.riskDetails} />
+            <RightPane
+              chosenCards={chosenCards}
+              //riskDetails={this.state.riskDetails}
+            />
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />

@@ -6,12 +6,16 @@ class RiskView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      riskDetails: this.props.riskDetails,
-    }; 
+      riskDetails: [
+        {
+          riskid: 0,
+          risk: '',
+        },
+      ],
+    };
   }
-  
+
   componentWillUpdate(nextProps, nextState) {
-    
     localStorage.setItem('risks', JSON.stringify(nextState));
   }
   handleChange = (e) => {
@@ -19,7 +23,7 @@ class RiskView extends Component {
       let riskDetails = [...this.state.riskDetails];
       riskDetails[e.target.dataset.id][e.target.name] = e.target.value;
     } else {
-      this.setState({ [e.target.name]: e.target.value });
+      this.setState({ [e.target.name]: e.target.value, [e.target.riskid] :  e.target.index});
     }
   };
   addNewRow = (e) => {
@@ -27,7 +31,7 @@ class RiskView extends Component {
       riskDetails: [
         ...prevState.riskDetails,
         {
-          index: Math.random(),
+          riskid: prevState.riskid++,
           risk: '',
         },
       ],
@@ -56,15 +60,16 @@ class RiskView extends Component {
     let { riskDetails } = this.state;
     return (
       <div className='content'>
-        <form className='riskDetailsForm'
-              onChange={this.handleChange}
-              onSubmit={this.onsubmit}>
+        <form className='riskDetailsForm' onSubmit={this.onsubmit}>
           <h2 className='riskDetailsHeading'>Add Risks</h2>
           <RiskList
+            key={this.props.key}
             add={this.addNewRow}
             delete={this.clickOnDelete.bind(this)}
             riskDetails={riskDetails}
             id={this.props.id}
+            card={this.props.card}
+            onchange={this.handleChange}
           />
           <Button>Confirm</Button>
         </form>
