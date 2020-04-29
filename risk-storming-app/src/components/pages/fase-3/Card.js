@@ -27,6 +27,7 @@ const Handler = styled.div`
   }
 `;
 
+const CardList = styled.div``;
 class Card extends React.Component {
   constructor() {
     super();
@@ -44,9 +45,10 @@ class Card extends React.Component {
         draggable='true'
         draggableId={this.props.card.id}
         index={this.props.index}
+        type='CARD'
       >
         {(provided, snapshot) => (
-          <div
+          <CardList
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -82,7 +84,7 @@ class Card extends React.Component {
               </Handler>
 
             </div>
-          </div>
+          </CardList>
         )}
       </Draggable>
     );
