@@ -8,7 +8,7 @@ const RightPane = (props) => {
   
   return (
     <Carousel slide={false} wrap={false} interval={null}>
-      {props.newArray.map((card, index) => (
+      {props.chosenCards.map((card, index) => (
         <Carousel.Item id={card.id} key={index}>
           <Card
             key={card.key}
@@ -21,7 +21,7 @@ const RightPane = (props) => {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
-          <RiskView riskDetails={props.risks} id={card.id}/>
+          <RiskView id={card.id} riskDetails={props.riskDetails}/>
         </Carousel.Item>
       ))}
     </Carousel>
