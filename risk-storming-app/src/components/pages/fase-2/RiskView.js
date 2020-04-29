@@ -56,25 +56,17 @@ class RiskView extends Component {
     let { riskDetails } = this.state;
     return (
       <div className='content'>
-        <form onChange={this.handleChange} onSubmit={this.onsubmit}>
-          <div className='row'>
-            <div className='col-sm-1' />
-            <div className='col-sm-10'>
-              <h2 className='text-center'> Add Risks </h2>
-              <div className='container'>
-                <div className='row'>
-                  <RiskList
-                    add={this.addNewRow}
-                    delete={this.clickOnDelete.bind(this)}
-                    riskDetails={riskDetails}
-                    id={this.props.id}
-                  />
-                  <Button>Confirm</Button>
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-1' />
-          </div>
+        <form className='riskDetailsForm'
+              onChange={this.handleChange}
+              onSubmit={this.onsubmit}>
+          <h2 className='riskDetailsHeading'>Add Risks</h2>
+          <RiskList
+            add={this.addNewRow}
+            delete={this.clickOnDelete.bind(this)}
+            riskDetails={riskDetails}
+            id={this.props.id}
+          />
+          <Button>Confirm</Button>
         </form>
       </div>
     );

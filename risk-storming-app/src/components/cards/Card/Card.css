@@ -46,85 +46,25 @@ general css for card template
   font-size: 0.9rem;
   line-height: 1.1;
   color: #fff;
-  border-bottom: 2px solid white;
+  /* temporary, till expanding is not fixed: */
+  /* border-bottom: 2px solid white; */
   padding: 0 1rem 1rem;
   margin: 1rem -1rem;
+  margin-bottom: 0; /* temporary, till expanding is not fixed */
+  padding-bottom: 0; /* temporary, till expanding is not fixed */
   word-spacing: 0.05rem;
 }
 
-.fase1LeftPane .cardDescription,
+.leftPane .cardDescription,
 .miniCardContainer .cardDescription {
   border-bottom-width: 0;
   margin-bottom: 0;
   /* padding-bottom: 0; */
 }
-.fase1LeftPane .cardDescription::after {
-  content: '>';
-  display: block;
-  text-align: center;
-}
-.fase1LeftPane .exampleContainer {
-  display: none;
-}
+
 /*added by Aline*/
-.fase2LeftPane .cardDescription,
-.miniCardContainer .cardDescription {
-  border-bottom-width: 0;
-  margin-bottom: 0;
-  /* padding-bottom: 0; */
-}
-.fase2LeftPane .cardDescription::after {
-  content: '>';
-  display: block;
-  text-align: center;
-}
-.fase2LeftPane .exampleContainer {
-  display: none;
-}
-.fase2RightPane .cardDescription,
-.miniCardContainer .cardDescription {
-  border-bottom-width: 0;
-  margin-bottom: 0;
-  /* padding-bottom: 0; */
-}
-.fase2RightPane .cardDescription::after {
-  /* content: '>'; */
-  display: block;
-  text-align: center;
-}
-.fase2RightPane .exampleContainer {
-  display: none;
-}
 .fase3LeftPane{
   width: 250px;
-}
-.fase3LeftPane .cardDescription,
-.miniCardContainer .cardDescription {
-  border-bottom-width: 0;
-  margin-bottom: 0;
-  /* padding-bottom: 0; */
-}
-.fase3LeftPane .cardDescription::after {
-  content: '>';
-  display: block;
-  text-align: center;
-}
-.fase3LeftPane .exampleContainer {
-  display: none;
-}
-.riskLane .cardDescription,
-.miniCardContainer .cardDescription {
-  border-bottom-width: 0;
-  margin-bottom: 0;
-  /* padding-bottom: 0; */
-}
-.riskLane .cardDescription::after {
-  content: '>';
-  display: block;
-  text-align: center;
-}
-.riskLane .exampleContainer {
-  display: none;
 }
 /**/
 .exampleContainer {

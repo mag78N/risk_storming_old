@@ -5,7 +5,7 @@ const RiskList = props => {
     let risk = `risk-${idx}`;
     return (
       <div className='form-row' key={val.index}>
-        <div className='col' id={props.id}>
+        <div className='postitContainer' id={props.id}>
           {/*  <label>Risk</label> */}
           <textarea
             rows='3'
@@ -16,18 +16,18 @@ const RiskList = props => {
             resize='none'
           ></textarea>
         </div>
-        <div className='col p-2'>
+        <div className='buttonContainer'>
           {idx === 0 ? (
             <button
               onClick={() => props.add()}
               type='button'
-              className='btn btn-primary text-center'
+              className='btn addButton'
             >
-              <i className='fa fa-plus-circle' aria-hidden='true' />
+              <i className='fa fa-plus' aria-hidden='true' />
             </button>
           ) : (
             <button
-              className='btn btn-danger'
+              className='btn removeButton'
               onClick={() => props.delete(val)}
             >
               <i className='fa fa-minus' aria-hidden='true' />

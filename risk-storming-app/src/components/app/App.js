@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Routes from '../router';
 import NotFoundPage from '../pages/404';
 import './App.css';
+import '../custom-bootstrap.css';
 import { CardsContextProvider } from '../../context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MainPage from '../pages/main-page';

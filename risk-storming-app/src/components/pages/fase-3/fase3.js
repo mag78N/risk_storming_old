@@ -109,45 +109,41 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='fase3LeftPane'>
+            <div className='leftPane fase3LeftPane'>
               {chosenbluecards.map((card, index) => (
-                <div className='row cardRow' key={index}>
-                  <div className='col'>
-                    <div className='row innerCardRow'>
-                      <div className='col-3'>
-                        <Card
-                          key={card.id}
-                          card={card}
-                          color={card.color}
-                          title={card.title}
-                          subTitle={card.subTitle}
-                          description={card.description}
-                          exampleOne={card.exampleOne}
-                          exampleTwo={card.exampleTwo}
-                          exampleThree={card.exampleThree}
-                        />
-                      </div>
-                      <div className='col-9'>
-                        <DummyRisk
-                          columnid={column1}
-                          key={column1.id}
-                          column={column1}
-                          cards={cardsColumn1}
-                        />
-                        <DummyRisk
-                          columnid={column1}
-                          key={column1.id}
-                          column={column1}
-                          cards={cardsColumn1}
-                        />
-                        <DummyRisk
-                          columnid={column1}
-                          key={column1.id}
-                          column={column1}
-                          cards={cardsColumn1}
-                        /> 
-                      </div>
-                    </div>
+                <div className='cardRow' key={index}>
+                  <div className='innerCardRow'>
+                    <Card
+                      key={card.id}
+                      card={card}
+                      color={card.color}
+                      title={card.title}
+                      subTitle={card.subTitle}
+                      description={card.description}
+                      exampleOne={card.exampleOne}
+                      exampleTwo={card.exampleTwo}
+                      exampleThree={card.exampleThree}
+                    />
+                  </div>
+                  <div className='innerRiskRow'>
+                    <DummyRisk
+                      columnid={column1}
+                      key={column1.id}
+                      column={column1}
+                      cards={cardsColumn1}
+                    />
+                    <DummyRisk
+                      columnid={column1}
+                      key={column1.id}
+                      column={column1}
+                      cards={cardsColumn1}
+                    />
+                    <DummyRisk
+                      columnid={column1}
+                      key={column1.id}
+                      column={column1}
+                      cards={cardsColumn1}
+                    />
                   </div>
                 </div>
               ))}

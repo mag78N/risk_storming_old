@@ -18,9 +18,10 @@
 }
 .goToPrevFaseBtn img,
 .goToNextFaseBtn img {
-  height: 25px;
+  height: 20px;
   width: 30px;
   display: inline-block;
+  margin-bottom: 3px;
 }
 .goToPrevFaseBtn img {
   padding-right: 0.5rem;
