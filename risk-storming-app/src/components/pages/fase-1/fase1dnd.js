@@ -8,24 +8,35 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import React from 'react';
 import CardsContext from '../../../context';
-
+import {bluecards} from '../../../assets/en/blueCards'
 class FaseOnePagednd extends React.Component {
   static contextType = CardsContext;
-  componentDidMount() {
-    const { data } = this.context;
-    //const data = this.context;
-    console.log(data);
-    console.log(data.bluecards)
-    
-  }
+  state = {
+    bluecards: bluecards,
+    columnsFase1: {
+      'column-1': {
+        id: 'column-1',
+        title: 'selected blue cards',
+        cardIds: [],
+        class: 'leftPane fase1LeftPane',
+      },
+      'column-2': {
+        id: 'column-2',
+        title: 'blue cards',
+        cardIds: Object.keys(bluecards),
+        class: 'rightPane fase1RightPane',
+      },
+    },
+    columnOrderFase1: ['column-1', 'column-2'],
+  };
   componentDidUpdate() {
-    const { data } = this.context;
-    let cards = JSON.stringify(data.columnsFase1['column-1'].cardIds);
-    localStorage.setItem('selectedBlueCards', cards);
+
+    let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
+    localStorage.setItem('selectedBlueCards', cardIds);
   }
-  
+
   onDragEnd = (result) => {
-    const { data, setData } = this.context;
+    const { columnsFase1 } = this.state;
     const { destination, source, draggableId } = result;
     //if item is dropped in non-droppable destination; do nothing
     if (!destination) {
@@ -39,8 +50,8 @@ class FaseOnePagednd extends React.Component {
       return;
     }
     //moving items in the same list; rearrange items
-    const start = data.columnsFase1[source.droppableId];
-    const finish = data.columnsFase1[destination.droppableId];
+    const start = this.state.columnsFase1[source.droppableId];
+    const finish = this.state.columnsFase1[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -51,13 +62,13 @@ class FaseOnePagednd extends React.Component {
         cardIds: newCardIds,
       };
       const newState = {
-        ...data,
+        ...this.state,
         columnsFase1: {
-          ...data.columnsFase1,
+          ...columnsFase1,
           [newColumn.id]: newColumn,
         },
       };
-      setData(newState);
+      this.setState(newState);
       return;
     }
     //moving from one list to another
@@ -74,20 +85,19 @@ class FaseOnePagednd extends React.Component {
       cardIds: finishCardIds,
     };
     const newState = {
-      ...data,
+      ...this.state,
       columnsFase1: {
-        ...data.columnsFase1,
+        ...columnsFase1,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
     };
-    setData(newState);
+    this.setState(newState);
     console.log(newState);
-    
   };
 
   render() {
-    const { data } = this.context;
+    const { columnsFase1, columnOrderFase1, bluecards } = this.state;
     return (
       <>
         <TopNavbar faseNum='Fase 1' />
@@ -108,10 +118,10 @@ class FaseOnePagednd extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            {data.columnOrderFase1.map((columnId) => {
-              const column = data.columnsFase1[columnId];
+            {columnOrderFase1.map((columnId) => {
+              const column = columnsFase1[columnId];
               const cards = column.cardIds.map(
-                (cardId) => data.bluecards[cardId]
+                (cardId) => bluecards[cardId]
               );
 
               return (
