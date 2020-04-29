@@ -75,7 +75,7 @@ const FaseOnePage = () => {
         cursor='col-resize'
       >
         <div
-          className='fase1LeftPane'
+          className='leftPane fase1LeftPane'
           onDrop={(e) => onDropLeftPane(e)}
           onDragOver={(e) => onDragOver(e)}
         >
@@ -91,7 +91,7 @@ const FaseOnePage = () => {
           ))}
         </div>
         <div
-          className='fase1RightPane'
+          className='rightPane fase1RightPane'
           onDrop={(e) => onDropRightPane(e)}
           onDragOver={(e) => onDragOver(e)}
         >

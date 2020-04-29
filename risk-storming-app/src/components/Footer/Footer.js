@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import rightChevron from '../../assets/icons/arrow-circle-right-outline.svg';
-import leftChevron from '../../assets/icons/arrow-circle-left-outline.svg';
+import rightChevron from '../../assets/icons/arrowhead-right-outline.svg';
+import leftChevron from '../../assets/icons/arrowhead-left-outline.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = (props) => {

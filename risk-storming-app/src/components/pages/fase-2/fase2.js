@@ -67,7 +67,7 @@ class FaseTwoPage extends React.Component {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div className='fase2LeftPane'>
+          <div className='leftPane fase2LeftPane'>
             {newArray.map((card) => (
               <Card
                 key={card.id}
@@ -82,7 +82,7 @@ class FaseTwoPage extends React.Component {
               />
             ))}
           </div>
-          <div className='fase2RightPane'>
+          <div className='rightPane fase2RightPane'>
             <RightPane newArray={newArray} risks={this.state.riskDetails} />
           </div>
         </Split>

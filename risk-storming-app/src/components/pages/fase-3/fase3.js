@@ -101,7 +101,7 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='fase3LeftPane'>
+            <div className='leftPane fase3LeftPane'>
               {chosenbluecards.map((card) => (
                 <div className='row cardLane'>
                   <div className='col'>
@@ -130,7 +130,7 @@ class FaseThreePage extends React.Component {
               ))}
             </div>
 
-            <div className='fase3RightPane'>
+            <div className='rightPane fase3RightPane'>
               {this.state.columnOrderFase3.map((columnId) => {
                 const column = this.state.columnsFase3[columnId];
                 const cards = column.cardIds.map(
