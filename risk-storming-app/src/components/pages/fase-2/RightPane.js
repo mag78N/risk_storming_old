@@ -21,7 +21,16 @@ const RightPane = (props) => {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
-          <RiskView id={card.id} card={card} /* riskDetails={this.props.riskDetails} *//>
+          <RiskView
+            id={card.id}
+            card={card}
+            riskDetails={props.riskDetails}
+            handleChange={props.handleChange}
+            addNewRow={props.addNewRow}
+            deleteRow={props.deleteRow}
+            clickOnDelete={props.clickOnDelete}
+            onsubmit={props.onsubmit}
+          />
         </Carousel.Item>
       ))}
     </Carousel>

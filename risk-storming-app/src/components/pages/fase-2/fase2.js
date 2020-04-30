@@ -16,14 +16,51 @@ class FaseTwoPage extends React.Component {
     this.state = {
       bluecards: bluecards,
       chosenCards: this.getCardObjectsFromLocalStorage(),
-      /* riskDetails: [
+      riskDetails: [
         {
-          id: '',
           risk: '',
-        }
-      ] , */
+        },
+      ],
     };
   }
+  handleChange = (e) => {
+    if (['risk'].includes(e.target.className)) {
+      let riskDetails = [...this.state.riskDetails];
+      riskDetails[e.target.dataset.id][
+        e.target.className
+      ] = e.target.value.toUpperCase();
+      this.setState({ riskDetails }, () => console.log(this.state.riskDetails));
+    } else {
+      this.setState({ [e.target.name]: e.target.value.toUpperCase() });
+    }
+  };
+  addNewRow = (e) => {
+    this.setState((prevState) => ({
+      riskDetails: [
+        ...prevState.riskDetails,
+        {
+          risk: '',
+        },
+      ],
+    }));
+  };
+
+  deleteRow = (index) => {
+    this.setState({
+      riskDetails: this.state.riskDetails.filter(
+        (s, sindex) => index !== sindex
+      ),
+    });
+  };
+
+  clickOnDelete(record) {
+    this.setState({
+      riskDetails: this.state.riskDetails.filter((r) => r !== record),
+    });
+  }
+  onsubmit = (e) => {
+    e.preventDefault();
+  };
   getCardObjectsFromLocalStorage() {
     const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
     const chosenBlueCardsArray = [];
@@ -79,7 +116,12 @@ class FaseTwoPage extends React.Component {
           <div className='rightPane fase2RightPane'>
             <RightPane
               chosenCards={chosenCards}
-              //riskDetails={this.state.riskDetails}
+              riskDetails={this.state.riskDetails}
+              handleChange={this.handleChange}
+              addNewRow={this.addNewRow}
+              deleteRow={this.deleteRow}
+              clickOnDelete={this.clickOnDelete}
+              onsubmit={this.onsubmit}
             />
           </div>
         </Split>
