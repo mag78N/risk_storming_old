@@ -3,6 +3,7 @@ import React from 'react';
 const RiskListLeftPane = (props) => {
   return props.riskDetails.map((val, idx) => {
     let riskId = `riskId-${idx}`,
+      riskText = val.risk,
       riskContent = `risk-${idx}`;
     console.log(val.risk);
     return (
@@ -19,7 +20,8 @@ const RiskListLeftPane = (props) => {
             resize='none'
             value={props.riskDetails[idx].riskContent}
           /> */}
-          <h2>risk is: {props.riskDetails[idx].riskContent}</h2>
+          <p>risk is:</p>
+          <p>{riskText}</p>
         </div>
       </div>
     );
