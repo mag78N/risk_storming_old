@@ -8,7 +8,7 @@ const RiskList = props => {
     return (
       <div className='form-row' key={idx}>
         <div className='postitContainer' id={`${props.card.id}|risk-${idx}`}>
-          <label htmlFor={riskId}>{`Risk #${idx + 1}`}</label>
+          {/* <label htmlFor={riskId}>{`Risk #${idx + 1}`}</label> */}
           <textarea
             onChange={props.onchange}
             rows='3'
