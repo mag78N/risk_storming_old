@@ -29,10 +29,10 @@ class FaseTwoPage extends React.Component {
       let riskDetails = [...this.state.riskDetails];
       riskDetails[e.target.dataset.id][
         e.target.className
-      ] = e.target.value.toUpperCase();
+      ] = e.target.value;
       this.setState({ riskDetails }, () => console.log(this.state.riskDetails));
     } else {
-      this.setState({ [e.target.name]: e.target.value.toUpperCase() });
+      this.setState({ [e.target.name]: e.target.value });
     }
   };
   addNewRow = (e) => {
