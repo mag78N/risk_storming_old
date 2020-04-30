@@ -9,7 +9,7 @@ const RiskListLeftPane = (props) => {
     return (
       <div className='riskLane' key={idx}>
         <div className='risk riskPostit' id={`${props.card.id}|risk-${idx}`}>
-          <div className='textareaBg'>
+          <div className='textareaBg' key={`${props.card.id}|risk-${idx}`}>
             <p>{riskId} is:</p>
             <p>{riskText}</p>
           </div>
