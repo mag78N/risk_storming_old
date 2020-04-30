@@ -11,7 +11,7 @@ const RightPane = (props) => {
       {props.chosenCards.map((card, index) => (
         <Carousel.Item id={card.id} key={index}>
           <Card
-            key={card.key}
+            key={card.id}
             id={card.id}
             color={card.color}
             title={card.title}
@@ -21,7 +21,16 @@ const RightPane = (props) => {
             exampleTwo={card.exampleTwo}
             exampleThree={card.exampleThree}
           />
-          <RiskView id={card.id} riskDetails={props.riskDetails}/>
+          <RiskView
+            id={card.id}
+            card={card}
+            riskDetails={props.riskDetails}
+            handleChange={props.handleChange}
+            addNewRow={props.addNewRow}
+            deleteRow={props.deleteRow}
+            clickOnDelete={props.clickOnDelete}
+            onsubmit={props.onsubmit}
+          />
         </Carousel.Item>
       ))}
     </Carousel>

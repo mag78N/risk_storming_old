@@ -17,35 +17,72 @@ class FaseTwoPage extends React.Component {
       bluecards: bluecards,
       chosenCards: this.getCardObjectsFromLocalStorage(),
       riskDetails: [
-        {riskId: '1'},
-        {content: 'test'},
-      ]
-      
+        {
+          risk: '',
+        },
+      ],
     };
   }
+  handleChange = (e) => {
+    if (['risk'].includes(e.target.className)) {
+      let riskDetails = [...this.state.riskDetails];
+      riskDetails[e.target.dataset.id][
+        e.target.className
+      ] = e.target.value.toUpperCase();
+      this.setState({ riskDetails }, () => console.log(this.state.riskDetails));
+    } else {
+      this.setState({ [e.target.name]: e.target.value.toUpperCase() });
+    }
+  };
+  addNewRow = (e) => {
+    this.setState((prevState) => ({
+      riskDetails: [
+        ...prevState.riskDetails,
+        {
+          risk: '',
+        },
+      ],
+    }));
+  };
+
+  deleteRow = (index) => {
+    this.setState({
+      riskDetails: this.state.riskDetails.filter(
+        (s, sindex) => index !== sindex
+      ),
+    });
+  };
+
+  clickOnDelete(record) {
+    this.setState({
+      riskDetails: this.state.riskDetails.filter((r) => r !== record),
+    });
+  }
+  onsubmit = (e) => {
+    e.preventDefault();
+  };
   getCardObjectsFromLocalStorage() {
     const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
-    const newArray = [];
-    for (let i = 0; i < 6; i++) {
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
-      for (let j = 0; j < 20; j++) {
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
         if (chosenBlueCard === bluecardKey) {
-          newArray.push(entireObject);
+          chosenBlueCardsArray.push(entireObject);
         }
       }
     }
-    return newArray;
+    return chosenBlueCardsArray;
   }
-  
 
   render() {
-   const { chosenCards } = this.state;
-   localStorage.setItem('chosenBlueCards', JSON.stringify(chosenCards));
-   console.log(chosenCards);
-   console.log(this.state);
-   
+    const { chosenCards } = this.state;
+    localStorage.setItem('chosenBlueCards', JSON.stringify(chosenCards));
+    console.log(chosenCards);
+    console.log(this.state);
+
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
@@ -77,7 +114,15 @@ class FaseTwoPage extends React.Component {
             ))}
           </div>
           <div className='rightPane fase2RightPane'>
-            <RightPane chosenCards={chosenCards} riskDetails={this.state.riskDetails} />
+            <RightPane
+              chosenCards={chosenCards}
+              riskDetails={this.state.riskDetails}
+              handleChange={this.handleChange}
+              addNewRow={this.addNewRow}
+              deleteRow={this.deleteRow}
+              clickOnDelete={this.clickOnDelete}
+              onsubmit={this.onsubmit}
+            />
           </div>
         </Split>
         <Footer prev='/fase1' next='/fase3' />
