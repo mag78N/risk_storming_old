@@ -8,6 +8,7 @@ import Footer from '../../Footer/Footer';
 import Card from './Card';
 import RightPane from './RightPane';
 import RiskView from './RiskView';
+import RiskListLeftPane from './RiskListLeftPane';
 import { bluecards } from '../../../assets/en/blueCards';
 
 class FaseTwoPage extends React.Component {
@@ -99,18 +100,29 @@ class FaseTwoPage extends React.Component {
           cursor='col-resize'
         >
           <div className='leftPane fase2LeftPane'>
-            {chosenCards.map((card) => (
-              <Card
-                key={card.id}
-                card={card}
-                color={card.color}
-                title={card.title}
-                subTitle={card.subTitle}
-                description={card.description}
-                exampleOne={card.exampleOne}
-                exampleTwo={card.exampleTwo}
-                exampleThree={card.exampleThree}
-              />
+            {chosenCards.map((card, index) => (
+              <div className='cardRow' key={index}>
+                <div className='innerCardRow'>
+                  <Card
+                    key={card.id}
+                    card={card}
+                    color={card.color}
+                    title={card.title}
+                    subTitle={card.subTitle}
+                    description={card.description}
+                    exampleOne={card.exampleOne}
+                    exampleTwo={card.exampleTwo}
+                    exampleThree={card.exampleThree}
+                  />
+                </div>
+                <RiskListLeftPane
+                  className='innerRiskRow'
+                  chosenCards={chosenCards}
+                  card={card}
+                  riskDetails={this.state.riskDetails}
+                  handleChange={this.handleChange}
+                />
+              </div>
             ))}
           </div>
           <div className='rightPane fase2RightPane'>
