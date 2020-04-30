@@ -10,14 +10,13 @@ const RiskView = (props) => {
         <RiskList
           key={props.key}
           add={props.addNewRow}
-          delete={props.clickOnDelete.bind(this)}
+          delete={props.clickOnDelete}
           riskDetails={props.riskDetails}
           id={props.id}
           card={props.card}
           onchange={props.handleChange}
           addNewRow={props.addNewRow}
           deleteRow={props.deleteRow}
-          clickOnDelete={props.clickOnDelete}
         />
         <Button onSubmit={props.onsubmit}>Confirm</Button>
       </form>
