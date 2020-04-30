@@ -1,21 +1,25 @@
 import React from 'react';
 
 const RiskList = props => {
-  return props.riskDetails.map((val, idx) => {
-    let risk = `risk-${idx}`;
+  return (
+    props.riskDetails.map((val, idx) => {
+      let riskId = `riskId-${idx}`, riskContent = `risk-${idx}`;
     console.log(val.risk);
     return (
-      <div className='form-row' key={val.index}>
+      <div className='form-row' key={idx}>
         <div className='postitContainer' id={`${props.card.id}|risk-${idx}`}>
+          <label htmlFor={riskId}>{`Risk #${idx + 1}`}</label>
           <textarea
             onChange={props.onchange}
             rows='3'
             placeholder='enter risk here'
-            name='risk'
+            name={riskId}
             data-id={idx}
             id={`${props.card.id}|risk-${idx}`}
+            className='risk'
             resize='none'
-          ></textarea>
+            value={props.riskDetails[idx].riskContent}
+          />
         </div>
         <div className='buttonContainer'>
           {idx === 0 ? (
@@ -37,6 +41,7 @@ const RiskList = props => {
         </div>
       </div>
     );
-  });
+  })
+  )
 }
 export default RiskList;

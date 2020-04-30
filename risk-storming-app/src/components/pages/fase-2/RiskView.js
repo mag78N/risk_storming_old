@@ -8,8 +8,8 @@ class RiskView extends Component {
     this.state = {
       riskDetails: [
         {
-          riskid: 0,
-          risk: '',
+          
+          risk: "",
         },
       ],
     };
@@ -19,11 +19,12 @@ class RiskView extends Component {
     localStorage.setItem('risks', JSON.stringify(nextState));
   }
   handleChange = (e) => {
-    if (['risk'].includes(e.target.name)) {
+    if (["risk"].includes(e.target.className)) {
       let riskDetails = [...this.state.riskDetails];
-      riskDetails[e.target.dataset.id][e.target.name] = e.target.value;
+      riskDetails[e.target.dataset.id][e.target.className] = e.target.value.toUpperCase() 
+      this.setState({riskDetails}, () => console.log(this.state.riskDetails))
     } else {
-      this.setState({ [e.target.name]: e.target.value, [e.target.riskid] :  e.target.index});
+      this.setState({ [e.target.name]: e.target.value.toUpperCase() });
     }
   };
   addNewRow = (e) => {
@@ -31,8 +32,8 @@ class RiskView extends Component {
       riskDetails: [
         ...prevState.riskDetails,
         {
-          riskid: prevState.riskid++,
-          risk: '',
+          
+          risk: "",
         },
       ],
     }));
@@ -71,7 +72,7 @@ class RiskView extends Component {
             card={this.props.card}
             onchange={this.handleChange}
           />
-          <Button>Confirm</Button>
+          <Button onSubmit={this.onsubmit}>Confirm</Button>
         </form>
       </div>
     );
