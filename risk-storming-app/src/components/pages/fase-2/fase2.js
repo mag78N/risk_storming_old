@@ -115,13 +115,14 @@ class FaseTwoPage extends React.Component {
                     exampleThree={card.exampleThree}
                   />
                 </div>
+                <div className='innerRiskRow'>
                 <RiskListLeftPane
-                  className='innerRiskRow'
                   chosenCards={chosenCards}
                   card={card}
                   riskDetails={this.state.riskDetails}
                   handleChange={this.handleChange}
                 />
+                </div>
               </div>
             ))}
           </div>

@@ -89,3 +89,10 @@ div.carousel {
 .buttonContainer {
   min-width: 50px;
 }
+.innerRiskRow {
+  display: flex;
+  flex-direction: column;
+}
+.fase2LeftPane .riskLane {
+  min-height: auto;
+}
