@@ -29,10 +29,10 @@ class FaseTwoPage extends React.Component {
       let riskDetails = [...this.state.riskDetails];
       riskDetails[e.target.dataset.id][
         e.target.className
-      ] = e.target.value.toUpperCase();
+      ] = e.target.value;
       this.setState({ riskDetails }, () => console.log(this.state.riskDetails));
     } else {
-      this.setState({ [e.target.name]: e.target.value.toUpperCase() });
+      this.setState({ [e.target.name]: e.target.value });
     }
   };
   addNewRow = (e) => {
@@ -116,12 +116,12 @@ class FaseTwoPage extends React.Component {
                   />
                 </div>
                 <div className='innerRiskRow'>
-                <RiskListLeftPane
-                  chosenCards={chosenCards}
-                  card={card}
-                  riskDetails={this.state.riskDetails}
-                  handleChange={this.handleChange}
-                />
+                  <RiskListLeftPane
+                    chosenCards={chosenCards}
+                    card={card}
+                    riskDetails={this.state.riskDetails}
+                    handleChange={this.handleChange}
+                  />
                 </div>
               </div>
             ))}
@@ -133,7 +133,7 @@ class FaseTwoPage extends React.Component {
               handleChange={this.handleChange}
               addNewRow={this.addNewRow}
               deleteRow={this.deleteRow}
-              clickOnDelete={this.clickOnDelete}
+              delete={this.clickOnDelete.bind(this)}
               onsubmit={this.onsubmit}
             />
           </div>

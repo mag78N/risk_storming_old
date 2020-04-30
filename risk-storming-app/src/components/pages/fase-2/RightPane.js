@@ -28,7 +28,7 @@ const RightPane = (props) => {
             handleChange={props.handleChange}
             addNewRow={props.addNewRow}
             deleteRow={props.deleteRow}
-            clickOnDelete={props.clickOnDelete}
+            clickOnDelete={props.delete}
             onsubmit={props.onsubmit}
           />
         </Carousel.Item>
