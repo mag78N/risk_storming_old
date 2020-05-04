@@ -11,7 +11,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
 import Column from './Column';
-import DummyRisk from './DummyRisk';
+import RiskList from './Risklist';
 import './styles/fase3.css';
 class FaseThreePage extends React.Component {
   constructor(props) {
@@ -132,14 +132,14 @@ class FaseThreePage extends React.Component {
   render() {
     console.log(this.state);
     const { chosenCards, colorcards } = this.state;
-   const column1 = this.state.columnsFase3['column-1'];
+    const column1 = this.state.columnsFase3['column-1'];
     const cardsColumn1 = column1.cardIds.map(
       (cardId) => this.state.colorcards[cardId]
     );
     const column2 = this.state.columnsFase3['column-2'];
     const cardsColumn2 = column2.cardIds.map(
       (cardId) => this.state.colorcards[cardId]
-    ); 
+    );
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
@@ -178,8 +178,12 @@ class FaseThreePage extends React.Component {
                     />
                   </div>
                   <div className='innerRiskRow'>
-                    
-                  
+                    <RiskList
+                      columnid={column1.id}
+                      chosenCards={this.state.chosenCards}
+                      card={card}
+                      cards={this.state.colorcards}
+                    />
                   </div>
                 </div>
               ))}
