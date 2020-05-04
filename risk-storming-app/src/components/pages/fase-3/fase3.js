@@ -8,16 +8,67 @@ import '../../cards/purple-card/PurpleCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-import CardsContext from '../../../context';
+import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
 import Column from './Column';
 import DummyRisk from './DummyRisk';
 import './styles/fase3.css';
 class FaseThreePage extends React.Component {
-  static contextType = CardsContext;
-  state = this.context.data;
+  constructor(props) {
+    super(props);
+    this.state = {
+      chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
+      colorcards: colorcards,
+      columnsFase3: {
+        'column-1': {
+          id: 'column-1',
+          title: 'selected blue cards and risks',
+          cardIds: [],
+          class: '',
+        },
+        'column-2': {
+          id: 'column-2',
+          title: 'color cards',
+          cardIds: Object.keys(colorcards),
+          class: 'rightPane fase1RightPane',
+        },
+      },
+      columnOrderFase3: ['column-1', 'column-2'],
+    };
+  }
+
   componentDidMount() {
-    console.log(this.state);
+    this.hydrateStateWithLocalStorage();
+    window.addEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
+  }
+  hydrateStateWithLocalStorage() {
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
+
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+  saveStateToLocalStorage() {
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
   }
   onDragEnd = (result) => {
     //todo: reorder our column
@@ -79,15 +130,16 @@ class FaseThreePage extends React.Component {
   };
 
   render() {
-    const chosenbluecards = JSON.parse(localStorage.getItem('chosenCards'));
-    const column1 = this.state.columnsFase3['column-1'];
+    console.log(this.state);
+    const { chosenCards, colorcards } = this.state;
+   const column1 = this.state.columnsFase3['column-1'];
     const cardsColumn1 = column1.cardIds.map(
-      (cardId) => this.state.cards[cardId]
+      (cardId) => this.state.colorcards[cardId]
     );
     const column2 = this.state.columnsFase3['column-2'];
     const cardsColumn2 = column2.cardIds.map(
-      (cardId) => this.state.cards[cardId]
-    );
+      (cardId) => this.state.colorcards[cardId]
+    ); 
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
@@ -110,7 +162,7 @@ class FaseThreePage extends React.Component {
             cursor='col-resize'
           >
             <div className='leftPane fase3LeftPane'>
-              {chosenbluecards.map((card, index) => (
+              {chosenCards.map((card, index) => (
                 <div className='cardRow' key={index}>
                   <div className='innerCardRow'>
                     <Card
@@ -126,24 +178,8 @@ class FaseThreePage extends React.Component {
                     />
                   </div>
                   <div className='innerRiskRow'>
-                    <DummyRisk
-                      columnid={column1}
-                      key={column1.id}
-                      column={column1}
-                      cards={cardsColumn1}
-                    />
-                    <DummyRisk
-                      columnid={column1}
-                      key={column1.id}
-                      column={column1}
-                      cards={cardsColumn1}
-                    />
-                    <DummyRisk
-                      columnid={column1}
-                      key={column1.id}
-                      column={column1}
-                      cards={cardsColumn1}
-                    />
+                    
+                  
                   </div>
                 </div>
               ))}
@@ -151,10 +187,10 @@ class FaseThreePage extends React.Component {
 
             <div>
               <Column
-                columnid={column2}
+                columnid={column2.id}
                 key={column2.id}
-                column={column2}
-                cards={cardsColumn2}
+                column2={column2}
+                colorcards={Object.values(colorcards)}
                 class={column2.class}
               />
             </div>

@@ -10,8 +10,8 @@ import chevronDown from '../../../assets/icons/chevron-down-outline.svg';
 import chevronUp from '../../../assets/icons/chevron-up-outline.svg';
 
 const Content = styled.div`
-  opacity: ${props => (props.open ? "1" : "0")};
-  max-height: ${props => (props.open ? "100%" : "0")};
+  opacity: ${(props) => (props.open ? '1' : '0')};
+  max-height: ${(props) => (props.open ? '100%' : '0')};
   overflow: hidden;
   transition: all 0.3s;
 `;
@@ -29,8 +29,8 @@ const Handler = styled.div`
 
 const CardList = styled.div``;
 class Card extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
     this.toggleOpen = this.toggleOpen.bind(this);
   }
@@ -40,10 +40,11 @@ class Card extends React.Component {
   }
 
   render() {
+    const { card } = this.props;
     return (
       <Draggable
         draggable='true'
-        draggableId={this.props.card.id}
+        draggableId={card.id}
         index={this.props.index}
         type='CARD'
       >
@@ -53,36 +54,40 @@ class Card extends React.Component {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             isDragging={snapshot.isDragging}
-            className={`cardContainer ${this.props.color}`}
+            className={`cardContainer ${card.color}`}
           >
-            <div className={`cardHeader ${this.props.color}Header`}>
-              <div className='cardTitle'>{this.props.title}</div>
-              <div className='cardSubtitle'>{this.props.subTitle}</div>
+            <div className={`cardHeader ${card.color}Header`}>
+              <div className='cardTitle'>{card.title}</div>
+              <div className='cardSubtitle'>{card.subTitle}</div>
             </div>
             <div className='cardBody'>
-              <div className='cardDescription'>{this.props.description}</div>
+              <div className='cardDescription'>{card.description}</div>
 
-              <Content id='cardExpanded'
-                       className='cardExpanded'
-                       open={this.state.open}>
-              <div className='exampleContainer'>
-                <div className='exampleNumber'>1</div>
-                <div className='cardExample1'>{this.props.exampleOne}</div>
-              </div>
-              <div className='exampleContainer'>
-                <div className='exampleNumber'>2</div>
-                <div className='cardExample2'>{this.props.exampleTwo}</div>
-              </div>
-              <div className='exampleContainer'>
-                <div className='exampleNumber'>3</div>
-                <div className='cardExample3'>{this.props.exampleThree}</div>
-              </div>
+              <Content
+                id='cardExpanded'
+                className='cardExpanded'
+                open={this.state.open}
+              >
+                <div className='exampleContainer'>
+                  <div className='exampleNumber'>1</div>
+                  <div className='cardExample1'>{card.exampleOne}</div>
+                </div>
+                <div className='exampleContainer'>
+                  <div className='exampleNumber'>2</div>
+                  <div className='cardExample2'>{card.exampleTwo}</div>
+                </div>
+                <div className='exampleContainer'>
+                  <div className='exampleNumber'>3</div>
+                  <div className='cardExample3'>{card.exampleThree}</div>
+                </div>
               </Content>
-              <Handler onClick={this.toggleOpen}
-                       open={this.state.open}
-                       className={`expandButton ${this.state.open ? 'opened': 'closed'}`}>
-              </Handler>
-
+              <Handler
+                onClick={this.toggleOpen}
+                open={this.state.open}
+                className={`expandButton ${
+                  this.state.open ? 'opened' : 'closed'
+                }`}
+              ></Handler>
             </div>
           </CardList>
         )}

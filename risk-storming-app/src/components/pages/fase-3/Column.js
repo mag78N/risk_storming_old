@@ -12,11 +12,11 @@ const CardList = styled.div``;
 class Column extends React.Component {
 
   render() {
-      console.log(this.props.columnid['id']);
+      console.log(Object.values(this.props.colorcards));
       
     return (
       <Droppable
-        droppableId={this.props.columnid['id']}
+        droppableId={this.props.columnid}
         direction='vertical'
         type='CARD'
       >
@@ -25,22 +25,24 @@ class Column extends React.Component {
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDraggingOver={snapshot.isDraggingOver}
-            className={this.props.column.class}
+            className={this.props.class}
           >
-            {this.props.cards.map((card, index) => (
+            {this.props.colorcards.map((card, index) => (
+             
+            
               <Card
                 type='CARD'
                 key={card.id}
                 card={card}
                 index={index}
-                column={this.props.column.id}
-                color={card.color}
+                column={this.props.column2}
+                /* color={card.color}
                 title={card.title}
                 subTitle={card.subTitle}
                 description={card.description}
                 exampleOne={card.exampleOne}
                 exampleTwo={card.exampleTwo}
-                exampleThree={card.exampleThree}
+                exampleThree={card.exampleThree} */
               />
             ))}
             {provided.placeholder}

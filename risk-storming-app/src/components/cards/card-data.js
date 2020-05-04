@@ -53,26 +53,6 @@ const CardData = {
       class: 'rightPane fase2RightPane',
     },
   },
-  risks: {
-    'bluecard-1': {
-      risks: [],
-    },
-    'bluecard-2': {
-      risks: [],
-    },
-    'bluecard-3': {
-      risks: [],
-    },
-    'bluecard-4': {
-      risks: [],
-    },
-    'bluecard-5': {
-      risks: [],
-    },
-    'bluecard-6': {
-      risks: [],
-    },
-  },
   columnsFase3: {
     'column-1': {
       id: 'column-1',
