@@ -2,7 +2,6 @@ import Card from './Card';
 import React from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
-
 import RiskView from './RiskView';
 const RightPane = (props) => {
   
@@ -24,11 +23,10 @@ const RightPane = (props) => {
           <RiskView
             id={card.id}
             card={card}
-            riskDetails={props.riskDetails}
             handleChange={props.handleChange}
             addNewRow={props.addNewRow}
             deleteRow={props.deleteRow}
-            clickOnDelete={props.delete}
+            
             onsubmit={props.onsubmit}
           />
         </Carousel.Item>

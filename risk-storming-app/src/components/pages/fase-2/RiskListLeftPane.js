@@ -1,11 +1,11 @@
 import React from 'react';
 
 const RiskListLeftPane = (props) => {
-  return props.riskDetails.map((val, idx) => {
+  return props.card.risks.map((val, idx) => {
     let riskId = `risk#${idx}`,
-      riskText = val.risk,
-      riskContent = `risk-${idx}`;
-    console.log(val.risk);
+      riskText = val;
+      
+    console.log(val);
     return (
       <div className='riskLane' key={idx}>
         <div className='risk riskPostit' id={`${props.card.id}|risk-${idx}`}>

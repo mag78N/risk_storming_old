@@ -17,48 +17,64 @@ class FaseTwoPage extends React.Component {
     this.state = {
       bluecards: bluecards,
       chosenCards: this.getCardObjectsFromLocalStorage(),
-      riskDetails: [
+      /* riskDetails: [
         {
           risk: '',
         },
-      ],
+      ], */
     };
   }
   handleChange = (e) => {
-    if (['risk'].includes(e.target.className)) {
-      let riskDetails = [...this.state.riskDetails];
-      riskDetails[e.target.dataset.id][
-        e.target.className
-      ] = e.target.value;
-      this.setState({ riskDetails }, () => console.log(this.state.riskDetails));
-    } else {
-      this.setState({ [e.target.name]: e.target.value });
-    }
-  };
-  addNewRow = (e) => {
+    /* let riskDetails = [...this.state.riskDetails];
+    riskDetails[e.target.dataset.id][e.target.className] = e.target.value;
+    this.setState({ riskDetails }, () => console.log(this.state.riskDetails)); */
+
+    const datasetCardId = e.target.dataset.cardid;
+    const datasetRiskIndex = e.target.dataset.index;
+    const value = e.target.value;
     this.setState((prevState) => ({
-      riskDetails: [
-        ...prevState.riskDetails,
-        {
-          risk: '',
-        },
-      ],
+      chosenCards: prevState.chosenCards.map((card) => {
+        console.log(datasetCardId, datasetRiskIndex);
+        if (datasetCardId === card.id) {
+          console.log(value);
+          card.risks[datasetRiskIndex] = value;
+        }
+        return card;
+      }),
     }));
   };
 
-  deleteRow = (index) => {
-    this.setState({
-      riskDetails: this.state.riskDetails.filter(
-        (s, sindex) => index !== sindex
-      ),
+  addNewRow = (cardId) => {
+    this.setState((prevState) => {
+      const newCards = [...prevState.chosenCards];
+      const card = newCards.find((newCard) => {
+        return newCard.id === cardId;
+      });
+      card.risks = [...card.risks, ''];
+      return {
+        chosenCards: newCards,
+      };
     });
   };
 
-  clickOnDelete(record) {
+  deleteRow = (cardId, index) => {
+    this.setState((prevState) => ({
+      chosenCards: prevState.chosenCards.map((card) => {
+        if (cardId === card.id) {
+          card.risks = card.risks.filter((risk, riskIndex) => {
+            return riskIndex !== index;
+          });
+        }
+        return card;
+      }),
+    }));
+  };
+
+  /* clickOnDelete(record) {
     this.setState({
       riskDetails: this.state.riskDetails.filter((r) => r !== record),
     });
-  }
+  } */
   onsubmit = (e) => {
     e.preventDefault();
   };
@@ -71,10 +87,12 @@ class FaseTwoPage extends React.Component {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
         if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [''];
           chosenBlueCardsArray.push(entireObject);
         }
       }
     }
+    //chosenBlueCardsArray[0].risks = ['test1', 'test2', 'test3'];
     return chosenBlueCardsArray;
   }
 
@@ -119,7 +137,6 @@ class FaseTwoPage extends React.Component {
                   <RiskListLeftPane
                     chosenCards={chosenCards}
                     card={card}
-                    riskDetails={this.state.riskDetails}
                     handleChange={this.handleChange}
                   />
                 </div>
@@ -129,11 +146,9 @@ class FaseTwoPage extends React.Component {
           <div className='rightPane fase2RightPane'>
             <RightPane
               chosenCards={chosenCards}
-              riskDetails={this.state.riskDetails}
               handleChange={this.handleChange}
               addNewRow={this.addNewRow}
               deleteRow={this.deleteRow}
-              delete={this.clickOnDelete.bind(this)}
               onsubmit={this.onsubmit}
             />
           </div>
