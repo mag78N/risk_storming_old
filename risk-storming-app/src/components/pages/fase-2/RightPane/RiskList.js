@@ -2,12 +2,13 @@ import React from 'react';
 
 const RiskList = (props) => {
   return props.card.risks.map((val, idx) => {
-    let riskId = `riskId-${idx} + 1`,
-      riskContent = `risk-${idx}`;
-    console.log(val);
+    let riskId = `risk-${idx + 1}`;
+    //console.log('val: ', val);
+    //console.log('idx: ', idx);
+    
     return (
       <div className='form-row' key={idx}>
-        <div className='postitContainer' id={`${props.card.id}|risk-${idx}`}>
+        <div className='postitContainer' id={`${props.card.id}|risk-${idx + 1}`}>
           <textarea
             onChange={props.onchange}
             rows='3'
@@ -15,7 +16,7 @@ const RiskList = (props) => {
             name={riskId}
             data-index={idx}
             data-cardid={props.card.id}
-            id={`${props.card.id}|risk-${idx}`}
+            id={riskId}
             className='risk'
             resize='none'
             value={val}

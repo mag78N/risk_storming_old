@@ -79,7 +79,7 @@ class FaseThreePage extends React.Component {
   };
 
   render() {
-    const chosenbluecards = JSON.parse(localStorage.getItem('chosenBlueCards'));
+    const chosenbluecards = JSON.parse(localStorage.getItem('chosenCards'));
     const column1 = this.state.columnsFase3['column-1'];
     const cardsColumn1 = column1.cardIds.map(
       (cardId) => this.state.cards[cardId]
