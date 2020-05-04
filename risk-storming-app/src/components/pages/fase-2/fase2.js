@@ -2,13 +2,12 @@ import React from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
-import './fase2.css';
+import './styles/fase2.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
-import RightPane from './RightPane';
-import RiskView from './RiskView';
-import RiskListLeftPane from './RiskListLeftPane';
+import RightPane from './RightPane/RightPane';
+import RiskListLeftPane from './LeftPane/RiskListLeftPane';
 import { bluecards } from '../../../assets/en/blueCards';
 
 class FaseTwoPage extends React.Component {
@@ -17,18 +16,9 @@ class FaseTwoPage extends React.Component {
     this.state = {
       bluecards: bluecards,
       chosenCards: this.getCardObjectsFromLocalStorage(),
-      /* riskDetails: [
-        {
-          risk: '',
-        },
-      ], */
     };
   }
   handleChange = (e) => {
-    /* let riskDetails = [...this.state.riskDetails];
-    riskDetails[e.target.dataset.id][e.target.className] = e.target.value;
-    this.setState({ riskDetails }, () => console.log(this.state.riskDetails)); */
-
     const datasetCardId = e.target.dataset.cardid;
     const datasetRiskIndex = e.target.dataset.index;
     const value = e.target.value;
@@ -92,7 +82,6 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-    //chosenBlueCardsArray[0].risks = ['test1', 'test2', 'test3'];
     return chosenBlueCardsArray;
   }
 

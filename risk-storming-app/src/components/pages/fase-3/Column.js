@@ -6,7 +6,7 @@ import '../../cards/pink-card/PinkCard.css';
 import '../../cards/purple-card/PurpleCard.css';
 import Card from './Card';
 import { Droppable } from 'react-beautiful-dnd';
-import './fase3.css';
+import './styles/fase3.css';
 const CardList = styled.div``;
 
 class Column extends React.Component {
