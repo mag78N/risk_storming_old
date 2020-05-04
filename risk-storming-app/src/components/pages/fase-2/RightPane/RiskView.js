@@ -9,9 +9,8 @@ const RiskView = (props) => {
         <h2 className='riskDetailsHeading'>Add Risks</h2>
         <RiskList
           key={props.key}
-          add={props.addNewRow}
-          delete={props.clickOnDelete}
-          riskDetails={props.riskDetails}
+          
+          
           id={props.id}
           card={props.card}
           onchange={props.handleChange}

@@ -4,7 +4,7 @@ import '../../cards/orange-card/OrangeCard.css';
 import '../../cards/pink-card/PinkCard.css';
 import '../../cards/purple-card/PurpleCard.css';
 import Card from './Card';
-import './fase3.css';
+import './styles/fase3.css';
 import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
 const CardList = styled.div``;

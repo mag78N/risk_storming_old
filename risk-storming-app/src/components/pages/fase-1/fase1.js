@@ -1,116 +1,141 @@
-import React, { useState, useEffect } from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
-import blueCardsJSON from '../../../assets/en/blueCards';
-import createCards from '../../cards/Card/createCards';
-import createMiniCards from '../../cards/Card/createMiniCards';
-import Split from 'react-split';
-import '../../pages/fase-1/fase1.css';
-import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-
-const FaseOnePage = () => {
-  const [blueCardList, setBlueCardList] = useState([]);
-  const [selectedBlueCards, setSelectedBlueCards] = useState([]);
-  const [draggedCard, setDraggedCard] = useState({});
-  //runs only once
-  useEffect(() => {
-    console.log('use effect 1');
-    const result = blueCardsJSON;
-    setBlueCardList(result);
-  }, []);
-  //stores selectedBlueCards to local storage only if value of selectedBlueCards changes
-  useEffect(() => {
-    console.log('use effect 2');
-    localStorage.setItem('cards', JSON.stringify(selectedBlueCards));
-  }, [selectedBlueCards]);
-
-  //checking if there is data saved to localstorage
-  useEffect(() => {
-    console.log('use effect 3');
-    let data = localStorage.getItem('cards');
-    if (data !== '') {
-      setSelectedBlueCards(JSON.parse(data));
-    }
-  }, []);
-  //saving  selected 6 cards to local storage
-
-  // Drag and drop
-  const onDrag = (e, card) => {
-    e.preventDefault();
-    setDraggedCard(card);
+import Split from 'react-split';
+import './styles/fase1.css';
+import Footer from '../../Footer/Footer';
+import { DragDropContext } from 'react-beautiful-dnd';
+import Column from './Column';
+import React from 'react';
+import CardsContext from '../../../context';
+import { bluecards } from '../../../assets/en/blueCards';
+class FaseOnePage extends React.Component {
+  static contextType = CardsContext;
+  state = {
+    bluecards: bluecards,
+    columnsFase1: {
+      'column-1': {
+        id: 'column-1',
+        title: 'selected blue cards',
+        cardIds: [],
+        class: 'leftPane fase1LeftPane',
+      },
+      'column-2': {
+        id: 'column-2',
+        title: 'blue cards',
+        cardIds: Object.keys(bluecards),
+        class: 'rightPane fase1RightPane',
+      },
+    },
+    columnOrderFase1: ['column-1', 'column-2'],
   };
-  const onDragOver = (e) => {
-    e.preventDefault();
+  componentDidUpdate() {
+    let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
+    localStorage.setItem('selectedBlueCards', cardIds);
+  }
+
+  onDragEnd = (result) => {
+    const { columnsFase1 } = this.state;
+    const { destination, source, draggableId } = result;
+    //if item is dropped in non-droppable destination; do nothing
+    if (!destination) {
+      return;
+    }
+    //if item is dropped in same spot; do nothing
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+    //moving items in the same list; rearrange items
+    const start = this.state.columnsFase1[source.droppableId];
+    const finish = this.state.columnsFase1[destination.droppableId];
+    if (start === finish) {
+      const newCardIds = Array.from(start.cardIds);
+      newCardIds.splice(source.index, 1);
+      newCardIds.splice(destination.index, 0, draggableId);
+
+      const newColumn = {
+        ...start,
+        cardIds: newCardIds,
+      };
+      const newState = {
+        ...this.state,
+        columnsFase1: {
+          ...columnsFase1,
+          [newColumn.id]: newColumn,
+        },
+      };
+      this.setState(newState);
+      return;
+    }
+    //moving from one list to another
+    const startCardIds = Array.from(start.cardIds);
+    startCardIds.splice(source.index, 1);
+    const newStart = {
+      ...start,
+      cardIds: startCardIds,
+    };
+    const finishCardIds = Array.from(finish.cardIds);
+    finishCardIds.splice(destination.index, 0, draggableId);
+    const newFinish = {
+      ...finish,
+      cardIds: finishCardIds,
+    };
+    const newState = {
+      ...this.state,
+      columnsFase1: {
+        ...columnsFase1,
+        [newStart.id]: newStart,
+        [newFinish.id]: newFinish,
+      },
+    };
+    this.setState(newState);
+    console.log(newState);
   };
 
-  const onDropLeftPane = (e) => {
-    if (!selectedBlueCards.includes(draggedCard)) {
-      setSelectedBlueCards([draggedCard, ...selectedBlueCards]);
-    }
-    setBlueCardList(blueCardList.filter((card) => card.id !== draggedCard.id));
-  };
-  const onDropRightPane = () => {
-    if (!blueCardList.includes(draggedCard)) {
-      setBlueCardList([draggedCard, ...blueCardList]);
-    }
-    setSelectedBlueCards(
-      selectedBlueCards.filter((card) => card.id !== draggedCard.id)
+  render() {
+    const { columnsFase1, columnOrderFase1, bluecards } = this.state;
+    return (
+      <>
+        <TopNavbar faseNum='Fase 1' />
+        <DragDropContext
+          onDragStart={this.onDragStart}
+          onDragUpdate={this.onDragUpdate}
+          onDragEnd={this.onDragEnd}
+        >
+          <Split
+            className='splitContainerFase1'
+            sizes={[75, 25]}
+            minSize={[300, 150]}
+            expandToMin={false}
+            gutterSize={10}
+            gutterAlign='center'
+            snapOffset={30}
+            dragInterval={1}
+            direction='horizontal'
+            cursor='col-resize'
+          >
+            {columnOrderFase1.map((columnId) => {
+              const column = columnsFase1[columnId];
+              const cards = column.cardIds.map((cardId) => bluecards[cardId]);
+
+              return (
+                <Column
+                  key={column.id}
+                  column={column}
+                  cards={cards}
+                  class={column.class}
+                />
+              );
+            })}
+          </Split>
+        </DragDropContext>
+        <Footer prev='/' next='/fase2' />
+      </>
     );
-  };
-
-  return (
-    <>
-      <TopNavbar />
-      <Split
-        className='splitContainerFase1'
-        sizes={[50, 50]}
-        minSize={[300, 150]}
-        expandToMin={false}
-        gutterSize={10}
-        gutterAlign='center'
-        snapOffset={30}
-        dragInterval={1}
-        direction='horizontal'
-        cursor='col-resize'
-      >
-        <div
-          className='leftPane fase1LeftPane'
-          onDrop={(e) => onDropLeftPane(e)}
-          onDragOver={(e) => onDragOver(e)}
-        >
-          {selectedBlueCards.map((card) => (
-            <div
-              draggable
-              key={card.id}
-              className='cardContainer'
-              onDrag={(e) => onDrag(e, card)}
-            >
-              {createMiniCards(card)}
-            </div>
-          ))}
-        </div>
-        <div
-          className='rightPane fase1RightPane'
-          onDrop={(e) => onDropRightPane(e)}
-          onDragOver={(e) => onDragOver(e)}
-        >
-          {blueCardList.map((card) => (
-            <div
-              className='cardContainer'
-              key={card.id}
-              draggable
-              onDrag={(e) => onDrag(e, card)}
-            >
-              {createCards(card)}
-            </div>
-          ))}
-        </div>
-      </Split>
-
-      <Footer prev='/' next='/fase2' />
-    </>
-  );
-};
+  }
+}
 
 export default FaseOnePage;
