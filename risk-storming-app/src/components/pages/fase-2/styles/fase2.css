@@ -41,9 +41,7 @@ textarea,
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
 }
-.textareaBg {
-  width: 10vw;
-}
+
 ol.carousel-indicators {
   display: none;
 }
@@ -56,12 +54,6 @@ div.carousel {
   align-items: center;
   align-content: center;
   justify-items: center;
-}
-.blackLine {
-  margin-right: 1rem;
-  width: 85%;
-  border: none;
-  border-top: 0.05rem dashed rgb(46, 45, 45);
 }
 #fase2RightPane div.active.carousel-item {
   display: flex;
@@ -95,7 +87,4 @@ div.carousel {
 .innerRiskRow {
   display: flex;
   flex-direction: column;
-}
-.fase2LeftPane .riskLane {
-  min-height: auto;
 }

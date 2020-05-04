@@ -4,48 +4,14 @@
   overflow: auto;
   height: 100vh;
   border-right: 1px solid #e5e5e5;
-  
 }
 
-.riskLane{
-  min-height: 280px;
-  padding: 0.5rem 0.5rem;
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  border-bottom: 2px solid #e5e5e5;
-}
-.riskLane:last-child {
-  border-bottom-width: 0;
-}
-.cardRow{
-  border-bottom: 2px solid #e5e5e5;
-  padding: 1rem 0;
-  margin: 0 1rem;
-  display: flex;
-  align-items: center;
-}
-.innerCardRow{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 255px;
-}
-.innerRiskRow {
-  width: calc(100% - 255px);
-}
-.dropzone{
+.dropzone {
   display: flex;
   width: calc(100% - 10vw);
   margin-left: 1rem;
   border: 1px dashed #e5e5e5;
-  min-height: 270px;
-}
-.blackLine {
-  margin-right: 1rem;
-  width: 85%;
-  border: none;
-  border-top: 0.05rem solid black;
+  min-height: 150px;
 }
 .gutter-horizontal {
   cursor: grab;
@@ -62,13 +28,4 @@
 .splitContainerFase3 {
   display: flex;
   width: 100%;
-}
-
-.splitContainerFase3 textarea {
-  width: 10vw;
-  background-color: #e5e5e5;
-  border: 1px solid rgb(228, 225, 225);
-  border-radius: 2px;
-  margin-top: 0.2rem;
-  
 }
