@@ -31,15 +31,7 @@
   margin-bottom: 1rem;
 }
 
-textarea {
-  width: 25vw;
-  background-color: #e5e5e5;
-  border: 1px solid rgb(228, 225, 225);
-  border-radius: 2px;
-  resize: none;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.9rem;
-}
+textarea,
 .textareaBg {
   width: 25vw;
   background-color: #e5e5e5;
@@ -49,6 +41,7 @@ textarea {
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
 }
+
 ol.carousel-indicators {
   display: none;
 }
@@ -61,12 +54,6 @@ div.carousel {
   align-items: center;
   align-content: center;
   justify-items: center;
-}
-.blackLine {
-  margin-right: 1rem;
-  width: 85%;
-  border: none;
-  border-top: 0.05rem dashed rgb(46, 45, 45);
 }
 #fase2RightPane div.active.carousel-item {
   display: flex;
@@ -100,7 +87,4 @@ div.carousel {
 .innerRiskRow {
   display: flex;
   flex-direction: column;
-}
-.fase2LeftPane .riskLane {
-  min-height: auto;
 }

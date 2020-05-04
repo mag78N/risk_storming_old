@@ -13,6 +13,7 @@ import Card from './../fase-2/Card';
 import Column from './Column';
 import DummyRisk from './DummyRisk';
 import './styles/fase3.css';
+import '../risk-row.css';
 class FaseThreePage extends React.Component {
   static contextType = CardsContext;
   state = this.context.data;
