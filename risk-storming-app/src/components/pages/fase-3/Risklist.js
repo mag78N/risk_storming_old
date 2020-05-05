@@ -8,6 +8,7 @@ import Card from './Card';
 import './styles/fase3.css';
 import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
+import RiskDropColumn from './RiskDropColumn';
 const CardList = styled.div``;
 
 class RiskList extends Component {
@@ -22,26 +23,42 @@ class RiskList extends Component {
             riskText = val;
           return (
             <div className='riskLane' key={idx}>
-              <div className='riskPostit' id={`${this.props.card.id}|${riskId}`}>
+              <div
+                className='riskPostit'
+                id={`${this.props.card.id}|${riskId}`}
+              >
                 <div key={`${this.props.card.id}|${riskId}`}>
                   <p>{`#${riskId}`}:</p>
                   <p>{riskText}</p>
                 </div>
               </div>
-              <Droppable
-                droppableId={this.props.columnid}
-                direction='horizontal'
-                type='CARD'
-              >
-                {(provided, snapshot) => (
-                  <CardList
-                    ref={provided.innerRef}
-                    {...provided.droppableProps}
-                    isDraggingOver={snapshot.isDraggingOver}
-                    className='dropzone'
-                  //className={props.column.class}
-                  >
-                   {/*  {Object.entries(this.props.cards).map(([key, card]) => (
+              <RiskDropColumn
+                columnid={`${this.props.card.id}|${riskId}`}
+                key={this.props.columnid}
+            
+                colorcards={this.props.colorcards}
+                
+              />
+            </div>
+          );
+        })}
+        </>
+    )}
+}
+
+export default RiskList;
+
+
+{/* <Droppable droppableId={this.props.columnid} direction='horizontal' type='CARD'>
+  {(provided, snapshot) => (
+    <CardList
+      ref={provided.innerRef}
+      {...provided.droppableProps}
+      isDraggingOver={snapshot.isDraggingOver}
+      className='dropzone' */}
+      //className={props.column.class}>
+    
+      {/*  {Object.entries(this.props.cards).map(([key, card]) => (
                       <Card
                         type='CARD'
                         key={card.id}
@@ -57,15 +74,7 @@ class RiskList extends Component {
                         exampleThree={card.exampleThree}
                       />
                     ))} */}
-                    {provided.placeholder}
-                  </CardList>
-                )}
-              </Droppable>
-            </div>
-          )
-        })}
-        </>
-    )}
-}
-
-export default RiskList;
+    /*   {provided.placeholder}
+    </CardList>
+  )}
+</Droppable>; */

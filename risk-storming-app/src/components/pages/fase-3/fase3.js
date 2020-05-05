@@ -20,6 +20,7 @@ class FaseThreePage extends React.Component {
     this.state = {
       chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
       colorcards: colorcards,
+      columns: ['right-column', []],
       columnsFase3: {
         'column-1': {
           id: 'column-1',
@@ -85,8 +86,8 @@ class FaseThreePage extends React.Component {
     ) {
       return;
     }
-    const start = this.state.columnsFase3[source.droppableId];
-    const finish = this.state.columnsFase3[destination.droppableId];
+    const start = this.state.columns[source.droppableId];
+    const finish = this.state.columns[destination.droppableId];
     if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
@@ -98,8 +99,8 @@ class FaseThreePage extends React.Component {
       };
       const newState = {
         ...this.state,
-        columnsFase3: {
-          ...this.state.columnsFase3,
+        columns: {
+          ...this.state.columns,
           [newColumn.id]: newColumn,
         },
       };
@@ -121,29 +122,42 @@ class FaseThreePage extends React.Component {
     };
     const newState = {
       ...this.state,
-      columnsFase3: {
-        ...this.state.columnsFase3,
+      columns: {
+        ...this.state.columns,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
     };
     this.setState(newState);
   };
-
+  getIdsFromDropzones = () => {
+    const dropzones = document.querySelectorAll('.dropzone');
+    //console.log(dropzones);
+    const arrDropzones = Array.from(dropzones);
+    const arrayOfDropIds = [];
+    arrDropzones.map((dropzone) => {
+      const dropIds = dropzone.dataset.rbdDroppableId;
+      console.log(dropIds);
+      arrayOfDropIds.push(dropIds);
+      return dropIds;
+    });
+    console.log(arrayOfDropIds);
+  };
   render() {
     console.log(this.state);
     const { chosenCards, colorcards } = this.state;
-    const column1 = this.state.columnsFase3['column-1'];
-    const cardsColumn1 = column1.cardIds.map(
+    //const column1 = this.state.columns[columnid];
+    /* const cardsColumn1 = column1.cardIds.map(
       (cardId) => this.state.colorcards[cardId]
     );
     const column2 = this.state.columnsFase3['column-2'];
     const cardsColumn2 = column2.cardIds.map(
       (cardId) => this.state.colorcards[cardId]
-    );
+    ); */
     //console.log(cardsColumn1, cardsColumn2);
-    console.log("cards in column-1:", cardsColumn1);
-    console.log("cards in column-2:", cardsColumn2);
+    //console.log("cards in column-1:", cardsColumn1);
+    //console.log("cards in column-2:", cardsColumn2);
+    this.getIdsFromDropzones();
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
@@ -183,10 +197,12 @@ class FaseThreePage extends React.Component {
                   </div>
                   <div className='innerRiskRow'>
                     <RiskList
-                      columnid={column1.id}
                       chosenCards={chosenCards}
                       card={card}
-                      cards={colorcards}
+                      //column1={column1}
+                      //columnid={column1.id}
+                      colorcards={Object.values(colorcards)}
+                      //class={column1.class}
                     />
                   </div>
                 </div>
@@ -195,11 +211,11 @@ class FaseThreePage extends React.Component {
 
             <div>
               <Column
-                columnid={column2.id}
-                key={column2.id}
-                column2={column2}
-                colorcards={Object.values(cardsColumn2)}
-                class={column2.class}
+                //columnid={column2.id}
+                //key={column2.id}
+                //column2={column2}
+                colorcards={Object.values(colorcards)}
+                //class={column2.class}
               />
             </div>
           </Split>
