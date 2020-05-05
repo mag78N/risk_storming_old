@@ -13,6 +13,7 @@ import Card from './../fase-2/Card';
 import Column from './Column';
 import RiskList from './Risklist';
 import './styles/fase3.css';
+import '../risk-row.css';
 class FaseThreePage extends React.Component {
   constructor(props) {
     super(props);
