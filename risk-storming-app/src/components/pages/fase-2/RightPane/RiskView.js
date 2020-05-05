@@ -6,7 +6,13 @@ const RiskView = (props) => {
   return (
     <div className='content'>
       <form className='riskDetailsForm'>
-        <h2 className='riskDetailsHeading'>Add Risks</h2>
+        <button
+          onClick={() => props.addNewRow(props.card.id)}
+          type='button'
+          className='btn btn-primary addButton'>
+          <i className='fa fa-plus' aria-hidden='true' />
+          Add risk
+        </button>
         <RiskList
           key={props.key}
           id={props.id}
@@ -15,7 +21,6 @@ const RiskView = (props) => {
           addNewRow={props.addNewRow}
           deleteRow={props.deleteRow}
         />
-        <Button onSubmit={props.onsubmit}>Confirm</Button>
       </form>
     </div>
   );
