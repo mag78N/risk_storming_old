@@ -28,18 +28,17 @@
   align-items: center;
 }
 .form-row {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 textarea,
 .textareaBg {
   width: 25vw;
-  background-color: #e5e5e5;
-  border: 1px solid rgb(228, 225, 225);
-  border-radius: 2px;
   resize: none;
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
+  border: 2px solid #000;
+  background-color: #fff;
 }
 
 ol.carousel-indicators {
@@ -72,11 +71,8 @@ div.carousel {
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-.riskDetailsHeading {
-  color: #343a40;
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+.riskDetailsForm {
+  text-align: center;
 }
 .riskDetailsForm textarea {
   margin-right: 1rem;
@@ -87,4 +83,11 @@ div.carousel {
 .innerRiskRow {
   display: flex;
   flex-direction: column;
+}
+.addButton {
+  display: inline-block;
+  margin: 2rem 0 1.5rem;
+}
+.addButton i {
+  padding-right: 0.5rem;
 }

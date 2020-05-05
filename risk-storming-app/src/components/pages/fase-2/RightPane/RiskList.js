@@ -18,18 +18,13 @@ const RiskList = (props) => {
             id={`${props.card.id}|risk-${idx}`}
             className='risk'
             resize='none'
+            maxlength='250'
             value={val}
           />
         </div>
         <div className='buttonContainer'>
           {idx === 0 ? (
-            <button
-              onClick={() => props.addNewRow(props.card.id)}
-              type='button'
-              className='btn addButton'
-            >
-              <i className='fa fa-plus' aria-hidden='true' />
-            </button>
+            ''
           ) : (
             <button
               className='btn removeButton'
