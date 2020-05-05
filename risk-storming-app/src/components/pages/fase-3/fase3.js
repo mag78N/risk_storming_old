@@ -14,13 +14,17 @@ import Column from './Column';
 import RiskList from './Risklist';
 import './styles/fase3.css';
 import '../risk-row.css';
+
 class FaseThreePage extends React.Component {
   constructor(props) {
     super(props);
+    
+      
+    
     this.state = {
       chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
       colorcards: colorcards,
-      columns: ['right-column', []],
+      columns: '',
       columnsFase3: {
         'column-1': {
           id: 'column-1',
@@ -45,6 +49,19 @@ class FaseThreePage extends React.Component {
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
     );
+  }
+  componentDidMount() {
+    const dropzones = document.querySelectorAll('.dropzone');
+    const arrDropzones = Array.from(dropzones);
+    const arrayOfDropIds = [];
+    arrDropzones.map((dropzone) => {
+      const dropIds = dropzone.dataset.rbdDroppableId;
+      console.log(dropIds);
+      arrayOfDropIds.push(dropIds);
+    });
+    console.log(arrayOfDropIds);
+    this.setState({ columns : arrayOfDropIds });
+      
   }
   hydrateStateWithLocalStorage() {
     // for all items in state
@@ -130,34 +147,11 @@ class FaseThreePage extends React.Component {
     };
     this.setState(newState);
   };
-  getIdsFromDropzones = () => {
-    const dropzones = document.querySelectorAll('.dropzone');
-    //console.log(dropzones);
-    const arrDropzones = Array.from(dropzones);
-    const arrayOfDropIds = [];
-    arrDropzones.map((dropzone) => {
-      const dropIds = dropzone.dataset.rbdDroppableId;
-      console.log(dropIds);
-      arrayOfDropIds.push(dropIds);
-      return dropIds;
-    });
-    console.log(arrayOfDropIds);
-  };
+  
   render() {
     console.log(this.state);
     const { chosenCards, colorcards } = this.state;
-    //const column1 = this.state.columns[columnid];
-    /* const cardsColumn1 = column1.cardIds.map(
-      (cardId) => this.state.colorcards[cardId]
-    );
-    const column2 = this.state.columnsFase3['column-2'];
-    const cardsColumn2 = column2.cardIds.map(
-      (cardId) => this.state.colorcards[cardId]
-    ); */
-    //console.log(cardsColumn1, cardsColumn2);
-    //console.log("cards in column-1:", cardsColumn1);
-    //console.log("cards in column-2:", cardsColumn2);
-    this.getIdsFromDropzones();
+
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
