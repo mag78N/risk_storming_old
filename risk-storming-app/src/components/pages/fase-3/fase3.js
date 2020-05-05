@@ -141,6 +141,9 @@ class FaseThreePage extends React.Component {
     const cardsColumn2 = column2.cardIds.map(
       (cardId) => this.state.colorcards[cardId]
     );
+    //console.log(cardsColumn1, cardsColumn2);
+    console.log("cards in column-1:", cardsColumn1);
+    console.log("cards in column-2:", cardsColumn2);
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
@@ -181,9 +184,9 @@ class FaseThreePage extends React.Component {
                   <div className='innerRiskRow'>
                     <RiskList
                       columnid={column1.id}
-                      chosenCards={this.state.chosenCards}
+                      chosenCards={chosenCards}
                       card={card}
-                      cards={this.state.colorcards}
+                      cards={colorcards}
                     />
                   </div>
                 </div>
@@ -195,7 +198,7 @@ class FaseThreePage extends React.Component {
                 columnid={column2.id}
                 key={column2.id}
                 column2={column2}
-                colorcards={Object.values(colorcards)}
+                colorcards={Object.values(cardsColumn2)}
                 class={column2.class}
               />
             </div>

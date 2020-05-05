@@ -12,8 +12,7 @@ const CardList = styled.div``;
 class Column extends React.Component {
 
   render() {
-      console.log(Object.values(this.props.colorcards));
-      
+      //console.log(Object.values(this.props.colorcards));
     return (
       <Droppable
         droppableId={this.props.columnid}
@@ -28,21 +27,13 @@ class Column extends React.Component {
             className={this.props.class}
           >
             {this.props.colorcards.map((card, index) => (
-             
-            
               <Card
                 type='CARD'
                 key={card.id}
                 card={card}
                 index={index}
                 column={this.props.column2}
-                /* color={card.color}
-                title={card.title}
-                subTitle={card.subTitle}
-                description={card.description}
-                exampleOne={card.exampleOne}
-                exampleTwo={card.exampleTwo}
-                exampleThree={card.exampleThree} */
+                
               />
             ))}
             {provided.placeholder}
