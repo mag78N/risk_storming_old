@@ -49,8 +49,18 @@ class FaseThreePage extends React.Component {
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
     );
+    const dropzones = document.querySelectorAll('.dropzone');
+    const arrDropzones = Array.from(dropzones);
+    const arrayOfDropIds = [];
+    arrDropzones.map((dropzone) => {
+      const dropIds = dropzone.dataset.rbdDroppableId;
+      console.log(dropIds);
+      arrayOfDropIds.push(dropIds);
+    });
+    console.log(arrayOfDropIds);
+    this.setState({ columns: arrayOfDropIds });
   }
-  componentDidMount() {
+  /* componentDidMount() {
     const dropzones = document.querySelectorAll('.dropzone');
     const arrDropzones = Array.from(dropzones);
     const arrayOfDropIds = [];
@@ -62,7 +72,7 @@ class FaseThreePage extends React.Component {
     console.log(arrayOfDropIds);
     this.setState({ columns : arrayOfDropIds });
       
-  }
+  } */
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {
