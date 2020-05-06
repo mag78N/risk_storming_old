@@ -28,6 +28,7 @@
 .riskPostit .textareaBg,
 .riskPostit textarea {
   width: 200px;
+  overflow-wrap: break-word;
   background:#ffc;
   border-color: #ffc;
   -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);

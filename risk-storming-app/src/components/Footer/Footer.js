@@ -1,7 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import rightChevron from '../../assets/icons/arrowhead-right-outline.svg';
-import leftChevron from '../../assets/icons/arrowhead-left-outline.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
@@ -9,12 +7,12 @@ const Footer = (props) => {
     <div className='btnContainer'>
       <Link to={props.prev}>
         <button className='goToPrevFaseBtn'>
-          <img src={leftChevron} alt=''/>
+          <i className='fa fa-chevron-left' aria-hidden='true' />
           Previous</button>
       </Link>
       <Link to={props.next}>
         <button className='goToNextFaseBtn'>Next
-        <img src={rightChevron} alt=''/>
+          <i className='fa fa-chevron-right' aria-hidden='true' />
         </button>
       </Link>
     </div>

@@ -137,7 +137,7 @@ class FaseTwoPage extends React.Component {
       <>
         <TopNavbar faseNum='Fase 2' />
         <Split
-          className='splitContainerFase2'
+          className='splitContainer splitContainerFase2'
           sizes={[60, 40]}
           minSize={[250]}
           expandToMin={false}
