@@ -10,22 +10,15 @@
 }
 .goToPrevFaseBtn, .goToNextFaseBtn {
   background-color: #fff;
-  color: rgb(46, 45, 45);
+  color: #000;
   border: 2px solid #fff;
   font-size: 1rem;
   text-transform: uppercase;
   padding: 0.25rem 1.5rem;
 }
-.goToPrevFaseBtn img,
-.goToNextFaseBtn img {
-  height: 20px;
-  width: 30px;
-  display: inline-block;
-  margin-bottom: 3px;
-}
-.goToPrevFaseBtn img {
+.goToPrevFaseBtn i {
   padding-right: 0.5rem;
 }
-.goToNextFaseBtn img {
+.goToNextFaseBtn i {
   padding-left: 0.5rem;
 }

@@ -5,7 +5,7 @@ general css for card template
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 200px;
+  width: 210px;
   border-radius: 5px;
   margin: 0.75rem;
   -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
@@ -21,6 +21,7 @@ general css for card template
   background-color: #fff;
   padding: 0.75rem 0.75rem 0.5rem;
   border-radius: 5px 5px 0 0;
+  overflow-wrap: break-word;
 }
 .cardTitle {
   font-size: 1.35rem;
@@ -53,11 +54,6 @@ general css for card template
   /* padding-bottom: 0; */
 }
 
-/*added by Aline*/
-.fase3LeftPane{
-  width: 250px;
-}
-/**/
 .exampleContainer {
   display: flex;
   font-size: 0.75rem;

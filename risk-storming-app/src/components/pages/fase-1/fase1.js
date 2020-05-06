@@ -106,8 +106,8 @@ class FaseOnePage extends React.Component {
           onDragEnd={this.onDragEnd}
         >
           <Split
-            className='splitContainerFase1'
-            sizes={[75, 25]}
+            className='splitContainer splitContainerFase1'
+            sizes={[40, 60]}
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}
