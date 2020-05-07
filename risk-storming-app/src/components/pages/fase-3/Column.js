@@ -15,7 +15,7 @@ class Column extends React.Component {
       //console.log(Object.values(this.props.colorcards));
     return (
       <Droppable
-        droppableId='right-column'
+        droppableId='RIGHT-COLUMN'
         direction='vertical'
         type='CARD'
       >

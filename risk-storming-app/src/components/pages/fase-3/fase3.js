@@ -29,23 +29,23 @@ class FaseThreePage extends React.Component {
           cardIds: [],
           class: '',
         },
-        'column-2': {
-          id: 'column-2',
+        'RIGHT-COLUMN': {
+          id: 'RIGHT-COLUMN',
           title: 'color cards',
           cardIds: Object.keys(colorcards),
           class: 'rightPane fase1RightPane',
         },
       },
-      columnOrderFase3: ['column-1', 'column-2'],
+      columnOrderFase3: ['column-1', 'RIGHT-COLUMN'],
     };
   }
 
   componentDidMount() {
-    this.hydrateStateWithLocalStorage();
-    window.addEventListener(
+    //this.hydrateStateWithLocalStorage();
+   /*  window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
+    ); */
     const dropzones = document.querySelectorAll('.dropzone');
     const arrDropzones = Array.from(dropzones);
     const arrayOfDropIds = [];
@@ -78,7 +78,7 @@ class FaseThreePage extends React.Component {
       }
     }
   }
-  saveStateToLocalStorage() {
+  /* saveStateToLocalStorage() {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
@@ -87,7 +87,7 @@ class FaseThreePage extends React.Component {
   }
   componentDidUpdate() {
     this.saveStateToLocalStorage();
-  }
+  } */
   onDragEnd = (result) => {
     //todo: reorder our column
 
