@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../cards/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
@@ -6,11 +7,9 @@ import './styles/fase1.css';
 import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
-import React from 'react';
-import CardsContext from '../../../context';
+
 import { bluecards } from '../../../assets/en/blueCards';
 class FaseOnePage extends React.Component {
-  static contextType = CardsContext;
   state = {
     bluecards: bluecards,
     columnsFase1: {
@@ -31,9 +30,9 @@ class FaseOnePage extends React.Component {
   };
   componentDidUpdate() {
     let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
-    localStorage.setItem('selectedBlueCards', cardIds);
+    localStorage.setItem('selectedBlueCardIds', cardIds);
   }
-  
+
   onDragEnd = (result) => {
     const { columnsFase1 } = this.state;
     const { destination, source, draggableId } = result;
@@ -100,11 +99,7 @@ class FaseOnePage extends React.Component {
     return (
       <>
         <TopNavbar faseNum='Fase 1' />
-        <DragDropContext
-          onDragStart={this.onDragStart}
-          onDragUpdate={this.onDragUpdate}
-          onDragEnd={this.onDragEnd}
-        >
+        <DragDropContext onDragEnd={this.onDragEnd}>
           <Split
             className='splitContainer splitContainerFase1'
             sizes={[40, 60]}

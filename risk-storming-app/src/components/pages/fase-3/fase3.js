@@ -22,7 +22,7 @@ class FaseThreePage extends React.Component {
       chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
       colorcards: Object.values(colorcards),
 
-      columnsFase3: {
+      /* columnsFase3: {
         'column-1': {
           id: 'column-1',
           title: 'risks',
@@ -36,7 +36,7 @@ class FaseThreePage extends React.Component {
           class: 'rightPane fase1RightPane',
         },
       },
-      columnOrderFase3: ['column-1', 'RIGHT-COLUMN'],
+      columnOrderFase3: ['column-1', 'RIGHT-COLUMN'], */
     };
   }
 

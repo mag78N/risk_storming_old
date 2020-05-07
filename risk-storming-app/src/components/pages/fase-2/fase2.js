@@ -19,7 +19,7 @@ class FaseTwoPage extends React.Component {
       chosenCards: this.getCardObjectsFromLocalStorage(),
     };
   }
-  componentDidMount() {
+  /* componentDidMount() {
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
       'beforeunload',
@@ -60,7 +60,7 @@ class FaseTwoPage extends React.Component {
       // save to localStorage
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
-  }
+  } */
   handleChange = (e) => {
     const datasetCardId = e.target.dataset.cardid;
     const datasetRiskIndex = e.target.dataset.index;
@@ -112,7 +112,9 @@ class FaseTwoPage extends React.Component {
     e.preventDefault();
   };
   getCardObjectsFromLocalStorage() {
-    const chosenCardIds = JSON.parse(localStorage.getItem('selectedBlueCards'));
+    const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
+    );
     const chosenBlueCardsArray = [];
     for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
