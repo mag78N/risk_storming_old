@@ -19,53 +19,34 @@ class FaseThreePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
+      chosenCards: JSON.parse(sessionStorage.getItem('chosenCards')),
       colorcards: Object.values(colorcards),
-
-      columnsFase3: {
-        'column-1': {
-          id: 'column-1',
-          title: 'risks',
-          cardIds: [],
-          class: '',
-        },
-        'RIGHT-COLUMN': {
-          id: 'RIGHT-COLUMN',
-          title: 'color cards',
-          cardIds: Object.keys(colorcards),
-          class: 'rightPane fase1RightPane',
-        },
-      },
-      columnOrderFase3: ['column-1', 'RIGHT-COLUMN'],
     };
   }
 
   componentDidMount() {
-    //this.hydrateStateWithLocalStorage();
-    /*  window.addEventListener(
+    this.hydrateStateWithLocalStorage();
+    window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); */
-    const dropzones = document.querySelectorAll('.dropzone');
-    const arrDropzones = Array.from(dropzones);
-    const arrayOfDropIds = [];
-    arrDropzones.map((dropzone) => {
-      const dropIds = dropzone.dataset.rbdDroppableId;
-      console.log(dropIds);
-      arrayOfDropIds.push(dropIds);
-      return this.setState({ columns: arrayOfDropIds });
-    });
-    console.log('Array of risk-dropzone-ids: ', arrayOfDropIds);
-    //this.setState({ columns: arrayOfDropIds });
+    );
   }
+  componentWillUnmount() {
+    window.removeEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
 
+    // saves if component has a chance to unmount
+    this.saveStateToLocalStorage();
+  }
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
-      if (localStorage.hasOwnProperty(key)) {
+      if (sessionStorage.hasOwnProperty(key)) {
         // get the key's value from localStorage
-        let value = localStorage.getItem(key);
+        let value = sessionStorage.getItem(key);
 
         // parse the localStorage string and setState
         try {
@@ -78,14 +59,14 @@ class FaseThreePage extends React.Component {
       }
     }
   }
-  /* saveStateToLocalStorage() {
+  saveStateToLocalStorage() {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
-      localStorage.setItem(key, JSON.stringify(this.state[key]));
+      sessionStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  componentDidUpdate() {
+  /* componentDidUpdate() {
     this.saveStateToLocalStorage();
   } */
 
@@ -152,54 +133,6 @@ class FaseThreePage extends React.Component {
         return { chosenCards: newCards };
       });
     }
-
-    /* console.log(
-      'source.droppableId => destination.droppableId: ',
-      source.droppableId,
-      destination.droppableId
-    ); */
-
-    /* if (start === finish) {
-      const newCardIds = Array.from(start.cardIds);
-      newCardIds.splice(source.index, 1);
-      newCardIds.splice(destination.index, 0, draggableId);
-
-      const newColumn = {
-        ...start,
-        cardIds: newCardIds,
-      };
-      const newState = {
-        ...this.state,
-        columns: {
-          ...this.state.columns,
-          [newColumn.id]: newColumn,
-        },
-      };
-      this.setState(newState);
-      return;
-    }
-    //moving from one list to another
-    const startCardIds = Array.from(start.cardIds);
-    startCardIds.splice(source.index, 1);
-    const newStart = {
-      ...start,
-      cardIds: startCardIds,
-    };
-    const finishCardIds = Array.from(finish.cardIds);
-    finishCardIds.splice(destination.index, 0, draggableId);
-    const newFinish = {
-      ...finish,
-      cardIds: finishCardIds,
-    };
-    const newState = {
-      ...this.state,
-      columns: {
-        ...this.state.columns,
-        [newStart.id]: newStart,
-        [newFinish.id]: newFinish,
-      },
-    };
-    this.setState(newState); */
   };
 
   render() {

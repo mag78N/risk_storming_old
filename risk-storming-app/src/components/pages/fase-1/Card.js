@@ -10,8 +10,8 @@ import chevronDown from '../../../assets/icons/chevron-down-outline.svg';
 import chevronUp from '../../../assets/icons/chevron-up-outline.svg';
 
 const Content = styled.div`
-  opacity: ${props => (props.open ? "1" : "0")};
-  max-height: ${props => (props.open ? "100%" : "0")};
+  opacity: ${(props) => (props.open ? '1' : '0')};
+  max-height: ${(props) => (props.open ? '100%' : '0')};
   overflow: hidden;
   transition: all 0.3s;
 `;
@@ -41,7 +41,11 @@ class Card extends React.Component {
 
   render() {
     return (
-      <Draggable draggable='true' draggableId={this.props.card.id} index={this.props.index}>
+      <Draggable
+        draggable='true'
+        draggableId={this.props.card.id}
+        index={this.props.index}
+      >
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
@@ -57,9 +61,11 @@ class Card extends React.Component {
             <div className='cardBody'>
               <div className='cardDescription'>{this.props.description}</div>
 
-              <Content id='cardExpanded'
-                       className='cardExpanded'
-                       open={this.state.open}>
+              <Content
+                id='cardExpanded'
+                className='cardExpanded'
+                open={this.state.open}
+              >
                 <div className='exampleContainer'>
                   <div className='exampleNumber'>1</div>
                   <div className='cardExample1'>{this.props.exampleOne}</div>
@@ -73,11 +79,13 @@ class Card extends React.Component {
                   <div className='cardExample3'>{this.props.exampleThree}</div>
                 </div>
               </Content>
-              <Handler onClick={this.toggleOpen}
-                       open={this.state.open}
-                       className={`expandButton ${this.state.open ? 'opened': 'closed'}`}>
-              </Handler>
-
+              <Handler
+                onClick={this.toggleOpen}
+                open={this.state.open}
+                className={`expandButton ${
+                  this.state.open ? 'opened' : 'closed'
+                }`}
+              ></Handler>
             </div>
           </CardList>
         )}
