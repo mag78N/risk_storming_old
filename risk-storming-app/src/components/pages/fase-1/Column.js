@@ -11,7 +11,6 @@ const CardList = styled.div``;
 
 class Column extends React.Component {
   render() {
-    console.log(this.props.column.id);
     return (
       <Droppable droppableId={this.props.column.id} direction='vertical'>
         {(provided, snapshot) => (

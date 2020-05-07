@@ -11,7 +11,6 @@ const CardList = styled.div``;
 
 class RiskDropColumn extends React.Component {
   render() {
-    console.log(this.props.riskCards);
     return (
       <Droppable
         droppableId={this.props.columnid}

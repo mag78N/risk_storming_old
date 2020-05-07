@@ -22,10 +22,7 @@ class FaseTwoPage extends React.Component {
   componentDidMount() {
     console.log(this.state);
     this.hydrateStateWithLocalStorage();
-    window.addEventListener(
-      'beforeunload',
-      this.saveStateToLocalStorage.bind(this)
-    );
+    window.addEventListener('beforeunload', this.saveStateToLocalStorage());
   }
   /* componentWillUnmount() {
     window.removeEventListener(
@@ -36,7 +33,7 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   } */
-  hydrateStateWithLocalStorage() {
+  hydrateStateWithLocalStorage = () => {
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -54,14 +51,14 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-  }
-  saveStateToLocalStorage() {
+  };
+  saveStateToLocalStorage = () => {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
       sessionStorage.setItem(key, JSON.stringify(this.state[key]));
     }
-  }
+  };
   handleChange = (e) => {
     const datasetCardId = e.target.dataset.cardid;
     const datasetRiskIndex = e.target.dataset.index;
@@ -128,9 +125,8 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-    sessionStorage.setItem("chosenCards", JSON.stringify(chosenBlueCardsArray));
+    sessionStorage.setItem('chosenCards', JSON.stringify(chosenBlueCardsArray));
     return chosenBlueCardsArray;
-    
   }
 
   render() {
