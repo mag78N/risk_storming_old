@@ -1,9 +1,14 @@
 .dropzone {
   display: flex;
   width: calc(100% - 10vw);
+  min-width: 300px;
   margin-left: 1rem;
   border: 1px dashed #e5e5e5;
   min-height: 150px;
+  overflow: auto;
+}
+.dropzone .cardContainer {
+  min-width: 210px;
 }
 .fase3LeftPane .riskPostit {
   width: 200px;
