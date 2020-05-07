@@ -70,12 +70,11 @@ class FaseTwoPage extends React.Component {
         console.log(datasetCardId, datasetRiskIndex);
         if (datasetCardId === card.id) {
           console.log(value);
-          card.risks[datasetRiskIndex] = value;
+          card.risks[datasetRiskIndex].label = value;
         }
         return card;
       }),
     }));
-    
   };
 
   addNewRow = (cardId) => {
@@ -84,12 +83,11 @@ class FaseTwoPage extends React.Component {
       const card = newCards.find((newCard) => {
         return newCard.id === cardId;
       });
-      card.risks = [...card.risks, ''];
+      card.risks = [...card.risks, { label: '', cards: [] }];
       return {
         chosenCards: newCards,
       };
     });
-    
   };
 
   deleteRow = (cardId, index) => {
@@ -103,7 +101,6 @@ class FaseTwoPage extends React.Component {
         return card;
       }),
     }));
-   
   };
 
   /* clickOnDelete(record) {
@@ -123,7 +120,12 @@ class FaseTwoPage extends React.Component {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
         if (chosenBlueCard === bluecardKey) {
-          entireObject.risks = [''];
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
           chosenBlueCardsArray.push(entireObject);
         }
       }

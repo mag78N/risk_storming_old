@@ -20,8 +20,8 @@ class FaseThreePage extends React.Component {
     super(props);
     this.state = {
       chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
-      colorcards: colorcards,
-      columns: '',
+      colorcards: Object.values(colorcards),
+
       columnsFase3: {
         'column-1': {
           id: 'column-1',
@@ -42,7 +42,7 @@ class FaseThreePage extends React.Component {
 
   componentDidMount() {
     //this.hydrateStateWithLocalStorage();
-   /*  window.addEventListener(
+    /*  window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
     ); */
@@ -55,7 +55,7 @@ class FaseThreePage extends React.Component {
       arrayOfDropIds.push(dropIds);
       return this.setState({ columns: arrayOfDropIds });
     });
-    console.log("Array of risk-dropzone-ids: ", arrayOfDropIds);
+    console.log('Array of risk-dropzone-ids: ', arrayOfDropIds);
     //this.setState({ columns: arrayOfDropIds });
   }
 
@@ -88,23 +88,78 @@ class FaseThreePage extends React.Component {
   componentDidUpdate() {
     this.saveStateToLocalStorage();
   } */
+
+  getCardList = (droppableId) => {
+    if (droppableId === 'RIGHT-COLUMN') {
+      return [...this.state.colorcards];
+    }
+    const [cardId, riskId] = droppableId.split('|');
+    const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+
+    const foundCard = this.state.chosenCards.find((card) => card.id === cardId);
+    return [...foundCard.risks[riskIndex].cards];
+  };
+
   onDragEnd = (result) => {
-    //todo: reorder our column
-
     const { destination, source, draggableId } = result;
-
     if (!destination) {
       return;
     }
     if (
-      destination.droppableId === source.droppableId &&
-      destination.index === source.index
+      destination.droppableId ===
+      source.droppableId /* &&
+      destination.index === source.index */
     ) {
       return;
     }
-    const start = this.state.columns[source.droppableId];
-    const finish = this.state.columns[destination.droppableId];
-    if (start === finish) {
+    const start = this.getCardList(source.droppableId);
+    console.log(start);
+    const finish = this.getCardList(destination.droppableId);
+
+    const removedCard = start.splice(source.index, 1)[0];
+    finish.splice(destination.index, 0, removedCard);
+
+    if (source.droppableId === 'RIGHT-COLUMN') {
+      this.setState((prevState) => {
+        return { colorcards: start };
+      });
+    } else {
+      this.setState((prevState) => {
+        const newCards = [...prevState.chosenCards];
+        const [cardId, riskId] = source.droppableId.split('|');
+        const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+
+        const foundCard = newCards.find((card) => card.id === cardId);
+        foundCard.risks[riskIndex].cards = start;
+        console.log(foundCard);
+        return { chosenCards: newCards };
+      });
+    }
+
+    if (destination.droppableId === 'RIGHT-COLUMN') {
+      this.setState((prevState) => {
+        return { colorcards: finish };
+      });
+    } else {
+      this.setState((prevState) => {
+        const newCards = [...prevState.chosenCards];
+        const [cardId, riskId] = destination.droppableId.split('|');
+        const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+
+        const foundCard = newCards.find((card) => card.id === cardId);
+        foundCard.risks[riskIndex].cards = finish;
+        console.log(foundCard);
+        return { chosenCards: newCards };
+      });
+    }
+
+    /* console.log(
+      'source.droppableId => destination.droppableId: ',
+      source.droppableId,
+      destination.droppableId
+    ); */
+
+    /* if (start === finish) {
       const newCardIds = Array.from(start.cardIds);
       newCardIds.splice(source.index, 1);
       newCardIds.splice(destination.index, 0, draggableId);
@@ -144,7 +199,7 @@ class FaseThreePage extends React.Component {
         [newFinish.id]: newFinish,
       },
     };
-    this.setState(newState);
+    this.setState(newState); */
   };
 
   render() {
@@ -189,27 +244,14 @@ class FaseThreePage extends React.Component {
                     />
                   </div>
                   <div className='innerRiskRow'>
-                    <RiskList
-                      chosenCards={chosenCards}
-                      card={card}
-                      //column1={column1}
-                      //columnid={column1.id}
-                      colorcards={Object.values(colorcards)}
-                      //class={column1.class}
-                    />
+                    <RiskList chosenCards={chosenCards} card={card} />
                   </div>
                 </div>
               ))}
             </div>
 
             <div>
-              <Column
-                //columnid={column2.id}
-                //key={column2.id}
-                //column2={column2}
-                colorcards={Object.values(colorcards)}
-                //class={column2.class}
-              />
+              <Column colorcards={colorcards} />
             </div>
           </Split>
         </DragDropContext>

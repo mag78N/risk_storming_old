@@ -20,7 +20,7 @@ class RiskList extends Component {
       <>
         {this.props.card.risks.map((val, idx) => {
           const riskId = `risk-${idx + 1}`,
-            riskText = val;
+            riskText = val.label;
           return (
             <div className='riskLane' key={idx}>
               <div
@@ -35,8 +35,8 @@ class RiskList extends Component {
               <RiskDropColumn
                 columnid={`${this.props.card.id}|${riskId}`}
                 key={this.props.columnid}
-            
-                colorcards={this.props.colorcards}
+                riskCards={val.cards}
+                
                 
               />
             </div>

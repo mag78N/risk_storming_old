@@ -20,7 +20,7 @@ const RiskList = (props) => {
             className='risk'
             resize='none'
             maxlength='250'
-            value={val}
+            value={val.label}
           />
         </div>
         <div className='buttonContainer'>

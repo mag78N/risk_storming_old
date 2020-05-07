@@ -3,7 +3,7 @@ import React from 'react';
 const RiskListLeftPane = (props) => {
   return props.card.risks.map((val, idx) => {
     let riskId = `risk #${idx + 1}`,
-      riskText = val;
+      riskText = val.label;
     return (
       <div className='riskLane' key={idx}>
         <div className='risk riskPostit' id={`${props.card.id}|risk-${idx}`}>

@@ -11,7 +11,7 @@ const CardList = styled.div``;
 
 class RiskDropColumn extends React.Component {
   render() {
-    //console.log(Object.values(this.props.colorcards));
+    console.log(this.props.riskCards);
     return (
       <Droppable
         droppableId={this.props.columnid}
@@ -25,7 +25,7 @@ class RiskDropColumn extends React.Component {
             isDraggingOver={snapshot.isDraggingOver}
             className=' dropzone'
           >
-            {/* {this.props.colorcards.map((card, index) => (
+            {this.props.riskCards.map((card, index) => (
               <Card
                 type='CARD'
                 key={card.id}
@@ -33,7 +33,7 @@ class RiskDropColumn extends React.Component {
                 index={index}
                 //column={this.props.column2}
               />
-            ))} */}
+            ))}
             {provided.placeholder}
           </CardList>
         )}
