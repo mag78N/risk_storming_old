@@ -18,9 +18,6 @@ import '../risk-row.css';
 class FaseThreePage extends React.Component {
   constructor(props) {
     super(props);
-    
-      
-    
     this.state = {
       chosenCards: JSON.parse(localStorage.getItem('chosenCards')),
       colorcards: colorcards,
@@ -28,7 +25,7 @@ class FaseThreePage extends React.Component {
       columnsFase3: {
         'column-1': {
           id: 'column-1',
-          title: 'selected blue cards and risks',
+          title: 'risks',
           cardIds: [],
           class: '',
         },
@@ -56,23 +53,12 @@ class FaseThreePage extends React.Component {
       const dropIds = dropzone.dataset.rbdDroppableId;
       console.log(dropIds);
       arrayOfDropIds.push(dropIds);
+      return this.setState({ columns: arrayOfDropIds });
     });
-    console.log(arrayOfDropIds);
-    this.setState({ columns: arrayOfDropIds });
+    console.log("Array of risk-dropzone-ids: ", arrayOfDropIds);
+    //this.setState({ columns: arrayOfDropIds });
   }
-  /* componentDidMount() {
-    const dropzones = document.querySelectorAll('.dropzone');
-    const arrDropzones = Array.from(dropzones);
-    const arrayOfDropIds = [];
-    arrDropzones.map((dropzone) => {
-      const dropIds = dropzone.dataset.rbdDroppableId;
-      console.log(dropIds);
-      arrayOfDropIds.push(dropIds);
-    });
-    console.log(arrayOfDropIds);
-    this.setState({ columns : arrayOfDropIds });
-      
-  } */
+
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {
@@ -98,6 +84,9 @@ class FaseThreePage extends React.Component {
       // save to localStorage
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
+  }
+  componentDidUpdate() {
+    this.saveStateToLocalStorage();
   }
   onDragEnd = (result) => {
     //todo: reorder our column
@@ -157,9 +146,9 @@ class FaseThreePage extends React.Component {
     };
     this.setState(newState);
   };
-  
+
   render() {
-    console.log('state inside render :' ,this.state);
+    console.log('state inside render :', this.state);
     const { chosenCards, colorcards } = this.state;
 
     return (
