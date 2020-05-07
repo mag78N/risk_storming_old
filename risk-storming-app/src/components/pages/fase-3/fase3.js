@@ -31,7 +31,15 @@ class FaseThreePage extends React.Component {
       this.saveStateToLocalStorage.bind(this)
     );
   }
+  componentWillUnmount() {
+    window.removeEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
 
+    // saves if component has a chance to unmount
+    this.saveStateToLocalStorage();
+  }
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {
@@ -58,9 +66,9 @@ class FaseThreePage extends React.Component {
       sessionStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  componentDidUpdate() {
+  /* componentDidUpdate() {
     this.saveStateToLocalStorage();
-  }
+  } */
 
   getCardList = (droppableId) => {
     if (droppableId === 'RIGHT-COLUMN') {
