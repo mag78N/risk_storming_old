@@ -1,5 +1,17 @@
-export const bluecards = {
-  'blue-1': {
+/* const csvData = [
+  ['firstname', 'lastname', 'email'],
+  ['Ahmed', 'Tomi', 'ah@smthing.co.com'],
+  ['Raed', 'Labes', 'rl@smthing.co.com'],
+  ['Yezzi', 'Min l3b', 'ymin@cocococo.com'],
+]; */
+{
+  /* <CSVLink data={csvData}>Download me</CSVLink>;
+// or
+<CSVDownload data={csvData} target='_blank' />;
+ */
+}
+export const csvBluecards = [
+  {
     id: 'blue-1',
     color: 'blue',
     title: 'Structure',
@@ -11,9 +23,9 @@ export const bluecards = {
     exampleTwo: 'Is the code modular or does it resemble one big monolith?',
     exampleThree:
       'Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?',
-    risks: ['risk 1'],
+    risks: [],
   },
-  'blue-2': {
+  {
     id: 'blue-2',
     color: 'blue',
     title: 'Functionality',
@@ -28,7 +40,7 @@ export const bluecards = {
       'Most of our testing centres around "can we do this?" or "can\'t we do that?". How far should we go in automating these things?',
     risks: [],
   },
-  'blue-3': {
+  {
     id: 'blue-3',
     color: 'blue',
     title: 'Data',
@@ -43,7 +55,7 @@ export const bluecards = {
       "Input of data is usually incredibly important and often equally fragile. There's tons of rubbish we can try to input into our systems, but how does it handle it?",
     risks: [],
   },
-  'blue-4': {
+  {
     id: 'blue-4',
     color: 'blue',
     title: 'Testability',
@@ -58,7 +70,7 @@ export const bluecards = {
       'Can you manipulate system time to test functionality that only comes into play at certain dates?',
     risks: [],
   },
-  'blue-5': {
+  {
     id: 'blue-5',
     color: 'blue',
     title: 'Operations',
@@ -73,7 +85,7 @@ export const bluecards = {
       'Is the code easy to read and easy to find your way through? You might test this by asking for a change in old code by a new team member.',
     risks: [],
   },
-  'blue-6': {
+  {
     id: 'blue-6',
     color: 'blue',
     title: 'Security and Permission',
@@ -88,7 +100,7 @@ export const bluecards = {
       'Hacking is hard to guard your product from. Keep that virus scan, third party and open source code up-to-date!',
     risks: [],
   },
-  'blue-7': {
+  {
     id: 'blue-7',
     color: 'blue',
     title: 'Adaptability',
@@ -103,7 +115,7 @@ export const bluecards = {
       'Smartphone configurations are always in constant flux. OS versions, screen sizes, shapes, resolutions... Can your app  adapt?',
     risks: [],
   },
-  'blue-8': {
+  {
     id: 'blue-8',
     color: 'blue',
     title: 'Stability',
@@ -118,7 +130,7 @@ export const bluecards = {
       'Is the performance of your hardware stable? The Iphone 6’s antenna dropped signal when you held your phone a certain way.',
     risks: [],
   },
-  'blue-9': {
+  {
     id: 'blue-9',
     color: 'blue',
     title: 'Internationalization',
@@ -133,7 +145,7 @@ export const bluecards = {
       "Laws, permissions, network security differ from country to country. If you want your product to be used in China, you'll most likely need to adjust a few things...",
     risks: [],
   },
-  'blue-10': {
+  {
     id: 'blue-10',
     color: 'blue',
     title: 'Accessibility',
@@ -148,7 +160,7 @@ export const bluecards = {
       ' Humans are diverse. The blind person. The arthritic. The novice. How do you know your software is accessible to them?',
     risks: [],
   },
-  'blue-11': {
+  {
     id: 'blue-11',
     color: 'blue',
     title: 'Clarity',
@@ -163,7 +175,7 @@ export const bluecards = {
       'Naming things is often really hard. Are all the buttons named consistently? Are the icons clear and unambiguous?',
     risks: [],
   },
-  'blue-12': {
+  {
     id: 'blue-12',
     color: 'blue',
     title: 'Complexity',
@@ -178,7 +190,7 @@ export const bluecards = {
       'The software that beats even the most battle-hardened chess masters uses a basic kind of artificial intelligence to predict human chess behaviour. How would you test this?',
     risks: [],
   },
-  'blue-13': {
+  {
     id: 'blue-13',
     color: 'blue',
     title: 'Confidentiality',
@@ -193,7 +205,7 @@ export const bluecards = {
       'When working in banking or medicine you cannot just copy production data for testing purposes. US regulations, for instance, uses HIPAA or FERPA.',
     risks: [],
   },
-  'blue-14': {
+  {
     id: 'blue-14',
     color: 'blue',
     title: 'Resource Management',
@@ -207,7 +219,7 @@ export const bluecards = {
     exampleThree: 'Can you eliminate unnecessary features?',
     risks: [],
   },
-  'blue-15': {
+  {
     id: 'blue-15',
     color: 'blue',
     title: 'Installability',
@@ -222,7 +234,7 @@ export const bluecards = {
       'Does the app have custom installation options which are easy to understand? What consequences do they have?',
     risks: [],
   },
-  'blue-16': {
+  {
     id: 'blue-16',
     color: 'blue',
     title: 'Changeability',
@@ -237,7 +249,7 @@ export const bluecards = {
       "Is there an option to trigger updates manually by the user? How do you handle users who don’t want to or won't update? What if others want to roll back?",
     risks: [],
   },
-  'blue-17': {
+  {
     id: 'blue-17',
     color: 'blue',
     title: 'Performance',
@@ -252,7 +264,7 @@ export const bluecards = {
       'Databases can become performance bottlenecks, especially when multiple threads and systems use the same database.',
     risks: [],
   },
-  'blue-18': {
+  {
     id: 'blue-18',
     color: 'blue',
     title: 'User Friendliness',
@@ -267,7 +279,7 @@ export const bluecards = {
       'Some things are intrusive, yet people love them. For example the-groupon-space-cat-logo. This makes your app unique, identifiable and memorable.',
     risks: [],
   },
-  'blue-19': {
+  {
     id: 'blue-19',
     color: 'blue',
     title: 'Concurrency',
@@ -282,7 +294,7 @@ export const bluecards = {
       'Two libraries in your program try to use the same data at the same time. One gets access, one does not. This may lead to trouble.',
     risks: [],
   },
-  'blue-20': {
+  {
     id: 'blue-20',
     color: 'blue',
     title: 'Safe-guard',
@@ -296,74 +308,4 @@ export const bluecards = {
       'Once a hacker gets in, in what form can he find your data? Will he be able to piece it together pretty easily?',
     risks: [],
   },
-  'blue-21': {
-    id: 'blue-21',
-    color: 'blue',
-    title: 'Availability',
-    subTitle: 'Reliability Aspect',
-    description:
-      'Every application has brown outs eventually. Some more often than others. How does your team deal with outages?',
-    exampleOne:
-      'Multiple time zones with multiple languages can make support difficult.',
-    exampleTwo:
-      'What is the impact of a system outage for your team? What is the cost of increasing the availability just a fraction extra?',
-    exampleThree:
-      'How fast can the software recover from a system failure? What are your disaster recovery protocols?',
-  },
-  'blue-22': {
-    id: 'blue-22',
-    color: 'blue',
-    title: 'Scalability',
-    subTitle: 'Efficiency Aspect',
-    description:
-      'Hardware is cheap these days. Just enter your credit card and there you go. How much hardware can you juggle?',
-    exampleOne:
-      'Some systems have to deal with peak traffic. Problems are often dealt with by throwing more hardware at it.',
-    exampleTwo:
-      'Code written in certain programming languages have fluctuating behaviour as their database gradually grows. Some deal with it well, others… not so well.',
-    exampleThree:
-      'Load balancing systems can help you distribute lots of traffic to different backend systems.',
-  },
-  'blue-23': {
-    id: 'blue-23',
-    color: 'blue',
-    title: 'Business Value Capability',
-    subTitle: 'Controllability Aspect',
-    description:
-      'Deliver business value to stakeholders with pace and consistency.',
-    exampleOne:
-      'How long does it take for a new idea to find its way to production? Is this reasonable?',
-    exampleTwo:
-      'Can costs of implementing a story be measured and weighed against profit it might potentially generate? ',
-    exampleThree:
-      'Delivery is not done until its impact on business value has been reviewed.',
-  },
-  'blue-24': {
-    id: 'blue-24',
-    color: 'blue',
-    title: 'Impartiality',
-    subTitle: 'Functionality Aspect',
-    description:
-      'Software built by humans imitates the social structures that are considered ‘normal’ by those humans. This includes their biases, favouritism & prejudices.',
-    exampleOne:
-      '"That software guiding care for tens of millions of people systematically privileges white patients over black patients." - Wired',
-    exampleTwo:
-      '“My wife and I filed joint tax returns [...] have been married for a long time, [... ]Yet Apple’s black box algorithm thinks I deserve 20x the credit limit she does.” - NYtimes',
-    exampleThree:
-      'Advancement in Artificial Intelligence and Machine Learning push us to confront the worst in the human world… and do something about it?',
-  },
-  'blue-25': {
-    id: 'blue-25',
-    color: 'blue',
-    title: 'Observability',
-    subTitle: 'Controllability Aspect',
-    description:
-      'How well can you see what’s actually going on within the product? Can you answer new questions without deploying code?',
-    exampleOne:
-      'How well can you understand the internals of a system by only observing the outputs?',
-    exampleTwo:
-      'Capture different sources of data within rich logs with improved information for  debugging, vulnerability detection, traffic monitoring,...',
-    exampleThree:
-      'Swinging red lights! Alarms! Our system has picked up that we’re losing money/users/speed because of a failure in a specific running feature.',
-  },
-};
+];
