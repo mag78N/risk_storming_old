@@ -1,11 +1,10 @@
 import React from 'react';
-import { csvPurplecards } from '../../../assets/csv/csvPurplecards';
 import './index.css';
 import Button from 'react-bootstrap/Button';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/bg.jpg';
-import { CSVLink } from 'react-csv';
+//import { CSVLink } from 'react-csv';
 
 const MainPage = () => {
   var bgImgStyle = {
@@ -24,7 +23,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <CSVLink data={csvPurplecards}>download</CSVLink>
+      {/* <CSVLink data={csvPurplecards}>download</CSVLink> */}
     </>
   );
 };

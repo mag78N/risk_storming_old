@@ -1139,7 +1139,7 @@ export const colorcards = {
     title: 'Black Box Monitoring',
     subTitle: 'Observability',
     description:
-      'Monitor: Network traffic, hard disk space, and memory usage donÕt point out what is exactly wrong, but they can act as smoke where there might be fire..',
+      "Monitor: Network traffic, hard disk space, and memory usage don't point out what is exactly wrong, but they can act as smoke where there might be fire..",
     exampleOne:
       'Things you see or experience in Black Box Monitoring are usually also visible to your users: the app is slow or crashes.',
     exampleTwo:
