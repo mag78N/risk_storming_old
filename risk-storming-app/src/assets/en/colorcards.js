@@ -1055,7 +1055,7 @@ export const colorcards = {
     title: 'Production Test Tenant',
     subTitle: 'Observability',
     description:
-      'Manipulate: Tagging testing actions taken in production with ÔtestÕ so that systems know to separate them from actual usage.',
+      "Manipulate: Tagging testing actions taken in production with 'test' so that systems know to separate them from actual usage.",
     exampleOne:
       "Building a webshop? Consider creating a 'Test' country which can only be seen by some users and tell systems, such as accounting, to ignore it.",
     exampleTwo:
@@ -1073,7 +1073,7 @@ export const colorcards = {
     exampleOne:
       'Logging context rich, arbitrarily wide events is the foundation of observability. E.g. It enable you to find out who, what, when, and where a pesky error happened!',
     exampleTwo:
-      'Some services return a 404 as part of the functionality. This doesnÕt have to mean something went wrong.',
+      "Some services return a 404 as part of the functionality. This doesn't have to mean something went wrong.",
     exampleThree:
       "Try to make logging accessible with visualisation and specialised tools. The days where log-digging exclusively meant reading through 'less service.log' are over.",
   },
@@ -1145,7 +1145,7 @@ export const colorcards = {
     exampleTwo:
       'In general, Black Box Monitoring is good at telling you what is wrong right now in your system and a good candidate for on-call-alerts.',
     exampleThree:
-      'It helps you to identify incorrect behaviour, but it likely wonÕt help to find the root cause.',
+      "It helps you to identify incorrect behaviour, but it likely won't help to find the root cause.",
   },
   'red-8': {
     id: 'red-8',
@@ -1199,9 +1199,9 @@ export const colorcards = {
     exampleOne:
       'Mostly a regression test technique by which you run vast amounts of production data through the changed system to see if anything bad happens.',
     exampleTwo:
-      'Tap Compare can help when there is a lot of moving data in the test systems and it is hard to maintain a regression test set, especially when you donÕt control all data sources.',
+      "Tap Compare can help when there is a lot of moving data in the test systems and it is hard to maintain a regression test set, especially when you don't control all data sources.",
     exampleThree:
-      'Combined with other techniques - e.g. Dark Launches - you can automate parts of a Tap Compare and donÕt need to analyse it manually. ',
+      "Combined with other techniques - e.g. Dark Launches - you can automate parts of a Tap Compare and don't need to analyse it manually. ",
   },
   'red-12': {
     id: 'red-12',
@@ -1241,7 +1241,7 @@ export const colorcards = {
     exampleOne:
       'Have multiple instances of the system running so that one can take over when the active one fails.',
     exampleTwo:
-      'A Zero Downtime requirement comes with a very heavy investment. Which systems are in place to protect, prevent & cure downtime? Maybe there should be aÊ test for that?',
+      'A Zero Downtime requirement comes with a very heavy investment. Which systems are in place to protect, prevent & cure downtime? Maybe there should be a test for that?',
     exampleThree:
       'Challenge this requirement approach: Do you want to spend money on Mean Time Between Failures, or Mean Time To Repair?',
   },
@@ -1379,11 +1379,11 @@ export const colorcards = {
     description:
       'Adapt: Writing and editing data across different linked systems can go very wrong. These are a set of rules that keep your data states consistent.',
     exampleOne:
-      'Some assumptions need to be made concerning time rules. Such as ‘last writer wins’ or ‘first writer wins’. Time plays a big role.',
+      "Some assumptions need to be made concerning time rules. Such as 'last writer wins' or 'first writer wins'. Time plays a big role.",
     exampleTwo:
       'It’s perfectly possible that one system holds out-of-date data, while all others stored the new. It will eventually be updated and therefore, consistent.',
     exampleThree:
-      'Your bank balance will most likely not use ‘eventual consistency’ as this needs more strict consistency. Apps storing weather data might.',
+      "Your bank balance will most likely not use 'eventual consistency' as this needs more strict consistency. Apps storing weather data might.",
   },
   'darkblue-10': {
     id: 'darkblue-10',
@@ -1397,7 +1397,7 @@ export const colorcards = {
     exampleTwo:
       'As an extra layer between your users and your system, it regulates incoming API calls & can potentially add more security.',
     exampleThree:
-      'Pressing ‘buy’ potentially fires one API call that is then split into: ‘get address’ from one system, ‘get articles’ from another, ‘shipping options’ from yet another.',
+      "Pressing 'buy' potentially fires one API call that is then split into: 'get address' from one system, 'get articles' from another, 'shipping options' from yet another.",
   },
   'darkblue-11': {
     id: 'darkblue-11',
@@ -1409,7 +1409,7 @@ export const colorcards = {
     exampleOne:
       'Containers give a large area for attackers to find vulnerabilities. The central kernel, for example, is an excellent target.',
     exampleTwo:
-      'Having so many moving parts in production obscures the visibility of vulnerabilities. ',
+      'Having so many moving parts in production obscures the visibility of vulnerabilities.',
     exampleThree:
       'Bring Container Security Scanning to your pipeline to mitigate the risk of a compromised container shipping off to production.',
   },
@@ -1521,7 +1521,7 @@ export const colorcards = {
       'Just finished cleaning up your API from legacy code? Run your CDCTs to see if you break any of your consumer’s workflow. Ideally, after each change.',
     exampleTwo: 'Run tests against APIs to be aware of changes.',
     exampleThree:
-      '“The call came from within the house”: since microservice systems have a lot of APIs within themselves, CDCTs can help you track defects to the changed microservice.',
+      '"The call came from within the house": since microservice systems have a lot of APIs within themselves, CDCTs can help you track defects to the changed microservice.',
   },
   'darkblue-20': {
     id: 'darkblue-20',
@@ -1531,7 +1531,7 @@ export const colorcards = {
     description:
       'Adapt: If we release today, what would be the absolute worst things that could go wrong? Think about future risks to deal with them now.',
     exampleOne:
-      'Also called the ‘nightmare game’. Is there a newspaper headline you most definitely want to avoid triggering with the product?',
+      'Also called the "nightmare game". Is there a newspaper headline you most definitely want to avoid triggering with the product?',
     exampleTwo:
       'Doing a Pre Mortem with your team and stakeholders will make concerns and uncertainties more transparent.',
     exampleThree:
