@@ -25,6 +25,7 @@ class FaseThreePage extends React.Component {
   }
 
   componentDidMount() {
+    console.log('componentdidmount');
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
       'beforeunload',
@@ -32,6 +33,7 @@ class FaseThreePage extends React.Component {
     );
   }
   componentWillUnmount() {
+    console.log('componentwillunmount');
     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
@@ -41,6 +43,7 @@ class FaseThreePage extends React.Component {
     this.saveStateToLocalStorage();
   }
   hydrateStateWithLocalStorage() {
+    console.log('hydratestate with local storage');
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -60,6 +63,7 @@ class FaseThreePage extends React.Component {
     }
   }
   saveStateToLocalStorage() {
+    console.log('savestate to localstorage');
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
