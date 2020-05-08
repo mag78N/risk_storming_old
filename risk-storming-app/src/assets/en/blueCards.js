@@ -300,9 +300,9 @@ export const bluecards = {
     id: 'blue-21',
     color: 'blue',
     title: 'Availability',
-    subTitle: 'Reliability Aspect',
+    subTitle: 'Quality Aspects',
     description:
-      'Every application has brown outs eventually. Some more often than others. How does your team deal with outages?',
+      'Reliability Aspect: Every application has brown outs eventually. Some more often than others. How does your team deal with outages?',
     exampleOne:
       'Multiple time zones with multiple languages can make support difficult.',
     exampleTwo:
@@ -314,9 +314,9 @@ export const bluecards = {
     id: 'blue-22',
     color: 'blue',
     title: 'Scalability',
-    subTitle: 'Efficiency Aspect',
+    subTitle: 'Quality Aspects',
     description:
-      'Hardware is cheap these days. Just enter your credit card and there you go. How much hardware can you juggle?',
+      'Efficiency Aspect: Hardware is cheap these days. Just enter your credit card and there you go. How much hardware can you juggle?',
     exampleOne:
       'Some systems have to deal with peak traffic. Problems are often dealt with by throwing more hardware at it.',
     exampleTwo:
@@ -328,9 +328,9 @@ export const bluecards = {
     id: 'blue-23',
     color: 'blue',
     title: 'Business Value Capability',
-    subTitle: 'Controllability Aspect',
+    subTitle: 'Quality Aspects',
     description:
-      'Deliver business value to stakeholders with pace and consistency.',
+      'Controllability Aspect: Deliver business value to stakeholders with pace and consistency.',
     exampleOne:
       'How long does it take for a new idea to find its way to production? Is this reasonable?',
     exampleTwo:
@@ -342,9 +342,9 @@ export const bluecards = {
     id: 'blue-24',
     color: 'blue',
     title: 'Impartiality',
-    subTitle: 'Functionality Aspect',
+    subTitle: 'Quality Aspects',
     description:
-      'Software built by humans imitates the social structures that are considered ‘normal’ by those humans. This includes their biases, favouritism & prejudices.',
+      'Functionality Aspect: Software built by humans imitates the social structures that are considered ‘normal’ by those humans. This includes their biases, favouritism & prejudices.',
     exampleOne:
       '"That software guiding care for tens of millions of people systematically privileges white patients over black patients." - Wired',
     exampleTwo:
@@ -356,9 +356,9 @@ export const bluecards = {
     id: 'blue-25',
     color: 'blue',
     title: 'Observability',
-    subTitle: 'Controllability Aspect',
+    subTitle: 'Quality Aspects',
     description:
-      'How well can you see what’s actually going on within the product? Can you answer new questions without deploying code?',
+      'Controllability Aspect: How well can you see what’s actually going on within the product? Can you answer new questions without deploying code?',
     exampleOne:
       'How well can you understand the internals of a system by only observing the outputs?',
     exampleTwo:
