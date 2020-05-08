@@ -690,7 +690,7 @@ export const colorcards = {
   'orange-25': {
     id: 'orange-25',
     color: 'orange',
-    title: 'Long Term Load Testing:',
+    title: 'Long Term Load Testing',
     subTitle: 'Approach',
     description:
       'Problems in performance are not always found with short bursts of high load. Long lasting, reasonable load is sometimes more realistic... and more troublesome.',
@@ -977,6 +977,77 @@ export const colorcards = {
     exampleThree:
       'Overflow errors sometimes only come up around the 8,16,32,... numbers. I once spent half a day investigating why sometimes one line in an invoice disappeared. When it had exactly 32 lines, the last one got deleted.',
   },
+
+  'pink-21': {
+    id: 'pink-21',
+    color: 'pink',
+    title: 'Dogfooding',
+    subTitle: 'Strategy Heuristic',
+    description:
+      'Roll out a newly developed software package to your internal staff to use in real situations.',
+    exampleOne: 'Use the company’s own product in real world situations.',
+    exampleTwo:
+      'Staff are a great resource for feedback and real - world examples.If they won’t use your product, ask them why.',
+    exampleThree:
+      'If dogfooding doesn’t seem possible at first; isolate certain parts, or change future development to allow for it. ',
+  },
+  'pink-22': {
+    id: 'pink-22',
+    color: 'pink',
+    title: 'Feature Toggles',
+    subTitle: 'Strategy Heuristic',
+    description:
+      'Hide functionality behind configuration parameters.Activate / deactivate the feature without deploying code!',
+    exampleOne:
+      'Hidden features after release can be tested in the most production - like environment possible: Production.',
+    exampleTwo:
+      'Want to experiment with a new feature, but unsure about the impact ? Make sure you’re able to roll back with the flip of a switch!',
+    exampleThree:
+      'Feature toggles are powerful, but adding too many can create several extra layers of complexity.Test them!',
+  },
+  'pink-23': {
+    id: 'pink-23',
+    color: 'pink',
+    title: 'Chaos Engineering',
+    subTitle: 'Strategy Heuristic',
+    description:
+      'Chaos Engineering uses test techniques to try and tear down your production environment.',
+    exampleOne:
+      'Problems in production are a matter of time. Drill your team to deal with this by practicing on scheduled disasters, often called ‘Game days’.',
+    exampleTwo:
+      'Have ‘automated chaos’ randomly create disasters for your team, then make it more robust. ',
+    exampleThree:
+      'Build in resiliency by having contingency plans when outages happen.',
+  },
+
+  'pink-24': {
+    id: 'pink-24',
+    color: 'pink',
+    title: 'Three Amigos',
+    subTitle: 'Strategy Heuristic',
+    description:
+      'A developer, product owner and tester go to a meeting. Magic happens! ',
+    exampleOne:
+      'Having a representative of different roles and perspective in a meeting gives everyone a broader & deeper understanding.',
+    exampleTwo:
+      'During design workshops or requirement refinement sessions, testers and developers are excellent at enhancing acceptance criteria.',
+    exampleThree:
+      'A bug triage meeting with all three roles present can help to : 1) set priority, 2) decide what a fix could be and 3) decide how to test it.',
+  },
+  'pink-25': {
+    id: 'pink-25',
+    color: 'pink',
+    title: 'Peer Reviews',
+    subTitle: 'Strategy Heuristic',
+    description:
+      'A team member makes code changes. Right after this, a different team member reviews the code and gives feedback.',
+    exampleOne:
+      'Having a team member look at your code before deploying is often part of the development process.',
+    exampleTwo:
+      'Our own errors are often so obvious to others. Four eyes simply see more than two.',
+    exampleThree:
+      'Peer review is not only possible on source code, but also on test code, documentation and User Stories. ',
+  },
   'purple-1': {
     id: 'purple-1',
     color: 'purple',
@@ -1142,7 +1213,7 @@ export const colorcards = {
     exampleTwo:
       "While exploring your product you come across  behaviour you can't quite pin down as good or bad. Which oracles can you consult? ",
     exampleThree:
-      'The team requires you to test in a way you\u2019ve never tested before. Security, performance or some other aspect needs to be investigated. This is unchartered territory for you.',
+      "The team requires you to test in a way you've never tested before. Security, performance or some other aspect needs to be investigated. This is unchartered territory for you.",
   },
   'purple-13': {
     id: 'purple-13',
@@ -1150,7 +1221,7 @@ export const colorcards = {
     title: 'Indifferent',
     subTitle: 'Feelings',
     description:
-      "Negative feeling: Mentally you\u2019ve all but given up on the project. You don't care about its success or failure. ",
+      "Negative feeling: Mentally you've all but given up on the project. You don't care about its success or failure. ",
     exampleOne:
       "The team has worked really hard. The product is released and then,... radio silence. You see activity in the logs, but you get no feedback. It's as if your users don't care. ",
     exampleTwo:
@@ -1194,9 +1265,9 @@ export const colorcards = {
     description:
       'Neutral feeling: Something you care a great deal about is going to change. You fight it vigorously.',
     exampleOne:
-      'You found a bug and think it\u2019s very important to get fixed as soon as possible. ',
+      "You found a bug and think it's very important to get fixed as soon as possible. ",
     exampleTwo:
-      "Your testing is blocked because some preconditions don't work. The team doesn\u2019t consider it the highest priority to fix it though. ",
+      "Your testing is blocked because some preconditions don't work. The team doesn't consider it the highest priority to fix it though. ",
     exampleThree:
       'Project management want to change the way you organise your testing, because it is not visible enough what you do. You strongly disagree with their suggestions. ',
   },
@@ -1211,7 +1282,7 @@ export const colorcards = {
     exampleOne:
       "You've invested in a few different tools and set-ups. Now you're stuck with constantly maintaining everything. ",
     exampleTwo:
-      "There's more input of testable stuff than you can actually work through. Everything is piling up, you're logging bugs which is more work on top of it and you feel like you\u2019re a bottleneck. ",
+      "There's more input of testable stuff than you can actually work through. Everything is piling up, you're logging bugs which is more work on top of it and you feel like you're a bottleneck. ",
     exampleThree:
       'Different teams, different contexts and many different questions for you to answer. Your attention is spread so thinly that you only have a shallow understanding of everything.',
   },
