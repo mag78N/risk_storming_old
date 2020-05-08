@@ -260,4 +260,69 @@ export const purplecards = {
     exampleThree:
       'You found new tools to automate parts of your activities. Now you are eager to try them and find out how they can be useful.',
   },
+  'purple-21': {
+    id: 'purple-21',
+    title: 'Informed',
+    subTitle: 'Feelings',
+    description:
+      'Positive feeling: Working to uncover the information needed means making connections with other people and departments to gain that information.',
+    exampleOne:
+      'What architectural improvements is the team working on? Are they explained to you? Can you give your input?',
+    exampleTwo:
+      'There’s (hopefully) a larger strategic vision for your project. The team should be aware of what success and business value look like.',
+    exampleThree:
+      'Want to feel more informed? Get involved in meetings, meet people, network within the office, and with teams, to gain more insight.',
+  },
+  'purple-22': {
+    id: 'purple-22',
+    title: 'Fear',
+    subTitle: 'Feelings',
+    description:
+      'Negative feeling: Fear is one of our most primal driving forces. Changes in trends and behaviour often come from large scale scares and making people afraid.',
+    exampleOne:
+      '[your job] is dead. They’ve been yelling it loudly for a long time. Does that scare you?',
+    exampleTwo:
+      'What is the first feeling you get when something about your role might change?',
+    exampleThree:
+      "Is 'going live' a reason for panic, or a non-event for your team?",
+  },
+  'purple-23': {
+    id: 'purple-23',
+    title: 'Overwhelmed',
+    subTitle: 'Feelings',
+    description:
+      'Negative feeling: In our rapidly changing world, it sometimes feels like the ground gets swept from under our feet.',
+    exampleOne:
+      'New technologies, ways to test, even this big set of cards. There are so many things you can learn. Take your time. Take a breath. It won’t run away',
+    exampleTwo:
+      'Starting new on a project can be daunting. Try to find the smallest way to add value.',
+    exampleThree:
+      'Looking at data from production is vast and invaluable. How does one identify what’s interesting?',
+  },
+  'purple-24': {
+    id: 'purple-24',
+    title: 'Excited',
+    subTitle: 'Feelings',
+    description:
+      'Positive feeling: Changing processes and technology bring your team a whole lot of options and different possible strategies. Your team can’t wait to try out new things.',
+    exampleOne:
+      "'We’re going Agile', or DevOps, or a newer trend. You’re not exactly sure what management means by it, but you see it as an opportunity.",
+    exampleTwo:
+      'You decided to try out something new. After some experimenting, you can’t wait to show the results.',
+    exampleThree:
+      'The team decided to try recovering from a self-engineered crash in production. After a difficult and stressful time, they solved it together.',
+  },
+  'purple-25': {
+    id: 'purple-25',
+    title: 'Unqualified',
+    subTitle: 'Feelings',
+    description:
+      "Negative feeling: 'You’re not technical', 'you don’t know the business', 'you don’t understand architecture'. We all have gaps. That’s why we need each other.",
+    exampleOne:
+      'People often say someone else’s job is either easy or hard. They often say this without having a good idea of what the job actually is.',
+    exampleTwo:
+      'Testing is technical. It’s just a bit more scientific-technical than communicating-with-a-computer-through-obscure-language-technical.',
+    exampleThree:
+      'Many brilliant people start off as unqualified. What’s important is to find and keep your own pace at which you learn.',
+  },
 };
