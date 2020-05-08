@@ -282,6 +282,75 @@ export const colorcards = {
     exampleThree:
       "Deadlines are often detrimental for testing. When there's a testing phase at the end, how do you prepare for this small time slot?",
   },
+  'green-21': {
+    id: 'green-21',
+    color: 'green',
+    title: 'OWASP Top Ten',
+    subTitle: 'Project level',
+    description:
+      'Open Web Application Security Project: A list of the top ten biggest security risks, which are regularly updated. ',
+    exampleOne:
+      'OWASP is a very useful checklist to reference when developing & testing possible security leaks.',
+    exampleTwo:
+      'You don’t have to dig too deep to find useful test ideas and tools to help find peculiar and important issues.',
+    exampleThree:
+      'Security is too often an afterthought for projects. It usually takes only one motivated person to raise awareness and improve security.',
+  },
+  'green-22': {
+    id: 'green-22',
+    color: 'green',
+    title: 'Story Mapping',
+    subTitle: 'Project level',
+    description:
+      'A project planning technique that helps you map out your high-level User Journey. It then drills down into details and identifies minimum viable experiments to release.',
+    exampleOne:
+      'Start writing down product features on cards. Keep it simple. The cards are not the most important thing. Communication and common understanding are.',
+    exampleTwo:
+      'Break down big ideas into smaller concrete ones, prioritize important ideas first. Stay focused on validating ideas.',
+    exampleThree:
+      'Use this technique, as a team, to test a hypothetical valuable idea in the smallest increments possible.',
+  },
+  'green-23': {
+    id: 'green-23',
+    color: 'green',
+    title: 'Mob Testing',
+    subTitle: 'Project level',
+    description:
+      'One person controls the system; the others give directions with the aim of finding bugs & limitations.',
+    exampleOne:
+      'Product demos sometimes go ‘off-script’ as someone says: “Hey, what was that? Can we check that now?” or “Did we think about different currencies?”.',
+    exampleTwo:
+      'Make sure everyone in the mob is equally valued. Rotate roles in a fair, unbiased manner. Any role can participate.',
+    exampleThree:
+      'Ideas that seem wrong or random should be encouraged, valued and tried out, not shut down.',
+  },
+  'green-24': {
+    id: 'green-24',
+    color: 'green',
+    title: 'Stress Testing',
+    subTitle: 'Product level',
+    description:
+      'The measures we take to find out at which point a system slows down, freezes, or behaves unexpectedly. ',
+    exampleOne:
+      'You can test potential bottlenecks by ramping up traffic to that specific area. ',
+    exampleTwo:
+      'Stress testing tools can be easy to learn, but adding value with them requires in-depth knowledge of the system under test and the underlying technologies.',
+    exampleThree:
+      'If the strategy behind stress testing seems random, try using data from production to direct your efforts.',
+  },
+  'green-25': {
+    id: 'green-25',
+    color: 'green',
+    title: 'Test Driven Development',
+    subTitle: 'Product level',
+    description:
+      'The first thing you write is a failing test before you write code. Then you write the code that makes the test pass. Repeat.',
+    exampleOne:
+      'This practice makes your codebase better and provides the team with stability as a feature is being developed. It allows the team to add code more quickly.',
+    exampleTwo:
+      'You can use examples of inputs and outputs to make TDD more relevant. Include these examples in acceptance criteria.',
+    exampleThree: 'Keep them small, clean, and most importantly: valuable.',
+  },
   'orange-1': {
     id: 'orange-1',
     color: 'orange',
@@ -561,6 +630,76 @@ export const colorcards = {
       "When smoke or regression testing you'll often go back to things that previously broke.",
     exampleThree:
       'Your app is designed to target users between 25 and 35. Afterwards your 1521 users older than 65 (a miniscule of 0,25%) were very loud in their app store ratings',
+  },
+  'orange-21': {
+    id: 'orange-21',
+    color: 'orange',
+    title: 'Single Responsibility Principle',
+    subTitle: 'Approach',
+    description:
+      'Every software module should have one, and only one, reason to change.',
+    exampleOne:
+      'This principle is closely coupled to business domain logic. If your price calculator is influenced by seasons, promotions, currency,... this should be decoupled.',
+    exampleTwo:
+      'It’s about people and their responsibilities. This principle is broken when a change for one person’s responsibilities could impact someone else’s.',
+    exampleThree:
+      'Gather the things that change for the same reasons. Separate those things that change for different reasons.',
+  },
+  'orange-22': {
+    id: 'orange-22',
+    color: 'orange',
+    title: 'Story Slicing',
+    subTitle: 'Approach',
+    description:
+      'What is the smallest possible block of functionality that can add value to business right now?',
+    exampleOne:
+      'Simplify functionality by splitting it up into the smallest possible pieces: Load one transaction, load 10 transactions, load all transactions, filter by date,...',
+    exampleTwo: 'Split by technology: UI, database, calculation logic,...',
+    exampleThree:
+      'Consider temporarily removing the complexity of currency, timezone & language: roll out to one country at a time.',
+  },
+  'orange-23': {
+    id: 'orange-23',
+    color: 'orange',
+    title: 'Mutation Testing',
+    subTitle: 'Approach',
+    description:
+      'Mutation tests are randomly generated alterations of your code that help evaluate the effectiveness of your unit tests.',
+    exampleOne:
+      'By randomly changing your source code, you get quick feedback on the value of your automated test code. ',
+    exampleTwo:
+      'Are your tests actually detecting breaking changes? Is the code even covered? Mutation testing helps you find the answers.',
+    exampleThree:
+      'Mutation testing can be costly and complex, but the results can be extremely insightful.',
+  },
+  'orange-24': {
+    id: 'orange-24',
+    color: 'orange',
+    title: 'Strangling Patterns',
+    subTitle: 'Approach',
+    description:
+      'Used to decouple blocks of functionality out of big clustered systems into smaller services to reduce complexity.',
+    exampleOne:
+      'Legacy systems are often built in such an overly complex way that you can’t begin to understand all the dependencies. Strangling tries to tackle this pattern.',
+    exampleTwo:
+      'Identify domains that fit together, such as ‘invoicing’ or ‘customer management’. Try to rebuild and protect these domain contexts in separate systems.',
+    exampleThree:
+      'Once rebuilt, have both systems run in parallel. Both get the same input. Monitor and compare their output over time. If it matches, you strangled successfully!',
+  },
+
+  'orange-25': {
+    id: 'orange-25',
+    color: 'orange',
+    title: 'Long Term Load Testing:',
+    subTitle: 'Approach',
+    description:
+      'Problems in performance are not always found with short bursts of high load. Long lasting, reasonable load is sometimes more realistic... and more troublesome.',
+    exampleOne:
+      'Simulating real user load and scenarios can be an enlightening activity.',
+    exampleTwo:
+      'We once found big architectural problems by letting a script run continuously over the weekend.',
+    exampleThree:
+      "Long term but slow connections can go stale. This doesn't show up in 1 hour but only after a day or longer",
   },
   'pink-1': {
     id: 'pink-1',

@@ -259,4 +259,69 @@ export const orangecards = {
     exampleThree:
       'Your app is designed to target users between 25 and 35. Afterwards your 1521 users older than 65 (a miniscule of 0,25%) were very loud in their app store ratings',
   },
+  'orange-21': {
+    id: 'orange-21',
+    title: 'Single Responsibility Principle',
+    subTitle: 'Approach',
+    description:
+      'Every software module should have one, and only one, reason to change.',
+    exampleOne:
+      'This principle is closely coupled to business domain logic. If your price calculator is influenced by seasons, promotions, currency,... this should be decoupled.',
+    exampleTwo:
+      'It’s about people and their responsibilities. This principle is broken when a change for one person’s responsibilities could impact someone else’s.',
+    exampleThree:
+      'Gather the things that change for the same reasons. Separate those things that change for different reasons.',
+  },
+  'orange-22': {
+    id: 'orange-22',
+    title: 'Story Slicing',
+    subTitle: 'Approach',
+    description:
+      'What is the smallest possible block of functionality that can add value to business right now?',
+    exampleOne:
+      'Simplify functionality by splitting it up into the smallest possible pieces: Load one transaction, load 10 transactions, load all transactions, filter by date,...',
+    exampleTwo: 'Split by technology: UI, database, calculation logic,...',
+    exampleThree:
+      'Consider temporarily removing the complexity of currency, timezone & language: roll out to one country at a time.',
+  },
+  'orange-23': {
+    id: 'orange-23',
+    title: 'Mutation Testing',
+    subTitle: 'Approach',
+    description:
+      'Mutation tests are randomly generated alterations of your code that help evaluate the effectiveness of your unit tests.',
+    exampleOne:
+      'By randomly changing your source code, you get quick feedback on the value of your automated test code. ',
+    exampleTwo:
+      'Are your tests actually detecting breaking changes? Is the code even covered? Mutation testing helps you find the answers.',
+    exampleThree:
+      'Mutation testing can be costly and complex, but the results can be extremely insightful.',
+  },
+  'orange-24': {
+    id: 'orange-24',
+    title: 'Strangling Patterns',
+    subTitle: 'Approach',
+    description:
+      'Used to decouple blocks of functionality out of big clustered systems into smaller services to reduce complexity.',
+    exampleOne:
+      'Legacy systems are often built in such an overly complex way that you can’t begin to understand all the dependencies. Strangling tries to tackle this pattern.',
+    exampleTwo:
+      'Identify domains that fit together, such as ‘invoicing’ or ‘customer management’. Try to rebuild and protect these domain contexts in separate systems.',
+    exampleThree:
+      'Once rebuilt, have both systems run in parallel. Both get the same input. Monitor and compare their output over time. If it matches, you strangled successfully!',
+  },
+
+  'orange-25': {
+    id: 'orange-25',
+    title: 'Long Term Load Testing:',
+    subTitle: 'Approach',
+    description:
+      'Problems in performance are not always found with short bursts of high load. Long lasting, reasonable load is sometimes more realistic... and more troublesome.',
+    exampleOne:
+      'Simulating real user load and scenarios can be an enlightening activity.',
+    exampleTwo:
+      'We once found big architectural problems by letting a script run continuously over the weekend.',
+    exampleThree:
+      "Long term but slow connections can go stale. This doesn't show up in 1 hour but only after a day or longer",
+  },
 };
