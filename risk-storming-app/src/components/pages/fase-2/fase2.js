@@ -22,20 +22,22 @@ class FaseTwoPage extends React.Component {
   componentDidMount() {
     console.log(this.state);
     this.hydrateStateWithLocalStorage();
-    window.addEventListener(
+     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
+    ); 
   }
   componentWillUnmount() {
-    window.removeEventListener(
+     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
-
+    ); 
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
+   componentDidUpdate() {
+    this.saveStateToLocalStorage.bind(this);
+  } 
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {

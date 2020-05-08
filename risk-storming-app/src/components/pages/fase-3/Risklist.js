@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import React from 'react';
-import '../../cards/green-card/GreenCard.css';
+/* import '../../cards/green-card/GreenCard.css';
 import '../../cards/orange-card/OrangeCard.css';
 import '../../cards/pink-card/PinkCard.css';
 import '../../cards/red-card/RedCard.css';
-import '../../cards/darkblue-card/DarkblueCard.css';
+import '../../cards/darkblue-card/DarkblueCard.css'; */
 import './styles/fase3.css';
 import RiskDropColumn from './RiskDropColumn';
 

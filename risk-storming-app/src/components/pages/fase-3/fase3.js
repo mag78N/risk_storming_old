@@ -18,9 +18,10 @@ import '../risk-row.css';
 
 class FaseThreePage extends React.Component {
   constructor(props) {
+    const cards = JSON.parse(sessionStorage.getItem('chosenCards'));
     super(props);
     this.state = {
-      chosenCards: JSON.parse(sessionStorage.getItem('chosenCards')),
+      chosenCards: cards,
       colorcards: Object.values(colorcards),
     };
   }
@@ -39,10 +40,10 @@ class FaseThreePage extends React.Component {
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
     );
-
-    // saves if component has a chance to unmount
+    //saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
+
   hydrateStateWithLocalStorage() {
     console.log('hydratestate with local storage');
     // for all items in state
@@ -71,11 +72,8 @@ class FaseThreePage extends React.Component {
       sessionStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  /* componentDidUpdate() {
-    this.saveStateToLocalStorage();
-  } */
 
-  getCardList = (droppableId) => {
+  /* getCardList = (droppableId) => {
     if (droppableId === 'RIGHT-COLUMN') {
       return [...this.state.colorcards];
     }
@@ -84,10 +82,22 @@ class FaseThreePage extends React.Component {
 
     const foundCard = this.state.chosenCards.find((card) => card.id === cardId);
     return [...foundCard.risks[riskIndex].cards];
-  };
+  }; */
 
   onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
+    const getCardList = (droppableId) => {
+      if (droppableId === 'RIGHT-COLUMN') {
+        return [...this.state.colorcards];
+      }
+      const [cardId, riskId] = droppableId.split('|');
+      const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+
+      const foundCard = this.state.chosenCards.find(
+        (card) => card.id === cardId
+      );
+      return [...foundCard.risks[riskIndex].cards];
+    };
     if (!destination) {
       return;
     }
@@ -98,17 +108,18 @@ class FaseThreePage extends React.Component {
     ) {
       return;
     }
-    const start = this.getCardList(source.droppableId);
+    const start = getCardList(source.droppableId);
     console.log(start);
-    const finish = this.getCardList(destination.droppableId);
-
+    const finish = getCardList(destination.droppableId);
+    console.log(finish);
     const removedCard = start.splice(source.index, 1)[0];
     finish.splice(destination.index, 0, removedCard);
 
     if (source.droppableId === 'RIGHT-COLUMN') {
-      this.setState((prevState) => {
+      /* this.setState((prevState) => {
         return { colorcards: start };
-      });
+      }); */
+      this.setState({ colorcards: start });
     } else {
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
@@ -118,7 +129,9 @@ class FaseThreePage extends React.Component {
         const foundCard = newCards.find((card) => card.id === cardId);
         foundCard.risks[riskIndex].cards = start;
         console.log(foundCard);
-        return { chosenCards: newCards };
+        return {
+          chosenCards: newCards,
+        };
       });
     }
 
@@ -143,11 +156,9 @@ class FaseThreePage extends React.Component {
   render() {
     console.log('state inside render :', this.state);
     const { chosenCards, colorcards } = this.state;
-
     return (
       <>
         <TopNavbar faseNum='Fase 3' />
-
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
