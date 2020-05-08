@@ -1,7 +1,8 @@
 export const pinkcards = {
   'pink-1': {
     id: 'pink-1',
-    title: 'Familiarity:',
+    color: 'pink',
+    title: 'Familiarity',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Given your experience, which problems, that you are familiar with,  would you expect in the current product? ',
@@ -14,7 +15,8 @@ export const pinkcards = {
   },
   'pink-2': {
     id: 'pink-2',
-    title: 'Explainability:',
+    color: 'pink',
+    title: 'Explainability',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: A product that is hard to explain might be too hard for a user to understand.',
@@ -27,7 +29,8 @@ export const pinkcards = {
   },
   'pink-3': {
     id: 'pink-3',
-    title: 'World:',
+    color: 'pink',
+    title: 'World',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: We all have expectations of the world around us. Our app should be no exception.',
@@ -40,7 +43,8 @@ export const pinkcards = {
   },
   'pink-4': {
     id: 'pink-4',
-    title: 'History:',
+    color: 'pink',
+    title: 'History',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: There is much to learn from earlier versions. What do they tell you about risk and failure?',
@@ -53,7 +57,8 @@ export const pinkcards = {
   },
   'pink-5': {
     id: 'pink-5',
-    title: 'Image:',
+    color: 'pink',
+    title: 'Image',
     subTitle: 'Heuristics',
     description:
       "Consistency Heuristic: Is your product true to the image and reputation you or the app's company wishes to project? ",
@@ -66,7 +71,8 @@ export const pinkcards = {
   },
   'pink-6': {
     id: 'pink-6',
-    title: 'Comparable Products:',
+    color: 'pink',
+    title: 'Comparable Products',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Are your competitors doing things different, maybe even in a better way?',
@@ -79,7 +85,8 @@ export const pinkcards = {
   },
   'pink-7': {
     id: 'pink-7',
-    title: 'Claims:',
+    color: 'pink',
+    title: 'Claims',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Can your product live up to the hype? ',
@@ -92,7 +99,8 @@ export const pinkcards = {
   },
   'pink-8': {
     id: 'pink-8',
-    title: 'User Desires:',
+    color: 'pink',
+    title: 'User Desires',
     subTitle: 'Heuristics',
     description:
       "Consistency Heuristic: What are the user's desires and does the product live up to them?",
@@ -105,7 +113,8 @@ export const pinkcards = {
   },
   'pink-9': {
     id: 'pink-9',
-    title: 'Product:',
+    color: 'pink',
+    title: 'Product',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Is the product consistent with itself, or can we even spot differences within?',
@@ -118,7 +127,8 @@ export const pinkcards = {
   },
   'pink-10': {
     id: 'pink-10',
-    title: 'Purpose:',
+    color: 'pink',
+    title: 'Purpose',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Does the product solve a problem? Will it fulfil its ultimate mission? ',
@@ -131,7 +141,8 @@ export const pinkcards = {
   },
   'pink-11': {
     id: 'pink-11',
-    title: 'Standards and Regulations:',
+    color: 'pink',
+    title: 'Standards and Regulations',
     subTitle: 'Heuristics',
     description:
       'Consistency Heuristic: Your app will have to adhere to standards, norms, regulations or the law.',
@@ -144,7 +155,8 @@ export const pinkcards = {
   },
   'pink-12': {
     id: 'pink-12',
-    title: 'Always and Never:',
+    color: 'pink',
+    title: 'Always and Never',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Look for the keywords "always" and "never" in your specifications. Try to break those rules.',
@@ -155,7 +167,8 @@ export const pinkcards = {
   },
   'pink-13': {
     id: 'pink-13',
-    title: 'Change the Model:',
+    color: 'pink',
+    title: 'Change the Model',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Create a model of your app, pair with others to gain creative input. . ',
@@ -167,7 +180,8 @@ export const pinkcards = {
   },
   'pink-14': {
     id: 'pink-14',
-    title: 'Reverse:',
+    color: 'pink',
+    title: 'Reverse',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: What can you learn from a workflow by executing it in opposite order or a different order? ',
@@ -180,7 +194,8 @@ export const pinkcards = {
   },
   'pink-15': {
     id: 'pink-15',
-    title: 'Starve:',
+    color: 'pink',
+    title: 'Starve',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: How does your app handle zeros and negatives?',
@@ -193,7 +208,8 @@ export const pinkcards = {
   },
   'pink-16': {
     id: 'pink-16',
-    title: 'Zero, One, Many:',
+    color: 'pink',
+    title: 'Zero, One, Many',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Blank fields, too many records or exactly one input can lead to horrible errors.',
@@ -206,7 +222,8 @@ export const pinkcards = {
   },
   'pink-17': {
     id: 'pink-17',
-    title: 'Violate Data Format Rules:',
+    color: 'pink',
+    title: 'Violate Data Format Rules',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: Strings for integers, weird characters where a date is expected, SQL injections,... ',
@@ -219,7 +236,8 @@ export const pinkcards = {
   },
   'pink-18': {
     id: 'pink-18',
-    title: 'Too Many:',
+    color: 'pink',
+    title: 'Too Many',
     subTitle: 'Heuristics',
     description:
       "Exploratory Heuristic: Everything has a theoretical breaking point, so let's find out where exactly that happens. ",
@@ -231,6 +249,7 @@ export const pinkcards = {
   },
   'pink-19': {
     id: 'pink-19',
+    color: 'pink',
     title: 'Useful Approximations',
     subTitle: 'Heuristics',
     description:
@@ -244,7 +263,8 @@ export const pinkcards = {
   },
   'pink-20': {
     id: 'pink-20',
-    title: 'Some, None, All:',
+    color: 'pink',
+    title: 'Some, None, All',
     subTitle: 'Heuristics',
     description:
       'Exploratory Heuristic: What happens when you order some products? And more? And even more? Or all the products? ',
@@ -255,13 +275,14 @@ export const pinkcards = {
     exampleThree:
       'Overflow errors sometimes only come up around the 8,16,32,... numbers. I once spent half a day investigating why sometimes one line in an invoice disappeared. When it had exactly 32 lines, the last one got deleted.',
   },
+
   'pink-21': {
     id: 'pink-21',
     color: 'pink',
     title: 'Dogfooding',
-    subTitle: 'Strategy Heuristic',
+    subTitle: 'Heuristics',
     description:
-      'Roll out a newly developed software package to your internal staff to use in real situations.',
+      'Strategy Heuristic: Roll out a newly developed software package to your internal staff to use in real situations.',
     exampleOne: 'Use the company’s own product in real world situations.',
     exampleTwo:
       'Staff are a great resource for feedback and real - world examples.If they won’t use your product, ask them why.',
@@ -272,9 +293,9 @@ export const pinkcards = {
     id: 'pink-22',
     color: 'pink',
     title: 'Feature Toggles',
-    subTitle: 'Strategy Heuristic',
+    subTitle: 'Heuristics',
     description:
-      'Hide functionality behind configuration parameters.Activate / deactivate the feature without deploying code!',
+      'Strategy Heuristic: Hide functionality behind configuration parameters. Activate/deactivate the feature without deploying code!',
     exampleOne:
       'Hidden features after release can be tested in the most production - like environment possible: Production.',
     exampleTwo:
@@ -286,9 +307,9 @@ export const pinkcards = {
     id: 'pink-23',
     color: 'pink',
     title: 'Chaos Engineering',
-    subTitle: 'Strategy Heuristic',
+    subTitle: 'Heuristics',
     description:
-      'Chaos Engineering uses test techniques to try and tear down your production environment.',
+      'Strategy Heuristic: Chaos Engineering uses test techniques to try and tear down your production environment.',
     exampleOne:
       'Problems in production are a matter of time. Drill your team to deal with this by practicing on scheduled disasters, often called ‘Game days’.',
     exampleTwo:
@@ -301,9 +322,9 @@ export const pinkcards = {
     id: 'pink-24',
     color: 'pink',
     title: 'Three Amigos',
-    subTitle: 'Strategy Heuristic',
+    subTitle: 'Heuristics',
     description:
-      'A developer, product owner and tester go to a meeting. Magic happens! ',
+      'Strategy Heuristic: A developer, product owner and tester go to a meeting. Magic happens! ',
     exampleOne:
       'Having a representative of different roles and perspective in a meeting gives everyone a broader & deeper understanding.',
     exampleTwo:
@@ -315,9 +336,9 @@ export const pinkcards = {
     id: 'pink-25',
     color: 'pink',
     title: 'Peer Reviews',
-    subTitle: 'Strategy Heuristic',
+    subTitle: 'Heuristics',
     description:
-      'A team member makes code changes. Right after this, a different team member reviews the code and gives feedback.',
+      'Strategy Heuristic: A team member makes code changes. Right after this, a different team member reviews the code and gives feedback.',
     exampleOne:
       'Having a team member look at your code before deploying is often part of the development process.',
     exampleTwo:
@@ -326,10 +347,3 @@ export const pinkcards = {
       'Peer review is not only possible on source code, but also on test code, documentation and User Stories. ',
   },
 };
-
-/* title:
-subTitle: 
-description:
-exampleOne:
-exampleTwo:
-exampleThree: */

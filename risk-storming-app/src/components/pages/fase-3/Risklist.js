@@ -3,15 +3,14 @@ import React from 'react';
 import '../../cards/green-card/GreenCard.css';
 import '../../cards/orange-card/OrangeCard.css';
 import '../../cards/pink-card/PinkCard.css';
-import '../../cards/purple-card/PurpleCard.css';
+import '../../cards/red-card/RedCard.css';
+import '../../cards/darkblue-card/DarkblueCard.css';
 import './styles/fase3.css';
 import RiskDropColumn from './RiskDropColumn';
 
-
 class RiskList extends Component {
-  
   render() {
-    return ( 
+    return (
       <>
         {this.props.card.risks.map((val, idx) => {
           const riskId = `risk-${idx + 1}`,
@@ -31,15 +30,13 @@ class RiskList extends Component {
                 columnid={`${this.props.card.id}|${riskId}`}
                 key={this.props.columnid}
                 riskCards={val.cards}
-                
-                
               />
             </div>
           );
         })}
-        </>
-    )}
+      </>
+    );
+  }
 }
 
 export default RiskList;
-

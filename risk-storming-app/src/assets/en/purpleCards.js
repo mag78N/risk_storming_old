@@ -1,6 +1,7 @@
 export const purplecards = {
   'purple-1': {
     id: 'purple-1',
+    color: 'purple',
     title: 'Anger',
     subTitle: 'Feelings',
     description:
@@ -14,6 +15,7 @@ export const purplecards = {
   },
   'purple-2': {
     id: 'purple-2',
+    color: 'purple',
     title: 'Happy',
     subTitle: 'Feelings',
     description:
@@ -27,6 +29,7 @@ export const purplecards = {
   },
   'purple-3': {
     id: 'purple-3',
+    color: 'purple',
     title: 'Bored',
     subTitle: 'Feelings',
     description:
@@ -40,6 +43,7 @@ export const purplecards = {
   },
   'purple-4': {
     id: 'purple-4',
+    color: 'purple',
     title: 'Adventurous',
     subTitle: 'Feelings',
     description:
@@ -52,6 +56,7 @@ export const purplecards = {
   },
   'purple-5': {
     id: 'purple-5',
+    color: 'purple',
     title: 'Flow',
     subTitle: 'Feelings',
     description:
@@ -65,6 +70,7 @@ export const purplecards = {
   },
   'purple-6': {
     id: 'purple-6',
+    color: 'purple',
     title: 'Confident',
     subTitle: 'Feelings',
     description:
@@ -78,6 +84,7 @@ export const purplecards = {
   },
   'purple-7': {
     id: 'purple-7',
+    color: 'purple',
     title: 'Comfortable',
     subTitle: 'Feelings',
     description:
@@ -91,6 +98,7 @@ export const purplecards = {
   },
   'purple-8': {
     id: 'purple-8',
+    color: 'purple',
     title: 'Surprised',
     subTitle: 'Feelings',
     description:
@@ -104,6 +112,7 @@ export const purplecards = {
   },
   'purple-9': {
     id: 'purple-9',
+    color: 'purple',
     title: 'Concerned',
     subTitle: 'Feelings',
     description:
@@ -117,6 +126,7 @@ export const purplecards = {
   },
   'purple-10': {
     id: 'purple-10',
+    color: 'purple',
     title: 'Certain',
     subTitle: 'Feelings',
     description:
@@ -130,6 +140,7 @@ export const purplecards = {
   },
   'purple-11': {
     id: 'purple-11',
+    color: 'purple',
     title: 'Irritated',
     subTitle: 'Feelings',
     description:
@@ -143,6 +154,7 @@ export const purplecards = {
   },
   'purple-12': {
     id: 'purple-12',
+    color: 'purple',
     title: 'Uncertain',
     subTitle: 'Feelings',
     description:
@@ -152,14 +164,15 @@ export const purplecards = {
     exampleTwo:
       "While exploring your product you come across  behaviour you can't quite pin down as good or bad. Which oracles can you consult? ",
     exampleThree:
-      'The team requires you to test in a way you\u2019ve never tested before. Security, performance or some other aspect needs to be investigated. This is unchartered territory for you.',
+      "The team requires you to test in a way you've never tested before. Security, performance or some other aspect needs to be investigated. This is unchartered territory for you.",
   },
   'purple-13': {
     id: 'purple-13',
+    color: 'purple',
     title: 'Indifferent',
     subTitle: 'Feelings',
     description:
-      "Negative feeling: Mentally you\u2019ve all but given up on the project. You don't care about its success or failure. ",
+      "Negative feeling: Mentally you've all but given up on the project. You don't care about its success or failure. ",
     exampleOne:
       "The team has worked really hard. The product is released and then,... radio silence. You see activity in the logs, but you get no feedback. It's as if your users don't care. ",
     exampleTwo:
@@ -169,6 +182,7 @@ export const purplecards = {
   },
   'purple-14': {
     id: 'purple-14',
+    color: 'purple',
     title: 'Nervous',
     subTitle: 'Feelings',
     description:
@@ -182,6 +196,7 @@ export const purplecards = {
   },
   'purple-15': {
     id: 'purple-15',
+    color: 'purple',
     title: 'Desperate',
     subTitle: 'Feelings',
     description:
@@ -195,20 +210,22 @@ export const purplecards = {
   },
   'purple-16': {
     id: 'purple-16',
+    color: 'purple',
     title: 'Tenacious',
     subTitle: 'Feelings',
     description:
       'Neutral feeling: Something you care a great deal about is going to change. You fight it vigorously.',
     exampleOne:
-      'You found a bug and think it\u2019s very important to get fixed as soon as possible. ',
+      "You found a bug and think it's very important to get fixed as soon as possible. ",
     exampleTwo:
-      "Your testing is blocked because some preconditions don't work. The team doesn\u2019t consider it the highest priority to fix it though. ",
+      "Your testing is blocked because some preconditions don't work. The team doesn't consider it the highest priority to fix it though. ",
     exampleThree:
       'Project management want to change the way you organise your testing, because it is not visible enough what you do. You strongly disagree with their suggestions. ',
   },
 
   'purple-17': {
     id: 'purple-17',
+    color: 'purple',
     title: 'Over tasked',
     subTitle: 'Feelings',
     description:
@@ -216,13 +233,14 @@ export const purplecards = {
     exampleOne:
       "You've invested in a few different tools and set-ups. Now you're stuck with constantly maintaining everything. ",
     exampleTwo:
-      "There's more input of testable stuff than you can actually work through. Everything is piling up, you're logging bugs which is more work on top of it and you feel like you\u2019re a bottleneck. ",
+      "There's more input of testable stuff than you can actually work through. Everything is piling up, you're logging bugs which is more work on top of it and you feel like you're a bottleneck. ",
     exampleThree:
       'Different teams, different contexts and many different questions for you to answer. Your attention is spread so thinly that you only have a shallow understanding of everything.',
   },
 
   'purple-18': {
     id: 'purple-18',
+    color: 'purple',
     title: 'Rejected',
     subTitle: 'Feelings',
     description:
@@ -236,6 +254,7 @@ export const purplecards = {
   },
   'purple-19': {
     id: 'purple-19',
+    color: 'purple',
     title: 'Victimised',
     subTitle: 'Feelings',
     description:
@@ -249,6 +268,7 @@ export const purplecards = {
   },
   'purple-20': {
     id: 'purple-20',
+    color: 'purple',
     title: 'Curious',
     subTitle: 'Feelings',
     description:
@@ -262,6 +282,7 @@ export const purplecards = {
   },
   'purple-21': {
     id: 'purple-21',
+    color: 'purple',
     title: 'Informed',
     subTitle: 'Feelings',
     description:
@@ -275,6 +296,7 @@ export const purplecards = {
   },
   'purple-22': {
     id: 'purple-22',
+    color: 'purple',
     title: 'Fear',
     subTitle: 'Feelings',
     description:
@@ -288,6 +310,7 @@ export const purplecards = {
   },
   'purple-23': {
     id: 'purple-23',
+    color: 'purple',
     title: 'Overwhelmed',
     subTitle: 'Feelings',
     description:
@@ -301,6 +324,7 @@ export const purplecards = {
   },
   'purple-24': {
     id: 'purple-24',
+    color: 'purple',
     title: 'Excited',
     subTitle: 'Feelings',
     description:
@@ -314,6 +338,7 @@ export const purplecards = {
   },
   'purple-25': {
     id: 'purple-25',
+    color: 'purple',
     title: 'Unqualified',
     subTitle: 'Feelings',
     description:

@@ -1,0 +1,7 @@
+.red {
+  background-color: rgb(228, 27, 27);
+  border: 2px solid rgb(228, 27, 27);
+}
+.redHeader {
+  color: rgb(228, 27, 27);
+}

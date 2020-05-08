@@ -1,6 +1,7 @@
 export const greencards = {
   'green-1': {
     id: 'green-1',
+    color: 'green',
     title: 'Requirements (re)Engineering',
     subTitle: 'Techniques',
     description:
@@ -14,6 +15,7 @@ export const greencards = {
   },
   'green-2': {
     id: 'green-2',
+    color: 'green',
     title: 'Intuition',
     subTitle: 'Techniques',
     description:
@@ -27,6 +29,7 @@ export const greencards = {
   },
   'green-3': {
     id: 'green-3',
+    color: 'green',
     title: 'Knowledge',
     subTitle: 'Techniques',
     description:
@@ -41,6 +44,7 @@ export const greencards = {
 
   'green-4': {
     id: 'green-4',
+    color: 'green',
     title: 'Data Analysis',
     subTitle: 'Techniques',
     description:
@@ -54,6 +58,7 @@ export const greencards = {
   },
   'green-5': {
     id: 'green-5',
+    color: 'green',
     title: 'Galumphing',
     subTitle: 'Techniques',
     description:
@@ -67,7 +72,9 @@ export const greencards = {
   },
   'green-6': {
     id: 'green-6',
+    color: 'green',
     title: 'A/B Testing',
+    subTitle: 'Techniques',
     description:
       'Project level: Work out the same concept in two different ways, evaluate them both and choose the best. Marketing does this often.',
     exampleOne:
@@ -80,6 +87,7 @@ export const greencards = {
 
   'green-7': {
     id: 'green-7',
+    color: 'green',
     title: 'Charm',
     subTitle: 'Techniques',
     description:
@@ -93,6 +101,7 @@ export const greencards = {
   },
   'green-8': {
     id: 'green-8',
+    color: 'green',
     title: 'Social Engineering',
     subTitle: 'Techniques',
     description:
@@ -106,6 +115,7 @@ export const greencards = {
   },
   'green-9': {
     id: 'green-9',
+    color: 'green',
     title: 'Diplomacy',
     subTitle: 'Techniques',
     description:
@@ -119,6 +129,7 @@ export const greencards = {
   },
   'green-10': {
     id: 'green-10',
+    color: 'green',
     title: 'Equivalence Partitioning',
     subTitle: 'Techniques',
     description:
@@ -132,6 +143,7 @@ export const greencards = {
   },
   'green-11': {
     id: 'green-11',
+    color: 'green',
     title: 'Boundary Testing',
     subTitle: 'Techniques',
     description:
@@ -145,6 +157,7 @@ export const greencards = {
   },
   'green-12': {
     id: 'green-12',
+    color: 'green',
     title: 'Pair Testing',
     subTitle: 'Techniques',
     description:
@@ -158,6 +171,7 @@ export const greencards = {
   },
   'green-13': {
     id: 'green-13',
+    color: 'green',
     title: 'Pairwise Testing',
     subTitle: 'Techniques',
     description:
@@ -172,6 +186,7 @@ export const greencards = {
 
   'green-14': {
     id: 'green-14',
+    color: 'green',
     title: 'Touring',
     subTitle: 'Techniques',
     description:
@@ -185,6 +200,7 @@ export const greencards = {
   },
   'green-15': {
     id: 'green-15',
+    color: 'green',
     title: 'Unit Testing',
     subTitle: 'Techniques',
     description:
@@ -198,6 +214,7 @@ export const greencards = {
   },
   'green-16': {
     id: 'green-16',
+    color: 'green',
     title: 'Integration Testing',
     subTitle: 'Techniques',
     description:
@@ -212,6 +229,7 @@ export const greencards = {
 
   'green-17': {
     id: 'green-17',
+    color: 'green',
     title: 'Business Scenarios',
     subTitle: 'Techniques',
     description:
@@ -225,6 +243,7 @@ export const greencards = {
   },
   'green-18': {
     id: 'green-18',
+    color: 'green',
     title: 'Personas',
     subTitle: 'Techniques',
     description:
@@ -238,6 +257,7 @@ export const greencards = {
   },
   'green-19': {
     id: 'green-19',
+    color: 'green',
     title: 'Sampling',
     subTitle: 'Techniques',
     description:
@@ -251,6 +271,7 @@ export const greencards = {
   },
   'green-20': {
     id: 'green-20',
+    color: 'green',
     title: 'Risk Analysis',
     subTitle: 'Techniques',
     description:
@@ -264,10 +285,11 @@ export const greencards = {
   },
   'green-21': {
     id: 'green-21',
+    color: 'green',
     title: 'OWASP Top Ten',
-    subTitle: 'Project level',
+    subTitle: 'Techniques',
     description:
-      'Open Web Application Security Project: A list of the top ten biggest security risks, which are regularly updated. ',
+      'Project level: Open Web Application Security Project: A list of the top ten biggest security risks, which are regularly updated. ',
     exampleOne:
       'OWASP is a very useful checklist to reference when developing & testing possible security leaks.',
     exampleTwo:
@@ -277,10 +299,11 @@ export const greencards = {
   },
   'green-22': {
     id: 'green-22',
+    color: 'green',
     title: 'Story Mapping',
-    subTitle: 'Project level',
+    subTitle: 'Techniques',
     description:
-      'A project planning technique that helps you map out your high-level User Journey. It then drills down into details and identifies minimum viable experiments to release.',
+      'Project level: A project planning technique that helps you map out your high-level User Journey. It then drills down into details and identifies minimum viable experiments to release.',
     exampleOne:
       'Start writing down product features on cards. Keep it simple. The cards are not the most important thing. Communication and common understanding are.',
     exampleTwo:
@@ -290,10 +313,11 @@ export const greencards = {
   },
   'green-23': {
     id: 'green-23',
+    color: 'green',
     title: 'Mob Testing',
-    subTitle: 'Project level',
+    subTitle: 'Techniques',
     description:
-      'One person controls the system; the others give directions with the aim of finding bugs & limitations.',
+      'Project level: One person controls the system; the others give directions with the aim of finding bugs & limitations.',
     exampleOne:
       'Product demos sometimes go ‘off-script’ as someone says: “Hey, what was that? Can we check that now?” or “Did we think about different currencies?”.',
     exampleTwo:
@@ -303,10 +327,11 @@ export const greencards = {
   },
   'green-24': {
     id: 'green-24',
+    color: 'green',
     title: 'Stress Testing',
-    subTitle: 'Product level',
+    subTitle: 'Techniques',
     description:
-      'The measures we take to find out at which point a system slows down, freezes, or behaves unexpectedly. ',
+      'Product level: The measures we take to find out at which point a system slows down, freezes, or behaves unexpectedly. ',
     exampleOne:
       'You can test potential bottlenecks by ramping up traffic to that specific area. ',
     exampleTwo:
@@ -316,10 +341,11 @@ export const greencards = {
   },
   'green-25': {
     id: 'green-25',
+    color: 'green',
     title: 'Test Driven Development',
-    subTitle: 'Product level',
+    subTitle: 'Techniques',
     description:
-      'The first thing you write is a failing test before you write code. Then you write the code that makes the test pass. Repeat.',
+      'Product level: The first thing you write is a failing test before you write code. Then you write the code that makes the test pass. Repeat.',
     exampleOne:
       'This practice makes your codebase better and provides the team with stability as a feature is being developed. It allows the team to add code more quickly.',
     exampleTwo:

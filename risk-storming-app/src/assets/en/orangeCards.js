@@ -1,6 +1,7 @@
 export const orangecards = {
   'orange-1': {
     id: 'orange-1',
+    color: 'orange',
     title: 'Interruption',
     subTitle: 'Patterns',
     description:
@@ -14,6 +15,7 @@ export const orangecards = {
   },
   'orange-2': {
     id: 'orange-2',
+    color: 'orange',
     title: 'Tediousness',
     subTitle: 'Patterns',
     description:
@@ -27,6 +29,7 @@ export const orangecards = {
   },
   'orange-3': {
     id: 'orange-3',
+    color: 'orange',
     title: 'Fluency',
     subTitle: 'Patterns',
     description:
@@ -40,6 +43,7 @@ export const orangecards = {
   },
   'orange-4': {
     id: 'orange-4',
+    color: 'orange',
     title: 'Disaster Control',
     subTitle: 'Patterns',
     description:
@@ -53,6 +57,7 @@ export const orangecards = {
   },
   'orange-5': {
     id: 'orange-5',
+    color: 'orange',
     title: 'Automation',
     subTitle: 'Patterns',
     description:
@@ -66,6 +71,7 @@ export const orangecards = {
   },
   'orange-6': {
     id: 'orange-6',
+    color: 'orange',
     title: 'Dependencies',
     subTitle: 'Patterns',
     description:
@@ -79,6 +85,7 @@ export const orangecards = {
   },
   'orange-7': {
     id: 'orange-7',
+    color: 'orange',
     title: 'Log-digging',
     subTitle: 'Patterns',
     description:
@@ -92,6 +99,7 @@ export const orangecards = {
   },
   'orange-8': {
     id: 'orange-8',
+    color: 'orange',
     title: 'Force',
     subTitle: 'Patterns',
     description:
@@ -105,6 +113,7 @@ export const orangecards = {
   },
   'orange-9': {
     id: 'orange-9',
+    color: 'orange',
     title: 'Superficial',
     subTitle: 'Patterns',
     description:
@@ -118,6 +127,7 @@ export const orangecards = {
   },
   'orange-10': {
     id: 'orange-10',
+    color: 'orange',
     title: 'Minimalism',
     subTitle: 'Patterns',
     description:
@@ -131,6 +141,7 @@ export const orangecards = {
   },
   'orange-11': {
     id: 'orange-11',
+    color: 'orange',
     title: 'Confirmation Bias',
     subTitle: 'Patterns',
     description:
@@ -144,6 +155,7 @@ export const orangecards = {
   },
   'orange-12': {
     id: 'orange-12',
+    color: 'orange',
     title: 'Bandwagon Effect',
     subTitle: 'Patterns',
     description:
@@ -157,6 +169,7 @@ export const orangecards = {
   },
   'orange-13': {
     id: 'orange-13',
+    color: 'orange',
     title: 'Dunning-Kruger Effect',
     subTitle: 'Patterns',
     description:
@@ -170,6 +183,7 @@ export const orangecards = {
   },
   'orange-14': {
     id: 'orange-14',
+    color: 'orange',
     title: 'Anchoring',
     subTitle: 'Patterns',
     description:
@@ -183,6 +197,7 @@ export const orangecards = {
   },
   'orange-15': {
     id: 'orange-15',
+    color: 'orange',
     title: 'Curse of Knowledge',
     subTitle: 'Patterns',
     description:
@@ -196,6 +211,7 @@ export const orangecards = {
   },
   'orange-16': {
     id: 'orange-16',
+    color: 'orange',
     title: 'Status Quo Bias',
     subTitle: 'Patterns',
     description:
@@ -209,6 +225,7 @@ export const orangecards = {
   },
   'orange-17': {
     id: 'orange-17',
+    color: 'orange',
     title: 'IKEA-effect',
     subTitle: 'Patterns',
     description:
@@ -222,6 +239,7 @@ export const orangecards = {
   },
   'orange-18': {
     id: 'orange-18',
+    color: 'orange',
     title: 'Observer-Expectancy Effect',
     subTitle: 'Patterns',
     description:
@@ -235,6 +253,7 @@ export const orangecards = {
   },
   'orange-19': {
     id: 'orange-19',
+    color: 'orange',
     title: 'Ostrich Effect',
     subTitle: 'Patterns',
     description:
@@ -248,6 +267,7 @@ export const orangecards = {
   },
   'orange-20': {
     id: 'orange-20',
+    color: 'orange',
     title: "Gambler's Fallacy",
     subTitle: 'Patterns',
     description:
@@ -261,12 +281,13 @@ export const orangecards = {
   },
   'orange-21': {
     id: 'orange-21',
+    color: 'orange',
     title: 'Single Responsibility Principle',
-    subTitle: 'Approach',
+    subTitle: 'Patterns',
     description:
-      'Every software module should have one, and only one, reason to change.',
+      'Approach: Every software module should have one, and only one, reason to change.',
     exampleOne:
-      'This principle is closely coupled to business domain logic. If your price calculator is influenced by seasons, promotions, currency,... this should be decoupled.',
+      'This principle is closely coupled to business domain logic. If your price calculator is influenced by seasons, promotions, currency... this should be decoupled.',
     exampleTwo:
       'It’s about people and their responsibilities. This principle is broken when a change for one person’s responsibilities could impact someone else’s.',
     exampleThree:
@@ -274,10 +295,11 @@ export const orangecards = {
   },
   'orange-22': {
     id: 'orange-22',
+    color: 'orange',
     title: 'Story Slicing',
-    subTitle: 'Approach',
+    subTitle: 'Patterns',
     description:
-      'What is the smallest possible block of functionality that can add value to business right now?',
+      'Approach: What is the smallest possible block of functionality that can add value to business right now?',
     exampleOne:
       'Simplify functionality by splitting it up into the smallest possible pieces: Load one transaction, load 10 transactions, load all transactions, filter by date,...',
     exampleTwo: 'Split by technology: UI, database, calculation logic,...',
@@ -286,10 +308,11 @@ export const orangecards = {
   },
   'orange-23': {
     id: 'orange-23',
+    color: 'orange',
     title: 'Mutation Testing',
-    subTitle: 'Approach',
+    subTitle: 'Patterns',
     description:
-      'Mutation tests are randomly generated alterations of your code that help evaluate the effectiveness of your unit tests.',
+      'Approach: Mutation tests are randomly generated alterations of your code that help evaluate the effectiveness of your unit tests.',
     exampleOne:
       'By randomly changing your source code, you get quick feedback on the value of your automated test code. ',
     exampleTwo:
@@ -299,10 +322,11 @@ export const orangecards = {
   },
   'orange-24': {
     id: 'orange-24',
+    color: 'orange',
     title: 'Strangling Patterns',
-    subTitle: 'Approach',
+    subTitle: 'Patterns',
     description:
-      'Used to decouple blocks of functionality out of big clustered systems into smaller services to reduce complexity.',
+      'Approach: Used to decouple blocks of functionality out of big clustered systems into smaller services to reduce complexity.',
     exampleOne:
       'Legacy systems are often built in such an overly complex way that you can’t begin to understand all the dependencies. Strangling tries to tackle this pattern.',
     exampleTwo:
@@ -313,10 +337,11 @@ export const orangecards = {
 
   'orange-25': {
     id: 'orange-25',
-    title: 'Long Term Load Testing:',
-    subTitle: 'Approach',
+    color: 'orange',
+    title: 'Long Term Load Testing',
+    subTitle: 'Patterns',
     description:
-      'Problems in performance are not always found with short bursts of high load. Long lasting, reasonable load is sometimes more realistic... and more troublesome.',
+      'Approach: Problems in performance are not always found with short bursts of high load. Long lasting, reasonable load is sometimes more realistic... and more troublesome.',
     exampleOne:
       'Simulating real user load and scenarios can be an enlightening activity.',
     exampleTwo:

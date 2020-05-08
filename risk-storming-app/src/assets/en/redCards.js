@@ -3,9 +3,9 @@ export const redcards = {
     id: 'red-1',
     color: 'red',
     title: 'Production Test Tenant',
-    subTitle: 'Manipulate',
+    subTitle: 'Observability',
     description:
-      'Tagging testing actions taken in production with ÔtestÕ so that systems know to separate them from actual usage.',
+      'Manipulate: Tagging testing actions taken in production with ÔtestÕ so that systems know to separate them from actual usage.',
     exampleOne:
       "Building a webshop? Consider creating a 'Test' country which can only be seen by some users and tell systems, such as accounting, to ignore it.",
     exampleTwo:
@@ -17,9 +17,9 @@ export const redcards = {
     id: 'red-2',
     color: 'red',
     title: 'Logging',
-    subTitle: 'Gather',
+    subTitle: 'Observability',
     description:
-      "The software can write books. They're about as readable as a book on Advance Differential Equations, but hold immensely useful information. Structure them!",
+      "Gather: The software can write books. They're about as readable as a book on Advance Differential Equations, but hold immensely useful information. Structure them!",
     exampleOne:
       'Logging context rich, arbitrarily wide events is the foundation of observability. E.g. It enable you to find out who, what, when, and where a pesky error happened!',
     exampleTwo:
@@ -31,9 +31,9 @@ export const redcards = {
     id: 'red-3',
     color: 'red',
     title: 'Distributed Tracing',
-    subTitle: 'Tracing',
+    subTitle: 'Observability',
     description:
-      'At the entry point of your system, assign a unique ID to actions made by the same agent. This way, the same agent can be traced across services, logs, etc.',
+      'Tracing: At the entry point of your system, assign a unique ID to actions made by the same agent. This way, the same agent can be traced across services, logs, etc.',
     exampleOne:
       "In a distributed system, you don't want to piece together a certain action across all the different services on your own. Add a correlation ID and all the information you can to each service log.",
     exampleTwo:
@@ -45,9 +45,9 @@ export const redcards = {
     id: 'red-4',
     color: 'red',
     title: 'Alerting',
-    subTitle: 'Trigger',
+    subTitle: 'Observability',
     description:
-      'Monitor for unwanted behaviour such as a high number of error codes over a short time. Have alerts in place to warn you before your users do.',
+      'Trigger: Monitor for unwanted behaviour such as a high number of error codes over a short time. Have alerts in place to warn you before your users do.',
     exampleOne:
       "Define Service Level Objectives like '98% uptime' and alert yourself early to avoid being on-called out of bed. You want to deal with this during working hours.",
     exampleTwo:
@@ -59,9 +59,9 @@ export const redcards = {
     id: 'red-5',
     color: 'red',
     title: 'Anomaly Detection',
-    subTitle: 'Trigger',
+    subTitle: 'Observability',
     description:
-      "Alerts are not always straightforward. You look for something outside of the statistical 'normal'. You know what 99% looks like, this warns you about the 1%.",
+      "Trigger: Alerts are not always straightforward. You look for something outside of the statistical 'normal'. You know what 99% looks like, this warns you about the 1%.",
     exampleOne:
       'Anomaly Detection applies the use of Statistical Analysis methods on the systemÕs real time output to find outliers.',
     exampleTwo:
@@ -73,9 +73,9 @@ export const redcards = {
     id: 'red-6',
     color: 'red',
     title: 'Business Metrics',
-    subTitle: 'Gather',
+    subTitle: 'Observability',
     description:
-      "The graph of sales numbers is steadily rising? Nice. Total revenue through ads? Useful. A sudden drop?! We're losing money! Action-time.",
+      "Gather: The graph of sales numbers is steadily rising? Nice. Total revenue through ads? Useful. A sudden drop?! We're losing money! Action-time.",
     exampleOne:
       'Identify use cases critical to your business, e.g. logins or checkouts.',
     exampleTwo:
@@ -87,9 +87,9 @@ export const redcards = {
     id: 'red-7',
     color: 'red',
     title: 'Black Box Monitoring',
-    subTitle: 'Monitor',
+    subTitle: 'Observability',
     description:
-      'Network traffic, hard disk space, and memory usage donÕt point out what is exactly wrong, but they can act as smoke where there might be fire..',
+      'Monitor: Network traffic, hard disk space, and memory usage donÕt point out what is exactly wrong, but they can act as smoke where there might be fire..',
     exampleOne:
       'Things you see or experience in Black Box Monitoring are usually also visible to your users: the app is slow or crashes.',
     exampleTwo:
@@ -101,9 +101,9 @@ export const redcards = {
     id: 'red-8',
     color: 'red',
     title: 'White Box Monitoring',
-    subTitle: 'Monitor',
+    subTitle: 'Observability',
     description:
-      'Database queries, user paths, unexpected response codes are triggers that point us to the exact problems. Best to keep a close eye on them.',
+      'Monitor: Database queries, user paths, unexpected response codes are triggers that point us to the exact problems. Best to keep a close eye on them.',
     exampleOne:
       'White Box Monitoring is based on the internals of the systems like logs or internal HTTP calls.',
     exampleTwo:
@@ -115,9 +115,9 @@ export const redcards = {
     id: 'red-9',
     color: 'red',
     title: 'Event Logging',
-    subTitle: 'Tracing',
+    subTitle: 'Observability',
     description:
-      'Keep a history of each datapoint. When was the last time the shopping cart was edited? What was inside it before that? Can we return to that state?',
+      'Tracing: Keep a history of each datapoint. When was the last time the shopping cart was edited? What was inside it before that? Can we return to that state?',
     exampleOne:
       'Event Logging thinks of every state change in your software as a series of events, which it captures and stores.',
     exampleTwo:
@@ -129,9 +129,9 @@ export const redcards = {
     id: 'red-10',
     color: 'red',
     title: 'Real User Monitoring',
-    subTitle: 'Monitor',
+    subTitle: 'Observability',
     description:
-      'Observe everything a user does in the system, how long it takes, and whether they are successful at it.',
+      'Monitor: Observe everything a user does in the system, how long it takes, and whether they are successful at it.',
     exampleOne:
       "Some tools assign a 'user happiness metric' to their journey. Whether it was fast, frustrating, or unhelpful.",
     exampleTwo:
@@ -143,9 +143,9 @@ export const redcards = {
     id: 'red-11',
     color: 'red',
     title: 'Tap Compare',
-    subTitle: 'Manipulate',
+    subTitle: 'Observability',
     description:
-      "Don't want to write the script to simulate actual usage for the new feature? Pluck the most used calls from production and run them on the dev environment.",
+      "Manipulate: Don't want to write the script to simulate actual usage for the new feature? Pluck the most used calls from production and run them on the dev environment.",
     exampleOne:
       'Mostly a regression test technique by which you run vast amounts of production data through the changed system to see if anything bad happens.',
     exampleTwo:
@@ -157,9 +157,9 @@ export const redcards = {
     id: 'red-12',
     color: 'red',
     title: 'Build it, run it',
-    subTitle: 'Trigger',
+    subTitle: 'Observability',
     description:
-      'Get to know your production problems first hand and take ownership.',
+      'Trigger: Get to know your production problems first hand and take ownership.',
     exampleOne:
       'Putting developers on-call is a very effective quality measurement. The people who can fix stuff should also be responsible for it running correctly.',
     exampleTwo:
@@ -171,9 +171,9 @@ export const redcards = {
     id: 'red-13',
     color: 'red',
     title: 'Dark Launch',
-    subTitle: 'Monitor',
+    subTitle: 'Observability',
     description:
-      'Only release your new features to production for a fraction of your users. Get feedback before taking the big leap.',
+      'Monitor: Only release your new features to production for a fraction of your users. Get feedback before taking the big leap.',
     exampleOne:
       'Launching a new feature to just the power-users will give you an idea of its usefulness.',
     exampleTwo:
@@ -185,9 +185,9 @@ export const redcards = {
     id: 'red-14',
     color: 'red',
     title: 'Zero Downtime Approach',
-    subTitle: 'Trigger',
+    subTitle: 'Observability',
     description:
-      'When your business is dependent on the service being available at all times, downtime becomes a huge cost. How does the service stay up and running?',
+      'Trigger: When your business is dependent on the service being available at all times, downtime becomes a huge cost. How does the service stay up and running?',
     exampleOne:
       'Have multiple instances of the system running so that one can take over when the active one fails.',
     exampleTwo:
@@ -199,9 +199,9 @@ export const redcards = {
     id: 'red-15',
     color: 'red',
     title: 'Service Level Indicators',
-    subTitle: 'Monitor',
+    subTitle: 'Observability',
     description:
-      'Service level agreements between services are quite common. Service Level Indicators are measurements taken to monitor what was agreed upon.',
+      'Monitor: Service level agreements between services are quite common. Service Level Indicators are measurements taken to monitor what was agreed upon.',
     exampleOne:
       'Common Service Level Objectives are availability or response times of services involved and the team in case of an outage.',
     exampleTwo:
