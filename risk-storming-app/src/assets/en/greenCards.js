@@ -262,4 +262,68 @@ export const greencards = {
     exampleThree:
       "Deadlines are often detrimental for testing. When there's a testing phase at the end, how do you prepare for this small time slot?",
   },
+  'green-21': {
+    id: 'green-21',
+    title: 'OWASP Top Ten',
+    subTitle: 'Project level',
+    description:
+      'Open Web Application Security Project: A list of the top ten biggest security risks, which are regularly updated. ',
+    exampleOne:
+      'OWASP is a very useful checklist to reference when developing & testing possible security leaks.',
+    exampleTwo:
+      'You don’t have to dig too deep to find useful test ideas and tools to help find peculiar and important issues.',
+    exampleThree:
+      'Security is too often an afterthought for projects. It usually takes only one motivated person to raise awareness and improve security.',
+  },
+  'green-22': {
+    id: 'green-22',
+    title: 'Story Mapping',
+    subTitle: 'Project level',
+    description:
+      'A project planning technique that helps you map out your high-level User Journey. It then drills down into details and identifies minimum viable experiments to release.',
+    exampleOne:
+      'Start writing down product features on cards. Keep it simple. The cards are not the most important thing. Communication and common understanding are.',
+    exampleTwo:
+      'Break down big ideas into smaller concrete ones, prioritize important ideas first. Stay focused on validating ideas.',
+    exampleThree:
+      'Use this technique, as a team, to test a hypothetical valuable idea in the smallest increments possible.',
+  },
+  'green-23': {
+    id: 'green-23',
+    title: 'Mob Testing',
+    subTitle: 'Project level',
+    description:
+      'One person controls the system; the others give directions with the aim of finding bugs & limitations.',
+    exampleOne:
+      'Product demos sometimes go ‘off-script’ as someone says: “Hey, what was that? Can we check that now?” or “Did we think about different currencies?”.',
+    exampleTwo:
+      'Make sure everyone in the mob is equally valued. Rotate roles in a fair, unbiased manner. Any role can participate.',
+    exampleThree:
+      'Ideas that seem wrong or random should be encouraged, valued and tried out, not shut down.',
+  },
+  'green-24': {
+    id: 'green-24',
+    title: 'Stress Testing',
+    subTitle: 'Product level',
+    description:
+      'The measures we take to find out at which point a system slows down, freezes, or behaves unexpectedly. ',
+    exampleOne:
+      'You can test potential bottlenecks by ramping up traffic to that specific area. ',
+    exampleTwo:
+      'Stress testing tools can be easy to learn, but adding value with them requires in-depth knowledge of the system under test and the underlying technologies.',
+    exampleThree:
+      'If the strategy behind stress testing seems random, try using data from production to direct your efforts.',
+  },
+  'green-25': {
+    id: 'green-25',
+    title: 'Test Driven Development',
+    subTitle: 'Product level',
+    description:
+      'The first thing you write is a failing test before you write code. Then you write the code that makes the test pass. Repeat.',
+    exampleOne:
+      'This practice makes your codebase better and provides the team with stability as a feature is being developed. It allows the team to add code more quickly.',
+    exampleTwo:
+      'You can use examples of inputs and outputs to make TDD more relevant. Include these examples in acceptance criteria.',
+    exampleThree: 'Keep them small, clean, and most importantly: valuable.',
+  },
 };
