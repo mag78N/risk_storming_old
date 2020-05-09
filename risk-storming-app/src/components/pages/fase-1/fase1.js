@@ -30,7 +30,7 @@ class FaseOnePage extends React.Component {
   };
   componentDidUpdate() {
     let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
-    sessionStorage.setItem('selectedBlueCardIds', cardIds);
+    localStorage.setItem('selectedBlueCardIds', cardIds);
   }
 
   onDragEnd = (result) => {

@@ -42,9 +42,9 @@ class FaseTwoPage extends React.Component {
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
-      if (sessionStorage.hasOwnProperty(key)) {
+      if (localStorage.hasOwnProperty(key)) {
         // get the key's value from localStorage
-        let value = sessionStorage.getItem(key);
+        let value = localStorage.getItem(key);
 
         // parse the localStorage string and setState
         try {
@@ -61,7 +61,7 @@ class FaseTwoPage extends React.Component {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
-      sessionStorage.setItem(key, JSON.stringify(this.state[key]));
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
 
@@ -112,7 +112,7 @@ class FaseTwoPage extends React.Component {
   };
   getCardObjectsFromLocalStorage() {
     const chosenCardIds = JSON.parse(
-      sessionStorage.getItem('selectedBlueCardIds')
+      localStorage.getItem('selectedBlueCardIds')
     );
     const chosenBlueCardsArray = [];
     for (let i = 0; i < chosenCardIds.length; i++) {
@@ -131,7 +131,7 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-    sessionStorage.setItem('chosenCards', JSON.stringify(chosenBlueCardsArray));
+    localStorage.setItem('chosenCards', JSON.stringify(chosenBlueCardsArray));
     return chosenBlueCardsArray;
   }
 

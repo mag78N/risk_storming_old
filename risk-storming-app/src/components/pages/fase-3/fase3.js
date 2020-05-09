@@ -18,7 +18,7 @@ import '../risk-row.css';
 
 class FaseThreePage extends React.Component {
   constructor(props) {
-    const cards = JSON.parse(sessionStorage.getItem('chosenCards'));
+    const cards = JSON.parse(localStorage.getItem('chosenCards'));
     super(props);
     this.state = {
       chosenCards: cards,
@@ -49,10 +49,9 @@ class FaseThreePage extends React.Component {
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
-      if (sessionStorage.hasOwnProperty(key)) {
+      if (localStorage.hasOwnProperty(key)) {
         // get the key's value from localStorage
-        let value = sessionStorage.getItem(key);
-
+        let value = localStorage.getItem(key);
         // parse the localStorage string and setState
         try {
           value = JSON.parse(value);
@@ -69,7 +68,7 @@ class FaseThreePage extends React.Component {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
-      sessionStorage.setItem(key, JSON.stringify(this.state[key]));
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
 
@@ -109,9 +108,9 @@ class FaseThreePage extends React.Component {
       return;
     }
     const start = getCardList(source.droppableId);
-    console.log(start);
+    console.log('start :', start);
     const finish = getCardList(destination.droppableId);
-    console.log(finish);
+    console.log('finish :', finish);
     const removedCard = start.splice(source.index, 1)[0];
     finish.splice(destination.index, 0, removedCard);
 
