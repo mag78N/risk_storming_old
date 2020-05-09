@@ -11,7 +11,7 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
-import Column from './Column';
+import RightColumn from './RightColumn';
 import RiskList from './Risklist';
 import './styles/fase3.css';
 import '../risk-row.css';
@@ -26,26 +26,26 @@ class FaseThreePage extends React.Component {
     };
   }
 
-  componentDidMount() {
+   componentDidMount() {
     console.log('componentdidmount');
     this.hydrateStateWithLocalStorage();
-    window.addEventListener(
+     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
-  }
-  componentWillUnmount() {
+    ); 
+  } 
+   componentWillUnmount() {
     console.log('componentwillunmount');
-    window.removeEventListener(
+     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
+    ); 
     //saves if component has a chance to unmount
     this.saveStateToLocalStorage();
-  }
+  } 
 
   hydrateStateWithLocalStorage() {
-    console.log('hydratestate with local storage');
+    console.log('hydrate state with local storage');
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -68,7 +68,10 @@ class FaseThreePage extends React.Component {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
-      localStorage.setItem(key, JSON.stringify(this.state[key]));
+      
+        localStorage.setItem(key, JSON.stringify(this.state[key]));
+      
+      
     }
   }
 
@@ -115,10 +118,10 @@ class FaseThreePage extends React.Component {
     finish.splice(destination.index, 0, removedCard);
 
     if (source.droppableId === 'RIGHT-COLUMN') {
-      /* this.setState((prevState) => {
+       this.setState((prevState) => {
         return { colorcards: start };
-      }); */
-      this.setState({ colorcards: start });
+      }); 
+      //this.setState({ colorcards: start });
     } else {
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
@@ -199,7 +202,7 @@ class FaseThreePage extends React.Component {
             </div>
 
             <div>
-              <Column colorcards={colorcards} />
+              <RightColumn colorcards={colorcards} />
             </div>
           </Split>
         </DragDropContext>

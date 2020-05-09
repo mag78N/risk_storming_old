@@ -1,9 +1,4 @@
 import React from 'react';
-/* import '../../cards/green-card/GreenCard.css';
-import '../../cards/orange-card/OrangeCard.css';
-import '../../cards/pink-card/PinkCard.css';
-import '../../cards/red-card/RedCard.css';
-import '../../cards/darkblue-card/DarkblueCard.css'; */
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';
@@ -41,12 +36,12 @@ class Card extends React.Component {
   }
 
   render() {
-    const { card } = this.props;
+    const { card, cardid , index } = this.props;
     return (
       <Draggable
-        draggable='true'
-        draggableId={card.id}
-        index={this.props.index}
+        draggable={true}
+        draggableId={cardid}
+        index={index}
         type='CARD'
       >
         {(provided, snapshot) => (

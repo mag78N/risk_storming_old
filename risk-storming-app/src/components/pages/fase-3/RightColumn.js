@@ -1,37 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-/* import '../../cards/green-card/GreenCard.css';
-import '../../cards/orange-card/OrangeCard.css';
-import '../../cards/pink-card/PinkCard.css';
-import '../../cards/red-card/RedCard.css';
-import '../../cards/darkblue-card/DarkblueCard.css'; */
 import Card from './Card';
 import { Droppable } from 'react-beautiful-dnd';
 import './styles/fase3.css';
 const CardList = styled.div``;
 
-class RiskDropColumn extends React.Component {
+class RightColumn extends React.Component {
+
   render() {
+      const { colorcards } = this.props;
     return (
-      <Droppable
-        droppableId={this.props.columnid}
-        direction='horizontal'
-        type='CARD'
-      >
+      <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDraggingOver={snapshot.isDraggingOver}
-            className=' dropzone'
+            className={`rightPane fase1RightPane`}
           >
-            {this.props.riskCards.map((card, index) => (
+            {colorcards.map((card, index) => (
               <Card
                 type='CARD'
-                key={card.id}
+                key={card['id']}
+                cardid={card['id']}
                 card={card}
                 index={index}
-                //column={this.props.column2}
               />
             ))}
             {provided.placeholder}
@@ -42,4 +35,4 @@ class RiskDropColumn extends React.Component {
   }
 }
 
-export default RiskDropColumn;
+export default RightColumn;
