@@ -10,6 +10,9 @@ const MainPage = () => {
   var bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
+  function clearLocalStorage() {
+    localStorage.clear();
+  }
   return (
     <>
       <div className='mainPageContainer'>
@@ -20,6 +23,13 @@ const MainPage = () => {
               Start Session!
             </Button>
           </Link>
+          <Button
+            onClick={clearLocalStorage}
+            variant='outline-dark'
+            
+          >
+            Clear Previous Data
+          </Button>
         </div>
       </div>
 

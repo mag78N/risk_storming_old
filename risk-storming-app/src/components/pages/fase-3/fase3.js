@@ -28,7 +28,8 @@ class FaseThreePage extends React.Component {
 
   componentDidMount() {
     const cards = JSON.parse(localStorage.getItem('chosenCards'));
-    this.state.chosenCards = cards;
+    this.setState({chosenCards : cards})
+    //this.state.chosenCards = cards;
     console.log('componentdidmount');
     this.hydrateStateWithLocalStorage();
      window.addEventListener(

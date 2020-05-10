@@ -40,8 +40,8 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-    
-    this.state.chosenCards = chosenBlueCardsArray;
+    this.setState({ chosenCards : chosenBlueCardsArray})
+    //this.state.chosenCards = chosenBlueCardsArray;
 
     console.log(this.state);
     this.hydrateStateWithLocalStorage();
