@@ -12,6 +12,7 @@ const MainPage = () => {
   };
   function clearLocalStorage() {
     localStorage.clear();
+    window.location.reload();
   }
   return (
     <>
@@ -23,11 +24,7 @@ const MainPage = () => {
               Start Session!
             </Button>
           </Link>
-          <Button
-            onClick={clearLocalStorage}
-            variant='outline-dark'
-            
-          >
+          <Button onClick={clearLocalStorage} variant='outline-dark'>
             Clear Previous Data
           </Button>
         </div>
