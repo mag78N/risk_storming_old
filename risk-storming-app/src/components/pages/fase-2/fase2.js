@@ -16,10 +16,33 @@ class FaseTwoPage extends React.Component {
     super(props);
     this.state = {
       bluecards: bluecards,
-      chosenCards: this.getCardObjectsFromLocalStorage(),
+      chosenCards: [],
     };
   }
   componentDidMount() {
+    const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
+    );
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
+      const chosenBlueCard = chosenCardIds[i];
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
+          chosenBlueCardsArray.push(entireObject);
+        }
+      }
+    }
+    
+    this.state.chosenCards = chosenBlueCardsArray;
+
     console.log(this.state);
     this.hydrateStateWithLocalStorage();
      window.addEventListener(
@@ -110,7 +133,7 @@ class FaseTwoPage extends React.Component {
   onsubmit = (e) => {
     e.preventDefault();
   };
-  getCardObjectsFromLocalStorage() {
+  /* getCardObjectsFromLocalStorage() {
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
@@ -133,9 +156,10 @@ class FaseTwoPage extends React.Component {
     }
     localStorage.setItem('chosenCards', JSON.stringify(chosenBlueCardsArray));
     return chosenBlueCardsArray;
-  }
+  } */
 
   render() {
+    
     const { chosenCards } = this.state;
     console.log(this.state);
     return (
