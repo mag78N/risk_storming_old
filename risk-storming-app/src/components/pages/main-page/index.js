@@ -11,7 +11,7 @@ const MainPage = () => {
     backgroundImage: `url(${bg})`,
   };
   function clearLocalStorage() {
-    localStorage.clear();
+    window.localStorage.clear();
     window.location.reload();
   }
   return (
