@@ -1,0 +1,17 @@
+.pdfContainer{
+  
+}
+
+.mainContainer{
+  width: 500px;
+  
+  display: flex;
+}
+.riskContainer{
+  display: flex;
+  flex-direction: column;
+  
+}
+.riskText{
+  padding: 1rem;
+}

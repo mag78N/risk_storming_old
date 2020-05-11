@@ -10,6 +10,10 @@ import Card from './Card';
 import RightPane from './RightPane/RightPane';
 import RiskListLeftPane from './LeftPane/RiskListLeftPane';
 import { bluecards } from '../../../assets/en/blueCards';
+import jsPDF from 'jspdf';
+import { Link } from 'react-router-dom';
+
+const ref = React.createRef();
 
 class FaseTwoPage extends React.Component {
   constructor(props) {
@@ -165,6 +169,14 @@ class FaseTwoPage extends React.Component {
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
+        <Link to={{
+          pathname: '/fase2Pdf',
+          state: {
+            data: this.state,
+          }
+        }}  >
+          <button>generate pdf</button>
+        </Link>
         <Split
           className='splitContainer splitContainerFase2'
           sizes={[60, 40]}
@@ -177,7 +189,7 @@ class FaseTwoPage extends React.Component {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div className='leftPane fase2LeftPane'>
+          <div ref={ref} className='leftPane fase2LeftPane'>
             {chosenCards.map((card, index) => (
               <div className='cardRow' key={index}>
                 <div className='innerCardRow'>

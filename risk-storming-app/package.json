@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@atlaskit/css-reset": "^5.0.10",
+    "@react-pdf/renderer": "^1.6.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "hookrouter": "^1.2.3",
+    "jspdf": "^1.5.3",
     "mobx-react": "^6.2.2",
     "react": "^16.13.1",
     "react-beautiful-dnd": "^13.0.0",
@@ -20,6 +22,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-split": "^2.0.7",
+    "react-to-pdf": "0.0.11",
     "styled-components": "^5.1.0",
     "uuidv4": "^6.0.7"
   },
