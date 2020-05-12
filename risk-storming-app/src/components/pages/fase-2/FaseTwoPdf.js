@@ -11,19 +11,19 @@ class FaseTwoPdf extends Component {
     console.log(chosenCards);
 
     return (
-      <div>
+      <div className='pdfContainer'>
         <Pdf targetRef={ref} filename='fase2.pdf'>
-          {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+          {({ toPdf }) => <button className='btn exportButton' onClick={toPdf}>Export to PDF</button>}
         </Pdf>
 
-        <div ref={ref} className='pdfContainer'>
+        <div ref={ref} className='pdfContent'>
           {chosenCards.map((card) => (
             <>
               <div className='mainContainer'>
                 <div className='cardContainer'>
-                  <div>{card.title}</div>
-                  <div>{card.subTitle}</div>
-                  <div>{card.description}</div>
+                  <div className='cardTitle'>{card.title}</div>
+                  <div className='cardSubtitle'>{card.subTitle}</div>
+                  <div className='cardDescription'>{card.description}</div>
                 </div>
                 <div className='riskContainer'>
                   {card.risks.map((risk) => (
