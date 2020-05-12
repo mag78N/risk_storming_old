@@ -30,7 +30,9 @@ class FaseTwoPdf extends Component {
                 </div>
                 <div className='riskContainer'>
                   {card.risks.map((risk,index) => (
-                    <div className='riskText' key={index}>{risk.label}</div>
+                    <div className='riskLane'>
+                      <p className='riskText' key={index}>{risk.label}</p>
+                    </div>
                   ))}
                 </div>
               </div>

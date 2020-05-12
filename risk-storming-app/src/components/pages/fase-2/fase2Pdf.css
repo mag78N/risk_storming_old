@@ -1,9 +1,10 @@
 .pdfContainer {
-  padding: 1rem;
-  padding-top: calc(1rem + 40px);
+  padding: 2rem;
+  padding-top: calc(2rem + 40px);
 }
 .pdfContainer .exportButton {
   top: 1rem;
+  left: 2.5rem;
 }
 .pdfContainer .cardContainer {
   width: 210px;
@@ -30,8 +31,8 @@
   display: flex;
   align-items: flex-start;
   border-bottom: 2px solid #e5e5e5;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 .mainContainer:last-child {
   margin-bottom: 0;
@@ -39,14 +40,24 @@
   border-bottom-width: 0;
 }
 .riskContainer {
-  max-width: 250px;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px dashed #e5e5e5;
 }
 .riskContainer:last-child {
   border-bottom-width: 0;
 }
+.riskLane {
+  padding: 1.75rem 1rem;
+  width: 750px;
+  border-bottom: 2px dashed #e5e5e5;
+}
 .riskText {
-  padding: 1rem;
+  max-width: 200px;
+  font-size: 0.8rem;
+}
+.riskLane:first-child {
+  padding-top: 0.75rem;
+}
+.riskLane:last-child {
+  padding-bottom: 0.75rem;
 }
