@@ -12,7 +12,8 @@ const MainPage = () => {
   };
   function clearLocalStorage() {
     window.localStorage.clear();
-    window.location.reload();
+    //window.location.reload();
+   // window.localStorage.clear();
   }
   return (
     <>
