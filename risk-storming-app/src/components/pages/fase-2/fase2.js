@@ -10,7 +10,7 @@ import Card from './Card';
 import RightPane from './RightPane/RightPane';
 import RiskListLeftPane from './LeftPane/RiskListLeftPane';
 import { bluecards } from '../../../assets/en/blueCards';
-import jsPDF from 'jspdf';
+
 import { Link } from 'react-router-dom';
 
 const ref = React.createRef();
