@@ -6,6 +6,9 @@
   top: 1rem;
   left: 2.5rem;
 }
+.pdfContent{
+  break-after: always;
+}
 .pdfContainer .cardContainer {
   width: 210px;
   border: 2px solid rgb(65, 161, 206);
