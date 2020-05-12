@@ -25,7 +25,9 @@ const MainPage = () => {
               Start Session!
             </Button>
           </Link>
-          <Button onClick={clearLocalStorage} variant='outline-dark'>
+          <Button variant='outline-dark'
+                  className='clearDataButton'
+                  onClick={clearLocalStorage}>
             Clear Previous Data
           </Button>
         </div>
