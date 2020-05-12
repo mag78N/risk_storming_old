@@ -169,13 +169,14 @@ class FaseTwoPage extends React.Component {
     return (
       <>
         <TopNavbar faseNum='Fase 2' />
-        <Link to={{
+        <Link className='btn exportButton'
+          to={{
           pathname: '/fase2Pdf',
           state: {
             data: this.state,
           }
-        }}  >
-          <button>generate pdf</button>
+        }}>
+          Export to PDF
         </Link>
         <Split
           className='splitContainer splitContainerFase2'
