@@ -20,7 +20,7 @@ class FaseTwoPdf extends Component {
         </Pdf>
 
         <div ref={ref} className='pdfContent'>
-          {chosenCards.map((card) => (
+          {chosenCards.map((card,index) => (
             <>
               <div className='mainContainer' key={index}>
                 <div className='cardContainer'>
