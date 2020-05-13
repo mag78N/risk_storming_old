@@ -14,13 +14,12 @@ class FaseTwoPdf extends Component {
         <PDFDownloadLink
           document={<PdfDocument chosenCards={chosenCards} />}
           fileName='fase2.pdf'
-          
+          className='btn exportButton'
         >
           {({ blob, url, loading, error }) =>
             loading ? 'Loading document...' : 'Download Pdf'
           }
         </PDFDownloadLink>
-        
       </div>
     );
   }
