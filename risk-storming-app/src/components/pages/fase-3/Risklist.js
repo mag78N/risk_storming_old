@@ -13,8 +13,8 @@ class RiskList extends Component {
             cardRiskId = `${card.id}|${riskId}`;
           return (
             <div className='riskLane' key={idx}>
-              <div className='riskPostit' id={cardRiskId}>
-                <div key={cardRiskId}>
+              <div className='risk riskPostit' id={cardRiskId}>
+                <div key={cardRiskId} className='textareaBg'>
                   <p>{`#${riskId}`}:</p>
                   <p>{riskText}</p>
                 </div>
@@ -23,7 +23,6 @@ class RiskList extends Component {
                 cardRiskId={cardRiskId}
                 key={cardRiskId}
                 riskCards={val.cards}
-              
               />
             </div>
           );
