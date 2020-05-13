@@ -44,21 +44,21 @@ class FaseTwoPage extends React.Component {
         }
       }
     }
-    this.setState({ chosenCards : chosenBlueCardsArray})
+    this.setState({ chosenCards: chosenBlueCardsArray });
     //this.state.chosenCards = chosenBlueCardsArray;
 
     console.log(this.state);
     this.hydrateStateWithLocalStorage();
-     window.addEventListener(
+    window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); 
+    );
   }
   componentWillUnmount() {
-      window.removeEventListener(
+    window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );  
+    );
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
@@ -163,19 +163,20 @@ class FaseTwoPage extends React.Component {
   } */
 
   render() {
-    
     const { chosenCards } = this.state;
     console.log(this.state);
     return (
       <>
-        <TopNavbar faseNum='Fase 2' />
-        <Link className='btn exportButton'
+        <TopNavbar faseNum='Phase 2' />
+        <Link
+          className='btn exportButton'
           to={{
-          pathname: '/fase2Pdf',
-          state: {
-            data: this.state,
-          }
-        }}>
+            pathname: '/fase2Pdf',
+            state: {
+              data: this.state,
+            },
+          }}
+        >
           Export to PDF
         </Link>
         <Split
@@ -226,7 +227,12 @@ class FaseTwoPage extends React.Component {
             />
           </div>
         </Split>
-        <Footer prev='/fase1' next='/fase3' />
+        <Footer
+          prev='/fase1'
+          next='/fase3'
+          prevFase='Phase 1'
+          nextFase='Phase 3'
+        />
       </>
     );
   }

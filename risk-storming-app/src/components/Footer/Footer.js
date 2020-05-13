@@ -8,10 +8,10 @@ const Footer = (props) => {
       <Link to={props.prev}>
         <button className='goToPrevFaseBtn'>
           <i className='fa fa-chevron-left' aria-hidden='true' />
-          Previous</button>
+          {props.prevFase}</button>
       </Link>
       <Link to={props.next}>
-        <button className='goToNextFaseBtn'>Next
+        <button className='goToNextFaseBtn'>{props.nextFase}
           <i className='fa fa-chevron-right' aria-hidden='true' />
         </button>
       </Link>

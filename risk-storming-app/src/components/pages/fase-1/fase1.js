@@ -98,7 +98,7 @@ class FaseOnePage extends React.Component {
     const { columnsFase1, columnOrderFase1, bluecards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Fase 1' />
+        <TopNavbar faseNum='Phase 1' />
         <DragDropContext onDragEnd={this.onDragEnd}>
           <Split
             className='splitContainer splitContainerFase1'
@@ -127,7 +127,12 @@ class FaseOnePage extends React.Component {
             })}
           </Split>
         </DragDropContext>
-        <Footer prev='/' next='/fase2' />
+        <Footer
+          prev='/'
+          next='/fase2'
+          prevFase='Main Page'
+          nextFase='Phase 2'
+        />
       </>
     );
   }
