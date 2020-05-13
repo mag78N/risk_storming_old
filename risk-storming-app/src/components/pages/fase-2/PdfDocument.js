@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    borderBottom: '2pt solid #e5e5e5',
-    margin: '16pt',
+   /*  borderBottom: '2pt solid #e5e5e5', */
+    margin: '20pt',
     paddingBottom: '16pt',
   },
   /* mainContainer:last-child: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   riskLane: {
     margin: '15pt',
     padding: '20pt',
-    width: '400pt',
+    width: '380pt',
     borderBottom: '2pt dashed #e5e5e5',
   },
   riskText: {
