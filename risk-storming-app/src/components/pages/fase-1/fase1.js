@@ -28,11 +28,56 @@ class FaseOnePage extends React.Component {
     },
     columnOrderFase1: ['column-1', 'column-2'],
   };
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
     localStorage.setItem('selectedBlueCardIds', cardIds);
   }
+  componentDidMount() {
+    console.log('fase 1 componentdidmount');
+    this.hydrateStateWithLocalStorage();
+    window.addEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
+  }
+  componentWillUnmount() {
+    console.log('fase 1 componentwillunmount');
+    window.removeEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
+    //saves if component has a chance to unmount
+    this.saveStateToLocalStorage();
+  }
 
+  hydrateStateWithLocalStorage() {
+    console.log('fase 1 hydrate state with local storage');
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+  saveStateToLocalStorage() {
+    console.log('fase 1 savestate to localstorage');
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+  }
   onDragEnd = (result) => {
     const { columnsFase1 } = this.state;
     const { destination, source, draggableId } = result;
@@ -91,7 +136,7 @@ class FaseOnePage extends React.Component {
       },
     };
     this.setState(newState);
-    console.log(newState);
+    console.log('fase 1 newState:', newState);
   };
 
   render() {

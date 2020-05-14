@@ -46,10 +46,10 @@ class FaseTwoPage extends React.Component {
     this.setState({ chosenCards: chosenBlueCardsArray });
   }
   componentDidMount() {
+    console.log('fase2 component did mount');
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
-    //this.setState({ selectedBlueCardIds : chosenCardIds});
     const chosenBlueCardsArray = [];
     for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
@@ -70,7 +70,7 @@ class FaseTwoPage extends React.Component {
     this.setState({ chosenCards: chosenBlueCardsArray });
     //this.state.chosenCards = chosenBlueCardsArray;
 
-    console.log(this.state);
+    //console.log(this.state);
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
       'beforeunload',
@@ -78,6 +78,7 @@ class FaseTwoPage extends React.Component {
     );
   }
   componentWillUnmount() {
+    console.log('fase2 componentwillunmount');
     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
@@ -85,12 +86,15 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-  componentDidUpdate(prevProps, prevState) {
+   /* componentDidUpdate(prevProps, prevState) {
+    
     if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
+      console.log('component did update');
       this.getChosenCardsFromFase1();
     }
-  }
+  }  */
   hydrateStateWithLocalStorage() {
+    console.log('fase 2 hydrate state with local storage');
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -110,6 +114,7 @@ class FaseTwoPage extends React.Component {
     }
   }
   saveStateToLocalStorage() {
+    console.log('fase 2 savestate to localstorage');
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
@@ -123,9 +128,9 @@ class FaseTwoPage extends React.Component {
     const value = e.target.value;
     this.setState((prevState) => ({
       chosenCards: prevState.chosenCards.map((card) => {
-        console.log(datasetCardId, datasetRiskIndex);
+        //console.log(datasetCardId, datasetRiskIndex);
         if (datasetCardId === card.id) {
-          console.log(value);
+          // console.log(value);
           card.risks[datasetRiskIndex].label = value;
         }
         return card;
