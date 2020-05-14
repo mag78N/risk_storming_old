@@ -19,14 +19,37 @@ class FaseTwoPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedBlueCardIds: [],
       bluecards: bluecards,
       chosenCards: [],
     };
+  }
+  getChosenCardsFromFase1() {
+    const chosenCardIds = this.state.selectedBlueCardIds;
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
+      const chosenBlueCard = chosenCardIds[i];
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
+          chosenBlueCardsArray.push(entireObject);
+        }
+      }
+    }
+    this.setState({ chosenCards: chosenBlueCardsArray });
   }
   componentDidMount() {
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
+    //this.setState({ selectedBlueCardIds : chosenCardIds});
     const chosenBlueCardsArray = [];
     for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
@@ -62,9 +85,11 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-  /* componentDidUpdate() {
-    this.saveStateToLocalStorage.bind(this);
-  }  */
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
+      this.getChosenCardsFromFase1();
+    }
+  }
   hydrateStateWithLocalStorage() {
     // for all items in state
     for (let key in this.state) {
