@@ -57,27 +57,27 @@ ol.carousel-indicators {
 .carousel-caption {
   position: static;
 }
-div.carousel {
+.carousel {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   justify-items: center;
 }
-div.active.carousel-item {
+.active.carousel-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .carousel-control-prev,
 .carousel-control-next {
-  height: 12rem;
+  height: 10rem;
   filter: invert(1);
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
   height: 4rem;
-  width: 4rem;
+  width: 3rem;
 }
 .carousel .cardContainer {
   margin: 0 auto;

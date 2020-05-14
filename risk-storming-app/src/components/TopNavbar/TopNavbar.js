@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/images/logo-blue.png';
+import logo from '../../assets/images/riskstorming_logo-white.png';
 import { Link } from 'react-router-dom';
 import '../TopNavbar/topNavbar.css';
 
