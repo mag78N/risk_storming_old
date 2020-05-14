@@ -25,7 +25,9 @@ class FaseTwoPage extends React.Component {
     };
   }
   getChosenCardsFromFase1() {
-    const chosenCardIds = this.state.selectedBlueCardIds;
+    const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
+    );
     const chosenBlueCardsArray = [];
     for (let i = 0; i < chosenCardIds.length; i++) {
       const chosenBlueCard = chosenCardIds[i];
@@ -48,10 +50,10 @@ class FaseTwoPage extends React.Component {
   componentDidMount() {
 
     this.hydrateStateWithLocalStorage();
-    window.addEventListener(
+    /* window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    );
+    ); */
     console.log('fase2 component did mount');
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
@@ -91,13 +93,13 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-   /* componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps, prevState) {
     
     if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
-      console.log('component did update');
+      console.log('fase2 component did update ran');
       this.getChosenCardsFromFase1();
     }
-  }  */
+  }  
   hydrateStateWithLocalStorage() {
     console.log('fase 2 hydrate state with local storage');
     // for all items in state
