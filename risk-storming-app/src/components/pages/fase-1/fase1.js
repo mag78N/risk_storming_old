@@ -74,6 +74,7 @@ class FaseOnePage extends React.PureComponent {
     );
   }
   componentWillUnmount() {
+     this.getChosenCardsFromFase1();
     console.log('fase 1 componentwillunmount');
     window.removeEventListener(
       'beforeunload',
