@@ -18,7 +18,6 @@ const ref = React.createRef();
 class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
-
     this.state = {
       selectedBlueCardIds: [],
       bluecards: bluecards,
@@ -50,12 +49,12 @@ class FaseTwoPage extends React.PureComponent {
   }
   componentDidMount() {
     this.hydrateStateWithLocalStorage();
-    /* window.addEventListener(
+     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); */
+    ); 
     console.log('fase2 component did mount');
-   /*  const chosenCardIds = JSON.parse(
+    /*  const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
     const chosenBlueCardsArray = [];
@@ -77,7 +76,7 @@ class FaseTwoPage extends React.PureComponent {
     } */
     //this.setState({ chosenCards: chosenBlueCardsArray });
     /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
-    this.hydrateStateWithLocalStorage();
+    //this.hydrateStateWithLocalStorage();
     /* window.addEventListener(
    'beforeunload',
    this.saveStateToLocalStorage.bind(this)
@@ -95,8 +94,8 @@ class FaseTwoPage extends React.PureComponent {
   /* componentDidUpdate(prevProps, prevState) {
     if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
       console.log('fase2 component did update ran'); */
-      /* this.getChosenCardsFromFase1(); */
- /*    }
+  /* this.getChosenCardsFromFase1(); */
+  /*    }
   } */
   hydrateStateWithLocalStorage() {
     console.log('fase 2 hydrate state with local storage');
