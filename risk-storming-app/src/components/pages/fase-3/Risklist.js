@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import RiskDropLane from './RiskDropLane';
 
 class RiskList extends Component {
-  
   render() {
     const { card } = this.props;
     return (
@@ -13,9 +12,11 @@ class RiskList extends Component {
             cardRiskId = `${card.id}|${riskId}`;
           return (
             <div className='riskLane' key={idx}>
-              <div className='riskPostit' id={cardRiskId}>
-                <div key={cardRiskId}>
-                  <p>{`#${riskId}`}:</p>
+              <div className='risk riskPostit' id={cardRiskId}>
+                <div key={cardRiskId} className='textareaBg'>
+                  <p>
+                    <b>{`#${riskId}`}:</b>
+                  </p>
                   <p>{riskText}</p>
                 </div>
               </div>
@@ -23,7 +24,6 @@ class RiskList extends Component {
                 cardRiskId={cardRiskId}
                 key={cardRiskId}
                 riskCards={val.cards}
-              
               />
             </div>
           );

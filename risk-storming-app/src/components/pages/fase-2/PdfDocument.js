@@ -17,73 +17,60 @@ const styles = StyleSheet.create({
     paddingTop: 25,
   },
   cardContainer: {
-    width: 170,
+    width: 130,
     border: '2pt solid #41a1ce',
-  },
-
-  cardSubtitle: {
-    padding: 5,
-    fontSize: '15pt',
-    color: '#41a1ce',
-    textTransform: 'uppercase',
-    backgroundColor: '#f7fcfc',
+    borderRadius: '3pt',
   },
   cardTitle: {
-    fontSize: '16pt',
+    fontSize: '13pt',
     padding: 5,
+    paddingBottom: 0,
     color: '#41a1ce',
     textTransform: 'uppercase',
-    backgroundColor: '#f7fcfc',
+  },
+  cardSubtitle: {
+    padding: 5,
+    fontSize: '10pt',
+    color: '#41a1ce',
+    textTransform: 'uppercase',
   },
   cardDescription: {
-    fontSize: '14pt',
-    color: '#f7fcfc',
+    fontSize: '10pt',
+    color: '#fff',
     backgroundColor: '#41a1ce',
-    margin: 0,
+    margin: -1,
     padding: 10,
   },
   mainContainer: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-start',
-   /*  borderBottom: '2pt solid #e5e5e5', */
     margin: '20pt',
-    paddingBottom: '16pt',
   },
-  /* mainContainer:last-child: {
-  marginBottom: '0',
-  paddingBottom: '0',
-  borderBottomWidth: '0',
-}, */
   riskContainer: {
     display: 'flex',
     flexDirection: 'column',
   },
-  /* riskContainer:last-child :{
-  borderBottomWidth: "0",
-}, */
   riskLane: {
     margin: '15pt',
-    padding: '20pt',
+    marginTop: '0pt',
+    marginBottom: '15pt',
+    padding: '20pt 5pt',
+    paddingTop: '0',
     width: '380pt',
     borderBottom: '2pt dashed #e5e5e5',
   },
   riskText: {
-    maxWidth: 200,
-    fontSize: '12pt',
+    maxWidth: 100,
+    fontSize: '9pt',
   },
-  /* riskLane:first-child: {
-  paddingTop: '0.75rem',
-},
-riskLane:last-child: {
-  paddingBottom: '0.75rem',
-} */
 });
+
 const PdfDocument = (props) => {
   console.log(props);
   return (
     <Document>
-      <Page size='A4' style={styles.page}>
+      <Page size='A4' charset='utf-8' style={styles.page}>
         {props.chosenCards.map((card, index) => (
           <View style={styles.mainContainer} key={index} wrap={false}>
             <View style={styles.cardContainer}>

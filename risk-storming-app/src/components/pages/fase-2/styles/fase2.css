@@ -71,8 +71,13 @@ div.active.carousel-item {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  height: 7rem;
+  height: 12rem;
   filter: invert(1);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  height: 4rem;
+  width: 4rem;
 }
 .carousel .cardContainer {
   margin: 0 auto;

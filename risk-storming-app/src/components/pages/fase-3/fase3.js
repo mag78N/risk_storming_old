@@ -28,24 +28,24 @@ class FaseThreePage extends React.Component {
 
   componentDidMount() {
     const cards = JSON.parse(localStorage.getItem('chosenCards'));
-    this.setState({chosenCards : cards})
+    this.setState({ chosenCards: cards });
     //this.state.chosenCards = cards;
     console.log('componentdidmount');
     this.hydrateStateWithLocalStorage();
-     window.addEventListener(
+    window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); 
-  } 
-   componentWillUnmount() {
+    );
+  }
+  componentWillUnmount() {
     console.log('componentwillunmount');
-     window.removeEventListener(
+    window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); 
+    );
     //saves if component has a chance to unmount
     this.saveStateToLocalStorage();
-  } 
+  }
 
   hydrateStateWithLocalStorage() {
     console.log('hydrate state with local storage');
@@ -71,10 +71,8 @@ class FaseThreePage extends React.Component {
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
-      
-        localStorage.setItem(key, JSON.stringify(this.state[key]));
-      
-      
+
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
 
@@ -121,9 +119,9 @@ class FaseThreePage extends React.Component {
     finish.splice(destination.index, 0, removedCard);
 
     if (source.droppableId === 'RIGHT-COLUMN') {
-       this.setState((prevState) => {
+      this.setState((prevState) => {
         return { colorcards: start };
-      }); 
+      });
       //this.setState({ colorcards: start });
     } else {
       this.setState((prevState) => {
@@ -163,7 +161,7 @@ class FaseThreePage extends React.Component {
     const { chosenCards, colorcards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Fase 3' />
+        <TopNavbar faseNum='Phase 3' />
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
@@ -209,7 +207,12 @@ class FaseThreePage extends React.Component {
             </div>
           </Split>
         </DragDropContext>
-        <Footer prev='/fase2' next='/' />
+        <Footer
+          prev='/fase2'
+          next='/'
+          prevFase='Phase 2'
+          nextFase='Main Page'
+        />
       </>
     );
   }
