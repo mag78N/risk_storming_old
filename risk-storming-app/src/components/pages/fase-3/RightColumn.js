@@ -12,7 +12,7 @@ class RightColumn extends React.Component {
     return (
       <React.Fragment>
         <div className='searchBar'>
-          <i class='fa fa-search fa-2x'></i>
+          <i class='fa fa-search'></i>
           <input type='text' onChange={this.props.filtercards} placeholder='search for cards' />
         </div>
         <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
