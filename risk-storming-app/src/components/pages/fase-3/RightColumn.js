@@ -11,8 +11,10 @@ class RightColumn extends React.Component {
       const { colorcards } = this.props;
     return (
       <React.Fragment>
-        <input type='text' onChange={this.props.filtercards} />
-
+        <div className='searchBar'>
+          <i class='fa fa-search fa-2x'></i>
+          <input type='text' onChange={this.props.filtercards} placeholder='search for cards' />
+        </div>
         <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
           {(provided, snapshot) => (
             <CardList
