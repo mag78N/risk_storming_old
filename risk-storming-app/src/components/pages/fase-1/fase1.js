@@ -12,6 +12,7 @@ import { bluecards } from '../../../assets/en/blueCards';
 class FaseOnePage extends React.Component {
   state = {
     bluecards: bluecards,
+    selectedBlueCardIds: [],
     columnsFase1: {
       'column-1': {
         id: 'column-1',
@@ -29,8 +30,16 @@ class FaseOnePage extends React.Component {
     columnOrderFase1: ['column-1', 'column-2'],
   };
   componentDidUpdate(prevProps, prevState) {
-    let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
-    localStorage.setItem('selectedBlueCardIds', cardIds);
+    if (
+      prevState.columnsFase1['column-1'].cardIds !==
+      this.state.columnsFase1['column-1'].cardIds
+    ) {
+      let cardIds = this.state.columnsFase1['column-1'].cardIds;
+      this.setState({ selectedBlueCardIds: cardIds });
+      localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
+    }
+    
+    
   }
   componentDidMount() {
     console.log('fase 1 componentdidmount');

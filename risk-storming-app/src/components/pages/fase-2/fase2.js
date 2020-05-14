@@ -46,6 +46,12 @@ class FaseTwoPage extends React.Component {
     this.setState({ chosenCards: chosenBlueCardsArray });
   }
   componentDidMount() {
+
+    this.hydrateStateWithLocalStorage();
+    window.addEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
     console.log('fase2 component did mount');
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
@@ -68,14 +74,13 @@ class FaseTwoPage extends React.Component {
       }
     }
     this.setState({ chosenCards: chosenBlueCardsArray });
-    //this.state.chosenCards = chosenBlueCardsArray;
-
-    //console.log(this.state);
-    this.hydrateStateWithLocalStorage();
-    window.addEventListener(
-      'beforeunload',
-      this.saveStateToLocalStorage.bind(this)
-    );
+    /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
+ this.hydrateStateWithLocalStorage();
+ /* window.addEventListener(
+   'beforeunload',
+   this.saveStateToLocalStorage.bind(this)
+ ); */
+    
   }
   componentWillUnmount() {
     console.log('fase2 componentwillunmount');
