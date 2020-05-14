@@ -55,7 +55,7 @@ class FaseTwoPage extends React.PureComponent {
       this.saveStateToLocalStorage.bind(this)
     ); */
     console.log('fase2 component did mount');
-    const chosenCardIds = JSON.parse(
+   /*  const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
     const chosenBlueCardsArray = [];
@@ -74,8 +74,8 @@ class FaseTwoPage extends React.PureComponent {
           chosenBlueCardsArray.push(entireObject);
         }
       }
-    }
-    this.setState({ chosenCards: chosenBlueCardsArray });
+    } */
+    //this.setState({ chosenCards: chosenBlueCardsArray });
     /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
     this.hydrateStateWithLocalStorage();
     /* window.addEventListener(

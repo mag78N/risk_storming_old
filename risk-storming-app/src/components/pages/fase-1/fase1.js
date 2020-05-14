@@ -13,6 +13,7 @@ class FaseOnePage extends React.PureComponent {
   state = {
     bluecards: bluecards,
     selectedBlueCardIds: [],
+    chosenCards: [],
     columnsFase1: {
       'column-1': {
         id: 'column-1',
@@ -29,6 +30,29 @@ class FaseOnePage extends React.PureComponent {
     },
     columnOrderFase1: ['column-1', 'column-2'],
   };
+  getChosenCardsFromFase1() {
+    const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
+    );
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
+      const chosenBlueCard = chosenCardIds[i];
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
+          chosenBlueCardsArray.push(entireObject);
+        }
+      }
+    }
+    this.setState({ chosenCards: chosenBlueCardsArray });
+  }
   componentDidUpdate(prevProps, prevState) {
     if (
       prevState.columnsFase1['column-1'].cardIds !==
@@ -38,6 +62,7 @@ class FaseOnePage extends React.PureComponent {
       this.setState({ selectedBlueCardIds: cardIds });
       localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
       console.log('fase1 component did update');
+      this.getChosenCardsFromFase1();
     }
   }
   componentDidMount() {
