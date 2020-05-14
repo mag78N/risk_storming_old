@@ -9,7 +9,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 
 import { bluecards } from '../../../assets/en/blueCards';
-class FaseOnePage extends React.Component {
+class FaseOnePage extends React.PureComponent {
   state = {
     bluecards: bluecards,
     selectedBlueCardIds: [],
@@ -37,9 +37,8 @@ class FaseOnePage extends React.Component {
       let cardIds = this.state.columnsFase1['column-1'].cardIds;
       this.setState({ selectedBlueCardIds: cardIds });
       localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
+      console.log('fase1 component did update');
     }
-    
-    
   }
   componentDidMount() {
     console.log('fase 1 componentdidmount');

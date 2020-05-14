@@ -15,9 +15,10 @@ import { Link } from 'react-router-dom';
 
 const ref = React.createRef();
 
-class FaseTwoPage extends React.Component {
+class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       selectedBlueCardIds: [],
       bluecards: bluecards,
@@ -48,7 +49,6 @@ class FaseTwoPage extends React.Component {
     this.setState({ chosenCards: chosenBlueCardsArray });
   }
   componentDidMount() {
-
     this.hydrateStateWithLocalStorage();
     /* window.addEventListener(
       'beforeunload',
@@ -77,12 +77,11 @@ class FaseTwoPage extends React.Component {
     }
     this.setState({ chosenCards: chosenBlueCardsArray });
     /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
- this.hydrateStateWithLocalStorage();
- /* window.addEventListener(
+    this.hydrateStateWithLocalStorage();
+    /* window.addEventListener(
    'beforeunload',
    this.saveStateToLocalStorage.bind(this)
  ); */
-    
   }
   componentWillUnmount() {
     console.log('fase2 componentwillunmount');
@@ -93,13 +92,12 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-    componentDidUpdate(prevProps, prevState) {
-    
+  /* componentDidUpdate(prevProps, prevState) {
     if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
-      console.log('fase2 component did update ran');
-      this.getChosenCardsFromFase1();
-    }
-  }  
+      console.log('fase2 component did update ran'); */
+      /* this.getChosenCardsFromFase1(); */
+ /*    }
+  } */
   hydrateStateWithLocalStorage() {
     console.log('fase 2 hydrate state with local storage');
     // for all items in state
