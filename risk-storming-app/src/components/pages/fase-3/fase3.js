@@ -23,14 +23,19 @@ class FaseThreePage extends React.Component {
     this.state = {
       chosenCards: [],
       colorcards: Object.values(colorcards),
+      filteredColorCards: [],
     };
   }
-
+  componentWillMount() {
+    this.setState({
+      filteredColorCards: this.state.colorcards,
+    });
+  }
   componentDidMount() {
     const cards = JSON.parse(localStorage.getItem('chosenCards'));
     this.setState({ chosenCards: cards });
-    //this.state.chosenCards = cards;
-    console.log('componentdidmount');
+
+    console.log('fase 3 componentdidmount');
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
       'beforeunload',
@@ -38,7 +43,7 @@ class FaseThreePage extends React.Component {
     );
   }
   componentWillUnmount() {
-    console.log('componentwillunmount');
+    console.log('fase 3 componentwillunmount');
     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
@@ -48,7 +53,7 @@ class FaseThreePage extends React.Component {
   }
 
   hydrateStateWithLocalStorage() {
-    console.log('hydrate state with local storage');
+    console.log('fase 3 hydrate state with local storage');
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -67,7 +72,7 @@ class FaseThreePage extends React.Component {
     }
   }
   saveStateToLocalStorage() {
-    console.log('savestate to localstorage');
+    console.log('fase 3 savestate to localstorage');
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
@@ -76,6 +81,15 @@ class FaseThreePage extends React.Component {
     }
   }
 
+  filterCards = (e) => {
+    let updatedList = this.state.colorcards;
+    updatedList = updatedList.filter((card) => {
+      return (
+        card.title.toLowerCase().search(e.target.value.toLowerCase()) !== -1
+      );
+    });
+    this.setState({ filteredColorCards: updatedList });
+  };
   /* getCardList = (droppableId) => {
     if (droppableId === 'RIGHT-COLUMN') {
       return [...this.state.colorcards];
@@ -158,7 +172,7 @@ class FaseThreePage extends React.Component {
 
   render() {
     console.log('state inside render :', this.state);
-    const { chosenCards, colorcards } = this.state;
+    const { chosenCards, colorcards, filteredColorCards } = this.state;
     return (
       <>
         <TopNavbar faseNum='Phase 3' />
@@ -203,7 +217,10 @@ class FaseThreePage extends React.Component {
             </div>
 
             <div>
-              <RightColumn colorcards={colorcards} />
+              <RightColumn
+                filtercards={this.filterCards}
+                colorcards={filteredColorCards}
+              />
             </div>
           </Split>
         </DragDropContext>

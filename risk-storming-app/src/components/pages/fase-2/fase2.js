@@ -15,15 +15,16 @@ import { Link } from 'react-router-dom';
 
 const ref = React.createRef();
 
-class FaseTwoPage extends React.Component {
+class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      selectedBlueCardIds: [],
       bluecards: bluecards,
       chosenCards: [],
     };
   }
-  componentDidMount() {
+  getChosenCardsFromFase1() {
     const chosenCardIds = JSON.parse(
       localStorage.getItem('selectedBlueCardIds')
     );
@@ -45,16 +46,44 @@ class FaseTwoPage extends React.Component {
       }
     }
     this.setState({ chosenCards: chosenBlueCardsArray });
-    //this.state.chosenCards = chosenBlueCardsArray;
-
-    console.log(this.state);
+  }
+  componentDidMount() {
     this.hydrateStateWithLocalStorage();
-    window.addEventListener(
+     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
+    ); 
+    console.log('fase2 component did mount');
+    /*  const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
     );
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
+      const chosenBlueCard = chosenCardIds[i];
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
+          chosenBlueCardsArray.push(entireObject);
+        }
+      }
+    } */
+    //this.setState({ chosenCards: chosenBlueCardsArray });
+    /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
+    //this.hydrateStateWithLocalStorage();
+    /* window.addEventListener(
+   'beforeunload',
+   this.saveStateToLocalStorage.bind(this)
+ ); */
   }
   componentWillUnmount() {
+    console.log('fase2 componentwillunmount');
     window.removeEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
@@ -62,10 +91,14 @@ class FaseTwoPage extends React.Component {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-  /* componentDidUpdate() {
-    this.saveStateToLocalStorage.bind(this);
-  }  */
+  /* componentDidUpdate(prevProps, prevState) {
+    if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
+      console.log('fase2 component did update ran'); */
+  /* this.getChosenCardsFromFase1(); */
+  /*    }
+  } */
   hydrateStateWithLocalStorage() {
+    console.log('fase 2 hydrate state with local storage');
     // for all items in state
     for (let key in this.state) {
       // if the key exists in localStorage
@@ -85,6 +118,7 @@ class FaseTwoPage extends React.Component {
     }
   }
   saveStateToLocalStorage() {
+    console.log('fase 2 savestate to localstorage');
     // for every item in React state
     for (let key in this.state) {
       // save to localStorage
@@ -98,9 +132,9 @@ class FaseTwoPage extends React.Component {
     const value = e.target.value;
     this.setState((prevState) => ({
       chosenCards: prevState.chosenCards.map((card) => {
-        console.log(datasetCardId, datasetRiskIndex);
+        //console.log(datasetCardId, datasetRiskIndex);
         if (datasetCardId === card.id) {
-          console.log(value);
+          // console.log(value);
           card.risks[datasetRiskIndex].label = value;
         }
         return card;

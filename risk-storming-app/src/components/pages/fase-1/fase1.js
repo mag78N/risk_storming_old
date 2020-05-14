@@ -9,9 +9,11 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 
 import { bluecards } from '../../../assets/en/blueCards';
-class FaseOnePage extends React.Component {
+class FaseOnePage extends React.PureComponent {
   state = {
     bluecards: bluecards,
+    selectedBlueCardIds: [],
+    chosenCards: [],
     columnsFase1: {
       'column-1': {
         id: 'column-1',
@@ -28,11 +30,88 @@ class FaseOnePage extends React.Component {
     },
     columnOrderFase1: ['column-1', 'column-2'],
   };
-  componentDidUpdate() {
-    let cardIds = JSON.stringify(this.state.columnsFase1['column-1'].cardIds);
-    localStorage.setItem('selectedBlueCardIds', cardIds);
+  getChosenCardsFromFase1() {
+    const chosenCardIds = JSON.parse(
+      localStorage.getItem('selectedBlueCardIds')
+    );
+    const chosenBlueCardsArray = [];
+    for (let i = 0; i < chosenCardIds.length; i++) {
+      const chosenBlueCard = chosenCardIds[i];
+      for (let j = 0; j < Object.keys(bluecards).length; j++) {
+        const bluecardKey = Object.keys(bluecards)[j];
+        const entireObject = Object.values(bluecards)[j];
+        if (chosenBlueCard === bluecardKey) {
+          entireObject.risks = [
+            {
+              label: '',
+              cards: [],
+            },
+          ];
+          chosenBlueCardsArray.push(entireObject);
+        }
+      }
+    }
+    this.setState({ chosenCards: chosenBlueCardsArray });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevState.columnsFase1['column-1'].cardIds !==
+      this.state.columnsFase1['column-1'].cardIds
+    ) {
+      let cardIds = this.state.columnsFase1['column-1'].cardIds;
+      this.setState({ selectedBlueCardIds: cardIds });
+      localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
+      console.log('fase1 component did update');
+      this.getChosenCardsFromFase1();
+    }
+  }
+  componentDidMount() {
+    console.log('fase 1 componentdidmount');
+    this.hydrateStateWithLocalStorage();
+    window.addEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
+  }
+  componentWillUnmount() {
+     //this.getChosenCardsFromFase1();
+    console.log('fase 1 componentwillunmount');
+    window.removeEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    );
+    //saves if component has a chance to unmount
+    this.saveStateToLocalStorage();
   }
 
+  hydrateStateWithLocalStorage() {
+    console.log('fase 1 hydrate state with local storage');
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+  saveStateToLocalStorage() {
+    console.log('fase 1 savestate to localstorage');
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+  }
   onDragEnd = (result) => {
     const { columnsFase1 } = this.state;
     const { destination, source, draggableId } = result;
@@ -91,7 +170,7 @@ class FaseOnePage extends React.Component {
       },
     };
     this.setState(newState);
-    console.log(newState);
+    console.log('fase 1 newState:', newState);
   };
 
   render() {
