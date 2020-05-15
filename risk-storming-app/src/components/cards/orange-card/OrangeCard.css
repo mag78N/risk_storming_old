@@ -4,6 +4,8 @@
   background-color: rgb(243, 115, 11);
   border: 2px solid rgb(243, 115, 11);
 }
-.orangeHeader {
+.orangeHeader,
+.orange .cardVote i,
+.orange .cardVote span {
   color: rgb(243, 115, 11);
 }
