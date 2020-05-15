@@ -216,7 +216,7 @@ class FaseThreePage extends React.Component {
               ))}
             </div>
 
-            <div>
+            <div className='rightPane fase3RightPane'>
               <RightColumn
                 filtercards={this.filterCards}
                 colorcards={filteredColorCards}

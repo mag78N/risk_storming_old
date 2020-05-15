@@ -23,7 +23,7 @@ class RightColumn extends React.Component {
               ref={provided.innerRef}
               {...provided.droppableProps}
               isDraggingOver={snapshot.isDraggingOver}
-              className={`rightPane fase1RightPane`}
+              className={`rightPane`}
             >
               {colorcards.map((card, index) => (
                 <Card
