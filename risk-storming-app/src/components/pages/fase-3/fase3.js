@@ -105,7 +105,7 @@ class FaseThreePage extends React.Component {
     const { destination, source, draggableId } = result;
     const getCardList = (droppableId) => {
       if (droppableId === 'RIGHT-COLUMN') {
-        return [...this.state.colorcards];
+        return [...this.state.filteredColorCards];
       }
       const [cardId, riskId] = droppableId.split('|');
       const riskIndex = parseInt(riskId.split('-')[1]) - 1;
@@ -134,7 +134,7 @@ class FaseThreePage extends React.Component {
 
     if (source.droppableId === 'RIGHT-COLUMN') {
       this.setState((prevState) => {
-        return { colorcards: start };
+        return { filteredColorCards: start };
       });
       //this.setState({ colorcards: start });
     } else {

@@ -10,13 +10,15 @@ class RightColumn extends React.Component {
   render() {
       const { colorcards } = this.props;
     return (
-      <React.Fragment>
-        <div className='searchBar'>
+     
+       
+        <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
+        {(provided, snapshot) => (
+           <React.Fragment>
+             <div className='searchBar'>
           <i class='fa fa-search'></i>
           <input type='text' onChange={this.props.filtercards} placeholder='search for cards' />
         </div>
-        <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
-          {(provided, snapshot) => (
             <CardList
               ref={provided.innerRef}
               {...provided.droppableProps}
@@ -32,11 +34,13 @@ class RightColumn extends React.Component {
                   index={index}
                 />
               ))}
-              {provided.placeholder}
-            </CardList>
+            {provided.placeholder}
+            
+          </CardList>
+           </React.Fragment>
           )}
         </Droppable>
-      </React.Fragment>
+     
     );
   }
 }
