@@ -2,6 +2,8 @@
   background-color: rgb(8, 122, 8);
   border: 2px solid rgb(8, 122, 8);
 }
-.greenHeader {
+.greenHeader,
+.green .cardVote i,
+.green .cardVote span {
   color: rgb(8, 122, 8);
 }

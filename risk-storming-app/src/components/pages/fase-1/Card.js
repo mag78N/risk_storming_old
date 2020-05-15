@@ -31,12 +31,17 @@ const CardList = styled.div``;
 class Card extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      clicks: 0,
+    };
     this.toggleOpen = this.toggleOpen.bind(this);
   }
 
   toggleOpen() {
     this.setState({ open: !this.state.open });
+  }
+  IncrementItem = () => {
+    this.setState({ clicks: this.state.clicks + 1 });
   }
 
   render() {
@@ -59,6 +64,11 @@ class Card extends React.Component {
               <div className='cardSubtitle'>{this.props.subTitle}</div>
             </div>
             <div className='cardBody'>
+              <a className='cardVote'
+                 onClick={this.IncrementItem}>
+                <i class='fa fa-thumbs-up'></i>&nbsp;
+                <span>{ this.state.clicks }</span>
+              </a>
               <div className='cardDescription'>{this.props.description}</div>
 
               <Content

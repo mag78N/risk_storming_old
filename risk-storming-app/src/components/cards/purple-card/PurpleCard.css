@@ -3,6 +3,8 @@
   background-color: rgb(103, 8, 122);
   border: 2px solid rgb(103, 8, 122);
 }
-.purpleHeader {
+.purpleHeader,
+.purple .cardVote i,
+.purple .cardVote span {
   color: rgb(103, 8, 122);
 }
