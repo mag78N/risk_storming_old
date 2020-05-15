@@ -2,6 +2,8 @@
   background-color: rgb(228, 27, 27);
   border: 2px solid rgb(228, 27, 27);
 }
-.redHeader {
+.redHeader,
+.red .cardVote i,
+.red .cardVote span {
   color: rgb(228, 27, 27);
 }
