@@ -64,3 +64,10 @@
 .riskLane:last-child {
   padding-bottom: 0.75rem;
 }
+.downloadButton{
+  position: absolute;
+  top: calc(60px + 0.75rem); /* height of topNavbar */
+  left: 25px;
+  z-index: 2;
+  text-decoration: none;
+}

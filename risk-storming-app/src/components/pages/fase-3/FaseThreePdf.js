@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import PdfDocument from './PdfDocument';
 import { PDFDownloadLink } from '@react-pdf/renderer';
+import './styles/fase3.css';
 import './fase3Pdf.css';
 
 class FaseThreePdf extends Component {
@@ -16,7 +17,7 @@ class FaseThreePdf extends Component {
           <PDFDownloadLink
             document={<PdfDocument chosenCards={chosenCards} />}
             fileName='fase3.pdf'
-            className='btn exportButton'
+            className='btn downloadButton'
           >
             {({ blob, url, loading, error }) =>
               loading ? 'Loading document...' : 'Download Pdf'
