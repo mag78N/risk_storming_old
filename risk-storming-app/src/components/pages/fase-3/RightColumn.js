@@ -16,7 +16,7 @@ class RightColumn extends React.Component {
         {(provided, snapshot) => (
            <React.Fragment>
              <div className='searchBar'>
-          <i class='fa fa-search'></i>
+          <i className='fa fa-search'></i>
           <input type='text' onChange={this.props.filtercards} placeholder='search for cards' />
         </div>
             <CardList
