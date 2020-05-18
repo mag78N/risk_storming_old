@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     width: 130,
-    border: '2pt solid #41a1ce',
+    /* border: '2pt solid #41a1ce', */
     borderRadius: '3pt',
     marginHorizontal: '5pt',
     marginVertical: '5pt',
@@ -75,9 +75,18 @@ const PdfDocument = (props) => {
       <Page size='A4' charset='utf-8' style={styles.page}>
         {props.chosenCards.map((card, index) => (
           <View style={styles.mainContainer} key={index} wrap={false}>
-            <View style={styles.cardContainer}>
-              <Text style={styles.cardTitle}>{card.title}</Text>
-              <Text style={styles.cardSubtitle}>{card.subTitle}</Text>
+            <View
+              style={[
+                styles.cardContainer,
+                { border: `2pt solid ${card.color}` },
+              ]}
+            >
+              <Text style={[styles.cardTitle, { color: card.color }]}>
+                {card.title}
+              </Text>
+              <Text style={[styles.cardSubtitle, { color: card.color }]}>
+                {card.subTitle}
+              </Text>
               <Text style={styles.cardDescription}>{card.description}</Text>
             </View>
             <View style={styles.riskContainer}>
@@ -91,12 +100,27 @@ const PdfDocument = (props) => {
                   <View style={styles.colorCardsRow}>
                     {risk.cards.map((card, index) => (
                       <View>
-                        <View style={styles.cardContainer} key={index}>
-                          <Text style={styles.cardTitle}>{card.title}</Text>
-                          <Text style={styles.cardSubtitle}>
-                            {card.subTitle}
+                        <View
+                          style={[
+                            styles.cardContainer,
+                            { border: `2pt solid ${card.color}` },
+                          ]}
+                          key={index}
+                        >
+                          <Text
+                            style={[styles.cardTitle, { color: card.color }]}
+                          >
+                            {card.title}
                           </Text>
-                          <Text style={styles.cardDescription}>
+                          <Text
+                            style={[styles.cardSubtitle, { color: card.color }]}
+                          ></Text>
+                          <Text
+                            style={[
+                              styles.cardDescription,
+                              { backgroundColor: card.color },
+                            ]}
+                          >
                             {card.description}
                           </Text>
                         </View>
