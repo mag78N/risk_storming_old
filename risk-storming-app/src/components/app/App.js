@@ -9,6 +9,7 @@ import FaseOnePage from '../pages/fase-1/fase1';
 import FaseTwoPage from '../pages/fase-2/fase2';
 import FaseTwoPdf from '../pages/fase-2/FaseTwoPdf';
 import FaseThreePage from '../pages/fase-3/fase3';
+import FaseThreePdf from '../pages/fase-3/FaseThreePdf';
 
 const App = () => (
   <Router>
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path='/fase2' component={FaseTwoPage} />
         <Route exact path='/fase2Pdf' component={FaseTwoPdf} />
         <Route exact path='/fase3' component={FaseThreePage} />
+        <Route exact path='/fase3Pdf' component={FaseThreePdf} />
         <Route exact path='/404' component={NotFoundPage} />
       </Switch>
     </>

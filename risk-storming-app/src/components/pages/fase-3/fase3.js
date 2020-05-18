@@ -9,6 +9,7 @@ import '../../cards/darkblue-card/DarkblueCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
+import { Link } from 'react-router-dom';
 import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
 import RightColumn from './RightColumn';
@@ -174,6 +175,17 @@ class FaseThreePage extends React.Component {
     return (
       <>
         <TopNavbar faseNum='Phase 3' />
+        <Link
+          className='btn exportButton'
+          to={{
+            pathname: '/fase3Pdf',
+            state: {
+              data: this.state,
+            },
+          }}
+        >
+          Export to PDF
+        </Link>
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}

@@ -44,3 +44,15 @@
   color: gray;
   font-size: 1.35rem;
 }
+
+/* Export to PDF button */
+.fase3LeftPane {
+  padding-top: 40px; /* height of exportButton */
+}
+.exportButton {
+  position: absolute;
+  top: calc(60px + 0.75rem); /* height of topNavbar */
+  left: 25px;
+  z-index: 2;
+  text-decoration: none;
+}
