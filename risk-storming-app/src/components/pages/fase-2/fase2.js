@@ -9,78 +9,24 @@ import Footer from '../../Footer/Footer';
 import Card from './Card';
 import RightPane from './RightPane/RightPane';
 import RiskListLeftPane from './LeftPane/RiskListLeftPane';
-import { bluecards } from '../../../assets/en/blueCards';
-
 import { Link } from 'react-router-dom';
-
-const ref = React.createRef();
 
 class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      selectedBlueCardIds: [],
-      bluecards: bluecards,
       chosenCards: [],
     };
   }
-  getChosenCardsFromFase1() {
-    const chosenCardIds = JSON.parse(
-      localStorage.getItem('selectedBlueCardIds')
-    );
-    const chosenBlueCardsArray = [];
-    for (let i = 0; i < chosenCardIds.length; i++) {
-      const chosenBlueCard = chosenCardIds[i];
-      for (let j = 0; j < Object.keys(bluecards).length; j++) {
-        const bluecardKey = Object.keys(bluecards)[j];
-        const entireObject = Object.values(bluecards)[j];
-        if (chosenBlueCard === bluecardKey) {
-          entireObject.risks = [
-            {
-              label: '',
-              cards: [],
-            },
-          ];
-          chosenBlueCardsArray.push(entireObject);
-        }
-      }
-    }
-    this.setState({ chosenCards: chosenBlueCardsArray });
-  }
+
   componentDidMount() {
+     console.log('fase2 component did mount');
     this.hydrateStateWithLocalStorage();
-     window.addEventListener(
+    window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
-    ); 
-    console.log('fase2 component did mount');
-    /*  const chosenCardIds = JSON.parse(
-      localStorage.getItem('selectedBlueCardIds')
     );
-    const chosenBlueCardsArray = [];
-    for (let i = 0; i < chosenCardIds.length; i++) {
-      const chosenBlueCard = chosenCardIds[i];
-      for (let j = 0; j < Object.keys(bluecards).length; j++) {
-        const bluecardKey = Object.keys(bluecards)[j];
-        const entireObject = Object.values(bluecards)[j];
-        if (chosenBlueCard === bluecardKey) {
-          entireObject.risks = [
-            {
-              label: '',
-              cards: [],
-            },
-          ];
-          chosenBlueCardsArray.push(entireObject);
-        }
-      }
-    } */
-    //this.setState({ chosenCards: chosenBlueCardsArray });
-    /* this.setState({ selectedBlueCardIds: chosenCardIds }); */
-    //this.hydrateStateWithLocalStorage();
-    /* window.addEventListener(
-   'beforeunload',
-   this.saveStateToLocalStorage.bind(this)
- ); */
+   
   }
   componentWillUnmount() {
     console.log('fase2 componentwillunmount');
@@ -91,22 +37,12 @@ class FaseTwoPage extends React.PureComponent {
     // saves if component has a chance to unmount
     this.saveStateToLocalStorage();
   }
-  /* componentDidUpdate(prevProps, prevState) {
-    if (prevState.selectedBlueCardIds !== this.state.selectedBlueCardIds) {
-      console.log('fase2 component did update ran'); */
-  /* this.getChosenCardsFromFase1(); */
-  /*    }
-  } */
+
   hydrateStateWithLocalStorage() {
     console.log('fase 2 hydrate state with local storage');
-    // for all items in state
     for (let key in this.state) {
-      // if the key exists in localStorage
       if (localStorage.hasOwnProperty(key)) {
-        // get the key's value from localStorage
         let value = localStorage.getItem(key);
-
-        // parse the localStorage string and setState
         try {
           value = JSON.parse(value);
           this.setState({ [key]: value });
@@ -119,9 +55,7 @@ class FaseTwoPage extends React.PureComponent {
   }
   saveStateToLocalStorage() {
     console.log('fase 2 savestate to localstorage');
-    // for every item in React state
     for (let key in this.state) {
-      // save to localStorage
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
@@ -132,9 +66,7 @@ class FaseTwoPage extends React.PureComponent {
     const value = e.target.value;
     this.setState((prevState) => ({
       chosenCards: prevState.chosenCards.map((card) => {
-        //console.log(datasetCardId, datasetRiskIndex);
         if (datasetCardId === card.id) {
-          // console.log(value);
           card.risks[datasetRiskIndex].label = value;
         }
         return card;
@@ -168,34 +100,6 @@ class FaseTwoPage extends React.PureComponent {
     }));
   };
 
-  onsubmit = (e) => {
-    e.preventDefault();
-  };
-  /* getCardObjectsFromLocalStorage() {
-    const chosenCardIds = JSON.parse(
-      localStorage.getItem('selectedBlueCardIds')
-    );
-    const chosenBlueCardsArray = [];
-    for (let i = 0; i < chosenCardIds.length; i++) {
-      const chosenBlueCard = chosenCardIds[i];
-      for (let j = 0; j < Object.keys(bluecards).length; j++) {
-        const bluecardKey = Object.keys(bluecards)[j];
-        const entireObject = Object.values(bluecards)[j];
-        if (chosenBlueCard === bluecardKey) {
-          entireObject.risks = [
-            {
-              label: '',
-              cards: [],
-            },
-          ];
-          chosenBlueCardsArray.push(entireObject);
-        }
-      }
-    }
-    localStorage.setItem('chosenCards', JSON.stringify(chosenBlueCardsArray));
-    return chosenBlueCardsArray;
-  } */
-
   render() {
     const { chosenCards } = this.state;
     console.log(this.state);
@@ -225,7 +129,7 @@ class FaseTwoPage extends React.PureComponent {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div ref={ref} className='leftPane fase2LeftPane'>
+          <div className='leftPane fase2LeftPane'>
             {chosenCards.map((card, index) => (
               <div className='cardRow' key={index}>
                 <div className='innerCardRow'>

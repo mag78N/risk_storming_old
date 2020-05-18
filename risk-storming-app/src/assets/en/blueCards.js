@@ -11,7 +11,12 @@ export const bluecards = {
     exampleTwo: 'Is the code modular or does it resemble one big monolith?',
     exampleThree:
       'Take a look of all the tools, frameworks and languages that make up your project. Are they designed to work together?',
-    risks: ['risk 1'],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-2': {
     id: 'blue-2',
@@ -26,7 +31,12 @@ export const bluecards = {
       'Business people are good at describing high-level functionalities. But did they think of less obvious, hidden or negative functionalities?',
     exampleThree:
       'Most of our testing centres around "can we do this?" or "can\'t we do that?". How far should we go in automating these things?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-3': {
     id: 'blue-3',
@@ -41,7 +51,12 @@ export const bluecards = {
       'Data flows can get convoluted. Is there a way to put data in limbo? An aborted transaction might do the trick.',
     exampleThree:
       "Input of data is usually incredibly important and often equally fragile. There's tons of rubbish we can try to input into our systems, but how does it handle it?",
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-4': {
     id: 'blue-4',
@@ -56,7 +71,12 @@ export const bluecards = {
       'Do you have enough environments to test on? What do you use them for? Is this clear for every team member?',
     exampleThree:
       'Can you manipulate system time to test functionality that only comes into play at certain dates?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-5': {
     id: 'blue-5',
@@ -71,7 +91,12 @@ export const bluecards = {
       'Your production release went wrong. How fast and efficient can you rollback?',
     exampleThree:
       'Is the code easy to read and easy to find your way through? You might test this by asking for a change in old code by a new team member.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-6': {
     id: 'blue-6',
@@ -86,7 +111,12 @@ export const bluecards = {
       'Some evil people used backdoor functionality by adding /admin to the URL. They gain a lot of  power to do some real damage to the application or infrastructure.',
     exampleThree:
       'Hacking is hard to guard your product from. Keep that virus scan, third party and open source code up-to-date!',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-7': {
     id: 'blue-7',
@@ -101,7 +131,12 @@ export const bluecards = {
       'When building web apps programmers typically dislike testing with Internet Explorer. Which is why you should. Oh, the surprises you get. ',
     exampleThree:
       'Smartphone configurations are always in constant flux. OS versions, screen sizes, shapes, resolutions... Can your app  adapt?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-8': {
     id: 'blue-8',
@@ -116,7 +151,12 @@ export const bluecards = {
       'Random crashes are pestering your program, causing you to lose progress or even data. ',
     exampleThree:
       'Is the performance of your hardware stable? The Iphone 6’s antenna dropped signal when you held your phone a certain way.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-9': {
     id: 'blue-9',
@@ -131,7 +171,12 @@ export const bluecards = {
       'Currency. Is it visualized correctly? How are conversions done? By a fixed conversion pattern or a dynamic service? What happens when this service is unreachable? ',
     exampleThree:
       "Laws, permissions, network security differ from country to country. If you want your product to be used in China, you'll most likely need to adjust a few things...",
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-10': {
     id: 'blue-10',
@@ -146,7 +191,12 @@ export const bluecards = {
       'The coffee test: mobile phone in one hand, a coffee in the other. Is your app still easy to use with one hand?',
     exampleThree:
       ' Humans are diverse. The blind person. The arthritic. The novice. How do you know your software is accessible to them?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-11': {
     id: 'blue-11',
@@ -161,7 +211,12 @@ export const bluecards = {
       'Colours in your app are important. Do they radiate a calming, relaxing design, or are they reminiscent of an epilepsy test?',
     exampleThree:
       'Naming things is often really hard. Are all the buttons named consistently? Are the icons clear and unambiguous?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-12': {
     id: 'blue-12',
@@ -176,7 +231,12 @@ export const bluecards = {
       'Stock Market trading  software is complex because the underlying calculations are a beast. ',
     exampleThree:
       'The software that beats even the most battle-hardened chess masters uses a basic kind of artificial intelligence to predict human chess behaviour. How would you test this?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-13': {
     id: 'blue-13',
@@ -191,7 +251,12 @@ export const bluecards = {
       'If you work with contractors or consultants, how are your data and ideas protected? Do you have Non-disclosure agreements? ',
     exampleThree:
       'When working in banking or medicine you cannot just copy production data for testing purposes. US regulations, for instance, uses HIPAA or FERPA.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-14': {
     id: 'blue-14',
@@ -205,7 +270,12 @@ export const bluecards = {
     exampleTwo:
       'How much storage does your application need? Some smartphones have a limited capacity for storage.',
     exampleThree: 'Can you eliminate unnecessary features?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-15': {
     id: 'blue-15',
@@ -220,7 +290,12 @@ export const bluecards = {
       'How long does it take to install your app and is it a reasonable amount of time?',
     exampleThree:
       'Does the app have custom installation options which are easy to understand? What consequences do they have?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-16': {
     id: 'blue-16',
@@ -235,7 +310,12 @@ export const bluecards = {
       'Is updating or patching  your application intrusive? Does it require restarting or a complete reinstall? ',
     exampleThree:
       "Is there an option to trigger updates manually by the user? How do you handle users who don’t want to or won't update? What if others want to roll back?",
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-17': {
     id: 'blue-17',
@@ -250,7 +330,12 @@ export const bluecards = {
       'Combine things! Doing hard, taxing calculations at the same time with multiple users and browsers can give fun results.',
     exampleThree:
       'Databases can become performance bottlenecks, especially when multiple threads and systems use the same database.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-18': {
     id: 'blue-18',
@@ -265,7 +350,12 @@ export const bluecards = {
       'Are the most important features available in the middle of your screen? Have your app eye-track-tested and find out whether people easily find what they’re looking for.',
     exampleThree:
       'Some things are intrusive, yet people love them. For example the-groupon-space-cat-logo. This makes your app unique, identifiable and memorable.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-19': {
     id: 'blue-19',
@@ -280,7 +370,12 @@ export const bluecards = {
       'There are quite a few tools (e.g. Neoload, Jmeter) on the market that can fire up the same scripts and calls as concurrent users. Two? Ten? Five hundred? You go ahead.',
     exampleThree:
       'Two libraries in your program try to use the same data at the same time. One gets access, one does not. This may lead to trouble.',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-20': {
     id: 'blue-20',
@@ -294,7 +389,12 @@ export const bluecards = {
       'SamuraiWTF (Web Testing Framework) is one of many open source penetration testing tools.',
     exampleThree:
       'Once a hacker gets in, in what form can he find your data? Will he be able to piece it together pretty easily?',
-    risks: [],
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-21': {
     id: 'blue-21',
@@ -309,6 +409,12 @@ export const bluecards = {
       'What is the impact of a system outage for your team? What is the cost of increasing the availability just a fraction extra?',
     exampleThree:
       'How fast can the software recover from a system failure? What are your disaster recovery protocols?',
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-22': {
     id: 'blue-22',
@@ -323,6 +429,12 @@ export const bluecards = {
       'Code written in certain programming languages have fluctuating behaviour as their database gradually grows. Some deal with it well, others… not so well.',
     exampleThree:
       'Load balancing systems can help you distribute lots of traffic to different backend systems.',
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-23': {
     id: 'blue-23',
@@ -337,6 +449,12 @@ export const bluecards = {
       'Can costs of implementing a story be measured and weighed against profit it might potentially generate? ',
     exampleThree:
       'Delivery is not done until its impact on business value has been reviewed.',
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-24': {
     id: 'blue-24',
@@ -351,6 +469,12 @@ export const bluecards = {
       '“My wife and I filed joint tax returns [...] have been married for a long time, [... ]Yet Apple’s black box algorithm thinks I deserve 20x the credit limit she does.” - NYtimes',
     exampleThree:
       'Advancement in Artificial Intelligence and Machine Learning push us to confront the worst in the human world… and do something about it?',
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
   'blue-25': {
     id: 'blue-25',
@@ -365,5 +489,11 @@ export const bluecards = {
       'Capture different sources of data within rich logs with improved information for  debugging, vulnerability detection, traffic monitoring,...',
     exampleThree:
       'Swinging red lights! Alarms! Our system has picked up that we’re losing money/users/speed because of a failure in a specific running feature.',
+    risks: [
+      {
+        label: '',
+        cards: [],
+      },
+    ],
   },
 };

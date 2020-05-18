@@ -4,37 +4,24 @@ import '../../cards/green-card/GreenCard.css';
 import '../../cards/orange-card/OrangeCard.css';
 import '../../cards/pink-card/PinkCard.css';
 import '../../cards/purple-card/PurpleCard.css';
-import Card from './Card';
+import InnerCardList from './InnerCardList';
 import { Droppable } from 'react-beautiful-dnd';
 import './styles/fase1.css';
 const CardList = styled.div``;
 
 class Column extends React.Component {
   render() {
+    const { column, cards } = this.props;
     return (
-      <Droppable droppableId={this.props.column.id} direction='vertical'>
+      <Droppable droppableId={column.id} direction='vertical'>
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDraggingOver={snapshot.isDraggingOver}
-            className={this.props.column.class}
+            className={column.class}
           >
-            {this.props.cards.map((card, index) => (
-              <Card
-                key={card.id}
-                card={card}
-                index={index}
-                column={this.props.column.id}
-                color={card.color}
-                title={card.title}
-                subTitle={card.subTitle}
-                description={card.description}
-                exampleOne={card.exampleOne}
-                exampleTwo={card.exampleTwo}
-                exampleThree={card.exampleThree}
-              />
-            ))}
+            <InnerCardList cards={cards} />
             {provided.placeholder}
           </CardList>
         )}

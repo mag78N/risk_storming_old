@@ -7,7 +7,6 @@ import './styles/fase1.css';
 import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
-
 import { bluecards } from '../../../assets/en/blueCards';
 class FaseOnePage extends React.PureComponent {
   state = {
@@ -31,36 +30,27 @@ class FaseOnePage extends React.PureComponent {
     columnOrderFase1: ['column-1', 'column-2'],
   };
   getChosenCardsFromFase1() {
-    const chosenCardIds = JSON.parse(
-      localStorage.getItem('selectedBlueCardIds')
-    );
+    let cardIds = this.state.columnsFase1['column-1'].cardIds;
+    localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
     const chosenBlueCardsArray = [];
-    for (let i = 0; i < chosenCardIds.length; i++) {
-      const chosenBlueCard = chosenCardIds[i];
+    for (let i = 0; i < cardIds.length; i++) {
+      const chosenBlueCard = cardIds[i];
       for (let j = 0; j < Object.keys(bluecards).length; j++) {
         const bluecardKey = Object.keys(bluecards)[j];
         const entireObject = Object.values(bluecards)[j];
         if (chosenBlueCard === bluecardKey) {
-          entireObject.risks = [
-            {
-              label: '',
-              cards: [],
-            },
-          ];
           chosenBlueCardsArray.push(entireObject);
+          this.setState({ chosenCards: [...chosenBlueCardsArray] });
         }
       }
     }
-    this.setState({ chosenCards: chosenBlueCardsArray });
+    //this.setState({ chosenCards: [...chosenBlueCardsArray] });
   }
   componentDidUpdate(prevProps, prevState) {
     if (
-      prevState.columnsFase1['column-1'].cardIds !==
-      this.state.columnsFase1['column-1'].cardIds
+      prevState.columnsFase1['column-1'].cardIds.length !==
+      this.state.columnsFase1['column-1'].cardIds.length
     ) {
-      let cardIds = this.state.columnsFase1['column-1'].cardIds;
-      this.setState({ selectedBlueCardIds: cardIds });
-      localStorage.setItem('selectedBlueCardIds', JSON.stringify(cardIds));
       console.log('fase1 component did update');
       this.getChosenCardsFromFase1();
     }
@@ -74,7 +64,6 @@ class FaseOnePage extends React.PureComponent {
     );
   }
   componentWillUnmount() {
-     //this.getChosenCardsFromFase1();
     console.log('fase 1 componentwillunmount');
     window.removeEventListener(
       'beforeunload',
@@ -86,13 +75,9 @@ class FaseOnePage extends React.PureComponent {
 
   hydrateStateWithLocalStorage() {
     console.log('fase 1 hydrate state with local storage');
-    // for all items in state
     for (let key in this.state) {
-      // if the key exists in localStorage
       if (localStorage.hasOwnProperty(key)) {
-        // get the key's value from localStorage
         let value = localStorage.getItem(key);
-        // parse the localStorage string and setState
         try {
           value = JSON.parse(value);
           this.setState({ [key]: value });
@@ -104,11 +89,8 @@ class FaseOnePage extends React.PureComponent {
     }
   }
   saveStateToLocalStorage() {
-    console.log('fase 1 savestate to localstorage');
-    // for every item in React state
+    console.log('fase 1 save state to localstorage');
     for (let key in this.state) {
-      // save to localStorage
-
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
