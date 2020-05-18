@@ -32,11 +32,9 @@ class FaseThreePage extends React.Component {
     });
   }
   componentDidMount() {
-    const cards = JSON.parse(localStorage.getItem('chosenCards'));
-    this.setState({ chosenCards: cards });
-
     console.log('fase 3 componentdidmount');
     this.hydrateStateWithLocalStorage();
+
     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
@@ -126,9 +124,9 @@ class FaseThreePage extends React.Component {
       return;
     }
     const start = getCardList(source.droppableId);
-    console.log('start :', start);
+    //console.log('start :', start);
     const finish = getCardList(destination.droppableId);
-    console.log('finish :', finish);
+    //console.log('finish :', finish);
     const removedCard = start.splice(source.index, 1)[0];
     finish.splice(destination.index, 0, removedCard);
 
@@ -145,7 +143,7 @@ class FaseThreePage extends React.Component {
 
         const foundCard = newCards.find((card) => card.id === cardId);
         foundCard.risks[riskIndex].cards = start;
-        console.log(foundCard);
+        //console.log(foundCard);
         return {
           chosenCards: newCards,
         };
@@ -164,7 +162,7 @@ class FaseThreePage extends React.Component {
 
         const foundCard = newCards.find((card) => card.id === cardId);
         foundCard.risks[riskIndex].cards = finish;
-        console.log(foundCard);
+        //console.log(foundCard);
         return { chosenCards: newCards };
       });
     }
