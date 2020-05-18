@@ -23,8 +23,8 @@ class RiskDropLane extends React.Component {
             {riskCards.map((card, index) => (
               <Card
                 type='CARD'
-                cardid={card['id']}
-                key={card['id']}
+                cardid={card.id}
+                key={card.id}
                 card={card}
                 index={index}
               />
