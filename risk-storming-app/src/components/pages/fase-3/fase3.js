@@ -128,15 +128,20 @@ class FaseThreePage extends React.Component {
     //console.log('start :', start);
     const finish = getCardList(destination.droppableId);
     //console.log('finish :', finish);
-    const removedCard = start.splice(source.index, 1)[0];
-    finish.splice(destination.index, 0, removedCard);
-
+    /* const removedCard = start.splice(source.index, 1)[0];
+    finish.splice(destination.index, 0, removedCard); */
+    let removedCard = null;
     if (source.droppableId === 'RIGHT-COLUMN') {
+      const draggedCard = { ...start[source.index] };
+      draggedCard.id = destination.droppableId + '|' + draggedCard.id;
+      finish.splice(destination.index, 0, draggedCard);
       this.setState((prevState) => {
         return { filteredColorCards: start };
       });
       //this.setState({ colorcards: start });
     } else {
+      removedCard = start.splice(source.index, 1)[0];
+
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
         const [cardId, riskId] = source.droppableId.split('|');
@@ -156,6 +161,9 @@ class FaseThreePage extends React.Component {
         return { colorcards: finish };
       });
     } else {
+      if (removedCard) {
+        finish.splice(destination.index, 0, removedCard);
+      }
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
         const [cardId, riskId] = destination.droppableId.split('|');
