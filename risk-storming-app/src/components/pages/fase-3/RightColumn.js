@@ -10,8 +10,6 @@ class RightColumn extends React.Component {
   render() {
       const { colorcards } = this.props;
     return (
-     
-       
         <Droppable droppableId='RIGHT-COLUMN' direction='vertical' type='CARD'>
         {(provided, snapshot) => (
            <React.Fragment>
