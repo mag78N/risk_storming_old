@@ -5,14 +5,12 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/bg.jpg';
 
-
 const MainPage = () => {
   var bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
   function clearLocalStorage() {
     window.localStorage.clear();
-    
   }
   return (
     <>
@@ -31,7 +29,7 @@ const MainPage = () => {
           >
             Clear Previous Data
           </Button>
-          <Link to='/CardsViewer'>
+          <Link to='/CardsViewer' target={'_blank'}>
             <Button variant='outline-dark' className='startSessionButton'>
               Go to Card Deck
             </Button>
