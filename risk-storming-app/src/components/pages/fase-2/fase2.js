@@ -20,13 +20,12 @@ class FaseTwoPage extends React.PureComponent {
   }
 
   componentDidMount() {
-     console.log('fase2 component did mount');
+    console.log('fase2 component did mount');
     this.hydrateStateWithLocalStorage();
     window.addEventListener(
       'beforeunload',
       this.saveStateToLocalStorage.bind(this)
     );
-   
   }
   componentWillUnmount() {
     console.log('fase2 componentwillunmount');
@@ -114,6 +113,7 @@ class FaseTwoPage extends React.PureComponent {
               data: this.state,
             },
           }}
+          
         >
           Export to PDF
         </Link>
