@@ -47,7 +47,7 @@ export default function Login() {
               <Link to='/mainpage'>
                 <Button
                   variant='outline-dark'
-                  /*  disabled={!validateForm()} */
+                  disabled={!validateForm()}
                   type='submit'
                   className='btn loginButton'
                 >
