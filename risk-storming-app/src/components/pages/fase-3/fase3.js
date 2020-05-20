@@ -1,11 +1,11 @@
 import React from 'react';
 import Split from 'react-split';
 import '../../cards/Card/Card.css';
-import '../../cards/green-card/GreenCard.css';
-import '../../cards/orange-card/OrangeCard.css';
-import '../../cards/pink-card/PinkCard.css';
-import '../../cards/red-card/RedCard.css';
-import '../../cards/darkblue-card/DarkblueCard.css';
+import '../../cards/color-css/green-card/GreenCard.css';
+import '../../cards/color-css/orange-card/OrangeCard.css';
+import '../../cards/color-css/pink-card/PinkCard.css';
+import '../../cards/color-css/red-card/RedCard.css';
+import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';

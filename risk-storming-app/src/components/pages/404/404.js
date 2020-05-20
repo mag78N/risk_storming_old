@@ -1,7 +1,7 @@
 import React from 'react';
 import './404.css';
 import { Link } from 'react-router-dom';
-import bg from '../../assets/images/bg.jpg';
+import bg from '../../../assets/images/bg.jpg';
 
 const NotFoundPage = () => {
   var bgImgStyle = {

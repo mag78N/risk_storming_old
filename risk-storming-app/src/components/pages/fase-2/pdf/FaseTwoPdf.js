@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TopNavbar from '../../TopNavbar/TopNavbar';
+import TopNavbar from '../../../TopNavbar/TopNavbar';
 import PdfDocument from './PdfDocument';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import './fase2Pdf.css';

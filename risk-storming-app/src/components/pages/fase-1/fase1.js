@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../cards/blue-card/BlueCard.css';
+import '../../cards/color-css/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Split from 'react-split';
