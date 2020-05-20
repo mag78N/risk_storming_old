@@ -3,7 +3,6 @@ import '../../../cards/color-css/green-card/GreenCard.css';
 import '../../../cards/color-css/orange-card/OrangeCard.css';
 import '../../../cards/color-css/pink-card/PinkCard.css';
 import '../../../cards/color-css/purple-card/PurpleCard.css';
-import styled from 'styled-components';
 import '../../../cards/Card/Card.css';
 
 

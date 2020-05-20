@@ -2,7 +2,7 @@ import React from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import '../../cards/Card/Card.css';
-import styled from 'styled-components';
+import './CardsViewer.css';
 import BlueCardDeck from './card-decks/BlueCardDeck';
 import DarkBlueCardDeck from './card-decks/DarkBlueCardDeck';
 import OrangeCardDeck from './card-decks/OrangeCardDeck';
@@ -16,35 +16,36 @@ import '../../cards/color-css/red-card/RedCard.css';
 import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
-const CardDeckContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
+
 const CardsViewer = () => {
   return (
     <>
       <TopNavbar />
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
-        <Tab eventKey='quality-aspects' title='Quality Aspects'>
+        <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
           <BlueCardDeck />
         </Tab>
-        <Tab eventKey='techniques' title='Techniques'>
+        <Tab eventKey='techniques' title='Techniques' className='tab'>
           {' '}
           <GreenCardDeck />
         </Tab>
-        <Tab eventKey='heuristics' title='Heuristics'>
+        <Tab eventKey='heuristics' title='Heuristics' className='tab'>
           {' '}
           <PinkCardDeck />
         </Tab>
-        <Tab eventKey='dealing-with-change' title='Dealing With Change'>
+        <Tab
+          eventKey='dealing-with-change'
+          title='Dealing With Change'
+          className='tab'
+        >
           {' '}
           <DarkBlueCardDeck />
         </Tab>
-        <Tab eventKey='patterns' title='Patterns'>
+        <Tab eventKey='patterns' title='Patterns' className='tab'>
           {' '}
           <OrangeCardDeck />
         </Tab>
-        <Tab eventKey='observability' title='Observability'>
+        <Tab eventKey='observability' title='Observability' className='tab'>
           {' '}
           <RedCardDeck />
         </Tab>
