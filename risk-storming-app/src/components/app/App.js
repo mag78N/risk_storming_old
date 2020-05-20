@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './App.css';
 import '../custom-bootstrap.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MainPage from '../pages/main-page';
+import Login from '../login/Login';
 import CardsViewer from '../pages/cards-viewer/CardsViewer';
 import FaseOnePage from '../pages/fase-1/fase1';
 import FaseTwoPage from '../pages/fase-2/fase2';
@@ -17,7 +17,8 @@ const App = () => (
   <Router>
     <>
       <Switch>
-        <Route exact path='/' component={MainPage} />
+        <Route exact path='/' component={Login} />
+        <Route exact path='/mainpage' component={MainPage} />
         <Route exact path='/CardsViewer' component={CardsViewer} />
         <Route exact path='/fase1' component={FaseOnePage} />
         <Route exact path='/fase2' component={FaseTwoPage} />

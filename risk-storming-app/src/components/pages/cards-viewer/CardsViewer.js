@@ -22,6 +22,7 @@ const CardsViewer = () => {
       <TopNavbar faseNum='Card Deck' />
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
         <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
+          <button>Expand all</button>
           <BlueCardDeck />
         </Tab>
         <Tab eventKey='techniques' title='Techniques' className='tab'>
