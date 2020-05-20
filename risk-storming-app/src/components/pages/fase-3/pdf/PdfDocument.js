@@ -72,7 +72,7 @@ const PdfDocument = (props) => {
   console.log(props);
   return (
     <Document>
-      <Page size='A4' charset='utf-8' style={styles.page}>
+      <Page size='A4' charset='utf-8' style={styles.page} orientation='l'>
         {props.chosenCards.map((card, index) => (
           <View style={styles.mainContainer} key={index} wrap={false}>
             <View
