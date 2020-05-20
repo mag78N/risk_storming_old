@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import TopNavbar from '../../TopNavbar/TopNavbar';
+import TopNavbar from '../../../TopNavbar/TopNavbar';
 import PdfDocument from './PdfDocument';
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import './styles/fase3.css';
+import '../styles/fase3.css';
 import './fase3Pdf.css';
 
 class FaseThreePdf extends Component {

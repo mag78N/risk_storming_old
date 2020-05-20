@@ -9,7 +9,7 @@ import FaseOnePage from '../pages/fase-1/fase1';
 import FaseTwoPage from '../pages/fase-2/fase2';
 import FaseTwoPdf from '../pages/fase-2/pdf/FaseTwoPdf';
 import FaseThreePage from '../pages/fase-3/fase3';
-import FaseThreePdf from '../pages/fase-3/FaseThreePdf';
+import FaseThreePdf from '../pages/fase-3/pdf/FaseThreePdf';
 
 const App = () => (
   <Router>

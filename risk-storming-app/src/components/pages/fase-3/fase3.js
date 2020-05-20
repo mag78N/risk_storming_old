@@ -12,8 +12,8 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import { Link } from 'react-router-dom';
 import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
-import RightColumn from './RightColumn';
-import RiskList from './Risklist';
+import RightColumn from './right-column/RightColumn';
+import RiskList from './Leftpane/Risklist';
 import './styles/fase3.css';
 import '../risk-row.css';
 
