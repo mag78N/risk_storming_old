@@ -1,16 +1,17 @@
 .bluecardCounter {
-  border: 1px solid black;
+  border-radius: 15px;
+  text-transform: uppercase;
   background-color: beige;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  width: 100px;
-  height: 80px;
+  padding: 15px;
+  height: 70px;
   position: absolute;
-  left: 18px;
+  left: 14px;
   z-index: 2;
   top: calc(60px + 0.75rem);
 }
 .fase1LeftPane {
-  padding-top: 100px; /* height of exportButton */
+  padding-top: 90px; /* height of exportButton */
 }
