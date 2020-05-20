@@ -14,13 +14,12 @@ import '../../cards/color-css/orange-card/OrangeCard.css';
 import '../../cards/color-css/pink-card/PinkCard.css';
 import '../../cards/color-css/red-card/RedCard.css';
 import '../../cards/color-css/darkblue-card/DarkblueCard.css';
-import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const CardsViewer = () => {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar faseNum='Card Deck' />
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
         <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
           <BlueCardDeck />
@@ -50,7 +49,6 @@ const CardsViewer = () => {
           <RedCardDeck />
         </Tab>
       </Tabs>
-      <Footer />
     </>
   );
 };
