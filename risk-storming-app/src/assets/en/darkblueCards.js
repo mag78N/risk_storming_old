@@ -1,4 +1,4 @@
-export const darkblueCards = {
+export const darkbluecards = {
   'darkblue-1': {
     id: 'darkblue-1',
     color: 'dark-blue',

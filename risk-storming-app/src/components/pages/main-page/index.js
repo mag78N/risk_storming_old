@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/bg.jpg';
-//import { CSVLink } from 'react-csv';
+
 
 const MainPage = () => {
   var bgImgStyle = {
@@ -12,8 +12,7 @@ const MainPage = () => {
   };
   function clearLocalStorage() {
     window.localStorage.clear();
-    //window.location.reload();
-   // window.localStorage.clear();
+    
   }
   return (
     <>
@@ -25,15 +24,20 @@ const MainPage = () => {
               Start Session!
             </Button>
           </Link>
-          <Button variant='outline-dark'
-                  className='clearDataButton'
-                  onClick={clearLocalStorage}>
+          <Button
+            variant='outline-dark'
+            className='clearDataButton'
+            onClick={clearLocalStorage}
+          >
             Clear Previous Data
           </Button>
+          <Link to='/CardsViewer'>
+            <Button variant='outline-dark' className='startSessionButton'>
+              Go to Card Deck
+            </Button>
+          </Link>
         </div>
       </div>
-
-      {/* <CSVLink data={csvPurplecards}>download</CSVLink> */}
     </>
   );
 };
