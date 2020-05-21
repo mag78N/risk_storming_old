@@ -18,7 +18,13 @@ const MainPage = () => {
     history.push(path);
   }; */
   function clearLocalStorage() {
-    window.localStorage.clear();
+    //window.localStorage.clear();
+    window.localStorage.removeItem('chosenCards');
+    window.localStorage.removeItem('selectedBlueCardIds');
+    window.localStorage.removeItem('columnsFase1');
+    window.localStorage.removeItem('columnOrderFase1');
+    window.localStorage.removeItem('colorcards');
+    window.localStorage.removeItem('filteredColorCards');
     history.push('/fase1');
   }
   return (

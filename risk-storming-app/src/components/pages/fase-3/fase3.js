@@ -245,7 +245,7 @@ class FaseThreePage extends React.Component {
         </DragDropContext>
         <Footer
           prev='/fase2'
-          next='/'
+          next='/mainpage'
           prevFase='Phase 2'
           nextFase='Main Page'
         />

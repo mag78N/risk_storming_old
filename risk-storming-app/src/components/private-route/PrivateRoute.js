@@ -1,17 +1,44 @@
-import { Redirect } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
+
 import React from 'react';
 
-const fakeAuth = {
-  isUserAuthenticated: false,
-};
- /* const validateForm = () => {
-   return username.length === 'risk' && password.length === 'storm';
- } */
-const PrivateRoute = ({ children }) => {
-  if (!fakeAuth.isUserAuthenticated) {
-    return <Redirect to='/login' />
+/* const PrivateRoute = ({ component: Component, ...rest }) => {
+  const username = localStorage.getItem('username');
+  const password = localStorage.getItem('password');
+  const u = 'risk';
+  const pw = 'storm';
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        username === u && password === pw ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: props.location },
+            }}
+          />
+        )
+      }
+    />
+  );
+}; */
+
+const PrivateRoute = (props) => {
+  const username = localStorage.getItem('username');
+  const password = localStorage.getItem('password');
+  const u = 'risk';
+  const pw = 'storm';
+  function isUserAuthenticated() {
+    return username === u && password === pw;
   }
-  return children;
-}
+  return (
+    <React.Fragment>
+      {isUserAuthenticated() ? props.children : <Redirect to='/login' />}
+    </React.Fragment>
+  );
+};
 
 export default PrivateRoute;

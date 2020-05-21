@@ -11,9 +11,13 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   function validateForm() {
-    return username.length > 0 && password.length > 0;
+    return username === 'risk' && password === 'storm';
+    
   }
-
+  function saveToLocalStorage() {
+    localStorage.setItem('username', username);
+    localStorage.setItem('pw', password);
+  }
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -50,6 +54,7 @@ export default function Login() {
                   disabled={!validateForm()}
                   type='submit'
                   className='btn btn-primary loginButton'
+                  onClick={saveToLocalStorage()}
                 >
                   Login
                 </button>

@@ -10,14 +10,13 @@ const MainPage = () => {
   const bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
-  
 
   return (
     <>
       <div className='mainPageContainer'>
-        <TopNavbar faseNum='' />
+        <TopNavbar />
         <div className='mainPageJumbotron' style={bgImgStyle}>
-          <Link to='/fase1'>
+          <Link to='/login'>
             <Button variant='outline-dark' className='mainPageButton'>
               Go to Login
             </Button>
