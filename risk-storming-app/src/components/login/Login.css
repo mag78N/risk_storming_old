@@ -1,33 +1,32 @@
-.Login {
-  padding: 60px 0;
+.loginContainer {
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 400px;
 }
-
-.Login form {
+.loginContainer h3 {
+  text-align: center;
+}
+.loginContainer form {
   margin: 0 auto;
-  max-width: 320px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+.loginContainer .form-group {
+  width: 100%;
+}
 .username,
 .password {
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
 }
-
-.loginButton {
-  margin-top: 2rem;
+.loginContainer input {
   border: 2px solid #000;
   border-radius: 0;
-  text-transform: uppercase;
-  font-size: 1.75rem;
-  padding: 0.75rem 2rem;
-  color: #000;
 }
-
-.loginButton:hover {
-  background-color: #000;
-  border: 2px solid #000;
+.loginButton {
+  margin-top: 2rem;
 }

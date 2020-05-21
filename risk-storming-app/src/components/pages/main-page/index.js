@@ -19,7 +19,12 @@ const MainPage = () => {
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <Link to='/fase1'>
             <Button variant='outline-dark' className='startSessionButton'>
-              Start Session!
+              Start Session
+            </Button>
+          </Link>
+          <Link to='/CardsViewer' target={'_blank'}>
+            <Button variant='outline-dark' className='startSessionButton'>
+              Go to Card Deck
             </Button>
           </Link>
           <Button
@@ -29,11 +34,6 @@ const MainPage = () => {
           >
             Clear Previous Data
           </Button>
-          <Link to='/CardsViewer' target={'_blank'}>
-            <Button variant='outline-dark' className='startSessionButton'>
-              Go to Card Deck
-            </Button>
-          </Link>
         </div>
       </div>
     </>

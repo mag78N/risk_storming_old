@@ -28,11 +28,12 @@
   font-size: 1.75rem;
   padding: 0.75rem 2rem;
   color: #000;
+  min-width: 305px;
+  margin-bottom: 2rem;
 }
 .clearDataButton {
   color: #000;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 .startSessionButton:hover,
 .clearDataButton:hover {

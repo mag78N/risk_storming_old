@@ -25,7 +25,8 @@ export default function Login() {
       <div className='mainPageContainer'>
         <TopNavbar />
         <div className='mainPageJumbotron' style={bgImgStyle}>
-          <div className='Login'>
+          <div className='loginContainer'>
+            <h3>Log in to RiskStorming</h3>
             <form onSubmit={handleSubmit}>
               <FormGroup controlId='email' bsSize='large'>
                 <FormLabel className='username'>Username</FormLabel>
@@ -49,7 +50,7 @@ export default function Login() {
                   variant='outline-dark'
                   /*  disabled={!validateForm()} */
                   type='submit'
-                  className='btn loginButton'
+                  className='btn btn-primary loginButton'
                 >
                   Login
                 </Button>
