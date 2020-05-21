@@ -27,7 +27,7 @@ export default function Login() {
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='Login'>
             <form onSubmit={handleSubmit}>
-              <FormGroup controlId='email' bsSize='large'>
+              <FormGroup controlId='email'>
                 <FormLabel className='username'>Username</FormLabel>
                 <FormControl
                   autoFocus
