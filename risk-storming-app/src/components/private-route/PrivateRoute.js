@@ -27,8 +27,8 @@ import React from 'react';
 }; */
 
 const PrivateRoute = (props) => {
-  const username = localStorage.getItem('username');
-  const password = localStorage.getItem('password');
+  const username = localStorage.getItem('uname');
+  const password = localStorage.getItem('pw');
   const u = 'risk';
   const pw = 'storm';
   function isUserAuthenticated() {

@@ -15,7 +15,7 @@ export default function Login() {
     
   }
   function saveToLocalStorage() {
-    localStorage.setItem('username', username);
+    localStorage.setItem('uname', username);
     localStorage.setItem('pw', password);
   }
   function handleSubmit(event) {
