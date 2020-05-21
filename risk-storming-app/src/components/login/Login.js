@@ -45,14 +45,13 @@ export default function Login() {
                 />
               </FormGroup>
               <Link to='/mainpage'>
-                <Button
-                  variant='outline-dark'
+                <button
                   disabled={!validateForm()}
                   type='submit'
-                  className='btn loginButton'
+                  className='loginButton'
                 >
                   Login
-                </Button>
+                </button>
               </Link>
             </form>
           </div>
