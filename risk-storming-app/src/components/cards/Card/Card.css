@@ -64,6 +64,8 @@ general css for card template
   background-color: #fff;
   border-radius: 10px;
   padding: 0 5px;
+  height: 22px;
+  line-height: 18px;
 }
 .cardVote i,
 .cardVote span {

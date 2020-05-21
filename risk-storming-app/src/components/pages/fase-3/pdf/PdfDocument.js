@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     width: 130,
-    /* border: '2pt solid #41a1ce', */
+    border: '2pt solid #41a1ce',
     borderRadius: '3pt',
     marginHorizontal: '5pt',
     marginVertical: '5pt',
@@ -54,14 +54,16 @@ const styles = StyleSheet.create({
     marginBottom: '15pt',
     padding: '20pt 5pt',
     paddingTop: '0',
-    width: '380pt',
+    width: '400pt',
     borderBottom: '2pt dashed #e5e5e5',
   },
   riskText: {
+    paddingTop: '5pt',
     maxWidth: 100,
     fontSize: '9pt',
   },
   colorCardsRow: {
+    marginLeft: '20pt',
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
