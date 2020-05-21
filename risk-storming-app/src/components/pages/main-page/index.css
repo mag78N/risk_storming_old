@@ -14,30 +14,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: flex-end;
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-
-.startSessionButton {
-  border: 2px solid #000;
-  border-radius: 0;
+.mainPageButtonContainer {
+  border-radius: 10px;
+  padding: 3rem;
+  /* background-color: rgb(46, 45, 45, 0.8); */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainPageButton{
+  background-color: #00bfbc;
+  border: 2px solid #00bfbc;
+  border-radius: 10px;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   padding: 0.75rem 2rem;
-  color: #000;
-  min-width: 305px;
-  margin-bottom: 2rem;
+  color: #eee;
 }
-.clearDataButton {
-  color: #000;
-  margin-top: 2rem;
-}
-.startSessionButton:hover,
-.clearDataButton:hover {
+.mainPageButton:hover{
   background-color: #000;
   border: 2px solid #000;
 }
- 
+.topButtonRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.clearDataButton {
+ margin-left: 1rem;
+}
+

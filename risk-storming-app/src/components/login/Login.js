@@ -28,7 +28,7 @@ export default function Login() {
           <div className='loginContainer'>
             <h3>Log in to RiskStorming</h3>
             <form onSubmit={handleSubmit}>
-              <FormGroup controlId='email' bsSize='large'>
+              <FormGroup controlId='email'>
                 <FormLabel className='username'>Username</FormLabel>
                 <FormControl
                   autoFocus
