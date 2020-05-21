@@ -17,6 +17,9 @@
 .loginContainer .form-group {
   width: 100%;
 }
+.form-group:last-of-type {
+  margin-bottom: 3rem;
+}
 .username,
 .password {
   font-size: 1.2rem;
@@ -26,7 +29,4 @@
 .loginContainer input {
   border: 2px solid #000;
   border-radius: 0;
-}
-.loginButton {
-  margin-top: 2rem;
 }
