@@ -1,0 +1,54 @@
+.mainPageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -60px; /* footer's height */
+}
+
+.mainPageJumbotron {
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - 60px); /* top navbar height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.mainPageButtonContainer {
+  border-radius: 10px;
+  padding: 3rem;
+  /* background-color: rgb(46, 45, 45, 0.8); */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainPageButton{
+  background-color: #00bfbc;
+  border: 2px solid #00bfbc;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.75rem 2rem;
+  color: #eee;
+}
+.mainPageButton:hover{
+  background-color: #000;
+  border: 2px solid #000;
+}
+.topButtonRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.clearDataButton {
+ margin-left: 1rem;
+}
+
