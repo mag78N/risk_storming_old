@@ -51,6 +51,7 @@
 }
 .exportButton {
   position: absolute;
+  background-color: #fff;
   top: calc(60px + 0.75rem); /* height of topNavbar */
   left: 25px;
   z-index: 2;

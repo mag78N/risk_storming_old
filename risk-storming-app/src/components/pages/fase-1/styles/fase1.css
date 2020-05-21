@@ -1,21 +1,13 @@
 .bluecardCounter {
-  border-radius: 15px;
-  text-transform: uppercase;
-  background:#ffc;
-  border-color: #ffc;
-  -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
-  -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
-  box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: 600;
   padding: 15px;
-  height: 70px;
+  height: 50px;
   position: absolute;
-  left: 14px;
+  left: 0;
   z-index: 2;
   top: calc(60px + 0.75rem);
 }
 .fase1LeftPane {
-  padding-top: 90px; /* height of exportButton */
+  padding-top: 70px; /* height of bluecardCounter */
 }

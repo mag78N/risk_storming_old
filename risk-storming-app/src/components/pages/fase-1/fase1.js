@@ -161,7 +161,7 @@ class FaseOnePage extends React.PureComponent {
       <>
         <TopNavbar faseNum='Phase 1' />
         <div className='bluecardCounter'>
-          blue cards selected: {this.state.columnsFase1['column-1'].cardIds.length}
+          Selected cards: <strong>{this.state.columnsFase1['column-1'].cardIds.length}</strong> out of 6.
         </div>
         <DragDropContext onDragEnd={this.onDragEnd}>
           <Split
