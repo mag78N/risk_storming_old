@@ -1,4 +1,4 @@
-.mainPageContainer {
+.landingPageContainer {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -7,7 +7,7 @@
   margin-bottom: -60px; /* footer's height */
 }
 
-.mainPageJumbotron {
+.landingPageJumbotron {
   width: 100%;
   max-width: 100%;
   height: calc(100vh - 60px); /* top navbar height */
@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.mainPageButtonContainer {
+.landingPageButtonContainer {
   border-radius: 10px;
   padding: 3rem;
   /* background-color: rgb(46, 45, 45, 0.8); */
@@ -29,7 +29,18 @@
   align-items: center;
   justify-content: center;
 }
-.mainPageButton{
+.landingPageHeadings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingPageHeadings div {
+  padding-bottom: 2rem;
+  color: #eee;
+  text-align: center;
+}
+.landingPageButton {
   background-color: #00bfbc;
   border: 2px solid #00bfbc;
   border-radius: 10px;
@@ -38,17 +49,7 @@
   padding: 0.75rem 2rem;
   color: #eee;
 }
-.mainPageButton:hover{
+.landingPageButton:hover {
   background-color: #000;
   border: 2px solid #000;
 }
-.topButtonRow{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.clearDataButton {
- margin-left: 1rem;
-}
-
