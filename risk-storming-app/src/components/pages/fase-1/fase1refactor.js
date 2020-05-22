@@ -70,43 +70,35 @@ class FaseOnePageRefactor extends React.Component {
     const { destination, source, draggableId } = result;
     const getCardList = (droppableId) => {
       if (droppableId === 'RIGHT-COLUMN') {
-        return [...this.state.filteredColorCards];
+        return [...this.state.bluecards];
       }
-      const [cardId, riskId] = droppableId.split('|');
-      const riskIndex = parseInt(riskId.split('-')[1]) - 1;
-
-      const foundCard = this.state.chosenCards.find(
-        (card) => card.id === cardId
-      );
-      return [...foundCard.risks[riskIndex].cards];
+      return [...this.state.chosenCards];
     };
     if (!destination) {
       return;
     }
     if (
-      destination.droppableId ===
-      source.droppableId /* &&
-      destination.index === source.index */
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
     ) {
       return;
     }
     const start = getCardList(source.droppableId);
-    //console.log('start :', start);
+    console.log('start :', start);
     const finish = getCardList(destination.droppableId);
-    //console.log('finish :', finish);
-    /* const removedCard = start.splice(source.index, 1)[0];
-    finish.splice(destination.index, 0, removedCard); */
-    let removedCard = null;
+    console.log('finish :', finish);
+    const draggedCard = start.splice(source.index, 1);
+    finish.splice(destination.index, 0, draggedCard);
+
     if (source.droppableId === 'RIGHT-COLUMN') {
-      const draggedCard = { ...start[source.index] };
-      draggedCard.id = destination.droppableId + '|' + draggedCard.id;
+      
       finish.splice(destination.index, 0, draggedCard);
       this.setState((prevState) => {
-        return { filteredColorCards: start };
+        return { bluecards: start };
       });
       //this.setState({ colorcards: start });
     } else {
-      removedCard = start.splice(source.index, 1)[0];
+      removedCard = start.splice(source.index, 1);
 
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
@@ -124,20 +116,15 @@ class FaseOnePageRefactor extends React.Component {
 
     if (destination.droppableId === 'RIGHT-COLUMN') {
       this.setState((prevState) => {
-        return { colorcards: finish };
+        return { bluecards: finish };
       });
     } else {
-      if (removedCard) {
-        finish.splice(destination.index, 0, removedCard);
-      }
+      
+        finish.splice(destination.index, 0, draggedCard);
+     
       this.setState((prevState) => {
         const newCards = [...prevState.chosenCards];
-        const [cardId, riskId] = destination.droppableId.split('|');
-        const riskIndex = parseInt(riskId.split('-')[1]) - 1;
-
-        const foundCard = newCards.find((card) => card.id === cardId);
-        foundCard.risks[riskIndex].cards = finish;
-        //console.log(foundCard);
+        
         return { chosenCards: newCards };
       });
     }
