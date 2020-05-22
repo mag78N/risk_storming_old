@@ -4,51 +4,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: -60px; /* footer's height */
+  margin-bottom: -54px; /* footer's height */
 }
 
 .mainPageJumbotron {
   width: 100%;
   max-width: 100%;
-  height: calc(100vh - 60px); /* top navbar height */
+  height: calc(100vh - 54px); /* top navbar height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
 }
 .mainPageButtonContainer {
-  border-radius: 10px;
-  padding: 3rem;
-  /* background-color: rgb(46, 45, 45, 0.8); */
   background-color: #fff;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0px 2px 6px 0px rgba(12,113,195,0.1);
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.mainPageButton{
-  background-color: #00bfbc;
-  border: 2px solid #00bfbc;
-  border-radius: 10px;
+.mainPageButton {
+  color: #ffffff;
+  border-width: 0px;
+  border-radius: 100px;
+  font-size: 1rem;
+  /* font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif; */
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 0.75rem 2rem;
-  color: #eee;
-}
-.mainPageButton:hover{
-  background-color: #000;
-  border: 2px solid #000;
-}
-.topButtonRow{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #00bfbc;
+  border: 1px solid #00bfbc;
+  padding: 15px 50px;
   margin-bottom: 2rem;
 }
-.clearDataButton {
- margin-left: 1rem;
+.mainPageButton:hover {
+  color: #fff;
+  background-color: #008990;
+  border: 1px solid #008990;
 }
-
+.clearDataButton {
+  margin-left: 0;
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
 import './Login.css';
 import '../pages/main-page/index.css';
-import bg from '../../assets/images/bg.jpg';
+import bg from '../../assets/images/10.png';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -28,7 +28,7 @@ export default function Login() {
     <React.Fragment>
       <div className='mainPageContainer'>
         <TopNavbar />
-        <div className='mainPageJumbotron' style={bgImgStyle}>
+        <div className='mainPageJumbotron loginPage' style={bgImgStyle}>
           <div className='loginContainer'>
             <h3>Log in to RiskStorming</h3>
             <form onSubmit={handleSubmit}>
