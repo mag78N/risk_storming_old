@@ -40,7 +40,7 @@ class FaseOnePageRefactor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      LEFTCOLUMN: [],
+      chosenCards: [],
       RIGHTCOLUMN: Object.values(bluecards),
       /* chosenCards: [],
       bluecards: bluecards, */
@@ -179,10 +179,10 @@ class FaseOnePageRefactor extends React.Component {
     return (
       <>
         <TopNavbar faseNum='Phase 1' />
-        {/* <div className='bluecardCounter'>
+        <div className='bluecardCounter'>
           Selected cards: <strong>{this.state.chosenCards.length}</strong> out
           of 6.
-        </div> */}
+        </div> 
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
@@ -202,8 +202,8 @@ class FaseOnePageRefactor extends React.Component {
           >
             <div className='leftPane fase1LeftPane'>
               <LeftColumn
-                id="LEFTCOLUMN"
-                cards={this.state.LEFTCOLUMN} />
+                id="chosenCards"
+                cards={this.state.chosenCards} />
             </div>
 
             <div className='rightPane fase1RightPane'>
