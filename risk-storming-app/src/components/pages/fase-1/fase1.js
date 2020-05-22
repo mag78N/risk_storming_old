@@ -23,9 +23,7 @@ const move = (state, source, destination) => {
   destListClone.splice(destination.index, 0, movedElement);
 
   return {
-    [source.droppableId]: srcListClone,
-    ...(source.droppableId === destination.droppableId
-      ? {}
+    [source.droppableId]: srcListClone, ...(source.droppableId === destination.droppableId ? {}
       : {
           [destination.droppableId]: destListClone,
         }),
