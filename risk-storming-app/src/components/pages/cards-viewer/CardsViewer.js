@@ -10,11 +10,6 @@ import { greencards } from '../../../assets/en/greenCards';
 import { redcards } from '../../../assets/en/redCards';
 import { darkbluecards } from '../../../assets/en/darkblueCards';
 import CardDeck from './card-decks/CardDeck';
-import '../../cards/color-css/green-card/GreenCard.css';
-import '../../cards/color-css/orange-card/OrangeCard.css';
-import '../../cards/color-css/pink-card/PinkCard.css';
-import '../../cards/color-css/red-card/RedCard.css';
-import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const CardsViewer = () => {
@@ -23,7 +18,7 @@ const CardsViewer = () => {
       <TopNavbar faseNum='Card Deck' />
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
         <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
-          <button>Expand all</button>
+          {/* <button>Expand all</button> */}
           <CardDeck cards={bluecards} />
         </Tab>
         <Tab eventKey='techniques' title='Techniques' className='tab'>
