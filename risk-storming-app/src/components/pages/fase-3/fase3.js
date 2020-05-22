@@ -88,16 +88,7 @@ class FaseThreePage extends React.Component {
     });
     this.setState({ filteredColorCards: updatedList });
   };
-  /* getCardList = (droppableId) => {
-    if (droppableId === 'RIGHT-COLUMN') {
-      return [...this.state.colorcards];
-    }
-    const [cardId, riskId] = droppableId.split('|');
-    const riskIndex = parseInt(riskId.split('-')[1]) - 1;
-
-    const foundCard = this.state.chosenCards.find((card) => card.id === cardId);
-    return [...foundCard.risks[riskIndex].cards];
-  }; */
+ 
 
   onDragEnd = (result) => {
     const { destination, source, draggableId } = result;

@@ -3,12 +3,13 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import '../../cards/Card/Card.css';
 import './CardsViewer.css';
-import BlueCardDeck from './card-decks/BlueCardDeck';
-import DarkBlueCardDeck from './card-decks/DarkBlueCardDeck';
-import OrangeCardDeck from './card-decks/OrangeCardDeck';
-import RedCardDeck from './card-decks/RedCardDeck';
-import GreenCardDeck from './card-decks/GreenCardDeck';
-import PinkCardDeck from './card-decks/PinkCardDeck';
+import { bluecards } from '../../../assets/en/blueCards';
+import { pinkcards } from '../../../assets/en/pinkCards';
+import { orangecards } from '../../../assets/en/orangeCards';
+import { greencards } from '../../../assets/en/greenCards';
+import { redcards } from '../../../assets/en/redCards';
+import { darkbluecards } from '../../../assets/en/darkblueCards';
+import CardDeck from './card-decks/CardDeck';
 import '../../cards/color-css/green-card/GreenCard.css';
 import '../../cards/color-css/orange-card/OrangeCard.css';
 import '../../cards/color-css/pink-card/PinkCard.css';
@@ -23,15 +24,15 @@ const CardsViewer = () => {
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
         <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
           <button>Expand all</button>
-          <BlueCardDeck />
+          <CardDeck cards={bluecards} />
         </Tab>
         <Tab eventKey='techniques' title='Techniques' className='tab'>
           {' '}
-          <GreenCardDeck />
+          <CardDeck cards={greencards} />
         </Tab>
         <Tab eventKey='heuristics' title='Heuristics' className='tab'>
           {' '}
-          <PinkCardDeck />
+          <CardDeck cards={pinkcards} />
         </Tab>
         <Tab
           eventKey='dealing-with-change'
@@ -39,15 +40,15 @@ const CardsViewer = () => {
           className='tab'
         >
           {' '}
-          <DarkBlueCardDeck />
+          <CardDeck cards={darkbluecards} />
         </Tab>
         <Tab eventKey='patterns' title='Patterns' className='tab'>
           {' '}
-          <OrangeCardDeck />
+          <CardDeck cards={orangecards} />
         </Tab>
         <Tab eventKey='observability' title='Observability' className='tab'>
           {' '}
-          <RedCardDeck />
+          <CardDeck cards={redcards} />
         </Tab>
       </Tabs>
     </>

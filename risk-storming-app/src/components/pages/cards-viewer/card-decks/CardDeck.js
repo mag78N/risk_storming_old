@@ -1,15 +1,14 @@
 import React from 'react';
 import Card from './Card';
-import { pinkcards } from '../../../../assets/en/pinkCards';
 import styled from 'styled-components';
 const CardDeckContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-const PinkCardDeck = () => {
+const CardDeck = (props) => {
   return (
     <CardDeckContainer>
-      {Object.values(pinkcards).map((card, index) => {
+      {Object.values(props.cards).map((card, index) => {
         return (
           <Card
             key={card.id}
@@ -26,6 +25,6 @@ const PinkCardDeck = () => {
       })}
     </CardDeckContainer>
   );
-}
+};
 
-export default PinkCardDeck;
+export default CardDeck;
