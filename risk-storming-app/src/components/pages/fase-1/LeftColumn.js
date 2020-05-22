@@ -7,9 +7,9 @@ const CardList = styled.div``;
 
 class Column extends React.Component {
   render() {
-    const { column, cards } = this.props;
+    const { chosenCards } = this.props;
     return (
-      <Droppable droppableId={column.id} direction='vertical'>
+      <Droppable droppableId='LEFT-COLUMN' direction='vertical'>
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}
@@ -17,7 +17,7 @@ class Column extends React.Component {
             isDraggingOver={snapshot.isDraggingOver}
             className={column.class}
           >
-            <InnerCardList cards={cards} />
+            <InnerCardList cards={chosenCards} />
             {provided.placeholder}
           </CardList>
         )}

@@ -1,35 +1,22 @@
 import React from 'react';
-import Split from 'react-split';
+import '../../cards/color-css/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
-import '../../cards/color-css/green-card/GreenCard.css';
-import '../../cards/color-css/orange-card/OrangeCard.css';
-import '../../cards/color-css/pink-card/PinkCard.css';
-import '../../cards/color-css/red-card/RedCard.css';
-import '../../cards/color-css/darkblue-card/DarkblueCard.css';
-import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
+import Split from 'react-split';
+import './styles/fase1.css';
+import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { Link } from 'react-router-dom';
-import { colorcards } from '../../../assets/en/colorcards';
-import Card from './../fase-2/Card';
-import RightColumn from './right-column/RightColumn';
-import RiskList from './Leftpane/Risklist';
-import './styles/fase3.css';
-import '../risk-row.css';
+import LeftColumn from './LeftColumn';
+import RightColumn from './RightColumn';
+import { bluecards } from '../../../assets/en/blueCards';
 
-class FaseThreePage extends React.Component {
+class FaseOnePageRefactor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       chosenCards: [],
-      colorcards: Object.values(colorcards),
-      filteredColorCards: [],
+      bluecards: bluecards,
     };
-  }
-  componentWillMount() {
-    this.setState({
-      filteredColorCards: this.state.colorcards,
-    });
   }
   componentDidMount() {
     console.log('fase 3 componentdidmount');
@@ -78,26 +65,6 @@ class FaseThreePage extends React.Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-
-  filterCards = (e) => {
-    let updatedList = this.state.colorcards;
-    updatedList = updatedList.filter((card) => {
-      return (
-        card.title.toLowerCase().search(e.target.value.toLowerCase()) !== -1
-      );
-    });
-    this.setState({ filteredColorCards: updatedList });
-  };
-  /* getCardList = (droppableId) => {
-    if (droppableId === 'RIGHT-COLUMN') {
-      return [...this.state.colorcards];
-    }
-    const [cardId, riskId] = droppableId.split('|');
-    const riskIndex = parseInt(riskId.split('-')[1]) - 1;
-
-    const foundCard = this.state.chosenCards.find((card) => card.id === cardId);
-    return [...foundCard.risks[riskIndex].cards];
-  }; */
 
   onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
@@ -178,29 +145,23 @@ class FaseThreePage extends React.Component {
 
   render() {
     console.log('state inside render :', this.state);
-    const { chosenCards, colorcards, filteredColorCards } = this.state;
+    const { chosenCards, bluecards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Phase 3' />
-        <Link
-          className='btn exportButton'
-          to={{
-            pathname: '/fase3Pdf',
-            state: {
-              data: this.state,
-            },
-          }}
-        >
-          Export to PDF
-        </Link>
+        <TopNavbar faseNum='Phase 1' />
+        <div className='bluecardCounter'>
+          Selected cards:{' '}
+          <strong>{this.state.columnsFase1['column-1'].cardIds.length}</strong>{' '}
+          out of 6.
+        </div>
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
           onDragEnd={this.onDragEnd}
         >
           <Split
-            className='splitContainer splitContainerFase3'
-            sizes={[60, 40]}
+            className='splitContainer splitContainerFase1'
+            sizes={[40, 60]}
             minSize={[300, 150]}
             expandToMin={false}
             gutterSize={10}
@@ -210,34 +171,12 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='leftPane fase3LeftPane'>
-              {chosenCards.map((card, index) => (
-                <div className='cardRow' key={index}>
-                  <div className='innerCardRow'>
-                    <Card
-                      key={card.id}
-                      card={card}
-                      color={card.color}
-                      title={card.title}
-                      subTitle={card.subTitle}
-                      description={card.description}
-                      exampleOne={card.exampleOne}
-                      exampleTwo={card.exampleTwo}
-                      exampleThree={card.exampleThree}
-                    />
-                  </div>
-                  <div className='innerRiskRow'>
-                    <RiskList chosenCards={chosenCards} card={card} />
-                  </div>
-                </div>
-              ))}
+            <div className='leftPane fase1LeftPane'>
+              <LeftColumn chosenCards={chosenCards} />
             </div>
 
-            <div className='rightPane fase3RightPane'>
-              <RightColumn
-                filtercards={this.filterCards}
-                colorcards={filteredColorCards}
-              />
+            <div className='rightPane fase1RightPane'>
+              <RightColumn bluecards={bluecards} />
             </div>
           </Split>
         </DragDropContext>
@@ -252,4 +191,4 @@ class FaseThreePage extends React.Component {
   }
 }
 
-export default FaseThreePage;
+export default FaseOnePageRefactor;
