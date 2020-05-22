@@ -1,8 +1,5 @@
 import React from 'react';
-import '../../cards/color-css/green-card/GreenCard.css';
-import '../../cards/color-css/orange-card/OrangeCard.css';
-import '../../cards/color-css/pink-card/PinkCard.css';
-import '../../cards/color-css/purple-card/PurpleCard.css';
+import '../../cards/color-css/blue-card/BlueCard.css';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';

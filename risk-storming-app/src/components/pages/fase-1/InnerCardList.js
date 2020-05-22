@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Card from './Card';
 class InnerCardList extends Component {
   shouldComponentUpdate(nextProps) {
-    if (nextProps.cards === this.props.cards) {
+    if (nextProps.bluecards === this.props.bluecards) {
       return false;
     }
     return true;
   }
   render() {
-    return this.props.cards.map((card, index) => (
+    return this.props.bluecards.map((card, index) => (
       <Card
         key={card.id}
         card={card}

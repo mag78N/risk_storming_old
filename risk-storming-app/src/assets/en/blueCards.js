@@ -1,5 +1,5 @@
-export const bluecards = {
-  'blue-1': {
+export const bluecards = [
+  {
     id: 'blue-1',
     color: 'blue',
     title: 'Structure',
@@ -18,7 +18,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-2': {
+  {
     id: 'blue-2',
     color: 'blue',
     title: 'Functionality',
@@ -38,7 +38,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-3': {
+  {
     id: 'blue-3',
     color: 'blue',
     title: 'Data',
@@ -58,7 +58,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-4': {
+  {
     id: 'blue-4',
     color: 'blue',
     title: 'Testability',
@@ -78,7 +78,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-5': {
+  {
     id: 'blue-5',
     color: 'blue',
     title: 'Operations',
@@ -98,7 +98,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-6': {
+  {
     id: 'blue-6',
     color: 'blue',
     title: 'Security and Permission',
@@ -118,7 +118,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-7': {
+  {
     id: 'blue-7',
     color: 'blue',
     title: 'Adaptability',
@@ -138,7 +138,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-8': {
+  {
     id: 'blue-8',
     color: 'blue',
     title: 'Stability',
@@ -158,7 +158,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-9': {
+  {
     id: 'blue-9',
     color: 'blue',
     title: 'Internationalization',
@@ -178,7 +178,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-10': {
+  {
     id: 'blue-10',
     color: 'blue',
     title: 'Accessibility',
@@ -198,7 +198,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-11': {
+  {
     id: 'blue-11',
     color: 'blue',
     title: 'Clarity',
@@ -218,7 +218,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-12': {
+  {
     id: 'blue-12',
     color: 'blue',
     title: 'Complexity',
@@ -238,7 +238,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-13': {
+  {
     id: 'blue-13',
     color: 'blue',
     title: 'Confidentiality',
@@ -258,7 +258,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-14': {
+  {
     id: 'blue-14',
     color: 'blue',
     title: 'Resource Management',
@@ -277,7 +277,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-15': {
+  {
     id: 'blue-15',
     color: 'blue',
     title: 'Installability',
@@ -297,7 +297,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-16': {
+  {
     id: 'blue-16',
     color: 'blue',
     title: 'Changeability',
@@ -317,7 +317,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-17': {
+  {
     id: 'blue-17',
     color: 'blue',
     title: 'Performance',
@@ -337,7 +337,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-18': {
+  {
     id: 'blue-18',
     color: 'blue',
     title: 'User Friendliness',
@@ -357,7 +357,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-19': {
+  {
     id: 'blue-19',
     color: 'blue',
     title: 'Concurrency',
@@ -377,7 +377,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-20': {
+  {
     id: 'blue-20',
     color: 'blue',
     title: 'Safe-guard',
@@ -396,7 +396,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-21': {
+  {
     id: 'blue-21',
     color: 'blue',
     title: 'Availability',
@@ -416,7 +416,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-22': {
+  {
     id: 'blue-22',
     color: 'blue',
     title: 'Scalability',
@@ -436,7 +436,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-23': {
+  {
     id: 'blue-23',
     color: 'blue',
     title: 'Business Value Capability',
@@ -456,7 +456,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-24': {
+  {
     id: 'blue-24',
     color: 'blue',
     title: 'Impartiality',
@@ -476,7 +476,7 @@ export const bluecards = {
       },
     ],
   },
-  'blue-25': {
+  {
     id: 'blue-25',
     color: 'blue',
     title: 'Observability',
@@ -496,4 +496,4 @@ export const bluecards = {
       },
     ],
   },
-};
+];
