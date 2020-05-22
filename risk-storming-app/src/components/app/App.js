@@ -13,7 +13,6 @@ import LandingPage from '../pages/landing-page/LandingPage';
 import MainPage from '../pages/main-page';
 import Login from '../login/Login';
 import CardsViewer from '../pages/cards-viewer/CardsViewer';
-import FaseOnePageRefactor from '../pages/fase-1/fase1refactor';
 import FaseOnePage from '../pages/fase-1/fase1';
 import FaseTwoPage from '../pages/fase-2/fase2';
 import FaseTwoPdf from '../pages/fase-2/pdf/FaseTwoPdf';
@@ -30,7 +29,7 @@ const App = () => (
         <PrivateRoute>
           <Route exact path='/mainpage' component={MainPage} />
           <Route exact path='/cardsviewer' component={CardsViewer} />
-          <Route exact path='/fase1' component={FaseOnePageRefactor} />
+          <Route exact path='/fase1' component={FaseOnePage} />
           <Route exact path='/fase2' component={FaseTwoPage} />
           <Route exact path='/fase2Pdf' component={FaseTwoPdf} />
           <Route exact path='/fase3' component={FaseThreePage} />
