@@ -1,16 +1,20 @@
 .topNavbar {
+  top: 0;
+  background-color: #fff;
   width: 100%;
-  background-color: rgb(46, 45, 45);
   padding: 0 25px;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 54px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
 .logo {
-  height: 40px;
+  height: 30px;
 }
 .faseNum {
-  color: rgb(201, 206, 211);
+  color: #62748a;
   font-size: 1.25rem;
   padding-left: 2rem;
   text-transform: uppercase;

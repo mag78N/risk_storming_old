@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
-import bg from '../../../assets/images/bg.jpg';
+import bg from '../../../assets/images/5.png';
 
 const MainPage = () => {
   const bgImgStyle = {
@@ -33,20 +33,18 @@ const MainPage = () => {
         <TopNavbar faseNum='' />
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='mainPageButtonContainer'>
-            <div className='topButtonRow'>
-              <Link to='/fase1'>
-                <Button variant='outline-dark' className='mainPageButton'>
-                  Continue Session
-                </Button>
-              </Link>
-              <Button
-                variant='outline-dark'
-                className='clearDataButton mainPageButton'
-                onClick={clearLocalStorage}
-              >
-                Start New Session
+            <Link to='/fase1'>
+              <Button variant='outline-dark' className='mainPageButton'>
+                Continue Session
               </Button>
-            </div>
+            </Link>
+            <Button
+              variant='outline-dark'
+              className='clearDataButton mainPageButton'
+              onClick={clearLocalStorage}
+            >
+              Start New Session
+            </Button>
             <div>
               <Link to='/CardsViewer' target={'_blank'}>
                 <Button variant='outline-dark' className='mainPageButton'>
