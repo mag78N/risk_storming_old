@@ -10,36 +10,30 @@
 .landingPageJumbotron {
   width: 100%;
   max-width: 100%;
-  height: calc(100vh - 60px); /* top navbar height */
+  height: calc(100vh - 54px); /* top navbar height */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
 .landingPageButtonContainer {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 60px 40px;
-  box-shadow: 0px 2px 6px 0px rgba(12,113,195,0.1);
-  width: 550px;
+  width: 50%;
+  margin: 5% 0 0 15%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: #2a3749;
 }
-.landingPageHeadings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.landingPageButtonContainer h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
-.landingPageHeadings div {
-  padding-bottom: 2rem;
-  
-  text-align: center;
+.lead {
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 .landingPageButton {
   color: #ffffff;
