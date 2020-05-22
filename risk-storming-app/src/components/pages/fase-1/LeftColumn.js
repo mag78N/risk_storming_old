@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Card from './Card';
 import { Droppable } from 'react-beautiful-dnd';
 import './styles/fase1.css';
-const CardList = styled.div``;
+const CardList = styled.div`
+min-height: 500px;
+`;
 
 class LeftColumn extends React.Component {
   render() {
