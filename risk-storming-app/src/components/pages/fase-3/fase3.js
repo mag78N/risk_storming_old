@@ -22,7 +22,7 @@ class FaseThreePage extends React.Component {
     super(props);
     this.state = {
       chosenCards: [],
-      colorcards: Object.values(colorcards),
+      colorcards: colorcards,
       filteredColorCards: [],
     };
   }

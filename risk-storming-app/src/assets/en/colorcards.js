@@ -1,5 +1,5 @@
-export const colorcards = {
-  'green-1': {
+export const colorcards = [ 
+  {
     id: 'green-1',
     color: 'green',
     title: 'Requirements (re)Engineering',
@@ -13,7 +13,7 @@ export const colorcards = {
     exampleThree:
       'If you jump into legacy applications, quite often there are no requirements. Your test results are desperately needed because no one knows what the app actually does and what it should do.',
   },
-  'green-2': {
+  {
     id: 'green-2',
     color: 'green',
     title: 'Intuition',
@@ -27,7 +27,7 @@ export const colorcards = {
     exampleThree:
       'Start listing all the features you can find in an unknown module or app. Then check with an expert to see which ones you missed. Would a user miss these features too?',
   },
-  'green-3': {
+  {
     id: 'green-3',
     color: 'green',
     title: 'Knowledge',
@@ -42,7 +42,7 @@ export const colorcards = {
       'Consider doing a daily "did you know this about our app?". This could bring knowledge of useful features, funny bugs, weird behaviour and powerful demonstrations to the team.',
   },
 
-  'green-4': {
+  {
     id: 'green-4',
     color: 'green',
     title: 'Data Analysis',
@@ -56,7 +56,7 @@ export const colorcards = {
     exampleThree:
       'Pay attention to how your input gets changed, saved and returned. How do you store data elements ?',
   },
-  'green-5': {
+  {
     id: 'green-5',
     color: 'green',
     title: 'Galumphing',
@@ -70,7 +70,7 @@ export const colorcards = {
     exampleThree:
       'Do some extra steps during an installation process: go into settings, uninstall another app or go into landscape mode. Then resume with the app once installed.',
   },
-  'green-6': {
+  {
     id: 'green-6',
     color: 'green',
     title: 'A/B Testing',
@@ -85,7 +85,7 @@ export const colorcards = {
       "Present two possible strategies to achieve a test mission. Discuss with the team and your stakeholders to choose the one that's within their best interest.",
   },
 
-  'green-7': {
+  {
     id: 'green-7',
     color: 'green',
     title: 'Charm',
@@ -99,7 +99,7 @@ export const colorcards = {
     exampleThree:
       "It's really easy to become a negative tester. One that complains and blocks progress. Be a positive force. Scratch some other people's backs and you'll find yours a lot less itchy.",
   },
-  'green-8': {
+  {
     id: 'green-8',
     color: 'green',
     title: 'Social Engineering',
@@ -113,7 +113,7 @@ export const colorcards = {
     exampleThree:
       "Can you get access to things you shouldn't be able to get access to by pretending you are someone else?",
   },
-  'green-9': {
+  {
     id: 'green-9',
     color: 'green',
     title: 'Diplomacy',
@@ -127,7 +127,7 @@ export const colorcards = {
     exampleThree:
       "Talking to a programmer directly to explain why you find something important can get things done a lot quicker than going through the 'right' procedures.",
   },
-  'green-10': {
+  {
     id: 'green-10',
     color: 'green',
     title: 'Equivalence Partitioning',
@@ -141,7 +141,7 @@ export const colorcards = {
     exampleThree:
       'If you can schedule an alarm on Monday; does that really mean you can do the same for the rest of the week?',
   },
-  'green-11': {
+  {
     id: 'green-11',
     color: 'green',
     title: 'Boundary Testing',
@@ -155,7 +155,7 @@ export const colorcards = {
     exampleThree:
       'In a Calendar app we could test whether scheduling a meeting from 23:30 to 00:30 is handled and visualized correctly.',
   },
-  'green-12': {
+  {
     id: 'green-12',
     color: 'green',
     title: 'Pair Testing',
@@ -169,7 +169,7 @@ export const colorcards = {
     exampleThree:
       "A product owner or user will usually test for important, high risk bugs or new features. Learn what's important to them and guide them to it.",
   },
-  'green-13': {
+  {
     id: 'green-13',
     color: 'green',
     title: 'Pairwise Testing',
@@ -184,7 +184,7 @@ export const colorcards = {
       'When calculating a payment rate dependent on age, gender,... consider listing all influencing factors in an organized list and use them as a basis for a minimal test set.',
   },
 
-  'green-14': {
+  {
     id: 'green-14',
     color: 'green',
     title: 'Touring',
@@ -198,7 +198,7 @@ export const colorcards = {
     exampleThree:
       'The Buy-one-get-one-free tour, which focuses on doing the same thing in different copies, tabs, configurations simultaneously.',
   },
-  'green-15': {
+  {
     id: 'green-15',
     color: 'green',
     title: 'Unit Testing',
@@ -212,7 +212,7 @@ export const colorcards = {
     exampleThree:
       'Unit testing at the lowest level checks pieces of code. A class, for example will have multiple unit tests that verify whether it works as the creator intended.',
   },
-  'green-16': {
+  {
     id: 'green-16',
     color: 'green',
     title: 'Integration Testing',
@@ -227,7 +227,7 @@ export const colorcards = {
       'Big government projects often draw data from other government products. The communication through XML requests can get huge and complex.',
   },
 
-  'green-17': {
+  {
     id: 'green-17',
     color: 'green',
     title: 'Business Scenarios',
@@ -241,7 +241,7 @@ export const colorcards = {
     exampleThree:
       'Agreed upon business scenarios can very well be acceptance criteria which would present the scope of the User Acceptance phase.',
   },
-  'green-18': {
+  {
     id: 'green-18',
     color: 'green',
     title: 'Personas',
@@ -255,7 +255,7 @@ export const colorcards = {
     exampleThree:
       'Personas can be real users, or arch-types, such as "The power user" or "The Kid". Can you generate random personas with Test Sphere?',
   },
-  'green-19': {
+  {
     id: 'green-19',
     color: 'green',
     title: 'Sampling',
@@ -269,7 +269,7 @@ export const colorcards = {
     exampleThree:
       "Let's test more different variations of ordering English language books, as 99% of our business is in that module.",
   },
-  'green-20': {
+  {
     id: 'green-20',
     color: 'green',
     title: 'Risk Analysis',
@@ -283,7 +283,7 @@ export const colorcards = {
     exampleThree:
       "Deadlines are often detrimental for testing. When there's a testing phase at the end, how do you prepare for this small time slot?",
   },
-  'green-21': {
+  {
     id: 'green-21',
     color: 'green',
     title: 'OWASP Top Ten',
@@ -297,7 +297,7 @@ export const colorcards = {
     exampleThree:
       'Security is too often an afterthought for projects. It usually takes only one motivated person to raise awareness and improve security.',
   },
-  'green-22': {
+  {
     id: 'green-22',
     color: 'green',
     title: 'Story Mapping',
@@ -311,7 +311,7 @@ export const colorcards = {
     exampleThree:
       'Use this technique, as a team, to test a hypothetical valuable idea in the smallest increments possible.',
   },
-  'green-23': {
+  {
     id: 'green-23',
     color: 'green',
     title: 'Mob Testing',
@@ -325,7 +325,7 @@ export const colorcards = {
     exampleThree:
       'Ideas that seem wrong or random should be encouraged, valued and tried out, not shut down.',
   },
-  'green-24': {
+{
     id: 'green-24',
     color: 'green',
     title: 'Stress Testing',
@@ -339,7 +339,7 @@ export const colorcards = {
     exampleThree:
       'If the strategy behind stress testing seems random, try using data from production to direct your efforts.',
   },
-  'green-25': {
+  {
     id: 'green-25',
     color: 'green',
     title: 'Test Driven Development',
@@ -352,7 +352,7 @@ export const colorcards = {
       'You can use examples of inputs and outputs to make TDD more relevant. Include these examples in acceptance criteria.',
     exampleThree: 'Keep them small, clean, and most importantly: valuable.',
   },
-  'orange-1': {
+  {
     id: 'orange-1',
     color: 'orange',
     title: 'Interruption',
@@ -366,7 +366,7 @@ export const colorcards = {
     exampleThree:
       'You\'re walking in the park and suddenly a pokémon jumps from behind a tree. You tap it and go into "catch the pokémon" view. Deactivate the screen, make a phone call and then resume catching it.',
   },
-  'orange-2': {
+  {
     id: 'orange-2',
     color: 'orange',
     title: 'Tediousness',
@@ -380,7 +380,7 @@ export const colorcards = {
     exampleThree:
       'Can we reduce the number of clicks the user has to do? What if we increase the actions?',
   },
-  'orange-3': {
+  {
     id: 'orange-3',
     color: 'orange',
     title: 'Fluency',
@@ -394,7 +394,7 @@ export const colorcards = {
     exampleThree:
       'Imagine "country" dropdowns where the most used country was all the way down the list of 300 options.',
   },
-  'orange-4': {
+  {
     id: 'orange-4',
     color: 'orange',
     title: 'Disaster Control',
@@ -408,7 +408,7 @@ export const colorcards = {
     exampleThree:
       'Your app produced a legal contract that is wrong. How is it detected? Who fixes it and what are the implications?',
   },
-  'orange-5': {
+  {
     id: 'orange-5',
     color: 'orange',
     title: 'Automation',
@@ -422,7 +422,7 @@ export const colorcards = {
     exampleThree:
       'Robots are good at monitoring stuff. Let them scan for trouble while you work, sleep, eat and enjoy life.',
   },
-  'orange-6': {
+  {
     id: 'orange-6',
     color: 'orange',
     title: 'Dependencies',
@@ -436,7 +436,7 @@ export const colorcards = {
     exampleThree:
       "One user's work is often dependent on the work of another. How is the work handed over? Does  communication proceed the handoff? ",
   },
-  'orange-7': {
+  {
     id: 'orange-7',
     color: 'orange',
     title: 'Log-digging',
@@ -450,7 +450,7 @@ export const colorcards = {
     exampleThree:
       'Zooming out and adding conditional formatting in excel can also make anomalies visible.',
   },
-  'orange-8': {
+  {
     id: 'orange-8',
     color: 'orange',
     title: 'Force',
@@ -464,7 +464,7 @@ export const colorcards = {
     exampleThree:
       "You don't just want to use the functionality. You want to do everything, all the time, all at once. Select everything, edit all the data and save it all at once.",
   },
-  'orange-9': {
+{
     id: 'orange-9',
     color: 'orange',
     title: 'Superficial',
@@ -478,7 +478,7 @@ export const colorcards = {
     exampleThree:
       'Do a complete spell check of the application. One typo might be a trivial thing, but a hundred are something else entirely.',
   },
-  'orange-10': {
+  {
     id: 'orange-10',
     color: 'orange',
     title: 'Minimalism',
@@ -492,7 +492,7 @@ export const colorcards = {
     exampleThree:
       'Some products require documents to be printed and then be uploaded again, with signature. Is there a possibility to keep everything electronic?',
   },
-  'orange-11': {
+  {
     id: 'orange-11',
     color: 'orange',
     title: 'Confirmation Bias',
@@ -506,7 +506,7 @@ export const colorcards = {
     exampleThree:
       'The team believes the application to be ready for production. Some automated checks turned "red" during the last build, but we discarded them as flaky.',
   },
-  'orange-12': {
+  {
     id: 'orange-12',
     color: 'orange',
     title: 'Bandwagon Effect',
@@ -520,7 +520,7 @@ export const colorcards = {
     exampleThree:
       "A test team started complaining and completely broke the morale of the team and the perception of the product. 'Moderately good' became 'bad'.",
   },
-  'orange-13': {
+  {
     id: 'orange-13',
     color: 'orange',
     title: 'Dunning-Kruger Effect',
@@ -534,7 +534,7 @@ export const colorcards = {
     exampleThree:
       'A project manager who mistakes his Excel planning capabilities with actual project managing skills.',
   },
-  'orange-14': {
+  {
     id: 'orange-14',
     color: 'orange',
     title: 'Anchoring',
@@ -548,7 +548,7 @@ export const colorcards = {
     exampleThree:
       'The previous requirement you tested had 5 bugs. This number might influence your motivation to find the same, more or fewer bugs in the next.',
   },
-  'orange-15': {
+  {
     id: 'orange-15',
     color: 'orange',
     title: 'Curse of Knowledge',
@@ -562,7 +562,7 @@ export const colorcards = {
     exampleThree:
       'As a new tester you might have a difficult time adjusting since your co-workers assume you know more than you actually do.',
   },
-  'orange-16': {
+  {
     id: 'orange-16',
     color: 'orange',
     title: 'Status Quo Bias',
@@ -576,7 +576,7 @@ export const colorcards = {
     exampleThree:
       'Users are hostile of the new product. It will change the way things are done and might make co-workers seem redundant.',
   },
-  'orange-17': {
+  {
     id: 'orange-17',
     color: 'orange',
     title: 'IKEA-effect',
@@ -590,7 +590,7 @@ export const colorcards = {
     exampleThree:
       'A programmer might be reluctant to replace his code for a new tool that might do its functions better.',
   },
-  'orange-18': {
+  {
     id: 'orange-18',
     color: 'orange',
     title: 'Observer-Expectancy Effect',
@@ -604,7 +604,7 @@ export const colorcards = {
     exampleThree:
       'A project manager might see the burndown go down really fast. However, the team decided to do the easy tasks first and is now stuck with all the heavy ones. ',
   },
-  'orange-19': {
+  {
     id: 'orange-19',
     color: 'orange',
     title: 'Ostrich Effect',
@@ -618,7 +618,7 @@ export const colorcards = {
     exampleThree:
       "At a certain point the team finds out they won't be able to make the deadline. They decide to hold up appearances and not tell their stakeholders.",
   },
-  'orange-20': {
+  {
     id: 'orange-20',
     color: 'orange',
     title: "Gambler's Fallacy",
@@ -632,7 +632,7 @@ export const colorcards = {
     exampleThree:
       'Your app is designed to target users between 25 and 35. Afterwards your 1521 users older than 65 (a miniscule of 0,25%) were very loud in their app store ratings',
   },
-  'orange-21': {
+  {
     id: 'orange-21',
     color: 'orange',
     title: 'Single Responsibility Principle',
@@ -646,7 +646,7 @@ export const colorcards = {
     exampleThree:
       'Gather the things that change for the same reasons. Separate those things that change for different reasons.',
   },
-  'orange-22': {
+  {
     id: 'orange-22',
     color: 'orange',
     title: 'Story Slicing',
@@ -659,7 +659,7 @@ export const colorcards = {
     exampleThree:
       'Consider temporarily removing the complexity of currency, timezone & language: roll out to one country at a time.',
   },
-  'orange-23': {
+  {
     id: 'orange-23',
     color: 'orange',
     title: 'Mutation Testing',
@@ -673,7 +673,7 @@ export const colorcards = {
     exampleThree:
       'Mutation testing can be costly and complex, but the results can be extremely insightful.',
   },
-  'orange-24': {
+  {
     id: 'orange-24',
     color: 'orange',
     title: 'Strangling Patterns',
@@ -688,7 +688,7 @@ export const colorcards = {
       'Once rebuilt, have both systems run in parallel. Both get the same input. Monitor and compare their output over time. If it matches, you strangled successfully!',
   },
 
-  'orange-25': {
+  {
     id: 'orange-25',
     color: 'orange',
     title: 'Long Term Load Testing',
@@ -702,7 +702,7 @@ export const colorcards = {
     exampleThree:
       "Long term but slow connections can go stale. This doesn't show up in 1 hour but only after a day or longer",
   },
-  'pink-1': {
+{
     id: 'pink-1',
     color: 'pink',
     title: 'Familiarity',
@@ -716,7 +716,7 @@ export const colorcards = {
     exampleThree:
       'When smoke testing, try to remember problematic pieces of functionality and apply extra pressure there.',
   },
-  'pink-2': {
+{
     id: 'pink-2',
     color: 'pink',
     title: 'Explainability',
@@ -730,7 +730,7 @@ export const colorcards = {
     exampleThree:
       'Does your product offer tooltips and help functions? How helpful are they really?',
   },
-  'pink-3': {
+{
     id: 'pink-3',
     color: 'pink',
     title: 'World',
@@ -744,7 +744,7 @@ export const colorcards = {
     exampleThree:
       'Doors in the world swing a certain way. I remember getting stuck behind doors in games, because the pixels pushed me in a corner while opening it. ',
   },
-  'pink-4': {
+{
     id: 'pink-4',
     color: 'pink',
     title: 'History',
@@ -758,7 +758,7 @@ export const colorcards = {
     exampleThree:
       'Knowledge of behaviour or features that have been removed because they were not on par with expectations can be used to evaluate new feature.',
   },
-  'pink-5': {
+{
     id: 'pink-5',
     color: 'pink',
     title: 'Image',
@@ -772,7 +772,7 @@ export const colorcards = {
     exampleThree:
       'If your slogan is "Just do it." your website better not have an overly convoluted process for buying new sports shoes.',
   },
-  'pink-6': {
+{
     id: 'pink-6',
     color: 'pink',
     title: 'Comparable Products',
@@ -786,7 +786,7 @@ export const colorcards = {
     exampleThree:
       'Testing a game could have you recalling other , similar features in games. What did you like about those features? What was missing?',
   },
-  'pink-7': {
+{
     id: 'pink-7',
     color: 'pink',
     title: 'Claims',
@@ -800,7 +800,7 @@ export const colorcards = {
     exampleThree:
       'Have each team member write down three sentences about what your app does. Discuss the differences and align if necessary.',
   },
-  'pink-8': {
+{
     id: 'pink-8',
     color: 'pink',
     title: 'User Desires',
@@ -814,7 +814,7 @@ export const colorcards = {
     exampleThree:
       'Pay attention to social media. People often complain in public ways that are not immediately visible to you.',
   },
-  'pink-9': {
+{
     id: 'pink-9',
     color: 'pink',
     title: 'Product',
@@ -828,7 +828,7 @@ export const colorcards = {
     exampleThree:
       "Icons and language should be consistent across the board. 'Cancel' here, 'abort' there and 'X' somewhere else gives your product a confusing interface.",
   },
-  'pink-10': {
+  {
     id: 'pink-10',
     color: 'pink',
     title: 'Purpose',
@@ -842,7 +842,7 @@ export const colorcards = {
     exampleThree:
       "If your app's upload-a-user-picture functionality can't upload very large files, but is actually a Life-monitoring-system, that bug doesn't conflict with the app's purpose.",
   },
-  'pink-11': {
+  {
     id: 'pink-11',
     color: 'pink',
     title: 'Standards and Regulations',
@@ -856,7 +856,7 @@ export const colorcards = {
     exampleThree:
       'When hiring other companies to create your product you have to make sure you are the sole owner.  Otherwise they might use your business knowledge to implement the same thing for your competitors. ',
   },
-  'pink-12': {
+  {
     id: 'pink-12',
     color: 'pink',
     title: 'Always and Never',
@@ -868,7 +868,7 @@ export const colorcards = {
     exampleTwo: 'The name field should never take more than 50 characters. ',
     exampleThree: 'The application should never have any downtime.',
   },
-  'pink-13': {
+  {
     id: 'pink-13',
     color: 'pink',
     title: 'Change the Model',
@@ -881,7 +881,7 @@ export const colorcards = {
     exampleThree:
       'What if we provided a view that shows all queried items and the available providers on a map?',
   },
-  'pink-14': {
+  {
     id: 'pink-14',
     color: 'pink',
     title: 'Reverse',
@@ -895,7 +895,7 @@ export const colorcards = {
     exampleThree:
       'How often have you ordered a product from a webshop, only to find out you need to create an account in a much later step in the process?',
   },
-  'pink-15': {
+  {
     id: 'pink-15',
     color: 'pink',
     title: 'Starve',
@@ -909,7 +909,7 @@ export const colorcards = {
     exampleThree:
       'Take a fairly old mobile phone and open lots of apps including the one you want to test. Now open another one, the phone will most likely take resources from your app. How will it take this hit?',
   },
-  'pink-16': {
+  {
     id: 'pink-16',
     color: 'pink',
     title: 'Zero, One, Many',
@@ -923,7 +923,7 @@ export const colorcards = {
     exampleThree:
       'Can you paste a whole book into a text field? What happens when you do? ',
   },
-  'pink-17': {
+  {
     id: 'pink-17',
     color: 'pink',
     title: 'Violate Data Format Rules',
@@ -937,7 +937,7 @@ export const colorcards = {
     exampleThree:
       "What's the maximum number of characters you can fit in the available fields? What happens if you put in the maximum amount everywhere? ",
   },
-  'pink-18': {
+  {
     id: 'pink-18',
     color: 'pink',
     title: 'Too Many',
@@ -950,7 +950,7 @@ export const colorcards = {
     exampleThree:
       'Can you put in immensely huge numbers in a field expecting a number? Decimals? How many?',
   },
-  'pink-19': {
+  {
     id: 'pink-19',
     color: 'pink',
     title: 'Useful Approximations',
@@ -964,7 +964,7 @@ export const colorcards = {
     exampleThree:
       'Gambling rates between two football teams will never go in favour of the worst team.',
   },
-  'pink-20': {
+  {
     id: 'pink-20',
     color: 'pink',
     title: 'Some, None, All',
@@ -979,7 +979,7 @@ export const colorcards = {
       'Overflow errors sometimes only come up around the 8,16,32,... numbers. I once spent half a day investigating why sometimes one line in an invoice disappeared. When it had exactly 32 lines, the last one got deleted.',
   },
 
-  'pink-21': {
+  {
     id: 'pink-21',
     color: 'pink',
     title: 'Dogfooding',
@@ -992,7 +992,7 @@ export const colorcards = {
     exampleThree:
       'If dogfooding doesn’t seem possible at first; isolate certain parts, or change future development to allow for it. ',
   },
-  'pink-22': {
+  {
     id: 'pink-22',
     color: 'pink',
     title: 'Feature Toggles',
@@ -1006,7 +1006,7 @@ export const colorcards = {
     exampleThree:
       'Feature toggles are powerful, but adding too many can create several extra layers of complexity.Test them!',
   },
-  'pink-23': {
+  {
     id: 'pink-23',
     color: 'pink',
     title: 'Chaos Engineering',
@@ -1021,7 +1021,7 @@ export const colorcards = {
       'Build in resiliency by having contingency plans when outages happen.',
   },
 
-  'pink-24': {
+  {
     id: 'pink-24',
     color: 'pink',
     title: 'Three Amigos',
@@ -1035,7 +1035,7 @@ export const colorcards = {
     exampleThree:
       'A bug triage meeting with all three roles present can help to : 1) set priority, 2) decide what a fix could be and 3) decide how to test it.',
   },
-  'pink-25': {
+  {
     id: 'pink-25',
     color: 'pink',
     title: 'Peer Reviews',
@@ -1048,8 +1048,7 @@ export const colorcards = {
       'Our own errors are often so obvious to others. Four eyes simply see more than two.',
     exampleThree:
       'Peer review is not only possible on source code, but also on test code, documentation and User Stories. ',
-  },
-  'red-1': {
+  },{
     id: 'red-1',
     color: 'red',
     title: 'Production Test Tenant',
@@ -1062,8 +1061,7 @@ export const colorcards = {
       'Run your scripts & automations on productions for your test tenant.',
     exampleThree:
       'The team will get close-to-real feedback, but with increased risk of something going wrong in production.',
-  },
-  'red-2': {
+  },{
     id: 'red-2',
     color: 'red',
     title: 'Logging',
@@ -1076,8 +1074,7 @@ export const colorcards = {
       "Some services return a 404 as part of the functionality. This doesn't have to mean something went wrong.",
     exampleThree:
       "Try to make logging accessible with visualisation and specialised tools. The days where log-digging exclusively meant reading through 'less service.log' are over.",
-  },
-  'red-3': {
+  },{
     id: 'red-3',
     color: 'red',
     title: 'Distributed Tracing',
@@ -1090,8 +1087,7 @@ export const colorcards = {
       'This is especially handy in stressful situations like being on-call or debugging a hard defect.',
     exampleThree:
       "It can also be useful for testers: Which way does a request take through the system and why? Is there a risk? Can your request take a 'shorter route'?",
-  },
-  'red-4': {
+  },{
     id: 'red-4',
     color: 'red',
     title: 'Alerting',
@@ -1104,8 +1100,7 @@ export const colorcards = {
       "You can - and should - alert based on business metrics. You want to know if your 'new order' calls are close to zero for an extended time to investigate why.",
     exampleThree:
       "Don't be too 'trigger-happy'. If everything is important, nothing is. Define only your most crucial alerts.",
-  },
-  'red-5': {
+  },{
     id: 'red-5',
     color: 'red',
     title: 'Anomaly Detection',
@@ -1118,8 +1113,7 @@ export const colorcards = {
       'There are powerful tools out there to get you started. If you are hosted on a public Cloud, the vendor they might have services available.',
     exampleThree:
       'You find out that one service has been restarting a little bit too often. Why? Also, why does that not affect your users?',
-  },
-  'red-6': {
+  },{
     id: 'red-6',
     color: 'red',
     title: 'Business Metrics',
@@ -1132,8 +1126,7 @@ export const colorcards = {
       "Define thresholds for these critical use cases, e.g. '95% of our customers can perform action: check out'.",
     exampleThree:
       'Identify how the use cases run through the system and how you can include these actions and the defined thresholds in the monitoring stack.',
-  },
-  'red-7': {
+  },{
     id: 'red-7',
     color: 'red',
     title: 'Black Box Monitoring',
@@ -1146,8 +1139,7 @@ export const colorcards = {
       'In general, Black Box Monitoring is good at telling you what is wrong right now in your system and a good candidate for on-call-alerts.',
     exampleThree:
       "It helps you to identify incorrect behaviour, but it likely won't help to find the root cause.",
-  },
-  'red-8': {
+  },{
     id: 'red-8',
     color: 'red',
     title: 'White Box Monitoring',
@@ -1160,8 +1152,7 @@ export const colorcards = {
       "It is very well suited to find underlying problems which have not reached the customer or 'boiling points' to a real outage like unusual service restarts.",
     exampleThree:
       "Google makes 'heavy use of white box monitoring with modest but critical uses of black box monitoring' - Site Reliability Engineering, Beyer, Jones, Petoff & Murphy",
-  },
-  'red-9': {
+  },{
     id: 'red-9',
     color: 'red',
     title: 'Event Logging',
@@ -1175,7 +1166,7 @@ export const colorcards = {
     exampleThree:
       "In some highly restricted industries, Event Storing might be necessary as an audit log to show you can track the 'what and when' of your software changes.",
   },
-  'red-10': {
+{
     id: 'red-10',
     color: 'red',
     title: 'Real User Monitoring',
@@ -1189,7 +1180,7 @@ export const colorcards = {
     exampleThree:
       'A powerful technique, but it only helps you in production. Before that, the data in those environments is too limited.',
   },
-  'red-11': {
+{
     id: 'red-11',
     color: 'red',
     title: 'Tap Compare',
@@ -1203,7 +1194,7 @@ export const colorcards = {
     exampleThree:
       "Combined with other techniques - e.g. Dark Launches - you can automate parts of a Tap Compare and don't need to analyse it manually. ",
   },
-  'red-12': {
+{
     id: 'red-12',
     color: 'red',
     title: 'Build it, run it',
@@ -1217,7 +1208,7 @@ export const colorcards = {
     exampleThree:
       'After an on-call experience, perform a Blameless Postmortem. Do. not. skip. the. Postmortem!',
   },
-  'red-13': {
+{
     id: 'red-13',
     color: 'red',
     title: 'Dark Launch',
@@ -1231,7 +1222,7 @@ export const colorcards = {
     exampleThree:
       'If time zones or geographical locations are difficult, reduce complexity by gradually releasing to locations.',
   },
-  'red-14': {
+{
     id: 'red-14',
     color: 'red',
     title: 'Zero Downtime Approach',
@@ -1245,7 +1236,7 @@ export const colorcards = {
     exampleThree:
       'Challenge this requirement approach: Do you want to spend money on Mean Time Between Failures, or Mean Time To Repair?',
   },
-  'red-15': {
+{
     id: 'red-15',
     color: 'red',
     title: 'Service Level Indicators',
@@ -1259,7 +1250,7 @@ export const colorcards = {
     exampleThree:
       'Try to make the SLOs as automated and tool-assisted as possible.',
   },
-  'darkblue-1': {
+  {
     id: 'darkblue-1',
     color: 'dark-blue',
     title: 'Blameless Postmortem',
@@ -1273,7 +1264,7 @@ export const colorcards = {
     exampleThree:
       'The focus of a Blameless Postmortem is all about learning & shaping a common understanding of what went wrong and how to make sure it won’t happen again.',
   },
-  'darkblue-2': {
+  {
     id: 'darkblue-2',
     color: 'dark-blue',
     title: 'Load Balancing',
@@ -1287,7 +1278,7 @@ export const colorcards = {
     exampleThree:
       'Testing the performance increase is mostly done by monitoring before and after activating the load balancer.',
   },
-  'darkblue-3': {
+  {
     id: 'darkblue-3',
     color: 'dark-blue',
     title: 'Anti-Corruption Layer',
@@ -1301,7 +1292,7 @@ export const colorcards = {
     exampleThree:
       'For evolvability, an ACL can enable one system to constantly grow and change without impacting the model of a depending service.',
   },
-  'darkblue-4': {
+  {
     id: 'darkblue-4',
     color: 'dark-blue',
     title: 'Circuit Breaker',
@@ -1315,7 +1306,7 @@ export const colorcards = {
     exampleThree:
       'Circuit breaker implementations have a small negative impact on performance.',
   },
-  'darkblue-5': {
+  {
     id: 'darkblue-5',
     color: 'dark-blue',
     title: 'Bulkhead',
@@ -1329,7 +1320,7 @@ export const colorcards = {
     exampleThree:
       'This pattern can help critical consumers by protecting their resources from load and errors triggered by standard users or consumers.',
   },
-  'darkblue-6': {
+  {
     id: 'darkblue-6',
     color: 'dark-blue',
     title: 'Caching',
@@ -1343,7 +1334,7 @@ export const colorcards = {
     exampleThree:
       'When caching for every user, you reduce the load on the backend multiplied by your number of users. The benefits can be enormous, for the user, and could be expensive for the business. Wisely choose what to cache.',
   },
-  'darkblue-7': {
+  {
     id: 'darkblue-7',
     color: 'dark-blue',
     title: 'Distributed Systems',
@@ -1357,7 +1348,7 @@ export const colorcards = {
     exampleThree:
       'Domain Driven Design has a wealth of ideas on this. Build systems that support user groups or consumers who talk the same language, and do the same things.',
   },
-  'darkblue-8': {
+  {
     id: 'darkblue-8',
     color: 'dark-blue',
     title: 'Single Sign On',
@@ -1371,7 +1362,7 @@ export const colorcards = {
     exampleThree:
       'In some countries, it’s possible to buy a house online, just by proving your identity through a government application.',
   },
-  'darkblue-9': {
+  {
     id: 'darkblue-9',
     color: 'dark-blue',
     title: 'Eventual Consistency',
@@ -1385,7 +1376,7 @@ export const colorcards = {
     exampleThree:
       "Your bank balance will most likely not use 'eventual consistency' as this needs more strict consistency. Apps storing weather data might.",
   },
-  'darkblue-10': {
+  {
     id: 'darkblue-10',
     color: 'dark-blue',
     title: 'API Gateway',
@@ -1399,7 +1390,7 @@ export const colorcards = {
     exampleThree:
       "Pressing 'buy' potentially fires one API call that is then split into: 'get address' from one system, 'get articles' from another, 'shipping options' from yet another.",
   },
-  'darkblue-11': {
+  {
     id: 'darkblue-11',
     color: 'dark-blue',
     title: 'Container Security Scanning',
@@ -1413,7 +1404,7 @@ export const colorcards = {
     exampleThree:
       'Bring Container Security Scanning to your pipeline to mitigate the risk of a compromised container shipping off to production.',
   },
-  'darkblue-12': {
+  {
     id: 'darkblue-12',
     color: 'dark-blue',
     title: 'Static Code Analysis',
@@ -1427,7 +1418,7 @@ export const colorcards = {
     exampleThree:
       "It can provide information on lines of code covered by tests, dead code, and code smells. It doesn’t just check your code's syntax, but also identifies potential security flaws.",
   },
-  'darkblue-13': {
+  {
     id: 'darkblue-13',
     color: 'dark-blue',
     title: 'Infrastructure as Code',
@@ -1441,7 +1432,7 @@ export const colorcards = {
     exampleThree:
       'Having specifications as code enables it to be part of source control, giving you more control and visibility.',
   },
-  'darkblue-14': {
+  {
     id: 'darkblue-14',
     color: 'dark-blue',
     title: 'Configurations as Code',
@@ -1455,7 +1446,7 @@ export const colorcards = {
     exampleThree:
       'Flip a feature toggle enabling or disabling a new functionality with code.',
   },
-  'darkblue-15': {
+  {
     id: 'darkblue-15',
     color: 'dark-blue',
     title: 'Separation of Concerns',
@@ -1468,7 +1459,7 @@ export const colorcards = {
     exampleThree:
       'Keep an overview by ordering the partitions into a hierarchy. This will help with debugging.',
   },
-  'darkblue-16': {
+  {
     id: 'darkblue-16',
     color: 'dark-blue',
     title: 'Command Query Responsibility Segregation',
@@ -1482,7 +1473,7 @@ export const colorcards = {
     exampleThree:
       'CQRS naturally fits well with a task-based UI, Event Sourcing, and Domain Driven Design systems.',
   },
-  'darkblue-17': {
+  {
     id: 'darkblue-17',
     color: 'dark-blue',
     title: 'Continuous Integration',
@@ -1496,7 +1487,7 @@ export const colorcards = {
     exampleThree:
       'Working on the same codebase as a team in small iterations increases the shared responsibility of a working product.',
   },
-  'darkblue-18': {
+  {
     id: 'darkblue-18',
     color: 'dark-blue',
     title: 'Continuous Delivery',
@@ -1510,7 +1501,7 @@ export const colorcards = {
     exampleThree:
       'Imagine giving the stakeholders the power to release at any given moment. How does that shift your process & mindset?',
   },
-  'darkblue-19': {
+  {
     id: 'darkblue-19',
     color: 'dark-blue',
     title: 'Consumer Driven Contract Testing (CDCT)',
@@ -1523,7 +1514,7 @@ export const colorcards = {
     exampleThree:
       '"The call came from within the house": since microservice systems have a lot of APIs within themselves, CDCTs can help you track defects to the changed microservice.',
   },
-  'darkblue-20': {
+  {
     id: 'darkblue-20',
     color: 'dark-blue',
     title: 'Pre Mortem',
@@ -1537,4 +1528,4 @@ export const colorcards = {
     exampleThree:
       'This format focuses on what’s important & what might have been overseen or neglected.',
   },
-};
+];
