@@ -6,13 +6,11 @@ const Footer = (props) => {
   return (
     <div className='btnContainer'>
       <Link to={props.prev}>
-        <button className='goToPrevFaseBtn'>
-          <i className='fa fa-chevron-left' aria-hidden='true' />
+        <button className='buttonSecondary goToPrevFaseBtn'>
           {props.prevFase}</button>
       </Link>
       <Link to={props.next}>
-        <button className='goToNextFaseBtn'>{props.nextFase}
-          <i className='fa fa-chevron-right' aria-hidden='true' />
+        <button className='buttonSecondary goToNextFaseBtn'>{props.nextFase}
         </button>
       </Link>
     </div>

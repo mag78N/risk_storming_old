@@ -30,8 +30,12 @@ textarea,
   resize: none;
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
-  border: 2px solid #000;
-  background-color: #fff;
+  border: 1px solid rgba(98,116,138,0.08);
+  background-color: rgba(98,116,138,0.08);
+  border-radius: 5px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #62748a;
 }
 .riskDetailsForm {
   text-align: center;
@@ -39,15 +43,19 @@ textarea,
 .riskDetailsForm textarea {
   margin-right: 1rem;
 }
-.buttonContainer {
-  min-width: 50px;
-}
 .addButton {
   display: inline-block;
   margin: 2rem 0 1.5rem;
 }
 .addButton i {
   padding-right: 0.5rem;
+}
+.removeButton {
+  background-color: #ffba1f;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #ffba1f;
+  padding: 0px 5px;
 }
 
 /* Card carousel */
@@ -89,13 +97,5 @@ ol.carousel-indicators {
 
 /* Export to PDF button */
 .fase2LeftPane {
-  padding-top: 40px; /* height of exportButton */
-}
-.exportButton {
-  position: absolute;
-  background-color: #fff;
-  top: calc(60px + 0.75rem); /* height of topNavbar */
-  left: 25px;
-  z-index: 2;
-  text-decoration: none;
+  padding-top: 50px; /* height of exportButton */
 }

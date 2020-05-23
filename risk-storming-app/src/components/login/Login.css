@@ -44,23 +44,6 @@
   padding: 1rem;
   height: 3rem;
 }
-.loginButton {
-  color: #fff;
-  border-width: 0px;
-  border-radius: 100px;
-  font-size: 1rem;
-  /* font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif; */
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #00bfbc;
-  border: 1px solid #00bfbc;
-  padding: 15px 50px;
-}
-.loginButton:hover {
-  color: #fff;
-  background-color: #008990;
-  border: 1px solid #008990;
-}
 .loginContainer a {
   align-self: flex-end;
 }

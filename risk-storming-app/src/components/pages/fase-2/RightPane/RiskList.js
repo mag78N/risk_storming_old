@@ -28,7 +28,7 @@ const RiskList = (props) => {
             ''
           ) : (
             <button
-              className='btn removeButton'
+              className='removeButton'
               onClick={() => props.deleteRow(props.card.id, idx)}
             >
               <i className='fa fa-minus' aria-hidden='true' />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TopNavbar from '../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
-import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
+import { FormGroup, FormControl, FormLabel } from 'react-bootstrap';
 import './Login.css';
 import '../pages/main-page/index.css';
 import bg from '../../assets/images/10.png';
@@ -53,7 +53,7 @@ export default function Login() {
                 <button
                   disabled={!validateForm()}
                   type='submit'
-                  className='btn btn-primary loginButton'
+                  className='buttonPrimary loginButton'
                   onClick={saveToLocalStorage()}
                 >
                   Login

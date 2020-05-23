@@ -17,7 +17,7 @@ class FaseThreePdf extends Component {
           <PDFDownloadLink
             document={<PdfDocument chosenCards={chosenCards} />}
             fileName='fase3.pdf'
-            className='btn downloadButton'
+            className='buttonSecondary downloadButton'
           >
             {({ blob, url, loading, error }) =>
               loading ? 'Loading document...' : 'Download Pdf'
