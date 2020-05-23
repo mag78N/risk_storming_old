@@ -106,7 +106,7 @@ class FaseTwoPage extends React.PureComponent {
       <>
         <TopNavbar faseNum='Phase 2' />
         <Link
-          className='btn exportButton'
+          className='buttonSecondary exportButton'
           to={{
             pathname: '/fase2Pdf',
             state: {

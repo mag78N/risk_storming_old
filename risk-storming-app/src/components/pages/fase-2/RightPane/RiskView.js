@@ -9,7 +9,7 @@ const RiskView = (props) => {
         <button
           onClick={() => props.addNewRow(props.card.id)}
           type='button'
-          className='btn btn-primary addButton'>
+          className='buttonSecondary addButton'>
           <i className='fa fa-plus' aria-hidden='true' />
           Add risk
         </button>

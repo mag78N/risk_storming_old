@@ -1,7 +1,6 @@
 import React from 'react';
 import './index.css';
 import { useHistory } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/5.png';
@@ -31,24 +30,21 @@ const MainPage = () => {
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='mainPageButtonContainer'>
             <Link to='/fase1'>
-              <Button variant='outline-dark' className='mainPageButton'>
+              <button className='buttonPrimary'>
                 Continue Session
-              </Button>
+              </button>
             </Link>
-            <Button
-              variant='outline-dark'
-              className='clearDataButton mainPageButton'
+            <button
+              className='buttonPrimary clearDataButton'
               onClick={clearLocalStorage}
             >
               Start New Session
-            </Button>
-            <div>
-              <Link to='/CardsViewer' target={'_blank'}>
-                <Button variant='outline-dark' className='mainPageButton'>
-                  Card Deck Management
-                </Button>
-              </Link>
-            </div>
+            </button>
+            <Link to='/CardsViewer' target={'_blank'}>
+              <button className='buttonPrimary'>
+                Card Deck Management
+              </button>
+            </Link>
           </div>
         </div>
       </div>
