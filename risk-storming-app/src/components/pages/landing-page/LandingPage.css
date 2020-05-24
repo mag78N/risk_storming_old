@@ -13,7 +13,7 @@
   height: calc(100vh - 54px); /* top navbar height */
   display: flex;
   flex-direction: column;
-  background-size: 80%;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: right bottom;
 }

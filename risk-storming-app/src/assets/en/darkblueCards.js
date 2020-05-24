@@ -1,7 +1,7 @@
 export const darkbluecards = {
   'darkblue-1': {
     id: 'darkblue-1',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Blameless Postmortem',
     subTitle: 'Dealing With Change',
     description:
@@ -15,7 +15,7 @@ export const darkbluecards = {
   },
   'darkblue-2': {
     id: 'darkblue-2',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Load Balancing',
     subTitle: 'Dealing With Change',
     description:
@@ -29,7 +29,7 @@ export const darkbluecards = {
   },
   'darkblue-3': {
     id: 'darkblue-3',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Anti-Corruption Layer',
     subTitle: 'Dealing With Change',
     description:
@@ -43,7 +43,7 @@ export const darkbluecards = {
   },
   'darkblue-4': {
     id: 'darkblue-4',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Circuit Breaker',
     subTitle: 'Dealing With Change',
     description:
@@ -57,7 +57,7 @@ export const darkbluecards = {
   },
   'darkblue-5': {
     id: 'darkblue-5',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Bulkhead',
     subTitle: 'Dealing With Change',
     description:
@@ -71,7 +71,7 @@ export const darkbluecards = {
   },
   'darkblue-6': {
     id: 'darkblue-6',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Caching',
     subTitle: 'Dealing With Change',
     description:
@@ -85,7 +85,7 @@ export const darkbluecards = {
   },
   'darkblue-7': {
     id: 'darkblue-7',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Distributed Systems',
     subTitle: 'Dealing With Change',
     description:
@@ -99,7 +99,7 @@ export const darkbluecards = {
   },
   'darkblue-8': {
     id: 'darkblue-8',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Single Sign On',
     subTitle: 'Dealing With Change',
     description:
@@ -113,7 +113,7 @@ export const darkbluecards = {
   },
   'darkblue-9': {
     id: 'darkblue-9',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Eventual Consistency',
     subTitle: 'Dealing With Change',
     description:
@@ -127,7 +127,7 @@ export const darkbluecards = {
   },
   'darkblue-10': {
     id: 'darkblue-10',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'API Gateway',
     subTitle: 'Dealing With Change',
     description:
@@ -141,7 +141,7 @@ export const darkbluecards = {
   },
   'darkblue-11': {
     id: 'darkblue-11',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Container Security Scanning',
     subTitle: 'Dealing With Change',
     description:
@@ -155,7 +155,7 @@ export const darkbluecards = {
   },
   'darkblue-12': {
     id: 'darkblue-12',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Static Code Analysis',
     subTitle: 'Dealing With Change',
     description:
@@ -169,7 +169,7 @@ export const darkbluecards = {
   },
   'darkblue-13': {
     id: 'darkblue-13',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Infrastructure as Code',
     subTitle: 'Dealing With Change',
     description:
@@ -183,7 +183,7 @@ export const darkbluecards = {
   },
   'darkblue-14': {
     id: 'darkblue-14',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Configurations as Code',
     subTitle: 'Dealing With Change',
     description:
@@ -197,7 +197,7 @@ export const darkbluecards = {
   },
   'darkblue-15': {
     id: 'darkblue-15',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Separation of Concerns',
     subTitle: 'Dealing With Change',
     description:
@@ -210,7 +210,7 @@ export const darkbluecards = {
   },
   'darkblue-16': {
     id: 'darkblue-16',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Command Query Responsibility Segregation',
     subTitle: 'Dealing With Change',
     description:
@@ -224,7 +224,7 @@ export const darkbluecards = {
   },
   'darkblue-17': {
     id: 'darkblue-17',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Continuous Integration',
     subTitle: 'Dealing With Change',
     description:
@@ -238,7 +238,7 @@ export const darkbluecards = {
   },
   'darkblue-18': {
     id: 'darkblue-18',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Continuous Delivery',
     subTitle: 'Dealing With Change',
     description:
@@ -252,7 +252,7 @@ export const darkbluecards = {
   },
   'darkblue-19': {
     id: 'darkblue-19',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Consumer Driven Contract Testing (CDCT)',
     subTitle: 'Dealing With Change',
     description:
@@ -265,7 +265,7 @@ export const darkbluecards = {
   },
   'darkblue-20': {
     id: 'darkblue-20',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Pre Mortem',
     subTitle: 'Dealing With Change',
     description:

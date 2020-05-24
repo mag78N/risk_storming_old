@@ -1,5 +1,5 @@
 .loginPage {
-  background-size: 80%;
+  background-size: 90%;
 }
 .loginContainer {
   background-color: #fff;
@@ -11,7 +11,7 @@
 }
 .loginContainer h3 {
   /* font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif; */
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 2px;

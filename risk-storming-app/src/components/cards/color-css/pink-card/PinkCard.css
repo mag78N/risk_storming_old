@@ -1,10 +1,10 @@
 
-.pink {
+.deeppink {
   background-color: rgb(240, 38, 156);
   border: 2px solid rgb(240, 38, 156);
 }
-.pinkHeader,
-.pink .cardVote i,
-.pink .cardVote span {
+.deeppinkHeader,
+.deeppink .cardVote i,
+.deeppink .cardVote span {
   color: rgb(240, 38, 156);
 }
