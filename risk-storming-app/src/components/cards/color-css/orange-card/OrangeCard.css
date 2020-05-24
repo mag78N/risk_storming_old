@@ -1,11 +1,11 @@
 
 
-.orange {
+.darkorange {
   background-color: rgb(243, 115, 11);
   border: 2px solid rgb(243, 115, 11);
 }
-.orangeHeader,
-.orange .cardVote i,
-.orange .cardVote span {
+.darkorangeHeader,
+.darkorange .cardVote i,
+.darkorange .cardVote span {
   color: rgb(243, 115, 11);
 }

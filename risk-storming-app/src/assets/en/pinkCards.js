@@ -1,7 +1,7 @@
 export const pinkcards = {
   'pink-1': {
     id: 'pink-1',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Familiarity',
     subTitle: 'Heuristics',
     description:
@@ -15,7 +15,7 @@ export const pinkcards = {
   },
   'pink-2': {
     id: 'pink-2',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Explainability',
     subTitle: 'Heuristics',
     description:
@@ -29,7 +29,7 @@ export const pinkcards = {
   },
   'pink-3': {
     id: 'pink-3',
-    color: 'pink',
+    color: 'deeppink',
     title: 'World',
     subTitle: 'Heuristics',
     description:
@@ -43,7 +43,7 @@ export const pinkcards = {
   },
   'pink-4': {
     id: 'pink-4',
-    color: 'pink',
+    color: 'deeppink',
     title: 'History',
     subTitle: 'Heuristics',
     description:
@@ -57,7 +57,7 @@ export const pinkcards = {
   },
   'pink-5': {
     id: 'pink-5',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Image',
     subTitle: 'Heuristics',
     description:
@@ -71,7 +71,7 @@ export const pinkcards = {
   },
   'pink-6': {
     id: 'pink-6',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Comparable Products',
     subTitle: 'Heuristics',
     description:
@@ -85,7 +85,7 @@ export const pinkcards = {
   },
   'pink-7': {
     id: 'pink-7',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Claims',
     subTitle: 'Heuristics',
     description:
@@ -99,7 +99,7 @@ export const pinkcards = {
   },
   'pink-8': {
     id: 'pink-8',
-    color: 'pink',
+    color: 'deeppink',
     title: 'User Desires',
     subTitle: 'Heuristics',
     description:
@@ -113,7 +113,7 @@ export const pinkcards = {
   },
   'pink-9': {
     id: 'pink-9',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Product',
     subTitle: 'Heuristics',
     description:
@@ -127,7 +127,7 @@ export const pinkcards = {
   },
   'pink-10': {
     id: 'pink-10',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Purpose',
     subTitle: 'Heuristics',
     description:
@@ -141,7 +141,7 @@ export const pinkcards = {
   },
   'pink-11': {
     id: 'pink-11',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Standards and Regulations',
     subTitle: 'Heuristics',
     description:
@@ -155,7 +155,7 @@ export const pinkcards = {
   },
   'pink-12': {
     id: 'pink-12',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Always and Never',
     subTitle: 'Heuristics',
     description:
@@ -167,7 +167,7 @@ export const pinkcards = {
   },
   'pink-13': {
     id: 'pink-13',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Change the Model',
     subTitle: 'Heuristics',
     description:
@@ -180,7 +180,7 @@ export const pinkcards = {
   },
   'pink-14': {
     id: 'pink-14',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Reverse',
     subTitle: 'Heuristics',
     description:
@@ -194,7 +194,7 @@ export const pinkcards = {
   },
   'pink-15': {
     id: 'pink-15',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Starve',
     subTitle: 'Heuristics',
     description:
@@ -208,7 +208,7 @@ export const pinkcards = {
   },
   'pink-16': {
     id: 'pink-16',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Zero, One, Many',
     subTitle: 'Heuristics',
     description:
@@ -222,7 +222,7 @@ export const pinkcards = {
   },
   'pink-17': {
     id: 'pink-17',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Violate Data Format Rules',
     subTitle: 'Heuristics',
     description:
@@ -236,7 +236,7 @@ export const pinkcards = {
   },
   'pink-18': {
     id: 'pink-18',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Too Many',
     subTitle: 'Heuristics',
     description:
@@ -249,7 +249,7 @@ export const pinkcards = {
   },
   'pink-19': {
     id: 'pink-19',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Useful Approximations',
     subTitle: 'Heuristics',
     description:
@@ -263,7 +263,7 @@ export const pinkcards = {
   },
   'pink-20': {
     id: 'pink-20',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Some, None, All',
     subTitle: 'Heuristics',
     description:
@@ -278,7 +278,7 @@ export const pinkcards = {
 
   'pink-21': {
     id: 'pink-21',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Dogfooding',
     subTitle: 'Heuristics',
     description:
@@ -291,7 +291,7 @@ export const pinkcards = {
   },
   'pink-22': {
     id: 'pink-22',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Feature Toggles',
     subTitle: 'Heuristics',
     description:
@@ -305,7 +305,7 @@ export const pinkcards = {
   },
   'pink-23': {
     id: 'pink-23',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Chaos Engineering',
     subTitle: 'Heuristics',
     description:
@@ -320,7 +320,7 @@ export const pinkcards = {
 
   'pink-24': {
     id: 'pink-24',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Three Amigos',
     subTitle: 'Heuristics',
     description:
@@ -334,7 +334,7 @@ export const pinkcards = {
   },
   'pink-25': {
     id: 'pink-25',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Peer Reviews',
     subTitle: 'Heuristics',
     description:

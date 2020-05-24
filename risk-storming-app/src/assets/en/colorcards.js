@@ -354,7 +354,7 @@ export const colorcards = [
   },
   {
     id: 'orange-1',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Interruption',
     subTitle: 'Patterns',
     description:
@@ -368,7 +368,7 @@ export const colorcards = [
   },
   {
     id: 'orange-2',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Tediousness',
     subTitle: 'Patterns',
     description:
@@ -382,7 +382,7 @@ export const colorcards = [
   },
   {
     id: 'orange-3',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Fluency',
     subTitle: 'Patterns',
     description:
@@ -396,7 +396,7 @@ export const colorcards = [
   },
   {
     id: 'orange-4',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Disaster Control',
     subTitle: 'Patterns',
     description:
@@ -410,7 +410,7 @@ export const colorcards = [
   },
   {
     id: 'orange-5',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Automation',
     subTitle: 'Patterns',
     description:
@@ -424,7 +424,7 @@ export const colorcards = [
   },
   {
     id: 'orange-6',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Dependencies',
     subTitle: 'Patterns',
     description:
@@ -438,7 +438,7 @@ export const colorcards = [
   },
   {
     id: 'orange-7',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Log-digging',
     subTitle: 'Patterns',
     description:
@@ -452,7 +452,7 @@ export const colorcards = [
   },
   {
     id: 'orange-8',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Force',
     subTitle: 'Patterns',
     description:
@@ -466,7 +466,7 @@ export const colorcards = [
   },
 {
     id: 'orange-9',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Superficial',
     subTitle: 'Patterns',
     description:
@@ -480,7 +480,7 @@ export const colorcards = [
   },
   {
     id: 'orange-10',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Minimalism',
     subTitle: 'Patterns',
     description:
@@ -494,7 +494,7 @@ export const colorcards = [
   },
   {
     id: 'orange-11',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Confirmation Bias',
     subTitle: 'Patterns',
     description:
@@ -508,7 +508,7 @@ export const colorcards = [
   },
   {
     id: 'orange-12',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Bandwagon Effect',
     subTitle: 'Patterns',
     description:
@@ -522,7 +522,7 @@ export const colorcards = [
   },
   {
     id: 'orange-13',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Dunning-Kruger Effect',
     subTitle: 'Patterns',
     description:
@@ -536,7 +536,7 @@ export const colorcards = [
   },
   {
     id: 'orange-14',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Anchoring',
     subTitle: 'Patterns',
     description:
@@ -550,7 +550,7 @@ export const colorcards = [
   },
   {
     id: 'orange-15',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Curse of Knowledge',
     subTitle: 'Patterns',
     description:
@@ -564,7 +564,7 @@ export const colorcards = [
   },
   {
     id: 'orange-16',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Status Quo Bias',
     subTitle: 'Patterns',
     description:
@@ -578,7 +578,7 @@ export const colorcards = [
   },
   {
     id: 'orange-17',
-    color: 'orange',
+    color: 'darkorange',
     title: 'IKEA-effect',
     subTitle: 'Patterns',
     description:
@@ -592,7 +592,7 @@ export const colorcards = [
   },
   {
     id: 'orange-18',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Observer-Expectancy Effect',
     subTitle: 'Patterns',
     description:
@@ -606,7 +606,7 @@ export const colorcards = [
   },
   {
     id: 'orange-19',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Ostrich Effect',
     subTitle: 'Patterns',
     description:
@@ -620,7 +620,7 @@ export const colorcards = [
   },
   {
     id: 'orange-20',
-    color: 'orange',
+    color: 'darkorange',
     title: "Gambler's Fallacy",
     subTitle: 'Patterns',
     description:
@@ -634,7 +634,7 @@ export const colorcards = [
   },
   {
     id: 'orange-21',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Single Responsibility Principle',
     subTitle: 'Patterns',
     description:
@@ -648,7 +648,7 @@ export const colorcards = [
   },
   {
     id: 'orange-22',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Story Slicing',
     subTitle: 'Patterns',
     description:
@@ -661,7 +661,7 @@ export const colorcards = [
   },
   {
     id: 'orange-23',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Mutation Testing',
     subTitle: 'Patterns',
     description:
@@ -675,7 +675,7 @@ export const colorcards = [
   },
   {
     id: 'orange-24',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Strangling Patterns',
     subTitle: 'Patterns',
     description:
@@ -690,7 +690,7 @@ export const colorcards = [
 
   {
     id: 'orange-25',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Long Term Load Testing',
     subTitle: 'Patterns',
     description:
@@ -704,7 +704,7 @@ export const colorcards = [
   },
 {
     id: 'pink-1',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Familiarity',
     subTitle: 'Heuristics',
     description:
@@ -718,7 +718,7 @@ export const colorcards = [
   },
 {
     id: 'pink-2',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Explainability',
     subTitle: 'Heuristics',
     description:
@@ -732,7 +732,7 @@ export const colorcards = [
   },
 {
     id: 'pink-3',
-    color: 'pink',
+    color: 'deeppink',
     title: 'World',
     subTitle: 'Heuristics',
     description:
@@ -746,7 +746,7 @@ export const colorcards = [
   },
 {
     id: 'pink-4',
-    color: 'pink',
+    color: 'deeppink',
     title: 'History',
     subTitle: 'Heuristics',
     description:
@@ -760,7 +760,7 @@ export const colorcards = [
   },
 {
     id: 'pink-5',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Image',
     subTitle: 'Heuristics',
     description:
@@ -774,7 +774,7 @@ export const colorcards = [
   },
 {
     id: 'pink-6',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Comparable Products',
     subTitle: 'Heuristics',
     description:
@@ -788,7 +788,7 @@ export const colorcards = [
   },
 {
     id: 'pink-7',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Claims',
     subTitle: 'Heuristics',
     description:
@@ -802,7 +802,7 @@ export const colorcards = [
   },
 {
     id: 'pink-8',
-    color: 'pink',
+    color: 'deeppink',
     title: 'User Desires',
     subTitle: 'Heuristics',
     description:
@@ -816,7 +816,7 @@ export const colorcards = [
   },
 {
     id: 'pink-9',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Product',
     subTitle: 'Heuristics',
     description:
@@ -830,7 +830,7 @@ export const colorcards = [
   },
   {
     id: 'pink-10',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Purpose',
     subTitle: 'Heuristics',
     description:
@@ -844,7 +844,7 @@ export const colorcards = [
   },
   {
     id: 'pink-11',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Standards and Regulations',
     subTitle: 'Heuristics',
     description:
@@ -858,7 +858,7 @@ export const colorcards = [
   },
   {
     id: 'pink-12',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Always and Never',
     subTitle: 'Heuristics',
     description:
@@ -870,7 +870,7 @@ export const colorcards = [
   },
   {
     id: 'pink-13',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Change the Model',
     subTitle: 'Heuristics',
     description:
@@ -883,7 +883,7 @@ export const colorcards = [
   },
   {
     id: 'pink-14',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Reverse',
     subTitle: 'Heuristics',
     description:
@@ -897,7 +897,7 @@ export const colorcards = [
   },
   {
     id: 'pink-15',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Starve',
     subTitle: 'Heuristics',
     description:
@@ -911,7 +911,7 @@ export const colorcards = [
   },
   {
     id: 'pink-16',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Zero, One, Many',
     subTitle: 'Heuristics',
     description:
@@ -925,7 +925,7 @@ export const colorcards = [
   },
   {
     id: 'pink-17',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Violate Data Format Rules',
     subTitle: 'Heuristics',
     description:
@@ -939,7 +939,7 @@ export const colorcards = [
   },
   {
     id: 'pink-18',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Too Many',
     subTitle: 'Heuristics',
     description:
@@ -952,7 +952,7 @@ export const colorcards = [
   },
   {
     id: 'pink-19',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Useful Approximations',
     subTitle: 'Heuristics',
     description:
@@ -966,7 +966,7 @@ export const colorcards = [
   },
   {
     id: 'pink-20',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Some, None, All',
     subTitle: 'Heuristics',
     description:
@@ -981,7 +981,7 @@ export const colorcards = [
 
   {
     id: 'pink-21',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Dogfooding',
     subTitle: 'Heuristics',
     description:
@@ -994,7 +994,7 @@ export const colorcards = [
   },
   {
     id: 'pink-22',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Feature Toggles',
     subTitle: 'Heuristics',
     description:
@@ -1008,7 +1008,7 @@ export const colorcards = [
   },
   {
     id: 'pink-23',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Chaos Engineering',
     subTitle: 'Heuristics',
     description:
@@ -1023,7 +1023,7 @@ export const colorcards = [
 
   {
     id: 'pink-24',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Three Amigos',
     subTitle: 'Heuristics',
     description:
@@ -1037,7 +1037,7 @@ export const colorcards = [
   },
   {
     id: 'pink-25',
-    color: 'pink',
+    color: 'deeppink',
     title: 'Peer Reviews',
     subTitle: 'Heuristics',
     description:
@@ -1252,7 +1252,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-1',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Blameless Postmortem',
     subTitle: 'Dealing With Change',
     description:
@@ -1266,7 +1266,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-2',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Load Balancing',
     subTitle: 'Dealing With Change',
     description:
@@ -1280,7 +1280,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-3',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Anti-Corruption Layer',
     subTitle: 'Dealing With Change',
     description:
@@ -1294,7 +1294,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-4',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Circuit Breaker',
     subTitle: 'Dealing With Change',
     description:
@@ -1308,7 +1308,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-5',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Bulkhead',
     subTitle: 'Dealing With Change',
     description:
@@ -1322,7 +1322,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-6',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Caching',
     subTitle: 'Dealing With Change',
     description:
@@ -1336,7 +1336,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-7',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Distributed Systems',
     subTitle: 'Dealing With Change',
     description:
@@ -1350,7 +1350,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-8',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Single Sign On',
     subTitle: 'Dealing With Change',
     description:
@@ -1364,7 +1364,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-9',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Eventual Consistency',
     subTitle: 'Dealing With Change',
     description:
@@ -1378,7 +1378,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-10',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'API Gateway',
     subTitle: 'Dealing With Change',
     description:
@@ -1392,7 +1392,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-11',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Container Security Scanning',
     subTitle: 'Dealing With Change',
     description:
@@ -1406,7 +1406,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-12',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Static Code Analysis',
     subTitle: 'Dealing With Change',
     description:
@@ -1420,7 +1420,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-13',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Infrastructure as Code',
     subTitle: 'Dealing With Change',
     description:
@@ -1434,7 +1434,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-14',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Configurations as Code',
     subTitle: 'Dealing With Change',
     description:
@@ -1448,7 +1448,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-15',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Separation of Concerns',
     subTitle: 'Dealing With Change',
     description:
@@ -1461,7 +1461,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-16',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Command Query Responsibility Segregation',
     subTitle: 'Dealing With Change',
     description:
@@ -1475,7 +1475,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-17',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Continuous Integration',
     subTitle: 'Dealing With Change',
     description:
@@ -1489,7 +1489,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-18',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Continuous Delivery',
     subTitle: 'Dealing With Change',
     description:
@@ -1503,7 +1503,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-19',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Consumer Driven Contract Testing (CDCT)',
     subTitle: 'Dealing With Change',
     description:
@@ -1516,7 +1516,7 @@ export const colorcards = [
   },
   {
     id: 'darkblue-20',
-    color: 'dark-blue',
+    color: 'darkblue',
     title: 'Pre Mortem',
     subTitle: 'Dealing With Change',
     description:

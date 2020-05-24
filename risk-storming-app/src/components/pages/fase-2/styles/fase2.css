@@ -34,6 +34,9 @@ textarea,
   background-color: rgba(98,116,138,0.08);
   border-radius: 5px;
   font-weight: 400;
+  color: #62748a;
+}
+textarea::placeholder {
   letter-spacing: 2px;
   color: #62748a;
 }

@@ -77,16 +77,11 @@ const PdfDocument = (props) => {
       <Page size='A4' charset='utf-8' style={styles.page} orientation='l'>
         {props.chosenCards.map((card, index) => (
           <View style={styles.mainContainer} key={index} wrap={false}>
-            <View
-              style={[
-                styles.cardContainer,
-                { border: `2pt solid ${card.color}` },
-              ]}
-            >
-              <Text style={[styles.cardTitle, { color: card.color }]}>
+            <View style={styles.cardContainer}>
+              <Text style={[styles.cardTitle]}>
                 {card.title}
               </Text>
-              <Text style={[styles.cardSubtitle, { color: card.color }]}>
+              <Text style={[styles.cardSubtitle]}>
                 {card.subTitle}
               </Text>
               <Text style={styles.cardDescription}>{card.description}</Text>

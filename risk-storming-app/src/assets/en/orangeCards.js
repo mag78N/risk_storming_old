@@ -1,7 +1,7 @@
 export const orangecards = {
   'orange-1': {
     id: 'orange-1',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Interruption',
     subTitle: 'Patterns',
     description:
@@ -15,7 +15,7 @@ export const orangecards = {
   },
   'orange-2': {
     id: 'orange-2',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Tediousness',
     subTitle: 'Patterns',
     description:
@@ -29,7 +29,7 @@ export const orangecards = {
   },
   'orange-3': {
     id: 'orange-3',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Fluency',
     subTitle: 'Patterns',
     description:
@@ -43,7 +43,7 @@ export const orangecards = {
   },
   'orange-4': {
     id: 'orange-4',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Disaster Control',
     subTitle: 'Patterns',
     description:
@@ -57,7 +57,7 @@ export const orangecards = {
   },
   'orange-5': {
     id: 'orange-5',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Automation',
     subTitle: 'Patterns',
     description:
@@ -71,7 +71,7 @@ export const orangecards = {
   },
   'orange-6': {
     id: 'orange-6',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Dependencies',
     subTitle: 'Patterns',
     description:
@@ -85,7 +85,7 @@ export const orangecards = {
   },
   'orange-7': {
     id: 'orange-7',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Log-digging',
     subTitle: 'Patterns',
     description:
@@ -99,7 +99,7 @@ export const orangecards = {
   },
   'orange-8': {
     id: 'orange-8',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Force',
     subTitle: 'Patterns',
     description:
@@ -113,7 +113,7 @@ export const orangecards = {
   },
   'orange-9': {
     id: 'orange-9',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Superficial',
     subTitle: 'Patterns',
     description:
@@ -127,7 +127,7 @@ export const orangecards = {
   },
   'orange-10': {
     id: 'orange-10',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Minimalism',
     subTitle: 'Patterns',
     description:
@@ -141,7 +141,7 @@ export const orangecards = {
   },
   'orange-11': {
     id: 'orange-11',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Confirmation Bias',
     subTitle: 'Patterns',
     description:
@@ -155,7 +155,7 @@ export const orangecards = {
   },
   'orange-12': {
     id: 'orange-12',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Bandwagon Effect',
     subTitle: 'Patterns',
     description:
@@ -169,7 +169,7 @@ export const orangecards = {
   },
   'orange-13': {
     id: 'orange-13',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Dunning-Kruger Effect',
     subTitle: 'Patterns',
     description:
@@ -183,7 +183,7 @@ export const orangecards = {
   },
   'orange-14': {
     id: 'orange-14',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Anchoring',
     subTitle: 'Patterns',
     description:
@@ -197,7 +197,7 @@ export const orangecards = {
   },
   'orange-15': {
     id: 'orange-15',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Curse of Knowledge',
     subTitle: 'Patterns',
     description:
@@ -211,7 +211,7 @@ export const orangecards = {
   },
   'orange-16': {
     id: 'orange-16',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Status Quo Bias',
     subTitle: 'Patterns',
     description:
@@ -225,7 +225,7 @@ export const orangecards = {
   },
   'orange-17': {
     id: 'orange-17',
-    color: 'orange',
+    color: 'darkorange',
     title: 'IKEA-effect',
     subTitle: 'Patterns',
     description:
@@ -239,7 +239,7 @@ export const orangecards = {
   },
   'orange-18': {
     id: 'orange-18',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Observer-Expectancy Effect',
     subTitle: 'Patterns',
     description:
@@ -253,7 +253,7 @@ export const orangecards = {
   },
   'orange-19': {
     id: 'orange-19',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Ostrich Effect',
     subTitle: 'Patterns',
     description:
@@ -267,7 +267,7 @@ export const orangecards = {
   },
   'orange-20': {
     id: 'orange-20',
-    color: 'orange',
+    color: 'darkorange',
     title: "Gambler's Fallacy",
     subTitle: 'Patterns',
     description:
@@ -281,7 +281,7 @@ export const orangecards = {
   },
   'orange-21': {
     id: 'orange-21',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Single Responsibility Principle',
     subTitle: 'Patterns',
     description:
@@ -295,7 +295,7 @@ export const orangecards = {
   },
   'orange-22': {
     id: 'orange-22',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Story Slicing',
     subTitle: 'Patterns',
     description:
@@ -308,7 +308,7 @@ export const orangecards = {
   },
   'orange-23': {
     id: 'orange-23',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Mutation Testing',
     subTitle: 'Patterns',
     description:
@@ -322,7 +322,7 @@ export const orangecards = {
   },
   'orange-24': {
     id: 'orange-24',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Strangling Patterns',
     subTitle: 'Patterns',
     description:
@@ -337,7 +337,7 @@ export const orangecards = {
 
   'orange-25': {
     id: 'orange-25',
-    color: 'orange',
+    color: 'darkorange',
     title: 'Long Term Load Testing',
     subTitle: 'Patterns',
     description:
