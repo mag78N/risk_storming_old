@@ -7,7 +7,7 @@ const CardList = styled.div``;
 
 class RightColumn extends React.Component {
   render() {
-    const { bluecards,id } = this.props;
+    const { cards,id } = this.props;
     return (
       <Droppable droppableId={id} direction='vertical'>
         {(provided, snapshot) => (
@@ -17,7 +17,7 @@ class RightColumn extends React.Component {
             isDraggingOver={snapshot.isDraggingOver}
             className='rightPane fase1RightPane'
           >
-            {bluecards.map((card, index) => (
+            {cards.map((card, index) => (
               <Card
                 type='CARD'
                 key={card['id']}

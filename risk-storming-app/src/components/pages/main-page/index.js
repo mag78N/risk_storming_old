@@ -19,6 +19,7 @@ const MainPage = () => {
   function clearLocalStorage() {
     //window.localStorage.clear();
     window.localStorage.removeItem('chosenCards');
+    window.localStorage.removeItem('RIGHTCOLUMN');
     window.localStorage.removeItem('colorcards');
     window.localStorage.removeItem('filteredColorCards');
     history.push('/fase1');
@@ -30,9 +31,7 @@ const MainPage = () => {
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='mainPageButtonContainer'>
             <Link to='/fase1'>
-              <button className='buttonPrimary'>
-                Continue Session
-              </button>
+              <button className='buttonPrimary'>Continue Session</button>
             </Link>
             <button
               className='buttonPrimary clearDataButton'
@@ -41,9 +40,7 @@ const MainPage = () => {
               Start New Session
             </button>
             <Link to='/CardsViewer' target={'_blank'}>
-              <button className='buttonPrimary'>
-                Card Deck Management
-              </button>
+              <button className='buttonPrimary'>Card Deck Management</button>
             </Link>
           </div>
         </div>
