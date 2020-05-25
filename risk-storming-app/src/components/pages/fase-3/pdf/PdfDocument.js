@@ -3,7 +3,9 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import './fase3Pdf.css';
 const styles = StyleSheet.create({
   page: {
-    marginTop: 15,
+    /* marginTop: 15, */
+    paddingVertical: 20,
+    paddingLeft: 20,
   },
   pdfContainer: {
     padding: 15,
@@ -40,7 +42,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    margin: '20pt',
+    /* margin: '20pt', */
+    paddingTop: '15pt',
   },
   riskContainer: {
     display: 'flex',
@@ -54,11 +57,11 @@ const styles = StyleSheet.create({
     marginBottom: '15pt',
     padding: '20pt 5pt',
     paddingTop: '0',
-    width: '400pt',
+    width: '500pt',
     borderBottom: '2pt dashed #e5e5e5',
   },
   riskText: {
-    paddingTop: '5pt',
+    paddingTop: '15pt',
     maxWidth: 100,
     fontSize: '9pt',
   },
@@ -76,7 +79,7 @@ const PdfDocument = (props) => {
     <Document>
       <Page size='A4' charset='utf-8' style={styles.page} orientation='l'>
         {props.chosenCards.map((card, index) => (
-          <View style={styles.mainContainer} key={index} wrap={false}>
+          <View style={styles.mainContainer} key={index} break>
             <View style={styles.cardContainer}>
               <Text style={[styles.cardTitle]}>{card.title}</Text>
               <Text style={[styles.cardSubtitle]}>{card.subTitle}</Text>
@@ -84,11 +87,9 @@ const PdfDocument = (props) => {
             </View>
             <View style={styles.riskContainer}>
               {card.risks.map((risk, index) => (
-                <View style={styles.riskLane}>
+                <View style={styles.riskLane} key={index} wrap={false}>
                   <View>
-                    <Text style={styles.riskText} key={index}>
-                      {risk.label}
-                    </Text>
+                    <Text style={styles.riskText}>{risk.label}</Text>
                   </View>
                   <View style={styles.colorCardsRow}>
                     {risk.cards.map((card, index) => (
