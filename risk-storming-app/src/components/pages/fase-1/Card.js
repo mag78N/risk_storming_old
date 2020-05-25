@@ -63,7 +63,7 @@ class Card extends React.Component {
             </div>
             <div className='cardBody'>
               <a className='cardVote' onClick={this.IncrementItem}>
-                <i class='fa fa-thumbs-up'></i>&nbsp;
+                <i className='fa fa-thumbs-up'></i>&nbsp;
                 <span>{this.state.clicks}</span>
               </a>
               <div className='cardDescription'>{card.description}</div>
