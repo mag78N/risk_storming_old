@@ -126,7 +126,7 @@ class FaseThreePage extends React.Component {
         destination.droppableId +
         '|' +
         draggedCard.id +
-        '|' +
+        '|idx' +
         destination.index;
       finish.splice(destination.index, 0, draggedCard);
       this.setState((prevState) => {
