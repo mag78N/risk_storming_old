@@ -78,12 +78,8 @@ const PdfDocument = (props) => {
         {props.chosenCards.map((card, index) => (
           <View style={styles.mainContainer} key={index} wrap={false}>
             <View style={styles.cardContainer}>
-              <Text style={[styles.cardTitle]}>
-                {card.title}
-              </Text>
-              <Text style={[styles.cardSubtitle]}>
-                {card.subTitle}
-              </Text>
+              <Text style={[styles.cardTitle]}>{card.title}</Text>
+              <Text style={[styles.cardSubtitle]}>{card.subTitle}</Text>
               <Text style={styles.cardDescription}>{card.description}</Text>
             </View>
             <View style={styles.riskContainer}>
