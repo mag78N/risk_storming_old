@@ -15,6 +15,7 @@
   overflow-wrap: break-word;
 }
 .fase3RightPane .rightPane {
+  background-color: lightgrey;
   align-content: flex-start;
   justify-content: flex-start;
   height: calc(100% - 60px);
@@ -37,8 +38,8 @@
   font-weight: 400;
   letter-spacing: 2px;
   color: #62748a;
-  border: 1px solid rgba(98,116,138,0.08);
-  background-color: rgba(98,116,138,0.08);
+  border: 1px solid rgba(98, 116, 138, 0.08);
+  background-color: rgba(98, 116, 138, 0.08);
   border-radius: 5px;
   height: 3rem;
 }
