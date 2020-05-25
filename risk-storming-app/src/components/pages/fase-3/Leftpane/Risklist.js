@@ -10,7 +10,7 @@ class RiskList extends Component {
           const riskId = `risk-${idx + 1}`,
             riskText = val.label,
             cardRiskId = `${card.id}|${riskId}`;
-          return (
+          return riskText !== '' ? (
             <div className='riskLane' key={idx}>
               <div className='risk riskPostit' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg'>
@@ -26,7 +26,7 @@ class RiskList extends Component {
                 riskCards={val.cards}
               />
             </div>
-          );
+          ) : null;
         })}
       </>
     );
