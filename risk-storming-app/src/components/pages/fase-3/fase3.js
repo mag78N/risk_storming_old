@@ -88,10 +88,9 @@ class FaseThreePage extends React.Component {
     });
     this.setState({ filteredColorCards: updatedList });
   };
- 
 
   onDragEnd = (result) => {
-    const { destination, source, draggableId } = result;
+    const { destination, source } = result;
     const getCardList = (droppableId) => {
       if (droppableId === 'RIGHT-COLUMN') {
         return [...this.state.filteredColorCards];
@@ -123,7 +122,12 @@ class FaseThreePage extends React.Component {
     let removedCard = null;
     if (source.droppableId === 'RIGHT-COLUMN') {
       const draggedCard = { ...start[source.index] };
-      draggedCard.id = destination.droppableId + '|' + draggedCard.id;
+      draggedCard.id =
+        destination.droppableId +
+        '|' +
+        draggedCard.id +
+        '|' +
+        destination.index;
       finish.splice(destination.index, 0, draggedCard);
       this.setState((prevState) => {
         return { filteredColorCards: start };
