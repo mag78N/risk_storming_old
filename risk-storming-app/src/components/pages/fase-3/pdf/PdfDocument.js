@@ -92,7 +92,7 @@ const PdfDocument = (props) => {
                   </View>
                   <View style={styles.colorCardsRow}>
                     {risk.cards.map((card, index) => (
-                      <View>
+                      <View key={card.id}>
                         <View
                           style={[
                             styles.cardContainer,

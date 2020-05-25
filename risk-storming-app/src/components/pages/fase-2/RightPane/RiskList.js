@@ -5,10 +5,13 @@ const RiskList = (props) => {
     let riskId = `risk-${idx + 1}`;
     //console.log('val: ', val);
     //console.log('idx: ', idx);
-    
+
     return (
       <div className='form-row' key={idx}>
-        <div className='postitContainer' id={`${props.card.id}|risk-${idx + 1}`}>
+        <div
+          className='postitContainer'
+          id={`${props.card.id}|risk-${idx + 1}`}
+        >
           <textarea
             onChange={props.onchange}
             rows='3'
@@ -19,7 +22,7 @@ const RiskList = (props) => {
             id={riskId}
             className='risk'
             resize='none'
-            maxlength='250'
+            maxLength='250'
             value={val.label}
           />
         </div>
