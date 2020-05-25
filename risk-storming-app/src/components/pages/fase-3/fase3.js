@@ -1,5 +1,6 @@
 import React from 'react';
 import Split from 'react-split';
+import { v4 as uuidv4 } from 'uuid';
 import '../../cards/Card/Card.css';
 import '../../cards/color-css/green-card/GreenCard.css';
 import '../../cards/color-css/orange-card/OrangeCard.css';
@@ -127,7 +128,10 @@ class FaseThreePage extends React.Component {
         '|' +
         draggedCard.id +
         '|idx' +
-        destination.index;
+        destination.index +
+        '|' +
+        uuidv4();
+
       finish.splice(destination.index, 0, draggedCard);
       this.setState((prevState) => {
         return { filteredColorCards: start };
