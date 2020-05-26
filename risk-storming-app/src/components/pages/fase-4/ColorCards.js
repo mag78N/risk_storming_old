@@ -18,6 +18,7 @@ const ColorCards = (props) => {
           </div>
         );
       })}
+      <button className='buttonSecondary'>Add Task</button>
     </>
   );
 };
