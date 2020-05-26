@@ -75,10 +75,6 @@ class FaseFourPage extends Component {
                   color={card.color}
                   title={card.title}
                   subTitle={card.subTitle}
-                  description={card.description}
-                  exampleOne={card.exampleOne}
-                  exampleTwo={card.exampleTwo}
-                  exampleThree={card.exampleThree}
                 />
               </div>
               <div className='innerRiskRow'>
