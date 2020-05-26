@@ -20,6 +20,8 @@ const MainPage = () => {
   }
   function signOut() {
     window.localStorage.clear();
+   /*  window.localStorage.removeItem('uname');
+    window.localStorage.removeItem('pw'); */
     history.push('/');
   }
   return (
@@ -42,14 +44,10 @@ const MainPage = () => {
               <button className='buttonPrimary'>Card Deck Management</button>
             </Link>
             <Link to='/'>
-              <button className='buttonPrimary'>
+              <button className='buttonPrimary' onClick={signOut}>
                 Sign Out
                 <span>
-                  <i
-                    className='fa fa-sign-out fa-lg'
-                    aria-hidden='true'
-                    onClick={signOut}
-                  ></i>
+                  <i className='fa fa-sign-out fa-lg' aria-hidden='true'></i>
                 </span>
               </button>
             </Link>
