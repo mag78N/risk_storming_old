@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './styles/fase4.css';
+import Card from './Card';
+import RiskList from './Risklist';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 class FaseFourPage extends Component {
@@ -57,9 +60,33 @@ class FaseFourPage extends Component {
     }
   }
   render() {
+    const { chosenCards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Phase 3' homepage='/mainpage' />
+        <TopNavbar faseNum='Phase 4' homepage='/mainpage' />
+
+        <div className='leftPane fase4LeftPane'>
+          {chosenCards.map((card, index) => (
+            <div className='cardRow' key={index}>
+              <div className='innerCardRow'>
+                <Card
+                  key={card.id}
+                  card={card}
+                  color={card.color}
+                  title={card.title}
+                  subTitle={card.subTitle}
+                  description={card.description}
+                  exampleOne={card.exampleOne}
+                  exampleTwo={card.exampleTwo}
+                  exampleThree={card.exampleThree}
+                />
+              </div>
+              <div className='innerRiskRow'>
+                <RiskList chosenCards={chosenCards} card={card} />
+              </div>
+            </div>
+          ))}
+        </div>
         <Footer
           prev='/fase3'
           next='/mainpage'

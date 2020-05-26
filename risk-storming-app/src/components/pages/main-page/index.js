@@ -42,11 +42,16 @@ const MainPage = () => {
               <button className='buttonPrimary'>Card Deck Management</button>
             </Link>
             <Link to='/'>
-              <i
-                className='fa fa-sign-out fa-3x'
-                aria-hidden='true'
-                onClick={signOut}
-              ></i>
+              <button className='buttonPrimary'>
+                Sign Out
+                <span>
+                  <i
+                    className='fa fa-sign-out fa-lg'
+                    aria-hidden='true'
+                    onClick={signOut}
+                  ></i>
+                </span>
+              </button>
             </Link>
           </div>
         </div>
