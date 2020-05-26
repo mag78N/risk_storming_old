@@ -8,6 +8,9 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import FreeFaseOnePage from '../free-version/fase1/fase1';
+import FreeFaseTwoPage from '../free-version/fase2/fase2';
+import FreeFaseThreePage from '../free-version/fase3/fase3';
 import PrivateRoute from '../private-route/PrivateRoute';
 import LandingPage from '../pages/landing-page/LandingPage';
 import MainPage from '../pages/main-page';
@@ -25,6 +28,21 @@ const App = () => (
     <>
       <Switch>
         <Route exact path='/' component={LandingPage} />
+        <Route
+          exact
+          path='/explorefreeversion/fase1'
+          component={FreeFaseOnePage}
+        />
+        <Route
+          exact
+          path='/explorefreeversion/fase2'
+          component={FreeFaseTwoPage}
+        />
+        <Route
+          exact
+          path='/explorefreeversion/fase3'
+          component={FreeFaseThreePage}
+        />
         <Route exact path='/login' component={Login} />
         <PrivateRoute>
           <Route exact path='/mainpage' component={MainPage} />

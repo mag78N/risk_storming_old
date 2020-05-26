@@ -1,0 +1,13 @@
+.bluecardCounter {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  top: calc(60px + 0.75rem);
+}
+.fase1LeftPane {
+  padding-top: 70px; /* height of bluecardCounter */
+}

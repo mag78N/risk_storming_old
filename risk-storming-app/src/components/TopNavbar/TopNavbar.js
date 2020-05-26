@@ -6,7 +6,7 @@ import '../TopNavbar/topNavbar.css';
 const TopNavbar = (props) => {
   return (
     <div className='topNavbar'>
-      <Link to='/mainpage'>
+      <Link to={props.homepage}>
         <img className='logo' src={logo} alt='RiskStorming Online' />
       </Link>
       <span className='faseNum'>{props.faseNum}</span>

@@ -24,19 +24,19 @@ const move = (state, source, destination) => {
 
   return {
     [source.droppableId]: srcListClone,
-    ...(source.droppableId === destination.droppableId ? {}
+    ...(source.droppableId === destination.droppableId
+      ? {}
       : {
           [destination.droppableId]: destListClone,
         }),
   };
 };
-class FaseOnePage extends React.Component {
+class FreeFaseOnePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       chosenCards: [],
       RIGHTCOLUMN: Object.values(bluecards),
-     
     };
   }
   componentDidMount() {
@@ -86,7 +86,7 @@ class FaseOnePage extends React.Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  
+
   onDragEnd = ({ source, destination }) => {
     if (!destination) {
       return;
@@ -95,14 +95,13 @@ class FaseOnePage extends React.Component {
       return move(state, source, destination);
     });
   };
-  
+
   render() {
-    
     console.log('state inside render :', this.state);
     const { chosenCards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Phase 1' homepage='/mainpage' />
+        <TopNavbar faseNum='Phase 1' homepage='/' />
         <div className='bluecardCounter'>
           Selected cards: <strong>{this.state.chosenCards.length}</strong> out
           of 6.
@@ -134,9 +133,9 @@ class FaseOnePage extends React.Component {
           </Split>
         </DragDropContext>
         <Footer
-          prev='/mainpage'
-          next='/fase2'
-          prevFase='Main Page'
+          prev='/'
+          next='/explorefreeversion/fase2'
+          prevFase='Home Page'
           nextFase='Phase 2'
         />
       </>
@@ -144,4 +143,4 @@ class FaseOnePage extends React.Component {
   }
 }
 
-export default FaseOnePage;
+export default FreeFaseOnePage;

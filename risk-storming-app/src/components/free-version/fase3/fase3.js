@@ -5,25 +5,22 @@ import '../../cards/Card/Card.css';
 import '../../cards/color-css/green-card/GreenCard.css';
 import '../../cards/color-css/orange-card/OrangeCard.css';
 import '../../cards/color-css/pink-card/PinkCard.css';
-import '../../cards/color-css/red-card/RedCard.css';
-import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { Link } from 'react-router-dom';
-import { colorcards } from '../../../assets/en/colorcards';
-import Card from './../fase-2/Card';
+import { freeversionColorcards } from '../../../assets/en/freeversionColorcards';
+import Card from '../../pages/fase-2/Card';
 import RightColumn from './right-column/RightColumn';
 import RiskList from './Leftpane/Risklist';
 import './styles/fase3.css';
-import '../risk-row.css';
+import '../../pages/risk-row.css';
 
-class FaseThreePage extends React.Component {
+class FreeFaseThreePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       chosenCards: [],
-      colorcards: colorcards,
+      colorcards: freeversionColorcards,
       filteredColorCards: [],
     };
   }
@@ -180,18 +177,7 @@ class FaseThreePage extends React.Component {
     const { chosenCards, colorcards, filteredColorCards } = this.state;
     return (
       <>
-        <TopNavbar faseNum='Phase 3' homepage='/mainpage' />
-        <Link
-          className='buttonSecondary exportButton'
-          to={{
-            pathname: '/fase3Pdf',
-            state: {
-              data: this.state,
-            },
-          }}
-        >
-          Export to PDF
-        </Link>
+        <TopNavbar faseNum='Phase 3' homepage='/' />
         <DragDropContext
           onDragStart={this.onDragStart}
           onDragUpdate={this.onDragUpdate}
@@ -241,14 +227,14 @@ class FaseThreePage extends React.Component {
           </Split>
         </DragDropContext>
         <Footer
-          prev='/fase2'
-          next='/mainpage'
+          prev='/explorefreeversion/fase2'
+          next='/'
           prevFase='Phase 2'
-          nextFase='Main Page'
+          nextFase='Home Page'
         />
       </>
     );
   }
 }
 
-export default FaseThreePage;
+export default FreeFaseThreePage;

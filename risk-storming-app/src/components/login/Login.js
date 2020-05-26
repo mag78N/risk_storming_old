@@ -12,7 +12,6 @@ export default function Login() {
 
   function validateForm() {
     return username === 'risk' && password === 'storm';
-    
   }
   function saveToLocalStorage() {
     localStorage.setItem('uname', username);
@@ -24,6 +23,7 @@ export default function Login() {
   var bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
+  
   return (
     <React.Fragment>
       <div className='mainPageContainer'>
@@ -60,6 +60,7 @@ export default function Login() {
                 </button>
               </Link>
             </form>
+            
           </div>
         </div>
       </div>

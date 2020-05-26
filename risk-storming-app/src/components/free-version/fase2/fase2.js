@@ -3,15 +3,14 @@ import '../../cards/color-css/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import Split from 'react-split';
 import './styles/fase2.css';
-import '../risk-row.css';
+import '../../pages/risk-row.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';
 import RightPane from './RightPane/RightPane';
 import RiskListLeftPane from './LeftPane/RiskListLeftPane';
-import { Link } from 'react-router-dom';
 
-class FaseTwoPage extends React.PureComponent {
+class FreeFaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -104,18 +103,8 @@ class FaseTwoPage extends React.PureComponent {
     console.log(this.state);
     return (
       <>
-        <TopNavbar faseNum='Phase 2' homepage='/mainpage' />
-        <Link
-          className='buttonSecondary exportButton'
-          to={{
-            pathname: '/fase2Pdf',
-            state: {
-              data: this.state,
-            },
-          }}
-        >
-          Export to PDF
-        </Link>
+        <TopNavbar faseNum='Phase 2' homepage='/' />
+
         <Split
           className='splitContainer splitContainerFase2'
           sizes={[60, 40]}
@@ -165,8 +154,8 @@ class FaseTwoPage extends React.PureComponent {
           </div>
         </Split>
         <Footer
-          prev='/fase1'
-          next='/fase3'
+          prev='/explorefreeversion/fase1'
+          next='/explorefreeversion/fase3'
           prevFase='Phase 1'
           nextFase='Phase 3'
         />
@@ -174,4 +163,4 @@ class FaseTwoPage extends React.PureComponent {
     );
   }
 }
-export default FaseTwoPage;
+export default FreeFaseTwoPage;
