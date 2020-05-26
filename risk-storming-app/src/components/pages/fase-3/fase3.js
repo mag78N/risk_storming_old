@@ -177,7 +177,7 @@ class FaseThreePage extends React.Component {
 
   render() {
     console.log('state inside render :', this.state);
-    const { chosenCards, colorcards, filteredColorCards } = this.state;
+    const { chosenCards, filteredColorCards } = this.state;
     return (
       <>
         <TopNavbar faseNum='Phase 3' homepage='/mainpage' />
@@ -242,9 +242,9 @@ class FaseThreePage extends React.Component {
         </DragDropContext>
         <Footer
           prev='/fase2'
-          next='/mainpage'
+          next='/fase4'
           prevFase='Phase 2'
-          nextFase='Main Page'
+          nextFase='Phase 4'
         />
       </>
     );

@@ -21,6 +21,7 @@ import FaseTwoPage from '../pages/fase-2/fase2';
 import FaseTwoPdf from '../pages/fase-2/pdf/FaseTwoPdf';
 import FaseThreePage from '../pages/fase-3/fase3';
 import FaseThreePdf from '../pages/fase-3/pdf/FaseThreePdf';
+import FaseFourPage from '../pages/fase-4/fase4';
 import NotFoundPage from '../pages/404/404';
 
 const App = () => (
@@ -52,6 +53,7 @@ const App = () => (
           <Route exact path='/fase2Pdf' component={FaseTwoPdf} />
           <Route exact path='/fase3' component={FaseThreePage} />
           <Route exact path='/fase3Pdf' component={FaseThreePdf} />
+          <Route exact path='/fase4' component={FaseFourPage} />
           <Route exact path='/404' component={NotFoundPage} />
         </PrivateRoute>
       </Switch>
