@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './styles/fase4.css';
 import BlueCard from './BlueCard';
+
+import Risk from './Risk';
+import ColorCards from './ColorCards';
 import RiskList from './Risklist';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
@@ -65,9 +68,9 @@ class FaseFourPage extends Component {
       <>
         <TopNavbar faseNum='Phase 4' homepage='/mainpage' />
 
-        <div className='leftPane fase4LeftPane'>
+        <div className='fase4LeftPane'>
           {chosenCards.map((card, index) => (
-            <div className='cardRow' key={index}>
+            <div className='cardStream' key={index}>
               <div className='blueCardColumn'>
                 <BlueCard
                   key={card.id}
@@ -77,11 +80,11 @@ class FaseFourPage extends Component {
                   subTitle={card.subTitle}
                 />
               </div>
-              <Risk card={card}/>
-              <ColorCards card={card} />
-              <div className='innerRiskRow'>
-                <RiskList chosenCards={chosenCards} card={card} />
+              <div className='risk'>
+                <Risk card={card} />
               </div>
+
+              
             </div>
           ))}
         </div>

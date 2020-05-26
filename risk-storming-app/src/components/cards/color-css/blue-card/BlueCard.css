@@ -2,6 +2,10 @@
   background-color: rgb(65, 161, 206);
   border: 2px solid rgb(65, 161, 206);
 }
+.blueBg {
+  background-color: rgb(65, 161, 206);
+  
+}
 .blueHeader,
 .blue .cardVote i,
 .blue .cardVote span {
