@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../cards/Card/Card.css';
-class Card extends React.Component {
+class BlueCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,4 +19,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default BlueCard;
