@@ -27,7 +27,7 @@ const MainPage = () => {
   return (
     <>
       <div className='mainPageContainer'>
-        <TopNavbar faseNum='' />
+        <TopNavbar faseNum='' homepage='/mainpage' />
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='mainPageButtonContainer'>
             <Link to='/fase1'>

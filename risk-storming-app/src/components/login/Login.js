@@ -23,11 +23,11 @@ export default function Login() {
   var bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
-  
+
   return (
     <React.Fragment>
       <div className='mainPageContainer'>
-        <TopNavbar />
+        <TopNavbar homepage='/mainpage' />
         <div className='mainPageJumbotron loginPage' style={bgImgStyle}>
           <div className='loginContainer'>
             <h3>Log in to RiskStorming</h3>
@@ -60,7 +60,6 @@ export default function Login() {
                 </button>
               </Link>
             </form>
-            
           </div>
         </div>
       </div>

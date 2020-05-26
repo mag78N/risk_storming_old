@@ -8,20 +8,20 @@ const MainPage = () => {
   const bgImgStyle = {
     backgroundImage: `url(${bg})`,
   };
- const history = useHistory();
+  const history = useHistory();
 
- function clearLocalStorage() {
-   window.localStorage.clear();
-   /*  window.localStorage.removeItem('chosenCards');
+  function clearLocalStorage() {
+    window.localStorage.clear();
+    /*  window.localStorage.removeItem('chosenCards');
      window.localStorage.removeItem('RIGHTCOLUMN');
      window.localStorage.removeItem('colorcards');
      window.localStorage.removeItem('filteredColorCards'); */
-   history.push('/explorefreeversion/fase1');
- }
+    history.push('/explorefreeversion/fase1');
+  }
   return (
     <>
       <div className='landingPageContainer'>
-        <TopNavbar />
+        <TopNavbar homepage='/' />
         <div className='landingPageJumbotron' style={bgImgStyle}>
           <div className='landingPageButtonContainer'>
             <h1>
@@ -31,6 +31,7 @@ const MainPage = () => {
             <div className='lead'>
               An online collaboration tool on quality and how to achieve it.
             </div>
+
             <Link to='/login'>
               <button className='buttonPrimary landingPageButton'>
                 Go to Login page
@@ -38,7 +39,7 @@ const MainPage = () => {
             </Link>
             <Link to='/explorefreeversion/fase1'>
               <button
-                className='buttonPrimary loginButton'
+                className='buttonPrimary landingPageButton'
                 onClick={clearLocalStorage}
               >
                 Explore Free Version

@@ -15,7 +15,7 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 const CardsViewer = () => {
   return (
     <>
-      <TopNavbar faseNum='Card Deck' />
+      <TopNavbar faseNum='Card Deck' homepage='/mainpage' />
       <Tabs defaultActiveKey='quality-aspects' id='uncontrolled-tab-example'>
         <Tab eventKey='quality-aspects' title='Quality Aspects' className='tab'>
           {/* <button>Expand all</button> */}
