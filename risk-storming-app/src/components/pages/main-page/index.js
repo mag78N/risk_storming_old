@@ -10,13 +10,7 @@ const MainPage = () => {
     backgroundImage: `url(${bg})`,
   };
   const history = useHistory();
-
-  /*  routeChange = () => {
-    let path = '/fase1';
-    let history = useHistory();
-    history.push(path);
-  }; */
-  function clearLocalStorage() {
+  function startNewSession() {
     //window.localStorage.clear();
     window.localStorage.removeItem('chosenCards');
     window.localStorage.removeItem('RIGHTCOLUMN');
@@ -24,10 +18,15 @@ const MainPage = () => {
     window.localStorage.removeItem('filteredColorCards');
     history.push('/fase1');
   }
+  function signOut() {
+    window.localStorage.clear();
+    history.push('/');
+  }
   return (
     <>
       <div className='mainPageContainer'>
         <TopNavbar faseNum='' homepage='/mainpage' />
+
         <div className='mainPageJumbotron' style={bgImgStyle}>
           <div className='mainPageButtonContainer'>
             <Link to='/fase1'>
@@ -35,12 +34,19 @@ const MainPage = () => {
             </Link>
             <button
               className='buttonPrimary clearDataButton'
-              onClick={clearLocalStorage}
+              onClick={startNewSession}
             >
               Start New Session
             </button>
             <Link to='/CardsViewer' target={'_blank'}>
               <button className='buttonPrimary'>Card Deck Management</button>
+            </Link>
+            <Link to='/'>
+              <i
+                className='fa fa-sign-out fa-3x'
+                aria-hidden='true'
+                onClick={signOut}
+              ></i>
             </Link>
           </div>
         </div>
