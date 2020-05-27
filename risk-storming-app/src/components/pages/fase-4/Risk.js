@@ -20,7 +20,9 @@ const Risk = (props) => {
             <div>
               <ColorCards risk={val} />
             </div>
-           
+            <div>
+              <button className='buttonSecondary'>Add Task</button>
+            </div>
           </div>
         ) : null;
       })}

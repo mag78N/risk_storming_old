@@ -20,9 +20,7 @@ const ColorCards = (props) => {
             </div>
           );
         })}
-        <div>
-          <button className='buttonSecondary'>Add Task</button>
-        </div>
+        
       </div>
     </>
   );
