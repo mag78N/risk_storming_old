@@ -1,6 +1,7 @@
 /* fase 4 */
-.fase4LeftPane{
+.fase4LeftPane {
   background-color: lightgrey;
+  
 }
 .cardStream {
   display: flex;
@@ -10,15 +11,14 @@
   margin: 1rem auto;
 }
 .miniCard {
-  border-radius: 10px;
-  border-width: 8px;
+  border-radius: 5px;
+  border-width: 6px;
   -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
-  margin: 1rem 0;
+  margin: 0.2rem 0;
   min-width: 250px;
 }
-
 .risk {
   width: 275px;
   display: flex;

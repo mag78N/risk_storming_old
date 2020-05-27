@@ -78,7 +78,7 @@ class FaseFourPage extends Component {
                   subTitle={card.subTitle}
                 />
              
-              <div >
+              <div>
                 <Risk card={card} />
               </div>
 
