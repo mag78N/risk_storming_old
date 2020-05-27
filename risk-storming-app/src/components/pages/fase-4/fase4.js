@@ -107,15 +107,20 @@ class FaseFourPage extends Component {
         <div className='fase4LeftPane'>
           {chosenCards.map((card, index) => (
             <div className='cardStream' key={index}>
-              <BlueCard
-                key={card.id}
-                card={card}
-                color={card.color}
-                title={card.title}
-                subTitle={card.subTitle}
-              />
-              <div>
-                <Risk card={card} handleChange={this.handleChange} />
+              <div className='innerCardStreamLeft'>
+                <div>
+                  <BlueCard
+                    key={card.id}
+                    card={card}
+                    color={card.color}
+                    title={card.title}
+                    subTitle={card.subTitle}
+                  />
+                </div>
+                  <div>
+                    <Risk card={card} handleChange={this.handleChange} />
+                  </div>
+                
               </div>
             </div>
           ))}

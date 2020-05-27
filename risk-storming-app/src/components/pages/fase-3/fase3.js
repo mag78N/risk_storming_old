@@ -176,7 +176,7 @@ class FaseThreePage extends React.Component {
   };
 
   render() {
-    console.log('state inside render :', this.state);
+    //console.log('state inside render :', this.state);
     const { chosenCards, filteredColorCards } = this.state;
     return (
       <>
