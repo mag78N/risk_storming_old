@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = {               
       chosenCards: [],
     };
   }
@@ -79,7 +79,20 @@ class FaseTwoPage extends React.PureComponent {
       const card = newCards.find((newCard) => {
         return newCard.id === cardId;
       });
-      card.risks = [...card.risks, { label: '', cards: [] , tasks: []}];
+      card.risks = [
+        ...card.risks,
+        {
+          label: '',
+          cards: [],
+          tasks: [
+            {
+              a: '',
+              b: '',
+              c: '',
+            },
+          ],
+        },
+      ];
       return {
         chosenCards: newCards,
       };

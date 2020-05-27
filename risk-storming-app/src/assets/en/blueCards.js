@@ -15,11 +15,13 @@ export const bluecards = [
       {
         label: '',
         cards: [],
-        tasks: {
+        tasks: [
+          {
           a: '',
           b: '',
           c: '',
-        },
+          }
+        ],
       },
     ],
   },
