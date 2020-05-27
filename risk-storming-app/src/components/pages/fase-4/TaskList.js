@@ -1,17 +1,9 @@
 import React from 'react';
-
+import './styles/fase4.css';
 const TaskList = (props) => {
   return (
-    <div>
-      <div>
-        <textarea>who</textarea>
-      </div>
-      <div>
-        <textarea>how</textarea>
-      </div>
-      <div>
-        <textarea>what</textarea>
-      </div>
+    <div className='row rowFlex'>
+     
     </div>
   );
 };
