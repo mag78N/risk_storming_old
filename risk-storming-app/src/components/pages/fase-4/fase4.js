@@ -3,8 +3,6 @@ import './styles/fase4.css';
 import BlueCard from './BlueCard';
 
 import Risk from './Risk';
-import ColorCards from './ColorCards';
-import RiskList from './Risklist';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 class FaseFourPage extends Component {
@@ -71,7 +69,7 @@ class FaseFourPage extends Component {
         <div className='fase4LeftPane'>
           {chosenCards.map((card, index) => (
             <div className='cardStream' key={index}>
-              <div className='blueCardColumn'>
+             
                 <BlueCard
                   key={card.id}
                   card={card}
@@ -79,8 +77,8 @@ class FaseFourPage extends Component {
                   title={card.title}
                   subTitle={card.subTitle}
                 />
-              </div>
-              <div className='risk'>
+             
+              <div >
                 <Risk card={card} />
               </div>
 

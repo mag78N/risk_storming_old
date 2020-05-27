@@ -8,17 +8,22 @@ import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 const ColorCards = (props) => {
   return (
     <>
-      {props.risk.cards.map((card, idx) => {
-        return (
-          <div className={`${card.color}Bg`} key={idx}>
-            <div className={`colorcardHeader`}>
-              <div className='cardTitle'>{card.title}</div>
-              <div className='cardSubtitle'>{card.subTitle}</div>
+     
+      <div className='risk'>
+        {props.risk.cards.map((card, idx) => {
+          return (
+            <div className={`${card.color} miniCard`} key={idx}>
+              <div className={`cardHeader ${card.color}Header`}>
+                <div className='cardTitle'>{card.title}</div>
+                <div className={`cardSubtitle`}>{card.subTitle}</div>
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <button className='buttonSecondary'>Add Task</button>
+          );
+        })}
+        <div>
+          <button className='buttonSecondary'>Add Task</button>
+        </div>
+      </div>
     </>
   );
 };

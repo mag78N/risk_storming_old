@@ -1,26 +1,26 @@
 /* fase 4 */
+.fase4LeftPane{
+  background-color: lightgrey;
+}
 .cardStream {
   display: flex;
-  border: 1px solid black;
-  width: 100vw;
- height: 100vh;
-  margin: 2rem auto;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 1rem auto;
 }
-.translate {
-  transform: translateY(80px);
+.miniCard {
+  border-radius: 10px;
+  border-width: 8px;
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
+  box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
+  margin: 1rem 0;
+  min-width: 250px;
 }
-.rotated {
-  transform: rotate(-90deg);
-}
-.colorcardHeader {
-  text-transform: uppercase;
-  color: #fff;
-  padding: 0.75rem 0.75rem 0.5rem;
-  border-radius: 5px 5px 0 0;
-  overflow-wrap: break-word;
-}
+
 .risk {
-  width: 250px;
+  width: 275px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,4 @@
 .riskColumn {
   display: flex;
   flex-direction: column;
-}
-.colorCardsColumn {
-  background-color: salmon;
 }
