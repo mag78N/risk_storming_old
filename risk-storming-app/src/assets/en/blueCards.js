@@ -15,6 +15,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -35,6 +36,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -55,6 +57,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -75,6 +78,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -95,6 +99,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -115,6 +120,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -135,6 +141,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -155,6 +162,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -175,6 +183,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -195,6 +204,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -215,6 +225,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -235,6 +246,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -255,6 +267,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -274,6 +287,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -294,6 +308,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -314,6 +329,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -334,6 +350,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -354,6 +371,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -374,6 +392,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -393,6 +412,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -413,6 +433,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -433,6 +454,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -453,6 +475,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -473,6 +496,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
@@ -493,6 +517,7 @@ export const bluecards = [
       {
         label: '',
         cards: [],
+        tasks: [],
       },
     ],
   },
