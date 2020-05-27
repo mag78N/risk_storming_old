@@ -10,7 +10,7 @@ const ColorCards = (props) => {
     <>
       {props.risk.cards.map((card, idx) => {
         return (
-          <div className={`${card.color}Bg `} key={idx}>
+          <div className={`${card.color}Bg`} key={idx}>
             <div className={`colorcardHeader`}>
               <div className='cardTitle'>{card.title}</div>
               <div className='cardSubtitle'>{card.subTitle}</div>

@@ -8,10 +8,12 @@ class BlueCard extends React.Component {
   render() {
     const { card } = this.props;
     return (
-      <div className={`${card.color} rotated`}>
-        <div className={`cardHeader ${card.color}Header`}>
-          <div className='cardTitle'>{card.title}</div>
-          <div className='cardSubtitle'>{card.subTitle}</div>
+      <div className='translate'>
+        <div className={`${card.color} rotated`}>
+          <div className={`cardHeader ${card.color}Header`}>
+            <div className='cardTitle'>{card.title}</div>
+            <div className='cardSubtitle'>{card.subTitle}</div>
+          </div>
         </div>
       </div>
     );
