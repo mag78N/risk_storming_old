@@ -60,6 +60,44 @@ class FaseFourPage extends Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
+  handleChange = (e) => {
+    const datasetRiskIndex = e.target.dataset.riskindex;
+    const datasetTaskId = e.target.dataset.taskid;
+    const datasetTaskIndex = e.target.dataset.taskindex;
+    const value = e.target.value;
+    this.setState((prevState) => ({
+      chosenCards: prevState.chosenCards.map((card) => {
+        card.risks[0].tasks[0].a = value;
+
+        return card;
+      }),
+    }));
+  };
+
+  addNewRow = (cardId) => {
+    this.setState((prevState) => {
+      const newCards = [...prevState.chosenCards];
+      const card = newCards.find((newCard) => {
+        return newCard.id === cardId;
+      });
+      card.risks.tasks = [...card.risks.tasks, { tasks: [] }];
+      return {
+        chosenCards: newCards,
+      };
+    });
+  };
+  deleteRow = (cardId, index) => {
+    this.setState((prevState) => ({
+      chosenCards: prevState.chosenCards.map((card) => {
+        if (cardId === card.id) {
+          card.risks = card.risks.filter((risk, riskIndex) => {
+            return riskIndex !== index;
+          });
+        }
+        return card;
+      }),
+    }));
+  };
   render() {
     const { chosenCards } = this.state;
     return (
@@ -77,9 +115,8 @@ class FaseFourPage extends Component {
                 subTitle={card.subTitle}
               />
               <div>
-                <Risk card={card} />
+                <Risk card={card} handleChange={this.handleChange} />
               </div>
-              
             </div>
           ))}
         </div>

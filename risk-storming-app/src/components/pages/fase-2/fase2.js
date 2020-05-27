@@ -79,7 +79,7 @@ class FaseTwoPage extends React.PureComponent {
       const card = newCards.find((newCard) => {
         return newCard.id === cardId;
       });
-      card.risks = [...card.risks, { label: '', cards: [] }];
+      card.risks = [...card.risks, { label: '', cards: [] , tasks: []}];
       return {
         chosenCards: newCards,
       };

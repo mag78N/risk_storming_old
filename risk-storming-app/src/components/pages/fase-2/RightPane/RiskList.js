@@ -3,9 +3,7 @@ import React from 'react';
 const RiskList = (props) => {
   return props.card.risks.map((val, idx) => {
     let riskId = `risk-${idx + 1}`;
-    //console.log('val: ', val);
-    //console.log('idx: ', idx);
-
+   
     return (
       <div className='form-row' key={idx}>
         <div
