@@ -106,7 +106,7 @@ class FreeFaseTwoPage extends React.PureComponent {
         <TopNavbar faseNum='Phase 2' homepage='/' />
 
         <Split
-          className='splitContainer splitContainerFase2'
+          className='freeVersion splitContainer splitContainerFase2'
           sizes={[60, 40]}
           minSize={[250]}
           expandToMin={false}
