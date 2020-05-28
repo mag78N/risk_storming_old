@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card';
 class InnerCardList extends Component {
   shouldComponentUpdate(nextProps) {
-    if (nextProps === this.props.colorcards) {
+    if (nextProps === this.props) {
       return false;
     }
     return true;

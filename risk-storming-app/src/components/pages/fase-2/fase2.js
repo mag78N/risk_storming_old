@@ -85,11 +85,7 @@ class FaseTwoPage extends React.PureComponent {
           label: '',
           cards: [],
           tasks: [
-            {
-              task1: '',
-              task2: '',
-              task3: '',
-            },
+            
           ],
         },
       ];

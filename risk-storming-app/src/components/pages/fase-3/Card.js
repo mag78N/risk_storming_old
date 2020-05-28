@@ -34,9 +34,27 @@ class Card extends React.Component {
   toggleOpen() {
     this.setState({ open: !this.state.open });
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.cardid === 'orange-1') {
+      console.log(nextState, this.state);
+    }
+    if (
+      nextProps.cardid !== this.props.cardid ||
+      nextProps.card !== this.props.card ||
+      nextProps.index !== this.props.index
+    ) {
+      console.log('props card updating', this.props.cardid);
+      return true;
+    }
+    if (nextState.open !== this.state.open) {
+      console.log('state card updating', this.props.cardid);
+      return true;
+    }
 
+    return false;
+  }
   render() {
-    const { card, cardid , index } = this.props;
+    const { card, cardid, index } = this.props;
     return (
       <Draggable
         draggable={true}

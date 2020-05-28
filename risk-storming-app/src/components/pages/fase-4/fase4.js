@@ -59,19 +59,58 @@ class FaseFourPage extends Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  addNewTask = () => {
-    
-    console.log('add new task');
-  }
+  handleChange = (e) => {
+    const datasetCardId = e.target.dataset.cardid;
+    const datasetRiskIndex = e.target.dataset.riskindex;
+    const datasetTaskIndex = e.target.dataset.taskindex;
+    const value = e.target.value;
+    const name = e.target.name;
+    this.setState((prevState) => {
+      const newCards = [...prevState.chosenCards];
+      const card = newCards.find((newCard) => {
+        return newCard.id === datasetCardId;
+      });
+      const task = card.risks[datasetRiskIndex].tasks[datasetTaskIndex];
+      task[name] = value;
+
+      return {
+        chosenCards: newCards,
+      };
+    });
+  };
+
+  addNewTask = (cardRiskId) => {
+    const [cardId, riskId] = cardRiskId.split('|');
+    const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+    this.setState((prevState) => {
+      const newCards = [...prevState.chosenCards];
+      const card = newCards.find((newCard) => {
+        return newCard.id === cardId;
+      });
+      const risk = card.risks[riskIndex];
+      risk.tasks = [
+        ...risk.tasks,
+        {
+          owner: '',
+          action: '',
+          deliverable: '',
+        },
+      ];
+
+      return {
+        chosenCards: newCards,
+      };
+    });
+  };
   render() {
     const { chosenCards } = this.state;
     return (
       <>
         <TopNavbar faseNum='Phase 4' homepage='/mainpage' />
-        <div className='fase4LeftContainer'>
+        <div className='fase4Container'>
           {chosenCards.map((card, index) => (
             /* 1 cardStream = blue card +  1 risk + colorcards for 1 risk */
-            <BlueCard key={index} card={card} addnewtask={this.addNewTask} />
+            <BlueCard key={index} card={card} addnewtask={this.addNewTask} onchange={this.handleChange}/>
           ))}
         </div>
         <Footer
