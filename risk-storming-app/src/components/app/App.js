@@ -54,8 +54,8 @@ const App = () => (
           <Route exact path='/fase3' component={FaseThreePage} />
           <Route exact path='/fase3Pdf' component={FaseThreePdf} />
           <Route exact path='/fase4' component={FaseFourPage} />
-          <Route exact path='/404' component={NotFoundPage} />
         </PrivateRoute>
+        <Route path='/404' component={NotFoundPage} />
       </Switch>
     </>
   </Router>

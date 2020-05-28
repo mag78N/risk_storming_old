@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 class FaseTwoPage extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {               
+    this.state = {
       chosenCards: [],
     };
   }
@@ -86,9 +86,9 @@ class FaseTwoPage extends React.PureComponent {
           cards: [],
           tasks: [
             {
-              a: '',
-              b: '',
-              c: '',
+              task1: '',
+              task2: '',
+              task3: '',
             },
           ],
         },

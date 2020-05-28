@@ -1,7 +1,7 @@
 import React from 'react';
 import Risk from './Risk';
 import '../../cards/Card/Card.css';
-const BlueCard = ({card}) => {
+const BlueCard = ({card, addnewtask}) => {
     return (
       <>
         {/* blue card */}
@@ -12,7 +12,7 @@ const BlueCard = ({card}) => {
           </div>
         </div>
         {/* risk post its for 1 blue card + its colorcards */}
-        <Risk card={card}/>
+        <Risk card={card} addnewtask={addnewtask}/>
      </>
     );
   }

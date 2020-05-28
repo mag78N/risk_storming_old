@@ -1,9 +1,8 @@
 /* fase 4 */
-.fase4LeftContainer {
-  background-color: lightgrey;
-  width: 30vw;
+/* .fase4LeftContainer {
+ 
 }
-
+ */
 .miniCard {
   border-radius: 5px;
   border-width: 6px;
@@ -29,5 +28,5 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }

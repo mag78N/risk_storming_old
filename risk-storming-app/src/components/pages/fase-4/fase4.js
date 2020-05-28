@@ -59,7 +59,10 @@ class FaseFourPage extends Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  
+  addNewTask = () => {
+    
+    console.log('add new task');
+  }
   render() {
     const { chosenCards } = this.state;
     return (
@@ -68,11 +71,7 @@ class FaseFourPage extends Component {
         <div className='fase4LeftContainer'>
           {chosenCards.map((card, index) => (
             /* 1 cardStream = blue card +  1 risk + colorcards for 1 risk */
-                  <BlueCard
-                    key={index}
-                    card={card}
-                    
-                  />
+            <BlueCard key={index} card={card} addnewtask={this.addNewTask} />
           ))}
         </div>
         <Footer

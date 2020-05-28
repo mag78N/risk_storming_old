@@ -1,7 +1,7 @@
 import React from 'react';
 import ColorCards from './ColorCards';
 import TaskList from './TaskList';
-const Risk = ({card}) => {
+const Risk = ({card, addnewtask}) => {
   return (
     <>
       {card.risks.map((risk, idx) => {
@@ -23,10 +23,16 @@ const Risk = ({card}) => {
                 <ColorCards risk={risk} />
               </div>
               <div>
-                <button className='buttonSecondary'>Add Task</button>
+                {/* onClick={() => addnewtask(card.id)} */}
+                <button
+                  className='buttonSecondary'
+                  onClick={() => addnewtask()}
+                >
+                  Add Task
+                </button>
               </div>
             </div>
-              <TaskList risks={card.risks} />           
+            <TaskList risks={card.risks} risk={risk} card={card} />
           </div>
         );
       })}
