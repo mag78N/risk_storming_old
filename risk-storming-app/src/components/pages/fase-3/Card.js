@@ -35,9 +35,9 @@ class Card extends React.Component {
     this.setState({ open: !this.state.open });
   }
   shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.cardid === 'orange-1') {
+    /* if (this.props.cardid === 'orange-1') {
       console.log(nextState, this.state);
-    }
+    } */
     if (
       nextProps.cardid !== this.props.cardid ||
       nextProps.card !== this.props.card ||
@@ -56,12 +56,7 @@ class Card extends React.Component {
   render() {
     const { card, cardid, index } = this.props;
     return (
-      <Draggable
-        draggable={true}
-        draggableId={cardid}
-        index={index}
-        type='CARD'
-      >
+      <Draggable draggable={true} draggableId={cardid} index={index}>
         {(provided, snapshot) => (
           <CardList
             ref={provided.innerRef}

@@ -11,7 +11,7 @@ class InnerCardList extends Component {
     const { colorcards } = this.props;
     return colorcards.map((card, index) => (
       <Card
-        type='CARD'
+        
         key={card.id}
         cardid={card.id}
         card={card}

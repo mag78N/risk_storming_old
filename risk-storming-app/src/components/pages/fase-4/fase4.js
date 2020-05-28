@@ -102,6 +102,23 @@ class FaseFourPage extends Component {
       };
     });
   };
+  deleteTaskRow = (cardRiskId, index) => {
+    console.log('row deleted');
+    const [cardId, riskId] = cardRiskId.split('|');
+    const riskIndex = parseInt(riskId.split('-')[1]) - 1;
+    this.setState((prevState) => {
+      const newCards = [...prevState.chosenCards];
+      const card = newCards.find((newCard) => {
+        return newCard.id === cardId;
+      });
+      const risk = card.risks[riskIndex];
+      risk.tasks = risk.tasks.filter((task, taskIndex) => {
+        return taskIndex !== index;
+      });
+
+      return risk;
+    });
+  };
   render() {
     const { chosenCards } = this.state;
     return (
@@ -110,7 +127,13 @@ class FaseFourPage extends Component {
         <div className='fase4Container'>
           {chosenCards.map((card, index) => (
             /* 1 cardStream = blue card +  1 risk + colorcards for 1 risk */
-            <BlueCard key={index} card={card} addnewtask={this.addNewTask} onchange={this.handleChange}/>
+            <BlueCard
+              key={index}
+              card={card}
+              addnewtask={this.addNewTask}
+              deletetaskrow={this.deleteTaskRow}
+              onchange={this.handleChange}
+            />
           ))}
         </div>
         <Footer
