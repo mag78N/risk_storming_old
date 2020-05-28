@@ -1,17 +1,9 @@
 /* fase 4 */
-.fase4LeftPane {
+.fase4LeftContainer {
   background-color: lightgrey;
-  width: 100vw;
+  width: 30vw;
 }
-.cardStream {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem auto;
-}
-.innerCardStreamLeft {
-  width: 275px;
-}
+
 .miniCard {
   border-radius: 5px;
   border-width: 6px;
@@ -32,14 +24,10 @@
   flex-direction: column;
   align-items: center;
 }
-.rowFlex{
-  display: flex;
-  flex-direction: row;
-}
+
 .riskColumn {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px dashed black;
   margin-bottom: 2rem;
 }

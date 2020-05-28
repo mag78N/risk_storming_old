@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles/fase4.css';
 import BlueCard from './BlueCard';
-
 import Risk from './Risk';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
@@ -60,66 +59,20 @@ class FaseFourPage extends Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  handleChange = (e) => {
-    const datasetRiskIndex = e.target.dataset.riskindex;
-    const datasetTaskId = e.target.dataset.taskid;
-    const datasetTaskIndex = e.target.dataset.taskindex;
-    const value = e.target.value;
-    this.setState((prevState) => ({
-      chosenCards: prevState.chosenCards.map((card) => {
-        card.risks[0].tasks[0].a = value;
-
-        return card;
-      }),
-    }));
-  };
-
-  addNewRow = (cardId) => {
-    this.setState((prevState) => {
-      const newCards = [...prevState.chosenCards];
-      const card = newCards.find((newCard) => {
-        return newCard.id === cardId;
-      });
-      card.risks.tasks = [...card.risks.tasks, { tasks: [] }];
-      return {
-        chosenCards: newCards,
-      };
-    });
-  };
-  deleteRow = (cardId, index) => {
-    this.setState((prevState) => ({
-      chosenCards: prevState.chosenCards.map((card) => {
-        if (cardId === card.id) {
-          card.risks = card.risks.filter((risk, riskIndex) => {
-            return riskIndex !== index;
-          });
-        }
-        return card;
-      }),
-    }));
-  };
+  
   render() {
     const { chosenCards } = this.state;
     return (
       <>
         <TopNavbar faseNum='Phase 4' homepage='/mainpage' />
-
-        <div className='fase4LeftPane'>
+        <div className='fase4LeftContainer'>
           {chosenCards.map((card, index) => (
-            <div className='cardStream'>
-              <div className='innerCardStreamLeft'>
-                
+            /* 1 cardStream = blue card +  1 risk + colorcards for 1 risk */
                   <BlueCard
-                    /* key={index} */
+                    key={index}
                     card={card}
-                    color={card.color}
-                    title={card.title}
-                    subTitle={card.subTitle}
+                    
                   />
-                
-                
-              </div>
-            </div>
           ))}
         </div>
         <Footer

@@ -1,13 +1,13 @@
 import React from 'react';
 import ColorCards from './ColorCards';
 import TaskList from './TaskList';
-const Risk = (props) => {
+const Risk = ({card}) => {
   return (
     <>
-      {props.card.risks.map((val, idx) => {
+      {card.risks.map((risk, idx) => {
         const riskId = `risk-${idx + 1}`,
-          riskText = val.label,
-          cardRiskId = `${props.card.id}|${riskId}`;
+          riskText = risk.label,
+          cardRiskId = `${card.id}|${riskId}`;
         return (
           <div className='riskColumn' key={idx}>
             <div className='column'>
@@ -20,15 +20,13 @@ const Risk = (props) => {
                 </div>
               </div>
               <div>
-                <ColorCards risk={val} />
+                <ColorCards risk={risk} />
               </div>
               <div>
                 <button className='buttonSecondary'>Add Task</button>
               </div>
             </div>
-            <div>
-              <TaskList risks={props.card.risks} />
-            </div>
+              <TaskList risks={card.risks} />           
           </div>
         );
       })}
