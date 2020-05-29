@@ -52,7 +52,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   onChange={onchange}
                 />
               </Col>
-              <Col sm={1}>
+              <Col sm={1} className='addTaskButtonContainer'>
                 <button
                   className='removeButton'
                   onClick={() => deletetaskrow(cardriskid, taskIndex)}
