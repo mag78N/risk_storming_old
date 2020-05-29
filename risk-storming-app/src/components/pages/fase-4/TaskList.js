@@ -7,6 +7,18 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
   return (
     <>
       <Container fluid>
+        <Row>
+          <Col sm={2} className='rowHeader'>
+            Who
+          </Col>
+          <Col sm={4} className='rowHeader'>
+            Commitment
+          </Col>
+          <Col sm={4} className='rowHeader'>
+            Deliverables/Measurables
+          </Col>
+          <Col sm={1}></Col>
+        </Row>
         {risk.tasks.map((task, taskIndex) => {
           return (
             <Row key={taskIndex}>
