@@ -14,11 +14,7 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
               <div className='risk riskPostit center' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg largerWidth'>
                   <p>
-                    <b
-                      style={{
-                        textTransform: 'uppercase',
-                      }}
-                    >{`risk #${idx + 1}`}</b>
+                    <b>{`risk #${idx + 1}`}</b>
                   </p>
                   <p>{riskText}</p>
                 </div>
@@ -26,11 +22,12 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
               <div>
                 <ColorCards risk={risk} />
               </div>
-              <div>
+              <div className='addTaskButtonContainer'>
                 <button
-                  className='buttonSecondary'
+                  className='buttonSecondary '
                   onClick={() => addnewtask(cardRiskId)}
                 >
+                  <i className='fa fa-plus' aria-hidden='true' />
                   Add Task
                 </button>
               </div>

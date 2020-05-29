@@ -6,7 +6,7 @@ const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
     <>
       {/* blue card */}
       <div className={`miniCard`}>
-        <div className={`cardHeader colorWhite ${card.color}Bg whiteBorder`}>
+        <div className={`cardHeader colorWhite ${card.color}Bg`}>
           <div className='cardTitle colorWhite'>{card.title}</div>
           <div className='cardSubtitle colorWhite'>{card.subTitle}</div>
         </div>

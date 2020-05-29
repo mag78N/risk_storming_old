@@ -8,7 +8,7 @@ import '../../cards/color-css/darkblue-card/DarkblueCard.css';
 const ColorCards = (props) => {
   return (
     <>
-      <div className='risk'>
+      <div className='colorCardsColumn'>
         {props.risk.cards.map((card, idx) => {
           return (
             <div className={`${card.color} miniCard`} key={idx}>
@@ -18,7 +18,7 @@ const ColorCards = (props) => {
               </div>
             </div>
           );
-        })}       
+        })}
       </div>
     </>
   );

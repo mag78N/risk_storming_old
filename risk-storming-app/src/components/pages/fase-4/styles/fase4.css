@@ -1,8 +1,8 @@
 /* fase 4 */
-/* .fase4LeftContainer {
- 
+.fase4Container {
+  box-sizing: border-box;
 }
- */
+
 .miniCard {
   text-align: center;
   border-radius: 5px;
@@ -10,22 +10,21 @@
   -webkit-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
-  margin: 0.2rem 0;
+  /* margin: 0.2rem 0; */
   width: 275px;
+  margin: 0.2rem auto;
 }
 .colorWhite {
   color: #eee !important;
   background-color: rgb(65, 161, 206) !important;
 }
-.whiteBorder {
-  border-width: 6px;
-  border-color: #eee !important;
-}
-.risk {
+
+.colorCardsColumn {
   width: 275px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
 }
 .riskCardsColumn {
   display: flex;
@@ -33,12 +32,15 @@
   align-items: center;
   margin-right: 2rem;
 }
-
+.fa-plus {
+    padding-right: 0.5rem;
+}
 .riskStream {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 5rem;
+  padding: 2rem 0;
+  border-bottom: 2px dashed #e5e5e5;
 }
 .rowHeader {
   text-transform: uppercase;
@@ -53,8 +55,9 @@ textarea {
 .largerWidth {
   width: 275px !important;
 }
+p:first-child {
+  text-align: center;
+}
 .addTaskButtonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 1rem;
 }
