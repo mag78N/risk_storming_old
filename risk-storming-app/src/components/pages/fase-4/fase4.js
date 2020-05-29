@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/fase4.css';
+import '../risk-row.css';
 import BlueCard from './BlueCard';
 import Risk from './Risk';
 import Footer from '../../Footer/Footer';

@@ -9,12 +9,16 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
           riskText = risk.label,
           cardRiskId = `${card.id}|${riskId}`;
         return (
-          <div className='riskColumn' key={idx}>
-            <div className='column'>
-              <div className='risk riskPostit' id={cardRiskId}>
+          <div className='riskStream' key={idx}>
+            <div className='riskCardsColumn'>
+              <div className='risk riskPostit center' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg'>
                   <p>
-                    <b>{`risk #${idx + 1}`}:</b>
+                    <b
+                      style={{
+                        textTransform: 'uppercase',
+                      }}
+                    >{`risk #${idx + 1}`}</b>
                   </p>
                   <p>{riskText}</p>
                 </div>
@@ -23,17 +27,22 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
                 <ColorCards risk={risk} />
               </div>
               <div>
-                {/* onClick={() => addnewtask(card.id)} */}
                 <button
                   className='buttonSecondary'
                   onClick={() => addnewtask(cardRiskId)}
                 >
                   Add Task
                 </button>
-               
               </div>
             </div>
-            <TaskList idx={idx} risk={risk} card={card} onchange={onchange} deletetaskrow={deletetaskrow} cardriskid={cardRiskId}/>
+            <TaskList
+              idx={idx}
+              risk={risk}
+              card={card}
+              onchange={onchange}
+              deletetaskrow={deletetaskrow}
+              cardriskid={cardRiskId}
+            />
           </div>
         );
       })}

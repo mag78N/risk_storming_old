@@ -5,10 +5,10 @@ const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
   return (
     <>
       {/* blue card */}
-      <div className={`${card.color} miniCard`}>
-        <div className={`cardHeader ${card.color}Header`}>
-          <div className='cardTitle'>{card.title}</div>
-          <div className='cardSubtitle'>{card.subTitle}</div>
+      <div className={`whiteBorder miniCard`}>
+        <div className={`cardHeader colorWhite ${card.color}Bg`}>
+          <div className='cardTitle colorWhite'>{card.title}</div>
+          <div className='cardSubtitle colorWhite'>{card.subTitle}</div>
         </div>
       </div>
       {/* risk post its for 1 blue card + its colorcards */}

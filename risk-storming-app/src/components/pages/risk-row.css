@@ -37,4 +37,8 @@
 }
 .riskPostit p {
   margin-bottom: 0.5rem;
+  
+}
+.textareaBg b{
+  text-transform: uppercase;
 }

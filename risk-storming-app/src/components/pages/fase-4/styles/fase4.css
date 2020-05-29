@@ -10,7 +10,14 @@
   -moz-box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
   margin: 0.2rem 0;
-  min-width: 250px;
+  width: 250px;
+}
+.colorWhite {
+  color: #eee !important;
+  background-color: rgb(65, 161, 206) !important;
+}
+.whiteBorder{
+  border-color: #eee!important;
 }
 .risk {
   width: 275px;
@@ -18,19 +25,15 @@
   flex-direction: column;
   align-items: center;
 }
-.column {
+.riskCardsColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.riskColumn {
+.riskStream {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 5rem;
-}
-table,
-td {
-    border: 1px solid #333;
 }
