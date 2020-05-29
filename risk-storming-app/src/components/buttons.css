@@ -3,6 +3,7 @@
   color: #ffffff;
   border-width: 0px;
   border-radius: 100px;
+  outline: 100px;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -16,10 +17,10 @@
   background-color: #008990;
   border: 1px solid #008990;
 }
-.buttonPrimary:active,
+/* .buttonPrimary:active,
 .buttonPrimary:focus {
-  
-}
+  outline: 100px;
+} */
 .buttonPrimary:disabled {
   background: #e5e5e5;
   color: grey;
