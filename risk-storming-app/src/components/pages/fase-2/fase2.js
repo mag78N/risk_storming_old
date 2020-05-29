@@ -84,13 +84,13 @@ class FaseTwoPage extends React.PureComponent {
         {
           label: '',
           cards: [],
-           tasks: [
+          tasks: [
             {
               owner: '',
               action: '',
               deliverable: '',
             },
-          ], 
+          ],
         },
       ];
       return {
@@ -114,7 +114,7 @@ class FaseTwoPage extends React.PureComponent {
 
   render() {
     const { chosenCards } = this.state;
-    console.log(this.state);
+
     return (
       <>
         <TopNavbar faseNum='Phase 2' homepage='/mainpage' />
@@ -146,7 +146,6 @@ class FaseTwoPage extends React.PureComponent {
               <div className='cardRow' key={index}>
                 <div className='innerCardRow'>
                   <Card
-                    key={card.id}
                     card={card}
                     color={card.color}
                     title={card.title}

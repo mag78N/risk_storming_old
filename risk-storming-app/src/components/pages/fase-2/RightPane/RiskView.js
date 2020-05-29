@@ -2,24 +2,23 @@ import RiskList from './RiskList';
 
 import React from 'react';
 
-const RiskView = (props) => {
+const RiskView = ({cardid, card, handleChange, addNewRow, deleteRow}) => {
   return (
     <div className='content'>
       <form className='riskDetailsForm'>
         <button
-          onClick={() => props.addNewRow(props.card.id)}
+          onClick={() => addNewRow(card.id)}
           type='button'
           className='buttonSecondary addButton'>
           <i className='fa fa-plus' aria-hidden='true' />
           Add risk
         </button>
         <RiskList
-          key={props.key}
-          id={props.id}
-          card={props.card}
-          onchange={props.handleChange}
-          addNewRow={props.addNewRow}
-          deleteRow={props.deleteRow}
+          /* key={key} */
+          cardid={cardid}
+          card={card}
+          onchange={handleChange}         
+          deleteRow={deleteRow}
         />
       </form>
     </div>
