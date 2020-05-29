@@ -3,7 +3,6 @@ import './styles/fase4.css';
 import '../risk-row.css';
 import Container from 'react-bootstrap/Container';
 import BlueCard from './BlueCard';
-import Risk from './Risk';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 class FaseFourPage extends Component {

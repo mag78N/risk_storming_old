@@ -22,8 +22,8 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
         {risk.tasks.map((task, taskIndex) => {
           return (
             <Row key={taskIndex}>
-              <Col sm={2}>
-                <label for={`${cardriskid}|owner-${taskIndex}`}></label>
+              <Col sm={2} className='textareaContainer'>
+                <label htmlFor={`${cardriskid}|owner-${taskIndex}`}></label>
                 <textarea
                   id={`${cardriskid}|owner-${taskIndex}`}
                   value={task.owner}
@@ -31,13 +31,12 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  //placeholder='who?'
                   rows='5'
                   onChange={onchange}
                 />
               </Col>
-              <Col sm={4}>
-                <label for={`${cardriskid}|action-${taskIndex}`}></label>
+              <Col sm={4} className='textareaContainer'>
+                <label htmlFor={`${cardriskid}|action-${taskIndex}`}></label>
                 <textarea
                   id={`${cardriskid}|action-${taskIndex}`}
                   value={task.action}
@@ -45,13 +44,14 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  //placeholder='action?'
                   rows='5'
                   onChange={onchange}
                 />
               </Col>
-              <Col sm={5}>
-                <label for={`${cardriskid}|deliverable-${taskIndex}`}></label>
+              <Col sm={5} className='textareaContainer'>
+                <label
+                  htmlFor={`${cardriskid}|deliverable-${taskIndex}`}
+                ></label>
                 <textarea
                   id={`${cardriskid}|deliverable-${taskIndex}`}
                   value={task.deliverable}
@@ -59,7 +59,6 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  //placeholder='deliverable?'
                   rows='5'
                   onChange={onchange}
                 />

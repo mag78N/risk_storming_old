@@ -1,5 +1,5 @@
 import React from 'react';
-import Risk from './Risk';
+import Risks from './Risks';
 import '../../cards/Card/Card.css';
 const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
   return (
@@ -16,7 +16,7 @@ const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
           <div>{card.subTitle}</div>
         </div>
       </div>
-      <Risk
+      <Risks
         card={card}
         addnewtask={addnewtask}
         onchange={onchange}

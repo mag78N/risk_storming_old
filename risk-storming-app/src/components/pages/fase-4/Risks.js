@@ -1,7 +1,7 @@
 import React from 'react';
 import ColorCards from './ColorCards';
 import TaskList from './TaskList';
-const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
+const Risks = ({ card, addnewtask, onchange, deletetaskrow }) => {
   return (
     <>
       {card.risks.map((risk, idx) => {
@@ -47,4 +47,4 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
   );
 };
 
-export default Risk;
+export default Risks;
