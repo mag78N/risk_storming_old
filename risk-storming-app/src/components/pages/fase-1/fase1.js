@@ -2,6 +2,7 @@ import React from 'react';
 import '../../cards/color-css/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
 import TopNavbar from '../../TopNavbar/TopNavbar';
+import { shuffle } from '../../../utils/utils';
 import Split from 'react-split';
 import './styles/fase1.css';
 import '../../../index.css';
@@ -24,7 +25,8 @@ const move = (state, source, destination) => {
 
   return {
     [source.droppableId]: srcListClone,
-    ...(source.droppableId === destination.droppableId ? {}
+    ...(source.droppableId === destination.droppableId
+      ? {}
       : {
           [destination.droppableId]: destListClone,
         }),
@@ -35,8 +37,7 @@ class FaseOnePage extends React.Component {
     super(props);
     this.state = {
       chosenCards: [],
-      RIGHTCOLUMN: Object.values(bluecards),
-     
+      RIGHTCOLUMN: shuffle(Object.values(bluecards)),
     };
   }
   componentDidMount() {
@@ -86,7 +87,7 @@ class FaseOnePage extends React.Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
-  
+
   onDragEnd = ({ source, destination }) => {
     if (!destination) {
       return;
@@ -95,9 +96,8 @@ class FaseOnePage extends React.Component {
       return move(state, source, destination);
     });
   };
-  
+
   render() {
-    
     console.log('state inside render :', this.state);
     const { chosenCards } = this.state;
     return (
