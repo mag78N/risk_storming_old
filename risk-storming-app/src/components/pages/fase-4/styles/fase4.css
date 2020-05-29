@@ -40,8 +40,9 @@
   align-items: center;
   margin-bottom: 5rem;
 }
-.rowHeader{
-  background-color: rgb(156, 154, 154);
+.rowHeader {
+  text-transform: uppercase;
+  font-size: 1.45rem;
   text-align: center;
   margin-left: 0.2rem;
   padding: 0.5rem;
@@ -49,7 +50,10 @@
 textarea {
   width: 100% !important;
 }
-.addTaskButtonContainer{
+.largerWidth {
+  width: 275px !important;
+}
+.addTaskButtonContainer {
   display: flex;
   justify-content: center;
   align-items: center;

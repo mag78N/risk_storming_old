@@ -12,7 +12,7 @@ const Risk = ({ card, addnewtask, onchange, deletetaskrow }) => {
           <div className='riskStream' key={idx}>
             <div className='riskCardsColumn'>
               <div className='risk riskPostit center' id={cardRiskId}>
-                <div key={cardRiskId} className='textareaBg'>
+                <div key={cardRiskId} className='textareaBg largerWidth'>
                   <p>
                     <b
                       style={{

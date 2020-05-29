@@ -14,7 +14,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
           <Col sm={4} className='rowHeader'>
             Commitment
           </Col>
-          <Col sm={4} className='rowHeader'>
+          <Col sm={5} className='rowHeader'>
             Deliverables/Measurables
           </Col>
           <Col sm={1}></Col>
@@ -31,7 +31,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  placeholder='who?'
+                  //placeholder='who?'
                   rows='5'
                   onChange={onchange}
                 />
@@ -45,7 +45,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  placeholder='action?'
+                  //placeholder='action?'
                   rows='5'
                   onChange={onchange}
                 />
@@ -59,7 +59,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   data-taskindex={taskIndex}
                   data-riskindex={idx}
                   data-cardid={card.id}
-                  placeholder='deliverable?'
+                  //placeholder='deliverable?'
                   rows='5'
                   onChange={onchange}
                 />
@@ -69,7 +69,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   className='removeButton'
                   onClick={() => deletetaskrow(cardriskid, taskIndex)}
                 >
-                  <i className='fa fa-minus' aria-hidden='true' />
+                  <i className='fa fa-minus fa-2x' aria-hidden='true' />
                 </button>
               </Col>
             </Row>
