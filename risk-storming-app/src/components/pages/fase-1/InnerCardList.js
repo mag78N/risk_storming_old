@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 class InnerCardList extends Component {
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.bluecards === this.props.bluecards) {
-      return false;
-    }
-    return true;
-  }
+  
   render() {
     return this.props.bluecards.map((card, index) => (
       <Card

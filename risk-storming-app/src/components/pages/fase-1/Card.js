@@ -40,7 +40,21 @@ class Card extends React.Component {
   IncrementItem = () => {
     this.setState({ clicks: this.state.clicks + 1 });
   };
+  shouldComponentUpdate(nextProps, nextState) {
+    if (
+      nextProps.cardid !== this.props.cardid ||
+      nextProps.card !== this.props.card 
+    ) {
+      console.log('props card updating', this.props.cardid);
+      return true;
+    }
+    if (nextState.open !== this.state.open || nextState.clicks !== this.state.clicks) {
+      console.log('state card updating', this.props.cardid);
+      return true;
+    }
 
+    return false;
+  }
   render() {
     const { card } = this.props;
     return (

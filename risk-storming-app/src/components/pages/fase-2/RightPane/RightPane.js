@@ -1,13 +1,11 @@
 import Card from '../Card';
 import React from 'react';
-
 import Carousel from 'react-bootstrap/Carousel';
 import RiskView from './RiskView';
-const RightPane = (props) => {
-  
+const RightPane = ({ handleChange, addNewRow, deleteRow, chosenCards }) => {
   return (
     <Carousel slide={false} wrap={false} interval={null}>
-      {props.chosenCards.map((card, index) => (
+      {chosenCards.map((card, index) => (
         <Carousel.Item id={card.id} key={index}>
           <Card
             key={card.id}
@@ -21,13 +19,10 @@ const RightPane = (props) => {
             exampleThree={card.exampleThree}
           />
           <RiskView
-            cardid={card.id}
             card={card}
-            handleChange={props.handleChange}
-            addNewRow={props.addNewRow}
-            deleteRow={props.deleteRow}
-            
-            
+            handleChange={handleChange}
+            addNewRow={addNewRow}
+            deleteRow={deleteRow}
           />
         </Carousel.Item>
       ))}

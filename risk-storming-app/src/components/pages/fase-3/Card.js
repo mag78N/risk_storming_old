@@ -35,9 +35,7 @@ class Card extends React.Component {
     this.setState({ open: !this.state.open });
   }
   shouldComponentUpdate(nextProps, nextState) {
-    /* if (this.props.cardid === 'orange-1') {
-      console.log(nextState, this.state);
-    } */
+   
     if (
       nextProps.cardid !== this.props.cardid ||
       nextProps.card !== this.props.card ||

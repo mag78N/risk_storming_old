@@ -19,7 +19,7 @@ class RightColumn extends React.Component {
           >
             {cards.map((card, index) => (
               <Card
-                type='CARD'
+                
                 key={card['id']}
                 cardid={card['id']}
                 card={card}

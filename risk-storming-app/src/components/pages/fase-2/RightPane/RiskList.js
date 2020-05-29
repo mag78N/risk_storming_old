@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RiskList = ({cardid, card, onchange, deleteRow}) => {
+const RiskList = ({card, onchange, deleteRow}) => {
   return card.risks.map((val, idx) => {
     let riskId = `risk-${idx + 1}`;
    
