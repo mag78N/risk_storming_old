@@ -184,7 +184,7 @@ class FreeFaseThreePage extends React.Component {
           onDragEnd={this.onDragEnd}
         >
           <Split
-            className='splitContainer splitContainerFase3'
+            className='freeVersion splitContainer splitContainerFase3'
             sizes={[60, 40]}
             minSize={[300, 150]}
             expandToMin={false}

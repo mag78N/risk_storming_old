@@ -46,6 +46,9 @@ textarea::placeholder {
 .riskDetailsForm textarea {
   margin-right: 1rem;
 }
+.buttonContainer {
+  width: 25px;
+}
 .addButton {
   display: inline-block;
   margin: 2rem 0 1.5rem;
