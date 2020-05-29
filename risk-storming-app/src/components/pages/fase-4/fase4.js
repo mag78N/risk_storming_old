@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './styles/fase4.css';
 import '../risk-row.css';
+import Container from 'react-bootstrap/Container';
 import BlueCard from './BlueCard';
 import Risk from './Risk';
 import Footer from '../../Footer/Footer';
@@ -125,7 +126,7 @@ class FaseFourPage extends Component {
     return (
       <>
         <TopNavbar faseNum='Phase 4' homepage='/mainpage' />
-        <div className='fase4Container'>
+        <Container fluid className='fase4Container'>
           {chosenCards.map((card, index) => (
             /* 1 cardStream = blue card +  1 risk + colorcards for 1 risk */
             <BlueCard
@@ -136,7 +137,7 @@ class FaseFourPage extends Component {
               onchange={this.handleChange}
             />
           ))}
-        </div>
+        </Container>
         <Footer
           prev='/fase3'
           next='/mainpage'

@@ -10,7 +10,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
         {risk.tasks.map((task, taskIndex) => {
           return (
             <Row key={taskIndex}>
-              <Col sm={4}>
+              <Col sm={2}>
                 <label for={`${cardriskid}|owner-${taskIndex}`}></label>
                 <textarea
                   id={`${cardriskid}|owner-${taskIndex}`}
@@ -38,7 +38,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   onChange={onchange}
                 />
               </Col>
-              <Col sm={4}>
+              <Col sm={5}>
                 <label for={`${cardriskid}|deliverable-${taskIndex}`}></label>
                 <textarea
                   id={`${cardriskid}|deliverable-${taskIndex}`}
@@ -52,14 +52,14 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   onChange={onchange}
                 />
               </Col>
-              <div>
+              <Col sm={1}>
                 <button
                   className='removeButton'
                   onClick={() => deletetaskrow(cardriskid, taskIndex)}
                 >
                   <i className='fa fa-minus' aria-hidden='true' />
                 </button>
-              </div>
+              </Col>
             </Row>
           );
         })}
