@@ -35,13 +35,9 @@
   box-shadow: 3px 5px 5px 0px rgba(158, 158, 158, 0.75);
 }
 .riskPostit p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
-b:first-child {
-  text-align: center;
-}
-.textareaBg b {
-  /* text-transform: uppercase; */
-  /* font-size: 1.35rem; */
-  text-align: center;
+.riskId {
+  font-weight: 600;
+  font-size: 0.8rem;
 }

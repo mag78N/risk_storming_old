@@ -14,10 +14,8 @@ class RiskList extends Component {
             <div className='riskLane' key={idx}>
               <div className='risk riskPostit' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg'>
-                  <p>
-                    <b>{`risk #${idx + 1}`}:</b>
-                  </p>
-                  <p>{riskText}</p>
+                  <p className='riskId'>{`risk #${idx + 1}`}:</p>
+                  <p className='riskText'>{riskText}</p>
                 </div>
               </div>
               <RiskDropLane
