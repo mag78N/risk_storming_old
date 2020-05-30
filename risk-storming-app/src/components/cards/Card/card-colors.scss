@@ -1,0 +1,46 @@
+$card-colors: (
+  "blue": rgb(65, 161, 206),
+  "darkblue": rgb(11, 41, 179),
+  "green": rgb(8, 122, 8),
+  "orange": rgb(243, 115, 11),
+  "pink": rgb(240, 38, 156),
+  "red": rgb(228, 27, 27),
+  "purple": rgb(103, 8, 122),
+);
+
+@each $name, $color in $card-colors {
+  .#{$name} {
+    background-color: $color;
+    border: 2px solid $color;
+    .cardVote {
+      i, span {
+        color: $color;
+      }
+    }
+  }
+  .#{$name}Bg {
+    background-color: $color;
+  }
+  .#{$name}Header {
+    color: $color;
+  }
+}
+
+.darkorange {
+  @extend .orange;
+}
+.darkorangeBg {
+  @extend .orangeBg;
+}
+.darkorangeHeader {
+  @extend .orangeHeader;
+}
+.deeppink {
+  @extend .pink;
+}
+.deeppinkBg {
+  @extend .pinkBg;
+}
+.deeppinkHeader {
+  @extend .pinkHeader;
+}

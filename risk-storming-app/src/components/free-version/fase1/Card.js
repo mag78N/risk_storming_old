@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../cards/color-css/blue-card/BlueCard.css';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import '../../cards/Card/Card.css';
+import '../../cards/Card/card-colors.scss';
 import chevronDown from '../../../assets/icons/chevron-down-outline.svg';
 import chevronUp from '../../../assets/icons/chevron-up-outline.svg';
 

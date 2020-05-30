@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../cards/color-css/blue-card/BlueCard.css';
 import '../../cards/Card/Card.css';
+import '../../cards/Card/card-colors.scss';
 import Split from 'react-split';
 import './styles/fase2.css';
 import '../../pages/risk-row.css';
