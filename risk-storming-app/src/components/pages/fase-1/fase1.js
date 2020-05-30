@@ -37,7 +37,7 @@ class FaseOnePage extends React.Component {
     super(props);
     this.state = {
       chosenCards: [],
-      RIGHTCOLUMN: shuffle(Object.values(bluecards)),
+      RIGHTCOLUMN: Object.values(bluecards),
     };
   }
   componentDidMount() {

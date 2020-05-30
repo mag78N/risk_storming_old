@@ -41,7 +41,7 @@ b:first-child {
   text-align: center;
 }
 .textareaBg b {
-  text-transform: uppercase;
-  font-size: 1.35rem;
+  /* text-transform: uppercase; */
+  /* font-size: 1.35rem; */
   text-align: center;
 }
