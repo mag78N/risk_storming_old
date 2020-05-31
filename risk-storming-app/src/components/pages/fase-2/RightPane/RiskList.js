@@ -12,7 +12,7 @@ const RiskList = ({card, onchange, deleteRow}) => {
         >
           <textarea
             onChange={onchange}
-            rows='3'
+            rows='5'
             placeholder='enter risk here'
             name={riskId}
             data-index={idx}

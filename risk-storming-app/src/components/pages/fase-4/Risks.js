@@ -13,10 +13,8 @@ const Risks = ({ card, addnewtask, onchange, deletetaskrow }) => {
             <div className='riskCardsColumn'>
               <div className='risk riskPostit center' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg largerWidth'>
-                  <p>
-                    <b>{`risk #${idx + 1}`}</b>
-                  </p>
-                  <p>{riskText}</p>
+                  <p className='riskId'>{`risk #${idx + 1}`}</p>
+                  <p className='riskText'>{riskText}</p>
                 </div>
               </div>
               <div>

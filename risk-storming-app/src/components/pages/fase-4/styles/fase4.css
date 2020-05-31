@@ -64,14 +64,11 @@
  .textareaContainer{
    padding: 0 3px;
  }
-textarea {
+.fase4Container textarea {
   width: 100% !important;
 }
 .largerWidth {
   width: 275px !important;
-}
-p:first-child {
-  text-align: center;
 }
 .addTaskButtonContainer {
   margin-top: 1rem;

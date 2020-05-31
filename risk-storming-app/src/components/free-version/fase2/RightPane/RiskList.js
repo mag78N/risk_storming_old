@@ -14,7 +14,7 @@ const RiskList = (props) => {
         >
           <textarea
             onChange={props.onchange}
-            rows='3'
+            rows='5'
             placeholder='enter risk here'
             name={riskId}
             data-index={idx}
