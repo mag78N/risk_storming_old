@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../cards/color-css/blue-card/BlueCard.css';
-import '../../cards/Card/Card.css';
+import '../../cards/Card/Card.scss';
+import '../../cards/Card/card-colors.scss';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Split from 'react-split';
 import './styles/fase1.css';

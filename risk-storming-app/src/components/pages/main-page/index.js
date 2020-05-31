@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 import { useHistory } from 'react-router-dom';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
@@ -26,11 +26,11 @@ const MainPage = () => {
   }
   return (
     <>
-      <div className='mainPageContainer'>
+      <div className='mainPage'>
         <TopNavbar faseNum='' homepage='/mainpage' />
 
-        <div className='mainPageJumbotron' style={bgImgStyle}>
-          <div className='mainPageButtonContainer'>
+        <div className='mainPage__jumbotron' style={bgImgStyle}>
+          <div className='mainPage__buttonContainer'>
             <Link to='/fase1'>
               <button className='buttonPrimary'>Continue Session</button>
             </Link>

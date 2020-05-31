@@ -1,7 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import '../buttons.css';
+import './App.scss';
+import '../../assets/styles/_variables.scss';
+import '../../assets/styles/buttons.scss';
 import {
   BrowserRouter as Router,
   Switch,

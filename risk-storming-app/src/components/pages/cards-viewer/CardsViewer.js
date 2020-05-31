@@ -1,8 +1,8 @@
 import React from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import '../../cards/Card/Card.css';
-import './CardsViewer.css';
+import '../../cards/Card/Card.scss';
+import './CardsViewer.scss';
 import { bluecards } from '../../../assets/en/blueCards';
 import { pinkcards } from '../../../assets/en/pinkCards';
 import { orangecards } from '../../../assets/en/orangeCards';

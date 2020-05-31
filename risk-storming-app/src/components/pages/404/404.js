@@ -1,5 +1,5 @@
 import React from 'react';
-import './404.css';
+import './404.scss';
 import { Link } from 'react-router-dom';
 import bg from '../../../assets/images/24.png';
 
@@ -12,7 +12,7 @@ const NotFoundPage = () => {
       <h1>Page not found!</h1>
       <p>This page doesn't exist, please go back to the</p>
       <Link to="/">
-        <button className='buttonPrimary landingPageButton'>main page</button>
+        <button className='buttonPrimary'>main page</button>
       </Link>
     </div>
   );

@@ -1,0 +1,26 @@
+@import '../../../assets/styles/_variables.scss';
+
+.nav {
+  justify-content: space-around;
+  margin-top: 1rem;
+  &.nav-tabs {
+    width: 100%;
+  }
+  .nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $text-color;
+    &.active {
+      color: $black;
+    }
+  }
+}
+.tab {
+  .tab-content {
+    padding: 1rem;
+  }
+  .cardBody {
+    padding-bottom: 1.5rem;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Risks from './Risks';
-import '../../cards/Card/Card.css';
+import '../../cards/Card/Card.scss';
 const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
   return (
     <>

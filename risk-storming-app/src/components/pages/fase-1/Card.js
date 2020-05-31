@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../cards/color-css/blue-card/BlueCard.css';
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
-import '../../cards/Card/Card.css';
+import '../../cards/Card/Card.scss';
+import '../../cards/Card/card-colors.scss';
 import chevronDown from '../../../assets/icons/chevron-down-outline.svg';
 import chevronUp from '../../../assets/icons/chevron-up-outline.svg';
 
@@ -69,18 +69,18 @@ class Card extends React.Component {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             isDragging={snapshot.isDragging}
-            className={`cardContainer ${card.color}`}
+            className={`card ${card.color}`}
           >
-            <div className={`cardHeader ${card.color}Header`}>
-              <div className='cardTitle'>{card.title}</div>
-              <div className='cardSubtitle'>{card.subTitle}</div>
+            <div className={`card__header ${card.color}Header`}>
+              <div className='card__title'>{card.title}</div>
+              <div className='card__subtitle'>{card.subTitle}</div>
             </div>
-            <div className='cardBody'>
-              <a className='cardVote' onClick={this.IncrementItem}>
+            <div className='card__body'>
+              <a className='card__vote' onClick={this.IncrementItem}>
                 <i className='fa fa-thumbs-up'></i>&nbsp;
                 <span>{this.state.clicks}</span>
               </a>
-              <div className='cardDescription'>{card.description}</div>
+              <div className='card__description'>{card.description}</div>
 
               <Content
                 id='cardExpanded'

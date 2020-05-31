@@ -1,0 +1,18 @@
+@import '../../../assets/styles/_variables.scss';
+
+.page404 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  margin-bottom: -60px;
+  color: $text-color-dark;
+  h1 {
+    margin-bottom: 1rem;
+  }
+}

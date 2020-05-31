@@ -1,10 +1,6 @@
 import React from 'react';
-import '../../cards/Card/Card.css';
-import '../../cards/color-css/green-card/GreenCard.css';
-import '../../cards/color-css/orange-card/OrangeCard.css';
-import '../../cards/color-css/pink-card/PinkCard.css';
-import '../../cards/color-css/red-card/RedCard.css';
-import '../../cards/color-css/darkblue-card/DarkblueCard.css';
+import '../../cards/Card/Card.scss';
+import '../../cards/Card/card-colors.scss';
 const ColorCards = (props) => {
   return (
     <>

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TopNavbar from '../TopNavbar/TopNavbar';
 import { Link } from 'react-router-dom';
 import { FormGroup, FormControl, FormLabel } from 'react-bootstrap';
-import './Login.css';
-import '../pages/main-page/index.css';
+import './Login.scss';
+import '../pages/main-page/index.scss';
 import bg from '../../assets/images/10.png';
 
 export default function Login() {
@@ -26,9 +26,9 @@ export default function Login() {
 
   return (
     <React.Fragment>
-      <div className='mainPageContainer'>
+      <div className='mainPage'>
         <TopNavbar homepage='/mainpage' />
-        <div className='mainPageJumbotron loginPage' style={bgImgStyle}>
+        <div className='mainPage__jumbotron loginPage' style={bgImgStyle}>
           <div className='loginContainer'>
             <h3>Log in to RiskStorming</h3>
             <form onSubmit={handleSubmit}>

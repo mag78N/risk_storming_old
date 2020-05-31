@@ -1,10 +1,8 @@
 import React from 'react';
 import Split from 'react-split';
 import { v4 as uuidv4 } from 'uuid';
-import '../../cards/Card/Card.css';
-import '../../cards/color-css/green-card/GreenCard.css';
-import '../../cards/color-css/orange-card/OrangeCard.css';
-import '../../cards/color-css/pink-card/PinkCard.css';
+import '../../cards/Card/Card.scss';
+import '../../cards/Card/card-colors.scss';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { DragDropContext } from 'react-beautiful-dnd';
