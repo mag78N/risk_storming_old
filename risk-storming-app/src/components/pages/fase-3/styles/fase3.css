@@ -7,7 +7,7 @@
   min-height: 150px;
   overflow: auto;
 }
-.dropzone .cardContainer {
+.dropzone .card {
   min-width: 210px;
 }
 .fase3LeftPane .riskPostit {

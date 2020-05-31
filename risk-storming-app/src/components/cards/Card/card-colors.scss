@@ -12,7 +12,7 @@ $card-colors: (
   .#{$name} {
     background-color: $color;
     border: 2px solid $color;
-    .cardVote {
+    .card__vote {
       i, span {
         color: $color;
       }

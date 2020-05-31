@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../../cards/Card/Card.css';
+import '../../cards/Card/Card.scss';
 import '../../cards/Card/card-colors.scss';
 import chevronDown from '../../../assets/icons/chevron-down-outline.svg';
 import chevronUp from '../../../assets/icons/chevron-up-outline.svg';
@@ -50,13 +50,13 @@ class Card extends React.Component {
   }
   render() {
     return (
-      <div className={`cardContainer ${this.props.color}`}>
-        <div className={`cardHeader ${this.props.color}Header`}>
-          <div className='cardTitle'>{this.props.title}</div>
-          <div className='cardSubtitle'>{this.props.subTitle}</div>
+      <div className={`card ${this.props.color}`}>
+        <div className={`card__header ${this.props.color}Header`}>
+          <div className='card__title'>{this.props.title}</div>
+          <div className='card__subtitle'>{this.props.subTitle}</div>
         </div>
-        <div className='cardBody'>
-          <div className='cardDescription'>{this.props.description}</div>
+        <div className='card__body'>
+          <div className='card__description'>{this.props.description}</div>
 
           <Content
             id='cardExpanded'

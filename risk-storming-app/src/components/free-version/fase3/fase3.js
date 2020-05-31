@@ -1,7 +1,7 @@
 import React from 'react';
 import Split from 'react-split';
 import { v4 as uuidv4 } from 'uuid';
-import '../../cards/Card/Card.css';
+import '../../cards/Card/Card.scss';
 import '../../cards/Card/card-colors.scss';
 import Footer from '../../Footer/Footer';
 import TopNavbar from '../../TopNavbar/TopNavbar';

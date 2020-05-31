@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../cards/Card/Card.css';
+import '../../../cards/Card/Card.scss';
 
 class Card extends React.Component {
   constructor() {
@@ -11,17 +11,17 @@ class Card extends React.Component {
   };
   render() {
     return (
-      <div className={`cardContainer ${this.props.color}`}>
-        <div className={`cardHeader ${this.props.color}Header`}>
-          <div className='cardTitle'>{this.props.title}</div>
-          <div className='cardSubtitle'>{this.props.subTitle}</div>
+      <div className={`card ${this.props.color}`}>
+        <div className={`card__header ${this.props.color}Header`}>
+          <div className='card__title'>{this.props.title}</div>
+          <div className='card__subtitle'>{this.props.subTitle}</div>
         </div>
-        <div className='cardBody'>
-          <a className='cardVote' onClick={this.IncrementItem}>
+        <div className='card__body'>
+          <a className='card__vote' onClick={this.IncrementItem}>
             <i class='fa fa-thumbs-up'></i>&nbsp;
             <span>{this.state.clicks}</span>
           </a>
-          <div className='cardDescription'>{this.props.description}</div>
+          <div className='card__description'>{this.props.description}</div>
 
           <div className='exampleContainer'>
             <div className='exampleNumber'>1</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './LandingPage.css';
+import './LandingPage.scss';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { Link, useHistory } from 'react-router-dom';
 import bg from '../../../assets/images/21.png';
@@ -20,10 +20,10 @@ const MainPage = () => {
   }
   return (
     <>
-      <div className='landingPageContainer'>
+      <div className='landingPage'>
         <TopNavbar homepage='/' />
-        <div className='landingPageJumbotron' style={bgImgStyle}>
-          <div className='landingPageButtonContainer'>
+        <div className='landingPage__jumbotron' style={bgImgStyle}>
+          <div className='landingPage__container'>
             <h1>
               Welcome to <br />
               RiskStorming Online
@@ -33,13 +33,13 @@ const MainPage = () => {
             </div>
 
             <Link to='/login'>
-              <button className='buttonPrimary landingPageButton'>
+              <button className='buttonPrimary'>
                 Go to Login page
               </button>
             </Link>
             <Link to='/explorefreeversion/fase1'>
               <button
-                className='buttonPrimary landingPageButton'
+                className='buttonPrimary'
                 onClick={clearLocalStorage}
               >
                 Explore Free Version

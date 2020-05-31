@@ -1,0 +1,105 @@
+@import '../../../assets/styles/_variables.scss';
+@import '../../../assets/styles/_mixins.scss';
+
+/* general css for card template */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 210px;
+  border-radius: 5px;
+  margin: 0.75rem;
+  @include box-shadow(3px 5px 5px 0px $card-shadow-color);
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    background-color: $white;
+    padding: 0.75rem 0.75rem 0.5rem;
+    border-radius: 5px 5px 0 0;
+    overflow-wrap: break-word;
+  }
+  &__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  &__subtitle {
+    font-size: 0.9rem;
+  }
+  &__body {
+    padding: 0 0.75rem 0.5rem;
+    border-radius: 0 0 5px 5px;
+  }
+  &__description {
+    font-size: 0.8rem;
+    line-height: 1.1;
+    color: $white;
+    /* temporary, till expanding is not fixed: */
+    /* border-bottom: 2px solid white; */
+    padding: 0 0.75rem 0.75rem;
+    margin: 0.75rem -0.75rem;
+    margin-bottom: 0; /* temporary, till expanding is not fixed */
+    padding-bottom: 0; /* temporary, till expanding is not fixed */
+    /* word-spacing: 0.05rem; */
+  }
+}
+
+.leftPane .card__description {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+  /* padding-bottom: 0; */
+}
+
+/* Votes counter */
+.card__vote {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-weight: bold;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 0 5px;
+  height: 22px;
+  line-height: 18px;
+  i,
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.exampleContainer {
+  display: flex;
+  font-size: 0.75rem;
+  color: $white;
+}
+.exampleNumber {
+  font-size: 1.75rem;
+  font-weight: bold;
+  align-self: center;
+  padding-right: 0.5rem;
+}
+.cardExample1 {
+  padding-top: 0.75rem;
+}
+.cardExample1,
+.cardExample2,
+.cardExample3 {
+  margin: 0.05rem;
+  word-spacing: 0.05rem;
+  line-height: 1.1;
+}
+.cardExample1,
+.cardExample2 {
+  border-bottom: 2px dotted #fff;
+  padding-bottom: 0.5rem;
+}
+.cardExample2,
+.cardExample3 {
+  margin-top: 0.5rem;
+}
+
+
