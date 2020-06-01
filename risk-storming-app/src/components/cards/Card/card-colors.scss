@@ -17,30 +17,15 @@ $card-colors: (
         color: $color;
       }
     }
-  }
-  .#{$name}Bg {
-    background-color: $color;
-  }
-  .#{$name}Header {
-    color: $color;
+    .card__header {
+      color: $color;
+    }
   }
 }
 
 .darkorange {
   @extend .orange;
 }
-.darkorangeBg {
-  @extend .orangeBg;
-}
-.darkorangeHeader {
-  @extend .orangeHeader;
-}
 .deeppink {
   @extend .pink;
-}
-.deeppinkBg {
-  @extend .pinkBg;
-}
-.deeppinkHeader {
-  @extend .pinkHeader;
 }

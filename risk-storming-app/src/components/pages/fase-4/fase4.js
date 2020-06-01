@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/fase4.css';
-import '../risk-row.css';
+import '../risk-row.scss';
 import Container from 'react-bootstrap/Container';
 import BlueCard from './BlueCard';
 import Footer from '../../Footer/Footer';

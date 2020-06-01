@@ -11,7 +11,7 @@ import Card from '../../pages/fase-2/Card';
 import RightColumn from './right-column/RightColumn';
 import RiskList from './Leftpane/Risklist';
 import './styles/fase3.css';
-import '../../pages/risk-row.css';
+import '../../pages/risk-row.scss';
 
 class FreeFaseThreePage extends React.Component {
   constructor(props) {

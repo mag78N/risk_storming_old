@@ -1,0 +1,47 @@
+@import '/assets/styles/_variables.scss';
+
+.splitContainer {
+  display: flex;
+  width: 100%;
+}
+/* Left pane */
+.leftPane {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+}
+
+/* Right pane */
+.rightPane {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Gutter */
+.gutter-horizontal {
+  cursor: grab;
+  background-color: $border-color;
+  position: relative;
+  margin: 0 0.75rem;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  &::before {
+    right: -10px;
+    border-left: 10px solid $arrow-color;
+  }
+  &::after {
+    left: -10px;
+    border-right: 10px solid $arrow-color;
+  }
+}

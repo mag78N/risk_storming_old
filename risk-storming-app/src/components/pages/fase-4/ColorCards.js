@@ -8,7 +8,7 @@ const ColorCards = (props) => {
         {props.risk.cards.map((card, idx) => {
           return (
             <div className={`${card.color} miniCard`} key={idx}>
-              <div className={`cardHeader ${card.color}Header`}>
+              <div className={`cardHeader`}>
                 <div className='cardTitle'>{card.title}</div>
                 <div className={`cardSubtitle`}>{card.subTitle}</div>
               </div>

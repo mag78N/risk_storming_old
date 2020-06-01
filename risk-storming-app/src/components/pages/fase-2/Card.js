@@ -51,7 +51,7 @@ class Card extends React.Component {
   render() {
     return (
       <div className={`card ${this.props.color}`}>
-        <div className={`card__header ${this.props.color}Header`}>
+        <div className={`card__header`}>
           <div className='card__title'>{this.props.title}</div>
           <div className='card__subtitle'>{this.props.subTitle}</div>
         </div>
@@ -63,19 +63,19 @@ class Card extends React.Component {
             className='cardExpanded'
             open={this.state.open}
           >
-            <div className='exampleContainer'>
-              <div className='exampleNumber'>1</div>
-              <div className='cardExample1'>{this.props.exampleOne}</div>
+            <div className='card__example'>
+              <div className='card__example--number'>1</div>
+              <div className='card__example--text'>{this.props.exampleOne}</div>
             </div>
 
-            <div className='exampleContainer'>
-              <div className='exampleNumber'>2</div>
-              <div className='cardExample2'>{this.props.exampleTwo}</div>
+            <div className='card__example'>
+              <div className='card__example--number'>2</div>
+              <div className='card__example--text'>{this.props.exampleTwo}</div>
             </div>
 
-            <div className='exampleContainer'>
-              <div className='exampleNumber'>3</div>
-              <div className='cardExample3'>{this.props.exampleThree}</div>
+            <div className='card__example'>
+              <div className='card__example--number'>3</div>
+              <div className='card__example--text'>{this.props.exampleThree}</div>
             </div>
           </Content>
           <Handler
