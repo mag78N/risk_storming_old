@@ -68,7 +68,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
                   className='removeButton'
                   onClick={() => deletetaskrow(cardriskid, taskIndex)}
                 >
-                  <i className='fa fa-minus fa-2x' aria-hidden='true' />
+                  <i className='fa fa-minus' aria-hidden='true' />
                 </button>
               </Col>
             </Row>

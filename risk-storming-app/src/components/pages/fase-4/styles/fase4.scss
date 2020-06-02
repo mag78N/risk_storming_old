@@ -64,7 +64,6 @@
     }
   }
   .deleteTaskButtonContainer {
-    @include flex-column-centered;
-    justify-content: center;
+    width: 25px;
   }
 }
