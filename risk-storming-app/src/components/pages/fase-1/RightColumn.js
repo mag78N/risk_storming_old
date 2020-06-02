@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 import { Droppable } from 'react-beautiful-dnd';
-import './styles/fase1.css';
+import './styles/fase1.scss';
 const CardList = styled.div``;
 
 class RightColumn extends React.Component {

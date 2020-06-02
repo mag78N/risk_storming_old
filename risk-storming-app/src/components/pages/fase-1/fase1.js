@@ -4,7 +4,7 @@ import '../../cards/Card/card-colors.scss';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import { shuffle } from '../../../utils/utils';
 import Split from 'react-split';
-import './styles/fase1.css';
+import './styles/fase1.scss';
 import '../../../index.scss';
 import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -98,7 +98,7 @@ class FaseOnePage extends React.Component {
   };
 
   render() {
-    console.log('state inside render :', this.state);
+    //console.log('state inside render :', this.state);
     const { chosenCards } = this.state;
     return (
       <>
@@ -113,7 +113,7 @@ class FaseOnePage extends React.Component {
           onDragEnd={this.onDragEnd}
         >
           <Split
-            className='splitContainer splitContainerFase1'
+            className='splitContainer'
             sizes={[40, 60]}
             minSize={[300, 150]}
             expandToMin={false}
