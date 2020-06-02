@@ -11,7 +11,7 @@ import { colorcards } from '../../../assets/en/colorcards';
 import Card from './../fase-2/Card';
 import RightColumn from './right-column/RightColumn';
 import RiskList from './Leftpane/Risklist';
-import './styles/fase3.css';
+import './styles/fase3.scss';
 import '../risk-row.scss';
 
 class FaseThreePage extends React.Component {

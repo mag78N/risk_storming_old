@@ -6,14 +6,13 @@
 }
 .fase2LeftPane {
   overflow: auto;
-  padding-top: $padding-top-navbar; /* height of exportButton */
+  padding-top: $padding-top-leftpane-navbar; /* height of exportButton */
 }
 .fase2RightPane {
   @include flex-column-centered;
   overflow: scroll;
   padding: 0.5rem 1rem;
 }
-
 /* Adding risks form */
 .form-group {
   @include flex-column-centered;
@@ -26,11 +25,11 @@ textarea,
   width: 25vw;
   resize: none;
   padding: $padding-textarea;
-  font-size: 1rem;
+  font-size: $primary-font-size;
   border: 1px solid $input-border-color;
   background-color: $input-bg-color;
   border-radius: 5px;
-  font-weight: 400;
+  font-weight: $primary-font-weight;
   color: $text-color;
 }
 textarea::placeholder {
