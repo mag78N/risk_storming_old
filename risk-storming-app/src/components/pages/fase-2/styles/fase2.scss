@@ -1,18 +1,6 @@
 @import '../../../../assets/styles/_variables';
 @import '../../../../assets/styles/_mixins';
 
-.splitContainerFase2 {
-  height: 100vh;
-}
-.fase2LeftPane {
-  overflow: auto;
-  padding-top: $padding-top-leftpane-navbar; /* height of exportButton */
-}
-.fase2RightPane {
-  @include flex-column-centered;
-  overflow: scroll;
-  padding: 0.5rem 1rem;
-}
 /* Adding risks form */
 .form-group {
   @include flex-column-centered;
@@ -35,14 +23,15 @@ textarea,
 
 .riskDetailsForm {
   text-align: center;
-}
-.riskDetailsForm textarea {
-  margin-right: 1rem;
-  &::placeholder {
-    letter-spacing: 2px;
-    color: $text-color;
+  textarea {
+    margin-right: 1rem;
+    &::placeholder {
+      letter-spacing: 2px;
+      color: $text-color;
+    }
   }
 }
+
 .buttonContainer {
   width: 25px;
 }

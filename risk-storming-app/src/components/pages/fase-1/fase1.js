@@ -124,7 +124,7 @@ class FaseOnePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='leftPane fase1LeftPane'>
+            <div className='leftPane leftPane--fase1'>
               <LeftColumn id='chosenCards' cards={chosenCards} />
             </div>
 

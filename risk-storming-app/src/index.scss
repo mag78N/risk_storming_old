@@ -1,8 +1,13 @@
 @import '/assets/styles/_variables.scss';
+@import '/assets/styles/_mixins';
+
 
 .splitContainer {
   display: flex;
   width: 100%;
+  &--fase2 {
+    height: 100vh;
+  }
 }
 /* Left pane */
 .leftPane {
@@ -10,6 +15,13 @@
   flex-direction: column;
   overflow: auto;
   height: 100vh;
+  &--fase1 {
+    padding-top: 70px; /* height of bluecardCounter */
+  }
+  &--fase2 {
+    overflow: auto;
+    padding-top: $padding-top-leftpane-navbar; /* height of exportButton */
+  }
   &--fase3 {
     padding-top: $padding-top-leftpane-navbar; /* Export to PDF button */
   }
@@ -21,6 +33,11 @@
   flex-wrap: wrap;
   height: 100vh;
   overflow: auto;
+  &--fase2 {
+    @include flex-column-centered;
+    overflow: scroll;
+    padding: 0.5rem 1rem;
+  }
   &--fase3 {
     align-content: flex-start;
     justify-content: flex-start;

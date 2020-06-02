@@ -205,7 +205,7 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='leftPane--fase3'>
+            <div className='leftPane leftPane--fase3'>
               {chosenCards.map((card, index) => (
                 <div className='cardRow' key={index}>
                   <div className='innerCardRow'>
@@ -228,7 +228,7 @@ class FaseThreePage extends React.Component {
               ))}
             </div>
 
-            <div className='rightPane--fase3'>
+            <div className='rightPane rightPane--fase3'>
               <RightColumn
                 filtercards={this.filterCards}
                 colorcards={filteredColorCards}

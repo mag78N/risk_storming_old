@@ -130,7 +130,7 @@ class FaseTwoPage extends React.PureComponent {
           Export to PDF
         </Link>
         <Split
-          className='splitContainer splitContainerFase2'
+          className='splitContainer splitContainer--fase2'
           sizes={[60, 40]}
           minSize={[250]}
           expandToMin={false}
@@ -141,7 +141,7 @@ class FaseTwoPage extends React.PureComponent {
           direction='horizontal'
           cursor='col-resize'
         >
-          <div className='leftPane fase2LeftPane'>
+          <div className='leftPane leftPane--fase2'>
             {chosenCards.map((card, index) => (
               <div className='cardRow' key={index}>
                 <div className='innerCardRow'>
@@ -166,7 +166,7 @@ class FaseTwoPage extends React.PureComponent {
               </div>
             ))}
           </div>
-          <div className='rightPane fase2RightPane'>
+          <div className='rightPane rightPane--fase2'>
             <RightPane
               chosenCards={chosenCards}
               handleChange={this.handleChange}
