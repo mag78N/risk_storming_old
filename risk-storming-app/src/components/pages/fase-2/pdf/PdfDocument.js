@@ -5,9 +5,9 @@ import {
   View,
   Document,
   StyleSheet,
-  Image,
+  
 } from '@react-pdf/renderer';
-import '../../pdf.scss';
+/* import '../../pdf.scss'; */
 const styles = StyleSheet.create({
   page: {
     marginTop: 15,
