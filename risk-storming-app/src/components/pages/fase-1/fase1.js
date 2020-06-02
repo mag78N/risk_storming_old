@@ -128,7 +128,7 @@ class FaseOnePage extends React.Component {
               <LeftColumn id='chosenCards' cards={chosenCards} />
             </div>
 
-            <div className='rightPane fase1RightPane'>
+            <div className='rightPane'>
               <RightColumn id='RIGHTCOLUMN' cards={this.state.RIGHTCOLUMN} />
             </div>
           </Split>
