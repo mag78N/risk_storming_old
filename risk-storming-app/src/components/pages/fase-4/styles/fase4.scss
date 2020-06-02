@@ -31,12 +31,12 @@
       @include flex-column-centered;
       margin-top: 1rem;
       .miniCard {
+        @include box-shadow(3px 5px 5px 0px $card-shadow-color);
+        color: $white;
+        width: 275px;
         text-align: center;
         border-radius: 5px;
         border-width: 6px;
-        @include box-shadow(3px 5px 5px 0px $card-shadow-color);
-        margin: 0.2rem 0;
-        width: 275px;
         margin: 0.2rem auto;
       }
     }
