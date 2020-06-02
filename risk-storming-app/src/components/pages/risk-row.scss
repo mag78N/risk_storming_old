@@ -16,6 +16,8 @@
 }
 .innerRiskRow {
   width: calc(100% - 225px);
+  display: flex;
+  flex-direction: column;
 }
 .riskLane {
   padding: 0.5rem 0.5rem 0.75rem;

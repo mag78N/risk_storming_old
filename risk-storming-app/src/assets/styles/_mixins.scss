@@ -5,3 +5,8 @@
   -moz-box-shadow: $value;
   box-shadow: $value;
 }
+@mixin flex-column-centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

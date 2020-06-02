@@ -58,3 +58,11 @@ $button-radius: 50px;
   z-index: 2;
   text-decoration: none;
 }
+/* rounded delete risk button in fase2*/
+.removeButton {
+  background-color: $secondary-color;
+  color: $white;
+  border-radius: 50%;
+  border: 1px solid $secondary-color;
+  padding: 0px 5px;
+}

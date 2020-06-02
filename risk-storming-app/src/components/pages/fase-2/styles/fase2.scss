@@ -1,0 +1,87 @@
+@import '../../../../assets/styles/_variables';
+@import '../../../../assets/styles/_mixins';
+
+.splitContainerFase2 {
+  height: 100vh;
+}
+.fase2LeftPane {
+  overflow: auto;
+  padding-top: $padding-top-navbar; /* height of exportButton */
+}
+.fase2RightPane {
+  @include flex-column-centered;
+  overflow: scroll;
+  padding: 0.5rem 1rem;
+}
+
+/* Adding risks form */
+.form-group {
+  @include flex-column-centered;
+}
+.form-row {
+  margin: 0 0 1rem 0;
+}
+textarea,
+.textareaBg {
+  width: 25vw;
+  resize: none;
+  padding: $padding-textarea;
+  font-size: 1rem;
+  border: 1px solid $input-border-color;
+  background-color: $input-bg-color;
+  border-radius: 5px;
+  font-weight: 400;
+  color: $text-color;
+}
+textarea::placeholder {
+  letter-spacing: 2px;
+  color: $text-color;
+}
+.riskDetailsForm {
+  text-align: center;
+}
+.riskDetailsForm textarea {
+  margin-right: 1rem;
+}
+.buttonContainer {
+  width: 25px;
+}
+.addButton {
+  display: inline-block;
+  margin: $margin-add-button;
+  i {
+    padding-right: 0.5rem;
+  }
+}
+
+/* Card carousel */
+
+.carousel-caption {
+  position: static;
+}
+.carousel {
+  @include flex-column-centered;
+  ol.carousel-indicators {
+    display: none;
+  }
+  .active.carousel-item {
+    @include flex-column-centered;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 10rem;
+    filter: invert(1);
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 4rem;
+    width: 3rem;
+  }
+  .card {
+    margin: 0 auto;
+  }
+  .card__description {
+    border-bottom-width: 0;
+    margin-bottom: 0;
+  }
+}
