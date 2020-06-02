@@ -5,8 +5,8 @@ const BlueCard = ({ card, addnewtask, onchange, deletetaskrow }) => {
   return (
     <>
       <div>
-        <div className='blueCardHeader'>
-          <div className='title'>{card.title}</div>
+        <div className='blueCard__header'>
+          <div className='blueCard__title'>{card.title}</div>
           <div>{card.subTitle}</div>
         </div>
       </div>

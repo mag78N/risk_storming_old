@@ -8,13 +8,13 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
     <>
       <Container fluid>
         <Row>
-          <Col sm={2} className='rowHeader'>
+          <Col sm={2} className='row__header'>
             Who
           </Col>
-          <Col sm={4} className='rowHeader'>
+          <Col sm={4} className='row__header'>
             Commitment
           </Col>
-          <Col sm={5} className='rowHeader'>
+          <Col sm={5} className='row__header'>
             Deliverables/Measurables
           </Col>
           <Col sm={1}></Col>
@@ -22,7 +22,7 @@ const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
         {risk.tasks.map((task, taskIndex) => {
           return (
             <Row key={taskIndex}>
-              <Col sm={2} className='textareaContainer'>
+              <Col sm={2} className='textarea__container'>
                 <label htmlFor={`${cardriskid}|owner-${taskIndex}`}></label>
                 <textarea
                   id={`${cardriskid}|owner-${taskIndex}`}

@@ -2,16 +2,18 @@
 @import '../../../../assets/styles/_variables';
 @import '../../../../assets/styles/_mixins';
 
-.blueCardHeader {
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 5px;
-  background-color: $fase4-blueheader-bg-color;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0.35rem;
-  .title {
+.blueCard {
+  &__header {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: $fase4-blueheader-bg-color;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.35rem;
+  }
+  &__title {
     font-weight: bolder;
   }
 }
@@ -50,19 +52,20 @@
 }
 
 .row {
-  .rowHeader {
+  &__header {
     text-transform: uppercase;
     font-size: 1.45rem;
     text-align: center;
     margin-left: 0.2rem;
     padding: 0.5rem;
   }
-  .textareaContainer {
-    padding: 0 3px;
-    textarea {
-      width: 100% !important;
+  textarea {
+    width: 100% !important;
+    &__container {
+      padding: 0 3px;
     }
   }
+
   .deleteTaskButtonContainer {
     width: 25px;
   }
