@@ -1,0 +1,70 @@
+/* fase 4 */
+@import '../../../../assets/styles/_variables';
+@import '../../../../assets/styles/_mixins';
+
+.blueCardHeader {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: $fase4-blueheader-bg-color;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.35rem;
+  .title {
+    font-weight: bolder;
+  }
+}
+
+.riskStream {
+  @include flex-row-centered;
+  padding: 2rem 0;
+  border-bottom: 2px dashed $border-color;
+  .riskCardsColumn {
+    @include flex-column-centered;
+    margin-right: 2rem;
+    .largerWidth {
+      width: 275px !important;
+    }
+    .colorCardsColumn {
+      width: 275px;
+      @include flex-column-centered;
+      margin-top: 1rem;
+      .miniCard {
+        text-align: center;
+        border-radius: 5px;
+        border-width: 6px;
+        @include box-shadow(3px 5px 5px 0px $card-shadow-color);
+        margin: 0.2rem 0;
+        width: 275px;
+        margin: 0.2rem auto;
+      }
+    }
+    .addTaskButtonContainer {
+      margin-top: 1rem;
+      .fa-plus {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.row {
+  .rowHeader {
+    text-transform: uppercase;
+    font-size: 1.45rem;
+    text-align: center;
+    margin-left: 0.2rem;
+    padding: 0.5rem;
+  }
+  .textareaContainer {
+    padding: 0 3px;
+    textarea {
+      width: 100% !important;
+    }
+  }
+  .deleteTaskButtonContainer {
+    @include flex-column-centered;
+    justify-content: center;
+  }
+}

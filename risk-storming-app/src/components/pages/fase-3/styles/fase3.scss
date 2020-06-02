@@ -24,8 +24,7 @@
   height: calc(100% - 60px);
 }
 .searchBar {
-  display: flex;
-  align-items: center;
+  @include flex-row-centered;
   justify-content: flex-end;
   padding: 0.5rem;
   width: 100%;
@@ -36,7 +35,7 @@
     position: absolute;
     right: 1rem;
     color: $text-color;
-    font-size: $i-font-size;
+    font-size: $search-i-font-size;
   }
   input {
     font-size: $primary-font-size;

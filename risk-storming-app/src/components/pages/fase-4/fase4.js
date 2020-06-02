@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/fase4.css';
+import './styles/fase4.scss';
 import '../risk-row.scss';
 import Container from 'react-bootstrap/Container';
 import BlueCard from './BlueCard';

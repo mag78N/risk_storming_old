@@ -5,13 +5,11 @@
   border-bottom: 2px solid $border-color;
   padding: 1rem 0;
   margin: 0 1rem;
-  display: flex;
-  align-items: center;
+  @include flex-row-centered;
 }
 .innerCardRow {
-  display: flex;
+  @include flex-row-centered;
   justify-content: center;
-  align-items: center;
   min-width: 225px;
 }
 .innerRiskRow {
@@ -21,8 +19,7 @@
 }
 .riskLane {
   padding: 0.5rem 0.5rem 0.75rem;
-  display: flex;
-  align-items: center;
+  @include flex-row-centered;
   margin-left: 1rem;
   border-bottom: 2px solid $border-color;
   &:last-child {

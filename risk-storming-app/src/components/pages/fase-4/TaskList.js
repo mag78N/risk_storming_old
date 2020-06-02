@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './styles/fase4.css';
+import './styles/fase4.scss';
 const TaskList = ({ idx, risk, card, onchange, deletetaskrow, cardriskid }) => {
   return (
     <>

@@ -11,7 +11,7 @@ const Risks = ({ card, addnewtask, onchange, deletetaskrow }) => {
         return (
           <div className='riskStream' key={idx}>
             <div className='riskCardsColumn'>
-              <div className='risk riskPostit center' id={cardRiskId}>
+              <div className='risk riskPostit' id={cardRiskId}>
                 <div key={cardRiskId} className='textareaBg largerWidth'>
                   <p className='riskId'>{`risk #${idx + 1}`}</p>
                   <p className='riskText'>{riskText}</p>
