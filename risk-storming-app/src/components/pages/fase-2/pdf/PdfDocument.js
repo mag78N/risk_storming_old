@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Image,
 } from '@react-pdf/renderer';
-import './fase2Pdf.css';
+import '../../pdf.scss';
 const styles = StyleSheet.create({
   page: {
     marginTop: 15,

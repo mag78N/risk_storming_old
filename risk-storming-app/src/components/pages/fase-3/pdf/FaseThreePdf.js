@@ -3,7 +3,7 @@ import TopNavbar from '../../../TopNavbar/TopNavbar';
 import PdfDocument from './PdfDocument';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import '../styles/fase3.scss';
-import './fase3Pdf.css';
+import '../../pdf.scss';
 
 class FaseThreePdf extends Component {
   render() {
