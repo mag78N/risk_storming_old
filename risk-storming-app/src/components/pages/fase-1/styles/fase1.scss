@@ -1,6 +1,8 @@
+@import '../../../../assets/styles/_variables';
+
 .bluecardCounter {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: $bold;
   padding: 15px;
   height: 50px;
   position: absolute;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import '../../pdf.scss';
+
 const styles = StyleSheet.create({
   page: {
     /* marginTop: 15, */
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   riskText: {
     paddingTop: '15pt',
-    maxWidth: 100,
+    maxWidth: 170,
     fontSize: '9pt',
   },
   colorCardsRow: {

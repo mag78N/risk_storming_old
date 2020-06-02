@@ -4,17 +4,19 @@
 
 .blueCard {
   &__header {
-    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 5px;
-    background-color: $fase4-blueheader-bg-color;
+    color: $white;
     width: 100%;
     margin: 0 auto;
     padding: 0.35rem;
+    margin-top: 1.5rem;
+    color: $blue-card-color;
   }
   &__title {
-    font-weight: bolder;
+    font-size: 2.5rem;
+    font-weight: $bold;
+    text-transform: none;
   }
 }
 
@@ -32,15 +34,6 @@
       width: 275px;
       @include flex-column-centered;
       margin-top: 1rem;
-      .miniCard {
-        @include box-shadow(3px 5px 5px 0px $card-shadow-color);
-        color: $white;
-        width: 275px;
-        text-align: center;
-        border-radius: 5px;
-        border-width: 6px;
-        margin: 0.2rem auto;
-      }
     }
     .addTaskButtonContainer {
       margin-top: 1rem;
@@ -49,24 +42,44 @@
       }
     }
   }
-}
-
-.row {
-  &__header {
-    text-transform: uppercase;
-    font-size: 1.45rem;
-    text-align: center;
-    margin-left: 0.2rem;
-    padding: 0.5rem;
-  }
-  textarea {
-    width: 100% !important;
-    &__container {
-      padding: 0 3px;
+  .row {
+    margin-bottom: 0.75rem;
+    > div {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    &__header {
+      font-size: 1rem;
+      text-align: center;
+      margin-left: 0.2rem;
+      font-weight: $bold;
+    }
+    textarea {
+      width: 100% !important;
+      &__container {
+        padding: 0 3px;
+      }
+    }
+    .deleteTaskButtonContainer {
+      width: 25px;
     }
   }
+}
 
-  .deleteTaskButtonContainer {
-    width: 25px;
+.miniCard {
+  @include box-shadow(3px 5px 5px 0px $card-shadow-color);
+  color: $white;
+  width: 275px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.35rem;
+  margin: 0.35rem auto;
+  .cardTitle {
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+  .cardSubtitle {
+    text-transform: uppercase;
+    font-size: 0.9rem;
   }
 }
