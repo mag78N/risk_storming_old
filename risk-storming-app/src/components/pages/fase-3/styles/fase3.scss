@@ -1,9 +1,5 @@
 @import '../../../../assets/styles/_variables';
 @import '../../../../assets/styles/_mixins';
-/* Export to PDF button */
-.fase3LeftPane {
-  padding-top: $padding-top-leftpane-navbar; /* height of exportButton */
-}
 
 .dropzone {
   display: flex;
@@ -18,11 +14,6 @@
   }
 }
 
-.fase3RightPane .rightPane {
-  align-content: flex-start;
-  justify-content: flex-start;
-  height: calc(100% - 60px);
-}
 .searchBar {
   @include flex-row-centered;
   justify-content: flex-end;

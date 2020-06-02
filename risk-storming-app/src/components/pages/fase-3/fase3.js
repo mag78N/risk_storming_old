@@ -194,7 +194,7 @@ class FaseThreePage extends React.Component {
           onDragEnd={this.onDragEnd}
         >
           <Split
-            className='splitContainer splitContainerFase3'
+            className='splitContainer'
             sizes={[60, 40]}
             minSize={[300, 150]}
             expandToMin={false}
@@ -205,7 +205,7 @@ class FaseThreePage extends React.Component {
             direction='horizontal'
             cursor='col-resize'
           >
-            <div className='leftPane fase3LeftPane'>
+            <div className='leftPane--fase3'>
               {chosenCards.map((card, index) => (
                 <div className='cardRow' key={index}>
                   <div className='innerCardRow'>
@@ -228,7 +228,7 @@ class FaseThreePage extends React.Component {
               ))}
             </div>
 
-            <div className='rightPane fase3RightPane'>
+            <div className='rightPane--fase3'>
               <RightColumn
                 filtercards={this.filterCards}
                 colorcards={filteredColorCards}
