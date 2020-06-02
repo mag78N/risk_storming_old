@@ -43,12 +43,16 @@ class Card extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (
       nextProps.cardid !== this.props.cardid ||
-      nextProps.card !== this.props.card 
+      nextProps.card !== this.props.card ||
+      nextProps.index !== this.props.index
     ) {
       console.log('props card updating', this.props.cardid);
       return true;
     }
-    if (nextState.open !== this.state.open || nextState.clicks !== this.state.clicks) {
+    if (
+      nextState.open !== this.state.open ||
+      nextState.clicks !== this.state.clicks
+    ) {
       console.log('state card updating', this.props.cardid);
       return true;
     }
