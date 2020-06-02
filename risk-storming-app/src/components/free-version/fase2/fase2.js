@@ -3,7 +3,7 @@ import '../../cards/Card/Card.scss';
 import '../../cards/Card/card-colors.scss';
 import Split from 'react-split';
 import './styles/fase2.css';
-import '../../pages/risk-row.css';
+import '../../pages/risk-row.scss';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Footer from '../../Footer/Footer';
 import Card from './Card';

@@ -4,7 +4,7 @@ import '../../cards/Card/card-colors.scss';
 import TopNavbar from '../../TopNavbar/TopNavbar';
 import Split from 'react-split';
 import './styles/fase1.css';
-import '../../../index.css';
+import '../../../index.scss';
 import Footer from '../../Footer/Footer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import LeftColumn from './LeftColumn';

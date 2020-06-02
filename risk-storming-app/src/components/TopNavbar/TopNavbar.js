@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/images/riskstorming_logo-1.png';
 import { Link } from 'react-router-dom';
-import '../TopNavbar/topNavbar.css';
+import '../TopNavbar/topNavbar.scss';
 
 const TopNavbar = (props) => {
   return (

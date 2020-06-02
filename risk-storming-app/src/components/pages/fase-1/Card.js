@@ -75,7 +75,7 @@ class Card extends React.Component {
             isDragging={snapshot.isDragging}
             className={`card ${card.color}`}
           >
-            <div className={`card__header ${card.color}Header`}>
+            <div className={`card__header`}>
               <div className='card__title'>{card.title}</div>
               <div className='card__subtitle'>{card.subTitle}</div>
             </div>
@@ -91,17 +91,17 @@ class Card extends React.Component {
                 className='cardExpanded'
                 open={this.state.open}
               >
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>1</div>
-                  <div className='cardExample1'>{card.exampleOne}</div>
+                <div className='card__example'>
+                  <div className='card__example--number'>1</div>
+                  <div className='card__example--text'>{card.exampleOne}</div>
                 </div>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>2</div>
-                  <div className='cardExample2'>{card.exampleTwo}</div>
+                <div className='card__example'>
+                  <div className='card__example--number'>2</div>
+                  <div className='card__example--text'>{card.exampleTwo}</div>
                 </div>
-                <div className='exampleContainer'>
-                  <div className='exampleNumber'>3</div>
-                  <div className='cardExample3'>{card.exampleThree}</div>
+                <div className='card__example'>
+                  <div className='card__example--number'>3</div>
+                  <div className='card__example--text'>{card.exampleThree}</div>
                 </div>
               </Content>
               <Handler
