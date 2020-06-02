@@ -32,15 +32,16 @@ textarea,
   font-weight: $primary-font-weight;
   color: $text-color;
 }
-textarea::placeholder {
-  letter-spacing: 2px;
-  color: $text-color;
-}
+
 .riskDetailsForm {
   text-align: center;
 }
 .riskDetailsForm textarea {
   margin-right: 1rem;
+  &::placeholder {
+    letter-spacing: 2px;
+    color: $text-color;
+  }
 }
 .buttonContainer {
   width: 25px;
